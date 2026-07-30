@@ -1,0 +1,48 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_short/stnet_best.pth",
+    "checkpoint_dir": "./checkpoint_ktcal_ncc_rollout_gt",
+    "output_json": "./checkpoint_ktcal_kalman_reset_fix/val_closed_loop.json",
+    "output_ckpt": "./checkpoint_ktcal_kalman_reset_fix/ncc_clean_reference.pth",
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 0,
+    "tau3": 1.0,
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "baseline": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.569616371496165,
+    "final_error_px": 3.518255084462502,
+    "post_processed_error_px": 3.276369229697817,
+    "trigger_ratio": 0.511875,
+    "tier3_ratio": 0.480625,
+    "boundary_rate": 0.376875,
+    "reset_ratio": 0.3634375
+  },
+  "selected": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.569616371496165,
+    "final_error_px": 3.518255084462502,
+    "post_processed_error_px": 3.276369229697817,
+    "trigger_ratio": 0.511875,
+    "tier3_ratio": 0.480625,
+    "boundary_rate": 0.376875,
+    "reset_ratio": 0.3634375
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+      "online_error_px": 3.569616371496165,
+      "final_error_px": 3.518255084462502,
+      "post_processed_error_px": 3.276369229697817,
+      "trigger_ratio": 0.511875,
+      "tier3_ratio": 0.480625,
+      "boundary_rate": 0.376875,
+      "reset_ratio": 0.3634375
+    }
+  ]
+}

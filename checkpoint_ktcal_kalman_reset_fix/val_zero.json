@@ -1,0 +1,49 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_short/stnet_best.pth",
+    "checkpoint_dir": "./checkpoint_ktcal_ncc_rollout_gt",
+    "output_json": "./checkpoint_ktcal_kalman_reset_fix/val_zero.json",
+    "output_ckpt": "./checkpoint_ktcal_kalman_reset_fix/ncc_zero.pth",
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 0,
+    "tau3": 1.0,
+    "reset_velocity_mode": "zero",
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "baseline": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.6327139183100594,
+    "final_error_px": 3.58566822961036,
+    "post_processed_error_px": 3.3294176196759016,
+    "trigger_ratio": 0.4978125,
+    "tier3_ratio": 0.4721875,
+    "boundary_rate": 0.37125,
+    "reset_ratio": 0.2721875
+  },
+  "selected": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.6327139183100594,
+    "final_error_px": 3.58566822961036,
+    "post_processed_error_px": 3.3294176196759016,
+    "trigger_ratio": 0.4978125,
+    "tier3_ratio": 0.4721875,
+    "boundary_rate": 0.37125,
+    "reset_ratio": 0.2721875
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+      "online_error_px": 3.6327139183100594,
+      "final_error_px": 3.58566822961036,
+      "post_processed_error_px": 3.3294176196759016,
+      "trigger_ratio": 0.4978125,
+      "tier3_ratio": 0.4721875,
+      "boundary_rate": 0.37125,
+      "reset_ratio": 0.2721875
+    }
+  ]
+}

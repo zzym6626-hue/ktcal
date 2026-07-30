@@ -1,0 +1,147 @@
+{
+  "mode": "ktcal_closed_loop_async",
+  "test_h5_path": "/Users/zhangyimeng/Downloads/TDTracker-main/data/seet/test_3et.h5",
+  "frames": 4000,
+  "immediate_online": {
+    "accuracy": {
+      "p1": 0.13675,
+      "p3": 0.54625,
+      "p5": 0.77,
+      "p10": 0.93825,
+      "p15": 0.98775
+    },
+    "mean_pixel_error_px": 3.7493571856001027,
+    "mean_squared_pixel_error_px2": 25.105979054092685
+  },
+  "final_closed_loop_corrected": {
+    "accuracy": {
+      "p1": 0.14325,
+      "p3": 0.55325,
+      "p5": 0.7745,
+      "p10": 0.93975,
+      "p15": 0.98825
+    },
+    "mean_pixel_error_px": 3.702697822185525,
+    "mean_squared_pixel_error_px2": 24.637417241825677
+  },
+  "post_processed": {
+    "method": "savgol",
+    "window": 15,
+    "poly_order": 3,
+    "accuracy": {
+      "p1": 0.1255,
+      "p3": 0.57025,
+      "p5": 0.79825,
+      "p10": 0.95725,
+      "p15": 0.99375
+    },
+    "mean_pixel_error_px": 3.441640450143859,
+    "mean_squared_pixel_error_px2": 20.266241889769457
+  },
+  "scheduling": {
+    "counts": {
+      "tier1": 1652,
+      "tier2": 136,
+      "tier3": 2212,
+      "tier3_bootstrap": 40,
+      "tier3_low_conf": 1181,
+      "tier3_large_error": 991,
+      "boundary_peaks": 1639,
+      "low_conf_boundary_peaks": 652,
+      "large_error_boundary_peaks": 976,
+      "stnet_calls": 2348,
+      "resets": 0
+    },
+    "tier_ratios": {
+      "tier1": 0.413,
+      "tier2": 0.034,
+      "tier3": 0.553
+    },
+    "stnet_ratio": 0.587,
+    "confidence_bins": {
+      "lt_0.3": 789,
+      "0.3_to_0.4": 118,
+      "0.4_to_0.5": 274,
+      "0.5_to_0.6": 647,
+      "ge_0.6": 2132
+    },
+    "epsilon_bins": {
+      "lt_3": 1652,
+      "3_to_5": 136,
+      "5_to_7": 318,
+      "7_to_10": 673,
+      "ge_10": 0
+    },
+    "threshold_only_candidates": {
+      "confidence_0.4_to_0.5": 274,
+      "epsilon_5_to_7": 318
+    },
+    "ground_truth_diagnosis": {
+      "low_conf": {
+        "count": 1181,
+        "mean_kalman_error_px": 3.910272680147279,
+        "mean_ncc_error_px": 6.21827969317498,
+        "ncc_better_ratio": 0.2777307366638442
+      },
+      "large_error": {
+        "count": 991,
+        "mean_kalman_error_px": 6.825066401115351,
+        "mean_ncc_error_px": 11.937974874013902,
+        "ncc_better_ratio": 0.09182643794147326
+      }
+    }
+  },
+  "latency_ms_per_frame": {
+    "online_fast_path": 18.80545505099998,
+    "async_stnet_compute_work": 1.4065282087500095,
+    "sync_stnet_critical_work": 16.109079735749983,
+    "concurrent_end_to_end_wall": 18.82843557225
+  },
+  "correction_delivery_lag": {
+    "frames": 4.588235294117647,
+    "milliseconds": 57.20362470588215,
+    "results": 136
+  },
+  "checkpoint_metadata": {
+    "stnet": {
+      "format_version": 1,
+      "epoch": 50,
+      "seed": 42,
+      "best_val_mean_pixel_error": 1.464056453704834
+    },
+    "ncc": {
+      "format_version": 1,
+      "epoch": 50,
+      "seed": 42,
+      "best_val_mean_pixel_error": 1.464056453704834
+    }
+  },
+  "config": {
+    "use_cpu": true,
+    "gpu": "0",
+    "test_h5_path": "./data/seet/test_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_clean/stnet_best.pth",
+    "ncc_ckpt": "./checkpoint_ktcal_clean/ncc_best.pth",
+    "sensor_width": 640,
+    "sensor_height": 480,
+    "spatial_factor": 0.125,
+    "pixel_tolerances": [
+      1,
+      3,
+      5,
+      10,
+      15
+    ],
+    "tau1": 3.0,
+    "tau2": 5.0,
+    "tau3": 1.0,
+    "hard_reset": false,
+    "ncc_thresh": 0.5,
+    "template_size": 11,
+    "search_size": 21,
+    "pp_window": 15,
+    "pp_poly": 3,
+    "batch_mode": false,
+    "output_json": "./checkpoint_ktcal_clean/test_closed.json"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_laststep_aug/stnet_best.pth",
+    "stnet_block3_kernel": 5,
+    "ncc_ckpt": "./checkpoint_ktcal_clean/ncc_best.pth",
+    "checkpoint_dir": null,
+    "output_json": "./checkpoint_ktcal_call_budget/val_baseline.json",
+    "output_ckpt": null,
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 5,
+    "tau1": 3.0,
+    "tau2": 5.0,
+    "tau3": 1.0,
+    "ncc_thresh": 0.5,
+    "stnet_cooldown": 0,
+    "disable_tier2": false,
+    "severe_conf_threshold": 0.2,
+    "severe_epsilon_threshold": 9.0,
+    "reset_velocity_mode": "legacy",
+    "low_conf_policy": "sync_stnet",
+    "kalman_process_noise": 0.001,
+    "kalman_measurement_noise": 0.01,
+    "kalman_velocity_decay": 1.0,
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "result": {
+    "checkpoint": "./checkpoint_ktcal_clean/ncc_best.pth",
+    "online_error_px": 3.4022668635328546,
+    "final_error_px": 3.3365279431972237,
+    "post_processed_error_px": 3.142268997101956,
+    "trigger_ratio": 0.5215625,
+    "tier3_ratio": 0.4878125,
+    "boundary_rate": 0.384375,
+    "reset_ratio": 0.4184375,
+    "cooldown_skip_ratio": 0.0,
+    "severe_bypass_ratio": 0.0,
+    "tier2_skip_ratio": 0.0
+  }
+}

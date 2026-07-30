@@ -1,0 +1,98 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_short/stnet_best.pth",
+    "checkpoint_dir": "./checkpoint_ktcal_ncc_rollout_historical",
+    "output_json": "./checkpoint_ktcal_ncc_rollout_historical/closed_loop_selection.json",
+    "output_ckpt": "./checkpoint_ktcal_ncc_rollout_historical/ncc_closed_loop_best.pth",
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 5,
+    "tau3": 1.0,
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "baseline": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_000.pth",
+    "online_error_px": 3.5101121430792626,
+    "final_error_px": 3.453021856295278,
+    "post_processed_error_px": 3.2536831796343,
+    "trigger_ratio": 0.52125,
+    "tier3_ratio": 0.49125,
+    "boundary_rate": 0.384375,
+    "reset_ratio": 0.41625
+  },
+  "selected": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_004.pth",
+    "online_error_px": 3.449313361313384,
+    "final_error_px": 3.3992708063491905,
+    "post_processed_error_px": 3.2163584307013475,
+    "trigger_ratio": 0.5125,
+    "tier3_ratio": 0.4828125,
+    "boundary_rate": 0.360625,
+    "reset_ratio": 0.4090625
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_012.pth",
+      "online_error_px": 3.45449613365498,
+      "final_error_px": 3.41178422764205,
+      "post_processed_error_px": 3.2111644474102157,
+      "trigger_ratio": 0.510625,
+      "tier3_ratio": 0.485,
+      "boundary_rate": 0.3484375,
+      "reset_ratio": 0.4075
+    },
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_011.pth",
+      "online_error_px": 3.4573577681176153,
+      "final_error_px": 3.4098560080980524,
+      "post_processed_error_px": 3.207819595991422,
+      "trigger_ratio": 0.5109375,
+      "tier3_ratio": 0.485,
+      "boundary_rate": 0.351875,
+      "reset_ratio": 0.40625
+    },
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_013.pth",
+      "online_error_px": 3.457446040226856,
+      "final_error_px": 3.4066382054669875,
+      "post_processed_error_px": 3.22198174974823,
+      "trigger_ratio": 0.519375,
+      "tier3_ratio": 0.486875,
+      "boundary_rate": 0.361875,
+      "reset_ratio": 0.4171875
+    },
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_009.pth",
+      "online_error_px": 3.4631290694294092,
+      "final_error_px": 3.414093334071988,
+      "post_processed_error_px": 3.2119353860325544,
+      "trigger_ratio": 0.5115625,
+      "tier3_ratio": 0.48375,
+      "boundary_rate": 0.34875,
+      "reset_ratio": 0.4040625
+    },
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_004.pth",
+      "online_error_px": 3.449313361313384,
+      "final_error_px": 3.3992708063491905,
+      "post_processed_error_px": 3.2163584307013475,
+      "trigger_ratio": 0.5125,
+      "tier3_ratio": 0.4828125,
+      "boundary_rate": 0.360625,
+      "reset_ratio": 0.4090625
+    },
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_historical/epochs/epoch_000.pth",
+      "online_error_px": 3.5101121430792626,
+      "final_error_px": 3.453021856295278,
+      "post_processed_error_px": 3.2536831796343,
+      "trigger_ratio": 0.52125,
+      "tier3_ratio": 0.49125,
+      "boundary_rate": 0.384375,
+      "reset_ratio": 0.41625
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_short/stnet_best.pth",
+    "checkpoint_dir": "./checkpoint_ktcal_ncc_rollout_gt",
+    "output_json": "./checkpoint_ktcal_low_conf_policy/val_kalman.json",
+    "output_ckpt": "./checkpoint_ktcal_low_conf_policy/ncc_kalman.pth",
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 0,
+    "tau3": 1.0,
+    "reset_velocity_mode": "legacy",
+    "low_conf_policy": "kalman",
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "baseline": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 562.8101300357143,
+    "final_error_px": 563.4360234538038,
+    "post_processed_error_px": 563.2847991979196,
+    "trigger_ratio": 0.06125,
+    "tier3_ratio": 0.059375,
+    "boundary_rate": 0.720625,
+    "reset_ratio": 0.05125
+  },
+  "selected": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 562.8101300357143,
+    "final_error_px": 563.4360234538038,
+    "post_processed_error_px": 563.2847991979196,
+    "trigger_ratio": 0.06125,
+    "tier3_ratio": 0.059375,
+    "boundary_rate": 0.720625,
+    "reset_ratio": 0.05125
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+      "online_error_px": 562.8101300357143,
+      "final_error_px": 563.4360234538038,
+      "post_processed_error_px": 563.2847991979196,
+      "trigger_ratio": 0.06125,
+      "tier3_ratio": 0.059375,
+      "boundary_rate": 0.720625,
+      "reset_ratio": 0.05125
+    }
+  ]
+}

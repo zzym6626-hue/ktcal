@@ -1,0 +1,24 @@
+{
+  "checkpoint": "/Users/zhangyimeng/Downloads/TDTracker-main/checkpoint_ktcal_stnet_7x7/stnet_best.pth",
+  "full_sequence_all_steps_error_px": 1.519165267944336,
+  "full_sequence_last_step_error_px": 1.8941954970359802,
+  "window_last_step_error_px": {
+    "1": 10.4687080681324,
+    "2": 5.307684689760208,
+    "4": 5.646730460226536,
+    "8": 4.303830236196518,
+    "16": 3.394101306796074
+  },
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_7x7/stnet_best.pth",
+    "stnet_block3_kernel": 7,
+    "window_sizes": "1,2,4,8,16",
+    "windows_per_sequence": 4,
+    "batch_size": 8,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "use_cpu": true,
+    "output_json": "./checkpoint_ktcal_stnet_7x7/val_windows.json"
+  }
+}

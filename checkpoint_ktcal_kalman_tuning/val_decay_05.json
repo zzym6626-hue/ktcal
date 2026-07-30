@@ -1,0 +1,53 @@
+{
+  "config": {
+    "train_h5_path": "./data/seet/train_3et.h5",
+    "stnet_ckpt": "./checkpoint_ktcal_stnet_short/stnet_best.pth",
+    "checkpoint_dir": "./checkpoint_ktcal_ncc_rollout_gt",
+    "output_json": "./checkpoint_ktcal_kalman_tuning/val_decay_05.json",
+    "output_ckpt": "./checkpoint_ktcal_kalman_tuning/ncc_decay_05.pth",
+    "use_cpu": true,
+    "seed": 42,
+    "val_ratio": 0.1,
+    "top_k": 0,
+    "tau3": 1.0,
+    "reset_velocity_mode": "legacy",
+    "low_conf_policy": "sync_stnet",
+    "kalman_process_noise": 0.001,
+    "kalman_measurement_noise": 0.01,
+    "kalman_velocity_decay": 0.5,
+    "pp_window": 15,
+    "pp_poly": 3
+  },
+  "baseline": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.5089040223302046,
+    "final_error_px": 3.4572357963137135,
+    "post_processed_error_px": 3.2551991786162056,
+    "trigger_ratio": 0.5153125,
+    "tier3_ratio": 0.488125,
+    "boundary_rate": 0.3784375,
+    "reset_ratio": 0.4084375
+  },
+  "selected": {
+    "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+    "online_error_px": 3.5089040223302046,
+    "final_error_px": 3.4572357963137135,
+    "post_processed_error_px": 3.2551991786162056,
+    "trigger_ratio": 0.5153125,
+    "tier3_ratio": 0.488125,
+    "boundary_rate": 0.3784375,
+    "reset_ratio": 0.4084375
+  },
+  "candidates": [
+    {
+      "checkpoint": "checkpoint_ktcal_ncc_rollout_gt/epochs/epoch_000.pth",
+      "online_error_px": 3.5089040223302046,
+      "final_error_px": 3.4572357963137135,
+      "post_processed_error_px": 3.2551991786162056,
+      "trigger_ratio": 0.5153125,
+      "tier3_ratio": 0.488125,
+      "boundary_rate": 0.3784375,
+      "reset_ratio": 0.4084375
+    }
+  ]
+}
