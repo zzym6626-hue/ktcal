@@ -13,3 +13,11 @@ log/
 
 # Rollout npz cache (regenerable via collect_ncc_rollout.py; keep only if <100MB)
 # checkpoint_ktcal_ncc_rollout/*.npz
+
+# Local KTCal environments and experiment artifacts
+.venv/
+local_run/
+artifacts/
+
+# Local KTCal environments and experiment artifacts
+.venv

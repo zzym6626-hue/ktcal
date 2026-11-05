@@ -1,0 +1,8 @@
+{
+  "checked": "2026-11-05",
+  "dataset": "SEET",
+  "author_readme_read": true,
+  "tonic_legacy_archive_url": "https://dl.dropboxusercontent.com/s/1hyer8egd8843t9/ThreeET_Eyetracking.zip?dl=0",
+  "archive_check_result": "DNS resolution timed out after 20 seconds outside sandbox; archive not downloaded",
+  "note": "Current local experiment uses already-downloaded AIS2024. No paper result is inferred from that substitution."
+}
