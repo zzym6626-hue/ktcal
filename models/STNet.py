@@ -1,14 +1,12 @@
 """
 STNet: Lightweight Spatio-Temporal Network (KTCal paper, Sec 3.2)
 
-A lightweight backbone that replaces TDTracker's heavy FFT + Mamba blocks with:
+A lightweight backbone with:
   - ITD (Implicit Temporal Dynamics): decoupled spatio-temporal convolution
         spatial conv (1, Ks, Ks) + temporal conv (3, 1, 1)
   - ETD (Explicit Temporal Dynamics): Bi-GRU over the temporal window
   - FC pupil-coordinate regression head (SA-SimDR heatmap form)
 
-Reference: paper Table 7 (Full STNet ~2.28M params, ~150M FLOPs) and
-review reply W6/W8 (decoupled conv + Bi-GRU are complementary).
 """
 import torch
 import torch.nn as nn
@@ -38,18 +36,25 @@ class SpatialDropout(nn.Module):
 
 
 class DecoupledSTBlock(nn.Module):
-    """One ITD stage: decoupled spatial (1,Ks,Ks) + temporal (3,1,1) convolution."""
+    """One ITD stage with configurable spatial support in the temporal convolution."""
 
-    def __init__(self, in_ch, out_ch, spatial_k, spatial_pad, pool=True, dropout=False):
+    def __init__(self, in_ch, out_ch, spatial_k, spatial_pad, pool=True,
+                 dropout=False, temporal_spatial_kernel=1):
         super().__init__()
+        if temporal_spatial_kernel not in (1, 3):
+            raise ValueError('temporal spatial kernel must be 1 or 3')
         self.spatial = nn.Sequential(
             nn.Conv3d(in_ch, out_ch, kernel_size=(1, spatial_k, spatial_k),
                       stride=(1, 1, 1), padding=(0, spatial_pad, spatial_pad)),
             nn.BatchNorm3d(out_ch),
             nn.ReLU(),
         )
+        temporal_pad = temporal_spatial_kernel // 2
         temporal_layers = [
-            nn.Conv3d(out_ch, out_ch, kernel_size=(3, 1, 1), padding=(1, 0, 0), bias=False),
+            nn.Conv3d(
+                out_ch, out_ch,
+                kernel_size=(3, temporal_spatial_kernel, temporal_spatial_kernel),
+                padding=(1, temporal_pad, temporal_pad), bias=False),
             nn.BatchNorm3d(out_ch),
             nn.ReLU(),
         ]
@@ -72,8 +77,8 @@ class STNet(nn.Module):
 
     The Bi-GRU produces a per-timestep hidden state (B, S, 256). We regress a
     coordinate heatmap at every timestep so the model stays compatible with the
-    existing SA-SimDR decode / metric pipeline. (Review reply W6 notes that a
-    single-shot variant can instead take BiGRU_out[:, -1, :]; see last_step().)
+    existing SA-SimDR decode / metric pipeline. A single-shot variant can
+    instead use the last-window prediction.
     """
 
     def __init__(self, args=None, hidden_size=128):
@@ -85,13 +90,27 @@ class STNet(nn.Module):
             raise ValueError('stnet_block3_kernel must be 5 or 7')
         self.unidirectional = bool(getattr(args, 'stnet_unidirectional', False)) \
             if args is not None else False
+        self.readout = getattr(args, 'stnet_readout', 'last') if args is not None else 'last'
+        if self.readout not in ('last', 'final_hidden', 'attention'):
+            raise ValueError('STNet readout must be last, final_hidden, or attention')
+        if self.readout == 'final_hidden' and self.unidirectional:
+            raise ValueError('final_hidden readout requires bidirectional GRU')
+        temporal_spatial_kernel = getattr(
+            args, 'stnet_temporal_spatial_kernel', 1) if args is not None else 1
+        if temporal_spatial_kernel not in (1, 3):
+            raise ValueError('temporal spatial kernel must be 1 or 3')
 
         # ITD: 3 decoupled spatio-temporal stages (32 -> 64 -> 128)
-        self.block1 = DecoupledSTBlock(2, 32, spatial_k=7, spatial_pad=3, pool=True)
-        self.block2 = DecoupledSTBlock(32, 64, spatial_k=5, spatial_pad=2, pool=True)
+        self.block1 = DecoupledSTBlock(
+            2, 32, spatial_k=7, spatial_pad=3, pool=True,
+            temporal_spatial_kernel=temporal_spatial_kernel)
+        self.block2 = DecoupledSTBlock(
+            32, 64, spatial_k=5, spatial_pad=2, pool=True,
+            temporal_spatial_kernel=temporal_spatial_kernel)
         self.block3 = DecoupledSTBlock(
             64, 128, spatial_k=block3_kernel, spatial_pad=block3_kernel // 2,
-            pool=False, dropout=True)
+            pool=False, dropout=True,
+            temporal_spatial_kernel=temporal_spatial_kernel)
 
         self.pool = nn.AdaptiveAvgPool3d((128, 4, 4))
         self.spatialdropout = SpatialDropout(0.5)
@@ -124,14 +143,36 @@ class STNet(nn.Module):
         x = self.spatialdropout(x)
         x = x.reshape(batch_size, seq_len, -1)
         x = self.layernorm(x)
-        x, _ = self.gru(x)                    # (B, S, 2*hidden)
+        x, hidden = self.gru(x)               # (B, S, 2*hidden)
+        if self.readout == 'final_hidden':
+            # The reverse output at S-1 only sees that frame. Its final state
+            # instead summarizes the entire (historical-only) window.
+            final = torch.cat((hidden[-2], hidden[-1]), dim=-1)
+            x = torch.cat((x[:, :-1], final.unsqueeze(1)), dim=1)
+        elif self.readout == 'attention':
+            # Parameter-free local temporal attention. The 11-frame support
+            # keeps FLOPs close to the fixed STNet budget while allowing each
+            # timestep to adaptively weight nearby GRU states.
+            radius = 5
+            length = x.shape[1]
+            offsets = torch.arange(-radius, radius + 1, device=x.device)
+            indices = (torch.arange(length, device=x.device).unsqueeze(1)
+                       + offsets).clamp(0, length - 1)
+            neighbors = x[:, indices]
+            scores = (x.unsqueeze(2) * neighbors).sum(-1) / (
+                x.shape[-1] ** 0.5)
+            x = (torch.softmax(scores, dim=-1).unsqueeze(-1)
+                 * neighbors).sum(2)
         return x
+
+    def forward_with_features(self, x):
+        """Return the GRU feature together with both SimDR heads."""
+        feat = self.extract_temporal(x)
+        return feat, self.fc_w(feat), self.fc_h(feat)
 
     def forward(self, x, y=None):
         feat = self.extract_temporal(x)
-        predict_w = self.fc_w(feat)
-        predict_h = self.fc_h(feat)
-        return predict_w, predict_h
+        return self.fc_w(feat), self.fc_h(feat)
 
     def last_step(self, x):
         """

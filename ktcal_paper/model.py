@@ -57,16 +57,27 @@ class PaperSTNet(nn.Module):
         if self.forward_head is not None:
             nn.init.constant_(self.forward_head.bias, .5)
 
-    def forward(self, frames, return_forward=False):
+    def encode(self, frames):
+        """Per-timestep 2048-d features before the recurrent stage."""
         if frames.ndim != 5 or frames.shape[2:] != (2, 60, 80) or frames.shape[1] < 1:
             raise ValueError('Expected nonempty (B,W,2,60,80) windows')
         b, w = frames.shape[:2]
         x = self.itd(frames.permute(0, 2, 1, 3, 4))
         x = x.permute(0, 2, 1, 3, 4).reshape(b*w, 128, *x.shape[-2:])
         x = self.spatial_pool(x).reshape(b, w, 2048)
-        x = self.dropout(self.norm(x))
+        return self.dropout(self.norm(x))
+
+    def forward(self, frames, return_forward=False, return_sequence=False):
+        if frames.ndim != 5 or frames.shape[2:] != (2, 60, 80) or frames.shape[1] < 1:
+            raise ValueError('Expected nonempty (B,W,2,60,80) windows')
+        b, w = frames.shape[:2]
+        x = self.encode(frames)
         if self.gru is not None:
             x, hidden = self.gru(x)
+        if return_sequence:
+            # Sequence training supervises every timestep; inference still
+            # reads the last step only, so no future frame enters a window.
+            return self.head(x)
         last = x[:, -1]
         if self.gru is not None and not self.deployed and self.readout == 'final_hidden':
             last = torch.cat((hidden[-2], hidden[-1]), dim=-1)

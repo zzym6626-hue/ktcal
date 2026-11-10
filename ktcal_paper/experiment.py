@@ -15,7 +15,9 @@ from torch.utils.data import DataLoader
 from .data import WindowDataset,load_manifest
 from .matching import PaperMatcher
 from .model import PaperSTNet
+from .stnet_sequence import RecordChunkDataset
 from .tracker import PaperTracker
+from .transfer import load_initialization
 
 
 def sha256(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -117,6 +119,8 @@ def train(manifest_path=None,output=None,resume=None,stop_after_epochs=None,init
     if unknown: raise ValueError(f'Unknown training options: {sorted(unknown)}')
     if resume and initialize_from: raise ValueError('Resume and initialize-from are mutually exclusive')
     initial=None
+    if resume and initialize_from:
+        raise ValueError('Resume and initialize-from are mutually exclusive')
     if resume:
         resume=Path(resume).resolve(); run=resume.parent
         state=torch.load(resume,map_location='cpu',weights_only=False)
@@ -287,10 +291,170 @@ def train(manifest_path=None,output=None,resume=None,stop_after_epochs=None,init
         for d in datasets: d.close()
 
 
-def load_deployed(checkpoint,device):
+SEQUENCE_DEFAULTS={'variant':'full','epochs':40,'patience':8,'chunk_window':32,
+    'batch_size':16,'lr':.002,'min_lr':.0002,'weight_decay':.0001,'match_weight':.3,
+    'val_stride':16,'seed':42,'threads':4,'device':'auto','scheduler':'cosine',
+    'readout':'last','purpose':'AIS2024-sequence-bidirectional','ncc_channels':16,
+    'temperature':.1}
+
+
+def train_sequence(manifest_path=None,output=None,resume=None,initialize_from=None,
+                   stop_after_epochs=None,**options):
+    """Train PaperSTNet on non-overlapping chunks with all timesteps supervised.
+
+    Inference still reads only the last step of a causal 16-frame window, so the
+    bidirectional GRU never sees a future frame. Chunks, loss and split follow
+    the sequence recipe that reached the strongest STNet-only validation error.
+    """
+    if resume:
+        resume=Path(resume).resolve(); run=resume.parent
+        state=torch.load(resume,map_location='cpu',weights_only=False)
+        if state.get('pipeline')!='sequence':
+            raise ValueError('Resume requires a sequence-training checkpoint')
+        config=state['config']
+        if any(v is not None and config.get(k)!=v for k,v in options.items()):
+            raise ValueError('Resume uses the saved sequence configuration; changed options need a new run')
+        path=Path(config['manifest']).resolve()
+        if sha256(path)!=state['manifest_sha256']:
+            raise ValueError('Dataset manifest changed since checkpoint')
+    else:
+        if manifest_path is None or output is None:
+            raise ValueError('New sequence run requires manifest and output')
+        path=Path(manifest_path).resolve(); run=Path(output).resolve()
+        config=dict(SEQUENCE_DEFAULTS); config.update({k:v for k,v in options.items() if v is not None})
+        if config['variant']!='full':
+            raise ValueError('Sequence training requires the full architecture')
+        if config['chunk_window']<2 or config['batch_size']<1 or config['epochs']<1 or config['patience']<1:
+            raise ValueError('Chunk window, batch size, epochs and patience must be positive')
+        if not 0<config['min_lr']<=config['lr'] or config['match_weight']<0:
+            raise ValueError('Require 0 < min_lr <= lr and a non-negative match weight')
+        if config['scheduler'] not in ('none','cosine') or config['readout'] not in ('last','final_hidden'):
+            raise ValueError('Unknown scheduler or readout')
+        config['manifest']=str(path)
+        state={'schema':1,'pipeline':'sequence','config':config,'manifest_sha256':sha256(path),
+               'phase':'sequence','epoch':0,'best_val':float('inf'),'no_improve':0,'history':[]}
+    initialization=None
+    device=configure(config['seed'],config['threads'],config['device'])
+    manifest=load_manifest(path)
+    train_data=RecordChunkDataset(path,'train',window=config['chunk_window'])
+    val_data=WindowDataset(path,'val',window=16,stride=config['val_stride'])
+    if not len(train_data) or not len(val_data):
+        raise ValueError('Train and validation splits must contain data')
+    train_loader=DataLoader(train_data,batch_size=config['batch_size'],shuffle=True,num_workers=0)
+    val_loader=DataLoader(val_data,batch_size=config['batch_size'],shuffle=False,num_workers=0)
+    model=PaperSTNet(deployed=False,variant=config['variant'],readout=config['readout']).to(device)
+    matcher=PaperMatcher(config['ncc_channels'],config['temperature']).to(device)
+    optimizer=torch.optim.AdamW(list(model.parameters())+list(matcher.parameters()),
+        lr=config['lr'],weight_decay=config['weight_decay'])
+    if state.get('epoch'):
+        model.load_state_dict(state['model_state']); matcher.load_state_dict(state['matcher_state'])
+        optimizer.load_state_dict(state['optimizer_state']); restore_rng(state['rng'])
+    elif initialize_from:
+        source=Path(initialize_from).resolve()
+        initialization={'checkpoint':str(source),'checkpoint_sha256':sha256(source),
+                        'report':load_initialization(model,source)}
+    if state['epoch']==0:
+        run.mkdir(parents=True,exist_ok=False)
+        config.update({'resolved_device':str(device),'dataset':manifest['dataset'],'bin_ms':manifest['bin_ms'],
+            'label_policy':manifest['label_policy'],'inference_mode':'bidirectional',
+            'train_chunks':len(train_data),'val_windows':len(val_data),
+            'coordinate_loss':'masked MSE in 80x60 pixel units over all valid timesteps',
+            'initialization':initialization,
+            'code_sha256':{p.name:sha256(p) for p in Path(__file__).parent.glob('*.py')},
+            'environment':{'python':platform.python_version(),'torch':torch.__version__,
+                'numpy':np.__version__,'platform':platform.platform(),'machine':platform.machine(),
+                'cuda_device':torch.cuda.get_device_name(device) if device.type=='cuda' else None}})
+        state['config']=config
+        write_json(run/'config.json',config); write_json(run/'split_manifest.json',manifest)
+        save_checkpoint(run/'last.pt',{**state,'model_state':model.state_dict(),
+            'matcher_state':matcher.state_dict(),'optimizer_state':optimizer.state_dict(),
+            'rng':rng_state(),'model_config':{'deployed':False,'variant':model.variant,'readout':model.readout}})
+
+    def checkpoint():
+        return {**state,'model_state':model.state_dict(),'matcher_state':matcher.state_dict(),
+            'optimizer_state':optimizer.state_dict(),'rng':rng_state(),
+            'model_config':{'deployed':False,'variant':model.variant,'readout':model.readout},
+            'parameters':{'stnet':sum(p.numel() for p in model.parameters()),
+                          'matcher':sum(p.numel() for p in matcher.parameters())}}
+
+    completed_this_call=0
+    try:
+        while state['epoch']<config['epochs'] and state['no_improve']<config['patience']:
+            started=time.perf_counter()
+            if config['scheduler']=='cosine':
+                progress=state['epoch']/max(1,config['epochs']-1)
+                rate=config['min_lr']+.5*(config['lr']-config['min_lr'])*(1+math.cos(math.pi*progress))
+                for group in optimizer.param_groups: group['lr']=rate
+            learning_rate=optimizer.param_groups[0]['lr']
+            model.train(); matcher.train()
+            totals={'coordinate':0.,'matching':0.}; samples=0
+            scale=torch.tensor([80.,60.],device=device)
+            for frames,labels in train_loader:
+                frames=frames.to(device); labels=labels.to(device)
+                valid=labels[...,3].bool()
+                count=int(valid.sum())
+                if count<1: continue
+                optimizer.zero_grad(set_to_none=True)
+                predicted=model(frames,return_sequence=True)
+                coordinate=((predicted-labels[...,:2])*scale).pow(2).sum(-1)
+                coordinate=coordinate.masked_fill(~valid,0.).sum()/count
+                loss=coordinate
+                matching=None
+                if config['match_weight']>0:
+                    matching=matcher.training_loss(frames,labels)
+                    loss=coordinate+config['match_weight']*matching
+                if not torch.isfinite(loss):
+                    raise RuntimeError('Non-finite sequence training loss')
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(list(model.parameters())+list(matcher.parameters()),
+                                               5.,error_if_nonfinite=True)
+                optimizer.step()
+                totals['coordinate']+=float(coordinate)*count
+                totals['matching']+=(float(matching) if matching is not None else 0.)*count
+                samples+=count
+            validation=validate(model,val_loader,device)
+            state['epoch']+=1
+            score=validation['primary']['mean_error_px']
+            improved=score<state['best_val']-1e-9
+            if improved: state['best_val']=score; state['no_improve']=0
+            else: state['no_improve']+=1
+            row={'phase':'sequence','epoch':state['epoch'],'learning_rate':learning_rate,
+                 'train':{k:v/max(1,samples) for k,v in totals.items()},'valid_timesteps':samples,
+                 'val':validation,'selected':improved,'seconds':time.perf_counter()-started}
+            state['history'].append(row)
+            save_checkpoint(run/'last.pt',checkpoint())
+            if improved: save_checkpoint(run/'bidirectional_best.pt',checkpoint())
+            write_json(run/'history.json',state['history'])
+            print(json.dumps(row),flush=True)
+            completed_this_call+=1
+            if stop_after_epochs is not None and completed_this_call>=stop_after_epochs:
+                return run/'last.pt'
+        best=run/'bidirectional_best.pt'
+        if not best.is_file():
+            raise RuntimeError('Sequence training finished without a selected checkpoint')
+        selected=torch.load(best,map_location='cpu',weights_only=False)
+        selected.update({'phase':'complete','training_completed':True,
+                         'completed_sequence_epochs':len(state['history'])})
+        save_checkpoint(best,selected)
+        state.update({'phase':'complete','training_completed':True})
+        save_checkpoint(run/'last.pt',checkpoint())
+        write_json(run/'training_summary.json',{'status':'complete','pipeline':'sequence',
+            'dataset':manifest['dataset'],'purpose':config['purpose'],
+            'inference_mode':'bidirectional','readout':config['readout'],
+            'train_chunks':len(train_data),'val_windows':len(val_data),
+            'epochs_completed':len(state['history']),'selected_epoch':selected['epoch'],
+            'best_validation':selected['best_val'],'initialization':initialization,
+            'checkpoint':best.name,'checkpoint_sha256':sha256(best),
+            'holdout_used_for_model_selection':False,'paper_results_reproduced':False})
+        return best
+    finally:
+        train_data.close(); val_data.close()
+
+
+def load_deployed(checkpoint,device,allow_partial=False):
     state=torch.load(checkpoint,map_location=device,weights_only=False)
     if state['config'].get('inference_mode')=='bidirectional':
-        if state.get('model_config',{}).get('deployed') or not state.get('training_completed'):
+        if state.get('model_config',{}).get('deployed') or (not state.get('training_completed') and not allow_partial):
             raise ValueError('Bidirectional evaluation requires a completed non-exported checkpoint')
     else:
         if not state.get('model_config',{}).get('deployed'):
@@ -305,9 +469,11 @@ def load_deployed(checkpoint,device):
 
 @torch.inference_mode()
 def evaluate(checkpoint,manifest_path,output,split='holdout',mode='both',device='auto',threads=4,
-             tau1=3.,tau2=5.,sigma=1.,realtime=False,max_frames=None):
+             tau1=3.,tau2=5.,sigma=1.,realtime=False,max_frames=None,q_pos=.1,q_vel=.5,
+             r_px=2.,capture='fine',min_psr=None,border_tier=3,allow_partial=False,
+             fusion_alpha=None,subpixel=False):
     device=configure(42,threads,device); path=Path(manifest_path).resolve()
-    manifest=load_manifest(path); model,matcher,state=load_deployed(checkpoint,device)
+    manifest=load_manifest(path); model,matcher,state=load_deployed(checkpoint,device,allow_partial)
     if sha256(path)!=state['manifest_sha256']:
         raise ValueError('Evaluation manifest differs from the training split')
     out=Path(output).resolve(); out.mkdir(parents=True,exist_ok=False)
@@ -317,11 +483,13 @@ def evaluate(checkpoint,manifest_path,output,split='holdout',mode='both',device=
     dummy=torch.zeros(1,16,2,60,80,device=device)
     for _ in range(3): model(dummy)
     if device.type=='cuda': torch.cuda.synchronize(device)
-    tracker=PaperTracker(model,matcher,device,tau1,tau2,sigma,manifest['bin_ms'],realtime)
+    tracker=PaperTracker(model,matcher,device,tau1,tau2,sigma,manifest['bin_ms'],realtime,
+        q_pos=q_pos,q_vel=q_vel,r_px=r_px,capture=capture,min_psr=min_psr,border_tier=border_tier,
+        fusion_alpha=fusion_alpha,subpixel=subpixel)
     for variant in modes:
         predicted=[]; targets=[]; retrospective=[]; record_stats=[]; all_states=[]
         with (out/f'{variant}_predictions.csv').open('w') as csvfile,h5py.File(path.parent/manifest['h5'],'r') as data:
-            writer=csv.writer(csvfile); writer.writerow(['recording','frame','x','y','target_x','target_y','state','valid','corrected_x','corrected_y'])
+            writer=csv.writer(csvfile); writer.writerow(['recording','frame','x','y','target_x','target_y','state','valid','corrected_x','corrected_y','tier'])
             for name in manifest['splits'][split]:
                 group=data[name]; count=len(group['frames'])
                 if max_frames is not None: count=min(count,max_frames)
@@ -347,10 +515,11 @@ def evaluate(checkpoint,manifest_path,output,split='holdout',mode='both',device=
                            'timing_mode':'paced' if realtime else 'as_fast_as_possible',
                            'stnet_calls':count,'latency_ms':float(np.mean(timings)),'trigger_ratio':1.}
                 truth=labels[:,:2]*scale
+                tiers=stats.pop('frame_tiers',None) or [1]*count
                 predicted.append(online[valid]); targets.append(truth[valid]); retrospective.append(corrected[valid]); all_states.append(labels[valid,2])
                 record_stats.append({'recording':name,'input_frames':count,'metrics':metrics(online[valid],truth[valid]),**stats})
                 for i in range(count):
-                    writer.writerow([name,i,*online[i],*truth[i],labels[i,2],bool(valid[i]),*corrected[i]])
+                    writer.writerow([name,i,*online[i],*truth[i],labels[i,2],bool(valid[i]),*corrected[i],tiers[i]])
                 print(f'Evaluated {variant} {name}: {count} frames, mean error {record_stats[-1]["metrics"]["mean_error_px"]:.3f}px',flush=True)
         y,t,corrected=np.concatenate(predicted),np.concatenate(targets),np.concatenate(retrospective)
         latencies=np.concatenate([r['frame_latency_ms'] for r in record_stats])
@@ -367,6 +536,10 @@ def evaluate(checkpoint,manifest_path,output,split='holdout',mode='both',device=
             'parameters_stnet':sum(p.numel() for p in model.parameters()),
             'parameters_matcher':sum(p.numel() for p in matcher.parameters()) if variant=='ktcal' else 0,
             'tau1':tau1,'tau2':tau2,'sigma':sigma,'bin_ms':manifest['bin_ms'],
+            'q_pos':q_pos,'q_vel':q_vel,'r_px':r_px,'capture':capture,
+            'min_psr':min_psr,'border_tier':border_tier,'fusion_alpha':fusion_alpha,
+            'subpixel':bool(subpixel),
+            'checkpoint_finalized':bool(state.get('training_completed')),
             'timing_mode':'paced' if realtime else 'as_fast_as_possible',
             'frame_deadline_misses':sum(r['frame_deadline_misses'] for r in record_stats)}
         rows.append(row)
@@ -380,7 +553,10 @@ def evaluate(checkpoint,manifest_path,output,split='holdout',mode='both',device=
             'Online outputs are immutable; retrospective correction is scored separately.',
             'Online emission, correction completion and total wall time are separate measurements.',
             'Literal 30x25/35x30 patch geometry limits epsilon to sqrt(12.5) px.',
-            'No FLOPs or RTX3090 latency claims are inferred from this run.'],
+            'Bidirectional inference only revisits the causal 16-frame history window.',
+            'No FLOPs or RTX3090 latency claims are inferred from this run.']
+            + ([] if state.get('training_completed') else
+               ['This checkpoint was not marked complete; weights are a best-so-far snapshot.']),
         'paper_results_reproduced':False}
     write_json(out/'report.json',report)
     with (out/'metrics.csv').open('w') as f:
