@@ -60,6 +60,8 @@ def validate_validation_h5(path):
 
 def load_stnet_checkpoint(path, device):
     path = Path(path).resolve()
+    if not path.is_file():
+        raise FileNotFoundError(f'STNet checkpoint not found: {path}')
     checkpoint = torch.load(path, map_location='cpu', weights_only=False)
     if not isinstance(checkpoint, dict) or 'model_state_dict' not in checkpoint:
         raise ValueError('STNet checkpoint must contain model_state_dict')
@@ -87,6 +89,8 @@ def load_stnet_checkpoint(path, device):
 
 def load_matcher_checkpoint(path, device):
     path = Path(path).resolve()
+    if not path.is_file():
+        raise FileNotFoundError(f'Matcher checkpoint not found: {path}')
     checkpoint = torch.load(path, map_location='cpu', weights_only=False)
     if not isinstance(checkpoint, dict) or 'matcher_state' not in checkpoint:
         raise ValueError('Matcher checkpoint must contain matcher_state')
@@ -191,6 +195,11 @@ def _aggregate_tracker_stats(rows, frames):
     return result
 
 
+def _synchronize(device):
+    if device.type == 'cuda':
+        torch.cuda.synchronize(device)
+
+
 @torch.inference_mode()
 def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
                           *, batch_size=4, threads=4, device='cuda',
@@ -224,6 +233,10 @@ def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
     corrected_sequences = []
     label_sequences = []
     tracker_stats = []
+    stnet_ms = 0.
+    tracking_ms = 0.
+    stnet_filter_ms = 0.
+    ktcal_filter_ms = 0.
     with h5py.File(h5_path, 'r') as handle:
         frames = handle['frames']
         labels = handle[label_key]
@@ -231,10 +244,26 @@ def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
             stop = min(start + batch_size, frames_shape[0])
             raw = frames[start:stop].astype(np.float32)
             frame_batch = torch.from_numpy(raw)
+            label_batch = labels[start:stop, :, :2].astype(np.float32)
+            if start == 0:
+                # Warm both paths on the same input without including setup in throughput.
+                warm_px = precompute_global_predictions(
+                    stnet, frame_batch, resolved_device, input_divisor,
+                    decode=stnet_decode)
+                PaperTracker(
+                    stnet, matcher, device=resolved_device, capture='fine',
+                    subpixel=True, fusion_alpha=fusion_alpha,
+                    max_prediction_variance_px2=max_prediction_variance_px2,
+                    max_consecutive_prediction_skips=max_consecutive_prediction_skips,
+                ).track(frame_batch[0], global_predictions=warm_px[0])
+            _synchronize(resolved_device)
+            started = time.perf_counter()
             global_px = precompute_global_predictions(
                 stnet, frame_batch, resolved_device, input_divisor,
                 decode=stnet_decode)
-            label_batch = labels[start:stop, :, :2].astype(np.float32)
+            _synchronize(resolved_device)
+            stnet_ms += (time.perf_counter() - started) * 1000
+            started = time.perf_counter()
             for index in range(stop - start):
                 tracker = PaperTracker(
                     stnet, matcher, device=resolved_device, capture='fine',
@@ -249,6 +278,8 @@ def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
                     corrected_px.astype(np.float32) / SCALE)
                 label_sequences.append(label_batch[index])
                 tracker_stats.append(stats)
+            _synchronize(resolved_device)
+            tracking_ms += (time.perf_counter() - started) * 1000
 
     metrics = {
         'stnet_only': summarize_sequence_predictions(
@@ -260,12 +291,29 @@ def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
     }
     if offline_filter != 'none':
         window = int(offline_filter[2:])
+        started = time.perf_counter()
+        smoothed_stnet = moving_average_sequence_predictions(
+            stnet_sequences, window)
+        stnet_filter_ms = (time.perf_counter() - started) * 1000
+        started = time.perf_counter()
+        smoothed_ktcal = moving_average_sequence_predictions(
+            online_sequences, window)
+        ktcal_filter_ms = (time.perf_counter() - started) * 1000
         metrics['stnet_offline'] = summarize_sequence_predictions(
-            moving_average_sequence_predictions(stnet_sequences, window),
-            label_sequences)
+            smoothed_stnet, label_sequences)
         metrics['ktcal_offline'] = summarize_sequence_predictions(
-            moving_average_sequence_predictions(online_sequences, window),
-            label_sequences)
+            smoothed_ktcal, label_sequences)
+    total_frames = frames_shape[0] * frames_shape[1]
+    ms_per_frame = {
+        'stnet_only': stnet_ms / total_frames,
+        'ktcal_online': (stnet_ms + tracking_ms) / total_frames,
+        'ktcal_retrospective': (stnet_ms + tracking_ms) / total_frames,
+    }
+    if offline_filter != 'none':
+        ms_per_frame['stnet_offline'] = (
+            stnet_ms + stnet_filter_ms) / total_frames
+        ms_per_frame['ktcal_offline'] = (
+            stnet_ms + tracking_ms + ktcal_filter_ms) / total_frames
     report = {
         'schema': 1,
         'protocol': '3ET test_aug full-100-frame bidirectional STNet + KTCAL',
@@ -288,8 +336,23 @@ def evaluate_combined_3et(h5_path, stnet_checkpoint, matcher_checkpoint, output,
                      'max_prediction_variance_px2': max_prediction_variance_px2,
                      'max_consecutive_prediction_skips': max_consecutive_prediction_skips},
         'metrics': metrics,
+        'latency': {
+            'mode': 'offline_batch_throughput',
+            'frames': total_frames,
+            'device': str(resolved_device),
+            'batch_size': batch_size,
+            'threads': threads,
+            'warmup': 'first_batch_stnet_and_first_sequence_tracker',
+            'scope': 'model forward, transfer, decode, tracking, optional filtering; '
+                     'excludes HDF5 reads, model loading, metrics and report I/O',
+            'stnet_total_ms': stnet_ms,
+            'ktcal_tracking_total_ms': tracking_ms,
+            'stnet_filter_total_ms': stnet_filter_ms,
+            'ktcal_filter_total_ms': ktcal_filter_ms,
+            'ms_per_frame': ms_per_frame,
+        },
         'tracker_stats': _aggregate_tracker_stats(
-            tracker_stats, frames_shape[0] * frames_shape[1]),
+            tracker_stats, total_frames),
         'latency_comparable': False,
         'final_holdout_used': False,
     }

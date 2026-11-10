@@ -18,9 +18,10 @@ def build_parser():
     parser.add_argument('--readout', choices=('last', 'final_hidden', 'attention'),
                         default='last',
                         help='last, final_hidden, or parameter-free temporal attention')
-    parser.add_argument('--selection-metric', choices=('hard_argmax', 'offline_soft_ma11'),
-                        default='hard_argmax',
-                        help='offline_soft_ma11: choose best by per-record soft decode + MA11 P3')
+    parser.add_argument('--selection-metric',
+                        choices=('hard_argmax', 'soft_ma11', 'offline_soft_ma11'),
+                        metavar='{hard_argmax,soft_ma11}', default='hard_argmax',
+                        help='soft_ma11: select by per-record soft decode + MA11 P3')
     parser.add_argument('--persistent-boost', type=float, default=0.,
                         help='Train-only weight added to runs of >=5 frames with >=3px error')
     parser.add_argument('--sparse-boost', type=float, default=0.,
@@ -48,6 +49,8 @@ def build_parser():
 
 def main():
     args = vars(build_parser().parse_args())
+    if args['selection_metric'] == 'soft_ma11':
+        args['selection_metric'] = 'offline_soft_ma11'
     print(train_stnet_3et(**args), flush=True)
 
 

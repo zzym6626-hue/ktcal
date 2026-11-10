@@ -2,6 +2,7 @@ import json
 import hashlib
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -222,6 +223,16 @@ class STNetSequenceTests(unittest.TestCase):
         self.assertFalse(args.causal_last_step)
         self.assertEqual(args.train_stride, 8)
         self.assertEqual(args.readout, 'last')
+
+    def test_3et_training_cli_maps_short_selection_name_to_existing_metric(self):
+        from scripts.train_stnet_3et import main
+
+        args = ['train_stnet_3et', '--train-h5', 'train.h5', '--val-h5',
+                'test_aug.h5', '--output', 'run', '--selection-metric', 'soft_ma11']
+        with mock.patch('sys.argv', args), \
+             mock.patch('scripts.train_stnet_3et.train_stnet_3et', return_value='ok') as train:
+            main()
+        self.assertEqual(train.call_args.kwargs['selection_metric'], 'offline_soft_ma11')
 
     def test_3et_attention_readout_is_offline_only(self):
         args = build_3et_train_parser().parse_args([

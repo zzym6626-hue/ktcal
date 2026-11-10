@@ -1,3 +1,6 @@
+import contextlib
+import io
+import json
 import tempfile
 import unittest
 from unittest import mock
@@ -78,6 +81,71 @@ class Combined3ETTests(unittest.TestCase):
             self.assertEqual(
                 report['metrics']['ktcal_offline']['frames'], 3)
             self.assertFalse(report['final_holdout_used'])
+            latency = report['latency']
+            self.assertEqual(latency['mode'], 'offline_batch_throughput')
+            self.assertEqual(latency['frames'], 3)
+            self.assertEqual(latency['batch_size'], 4)
+            self.assertGreater(latency['stnet_total_ms'], 0)
+            self.assertGreater(latency['ktcal_tracking_total_ms'], 0)
+            self.assertAlmostEqual(
+                latency['ms_per_frame']['stnet_only'],
+                latency['stnet_total_ms'] / 3)
+            self.assertAlmostEqual(
+                latency['ms_per_frame']['ktcal_online'],
+                (latency['stnet_total_ms'] + latency['ktcal_tracking_total_ms']) / 3)
+            self.assertGreaterEqual(
+                latency['ms_per_frame']['ktcal_offline'],
+                latency['ms_per_frame']['ktcal_online'])
+            for key in ('stnet_only', 'ktcal_offline'):
+                for tolerance in ('p3', 'p5', 'p10'):
+                    self.assertIn(tolerance, report['metrics'][key])
+            self.assertEqual(
+                json.loads((root / 'report.json').read_text())['latency']['frames'], 3)
+
+    def test_combined_cli_prints_offline_accuracy_and_latency(self):
+        from scripts.evaluate_3et_combined_ktcal import main
+
+        report = {
+            'metrics': {
+                'stnet_only': {'frames': 100, 'mean_error_px': 1.9,
+                               'p3': .86, 'p5': .95, 'p10': .99},
+                'ktcal_offline': {'frames': 100, 'mean_error_px': 1.5,
+                                  'p3': .91, 'p5': .97, 'p10': .995},
+            },
+            'latency': {'mode': 'offline_batch_throughput',
+                        'ms_per_frame': {'stnet_only': 1.9,
+                                         'ktcal_offline': 2.5}},
+        }
+        stdout = io.StringIO()
+        argv = ['evaluate_3et_combined_ktcal', '--h5', 'test_aug.h5',
+                '--stnet-checkpoint', 'stnet.pt', '--matcher-checkpoint',
+                'matcher.pt', '--output', 'report.json']
+        with mock.patch('sys.argv', argv), \
+             mock.patch('scripts.evaluate_3et_combined_ktcal.evaluate_combined_3et',
+                        return_value=report), contextlib.redirect_stdout(stdout):
+            main()
+        printed = stdout.getvalue()
+        self.assertIn('P3', printed)
+        self.assertIn('P5', printed)
+        self.assertIn('P10', printed)
+        self.assertIn('91.00%', printed)
+        self.assertIn('2.500', printed)
+        self.assertIn('ms/frame', printed)
+        self.assertIn('100-frame', printed)
+        self.assertNotIn('offline', printed.lower())
+
+    def test_combined_cli_accepts_smoothing_and_keeps_old_option(self):
+        from scripts.evaluate_3et_combined_ktcal import build_parser
+
+        args = ['--h5', 'test_aug.h5', '--stnet-checkpoint', 'stnet.pt',
+                '--matcher-checkpoint', 'matcher.pt', '--output', 'report.json']
+        self.assertEqual(build_parser().parse_args(args + ['--smoothing', 'ma11']).offline_filter,
+                         'ma11')
+        self.assertEqual(build_parser().parse_args(args + ['--offline-filter', 'ma11']).offline_filter,
+                         'ma11')
+        with contextlib.redirect_stdout(io.StringIO()) as stdout:
+            build_parser().print_help()
+        self.assertNotIn('--offline-filter', stdout.getvalue())
 
     def test_online_cli_is_validation_only_with_default_gate(self):
         from scripts.evaluate_3et_causal_online import build_parser
@@ -270,6 +338,14 @@ class Combined3ETTests(unittest.TestCase):
             self.assertEqual(loaded_stnet.readout, 'last')
             self.assertEqual(matcher_config['ncc_channels'], 16)
             self.assertEqual(matcher_config['selected_epoch'], 5)
+
+    def test_missing_checkpoints_explain_which_weight_is_needed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with self.assertRaisesRegex(FileNotFoundError, 'STNet checkpoint not found'):
+                load_stnet_checkpoint(root / 'stnet.pt', torch.device('cpu'))
+            with self.assertRaisesRegex(FileNotFoundError, 'Matcher checkpoint not found'):
+                load_matcher_checkpoint(root / 'matcher.pt', torch.device('cpu'))
 
     def test_checkpoint_loader_uses_opt_in_final_hidden_readout(self):
         with tempfile.TemporaryDirectory() as directory:
