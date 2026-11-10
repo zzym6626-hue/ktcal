@@ -5,8 +5,12 @@
 /checkpoint_ktcal_*/
 *.pth
 *.pt
+*.rknn
+*.bin
 *.npz
 *.csv
+/hardware/rv1106/ktcal_fast_test
+/hardware/rv1106/ktcal_rv1106
 /log/
 
 # Personal notes and local tools

@@ -65,5 +65,6 @@ python -m scripts.evaluate_3et_combined_ktcal \
 - `ktcal_paper/model.py`、`matching.py`、`tracker.py`：KTCAL 网络、模板匹配及门控/卡尔曼跟踪。
 - `ktcal_paper/combined_3et.py`、`official_holdout.py`：验证与留出集评估。
 - `scripts/`：训练、评估及诊断入口；`tests/ktcal_paper/`：单元/合成数据测试。
+- `hardware/rv1106/`：论文 RV1106 CPU 快路径＋可选 RKNN NPU 接口、导出脚本及构建说明；未附 SDK、板端模型或硬件指标证明。
 
 权重和预处理数据不随代码分发，克隆后无法直接得到本文已有实验数值；本仓库不声称 P3 已达到 91%。
