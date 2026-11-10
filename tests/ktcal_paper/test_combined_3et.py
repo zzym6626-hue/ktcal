@@ -27,6 +27,28 @@ from models.STNet import STNet
 
 
 class Combined3ETTests(unittest.TestCase):
+    def test_published_3et_weights_load_without_training_or_teacher_state(self):
+        root = Path(__file__).resolve().parents[2] / 'weights' / '3et'
+        student_path = root / 'stnet_best.pt'
+        matcher_path = root / 'matcher_best.pt'
+        model, config, divisor = load_stnet_checkpoint(
+            student_path, torch.device('cpu'))
+        matcher, _ = load_matcher_checkpoint(matcher_path, torch.device('cpu'))
+        self.assertEqual(config['window'], 100)
+        self.assertEqual(config['readout'], 'attention')
+        self.assertEqual(divisor, 1.)
+        self.assertIsInstance(matcher, PaperMatcher)
+        self.assertEqual(set(torch.load(student_path, map_location='cpu',
+                                        weights_only=False)),
+                         {'schema', 'model_state_dict', 'config', 'best_epoch'})
+        self.assertEqual(set(torch.load(matcher_path, map_location='cpu',
+                                        weights_only=False)),
+                         {'schema', 'matcher_state', 'config', 'matcher_finetune'})
+        with torch.inference_mode():
+            logits_x, logits_y = model(torch.zeros((1, 2, 2, 60, 80)))
+        self.assertEqual(logits_x.shape, (1, 2, 80))
+        self.assertEqual(logits_y.shape, (1, 2, 60))
+
     def test_moving_average_filters_each_sequence_with_edge_padding(self):
         values = np.array([
             [0., 0.],
