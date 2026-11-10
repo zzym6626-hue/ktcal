@@ -26,4 +26,4 @@ make -C hardware/rv1106 board CXX=arm-linux-gnueabihf-g++ \
   > predictions.csv
 ```
 
-板端使用硬峰值匹配，与 Python 评测路径不完全相同。`tick_ms` 不包含文件读取和后台异步计算；尚未验证 Conv3D/GRU 到 RV1106 的模型转换、板端精度、端到端延迟及功耗。
+
