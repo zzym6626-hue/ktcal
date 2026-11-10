@@ -12,6 +12,8 @@ pip install -r requirements-ktcal.txt
 
 ### Dataset
 
+3ET+ 2025: [official dataset](https://www.kaggle.com/competitions/event-based-eye-tracking-cvpr-2025/data) · [processed 100-frame data (TDTracker, Baidu; code: hsft)](https://pan.baidu.com/s/11-zaux8WKvGqIOBQuUlK3g?pwd=hsft).
+
 Place the 3ET+2025 `test_aug.h5` in `data/3et/`; add `train_aug.h5` if training. The two inference checkpoints are in `weights/3et/`. Dataset files are not included. Keep `test_200_200.h5` as the final holdout; do not use it for training or model selection.
 
 ### Usage
