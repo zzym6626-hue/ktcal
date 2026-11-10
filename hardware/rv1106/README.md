@@ -5,7 +5,7 @@
 ### 模型与输入
 
 - Matcher 可由仓库权重 `weights/3et/matcher_best.pt` 导出。
-- STNet **必须另行训练** `window=16, causal_last_step=true` 的检查点；仓库发布的 `weights/3et/stnet_best.pt` 是 100 帧模型，不能直接用于板端导出。导出的 ONNX 输入为 `[1,16,2,60,80]`，输出为最后一帧的 `x[80]`、`y[60]` logits。
+- STNet 板端示例需要自行提供 `window=16, causal_last_step=true` 的检查点。导出的 ONNX 输入为 `[1,16,2,60,80]`，输出为最后一帧的 `x[80]`、`y[60]` logits。
 - 输入文件是连续的小端 `float32` 帧，每帧按 `2×60×80` CHW 排布。ONNX 导出器已封装训练时的输入归一化，因此示例中的运行时除数为 `1.0`。
 
 ### 验证与运行
