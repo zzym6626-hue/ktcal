@@ -1,0 +1,37 @@
+{
+  "expected_report_sha256": "02e30b984683cc9939d64faf75ef7ec451ae59e928c1a116cc44853be6962221",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "stnet_sha256": "879c4434fc31df7bd6e171633afa441edf62bc716fc37705ef0257f8ebabb691",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "joint_targets_required": false,
+  "independent_metrics": {
+    "frames": 9300,
+    "mean_error_px": 1.6144743668816903,
+    "median_error_px": 1.224597959823999,
+    "p1": 0.3735483870967742,
+    "p3": 0.9110752688172044,
+    "p5": 0.964516129032258,
+    "p10": 0.9924731182795699,
+    "p15": 0.9970967741935484
+  },
+  "tracker_stats": {
+    "tier1": 5648,
+    "tier2": 27,
+    "tier3": 3625,
+    "fusion_calls": 4,
+    "small_fusion_calls": 0,
+    "medium_rollbacks": 23,
+    "medium_refinements": 4,
+    "border_peaks": 490,
+    "frames": 9300,
+    "stnet_requests": 3652,
+    "global_predictions_precomputed": 9300
+  },
+  "low_global_invariance_max_error_px": 0.0,
+  "independent_torch_decoder": true,
+  "independent_pixel_metrics": true,
+  "full_9300_frames": true,
+  "final_holdout_used": false,
+  "labels_used_for_inference": false,
+  "passed": true
+}

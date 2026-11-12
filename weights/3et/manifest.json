@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "stnet": {
+    "path": "weights/3et/stnet_best.pt",
+    "sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+    "source_checkpoint_sha256": "879c4434fc31df7bd6e171633afa441edf62bc716fc37705ef0257f8ebabb691",
+    "tensor_values_preserved": true,
+    "format": "inference_only",
+    "architecture": {
+      "dataset": "3ET+2025",
+      "window": 100,
+      "readout": "attention",
+      "temporal_variant": "dense",
+      "temporal_spatial_kernel": 1,
+      "block3_kernel": 5,
+      "unidirectional": false,
+      "input_divisor": 1.0,
+      "preprocessing": "raw_event_counts"
+    }
+  },
+  "matcher": {
+    "path": "weights/3et/matcher_best.pt",
+    "sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f"
+  },
+  "validation_h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e"
+}

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "879c4434fc31df7bd6e171633afa441edf62bc716fc37705ef0257f8ebabb691",
+  "release_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "parameter_and_buffer_count": 57,
+  "tensor_values_preserved": true,
+  "input_divisor_preserved": true,
+  "cpu_100_frame_10_view_predictions_max_difference_px": 0.0,
+  "prediction_equivalence_passed": true,
+  "source_reference_report_sha256": "02e30b984683cc9939d64faf75ef7ec451ae59e928c1a116cc44853be6962221",
+  "source_independent_verification_passed": true,
+  "packaged_cuda_recheck_completed": false,
+  "packaged_cuda_recheck_limitation": "SSH disconnected during the second run; host then refused connections. Source-checkpoint release-code GPU run and independent verification completed before packaging; inference parameters and 100-frame ten-view CPU predictions are identical."
+}
