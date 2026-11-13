@@ -68,15 +68,61 @@ def load_stnet_checkpoint(path, device):
     config = dict(checkpoint.get('config', {}))
     if 'best_epoch' in checkpoint:
         config['best_epoch'] = checkpoint['best_epoch']
+    try:
+        flip_axis_px = float(config.get('flip_axis_px', 79.))
+    except (TypeError, ValueError) as error:
+        raise ValueError('STNet flip_axis_px must be finite and within [79, 80]') from error
+    if not np.isfinite(flip_axis_px) or not 79. <= flip_axis_px <= 80.:
+        raise ValueError('STNet flip_axis_px must be finite and within [79, 80]')
     args = SimpleNamespace(
         stnet_block3_kernel=int(config.get('block3_kernel', 5)),
         stnet_unidirectional=bool(config.get('unidirectional', False)),
         stnet_decode='argmax',
         stnet_readout=config.get('readout', 'last'),
+        stnet_flip_axis_px=flip_axis_px,
         stnet_temporal_spatial_kernel=int(
             config.get('temporal_spatial_kernel', 1)),
     )
-    model = STNet(args)
+    if config.get('temporal_mode') == 'causal_streaming':
+        from models.streaming_stnet import StreamingSTNet
+        if config.get('spatial_localizer') and config.get('current_readout'):
+            raise ValueError('Spatial localization and current readout are mutually exclusive')
+        if config.get('learned_initial_state') and not config.get('current_readout'):
+            raise ValueError('Learned initial state requires current readout')
+        if config.get('raw_current_readout') and not config.get('current_readout'):
+            raise ValueError('Raw current readout requires current readout')
+        if config.get('raw_current_readout') and config.get('learned_initial_state'):
+            raise ValueError('Raw current readout and learned initial state are mutually exclusive')
+        if config.get('memory_readout') and not config.get('current_readout'):
+            raise ValueError('Memory readout requires current readout')
+        if config.get('memory_readout') and (config.get('raw_current_readout') or config.get('learned_initial_state')):
+            raise ValueError('Memory readout and other auxiliary architectures are mutually exclusive')
+        if config.get('memory_readout', False):
+            from models.memory_readout_streaming_stnet import MemoryReadoutStreamingSTNet
+            model = MemoryReadoutStreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)),
+                                               memory_window=config.get('memory_window', 8))
+        elif config.get('raw_current_readout', False):
+            from models.raw_current_streaming_stnet import RawCurrentStreamingSTNet
+            model = RawCurrentStreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)))
+        elif config.get('learned_initial_state', False):
+            from models.initialized_streaming_stnet import InitializedCurrentReadoutStreamingSTNet
+            model = InitializedCurrentReadoutStreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)))
+        elif config.get('current_readout', False):
+            from models.current_readout_streaming_stnet import CurrentReadoutStreamingSTNet
+            model = CurrentReadoutStreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)))
+        elif config.get('spatial_localizer', False):
+            from models.localization_streaming_stnet import LocalizationStreamingSTNet
+            model = LocalizationStreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)))
+        else:
+            model = StreamingSTNet(args, hidden_size=int(config.get('hidden_size', 256)))
+    else:
+        if config.get('memory_readout'):
+            raise ValueError('Memory readout requires causal streaming')
+        if config.get('raw_current_readout'):
+            raise ValueError('Raw current readout requires causal streaming')
+        if config.get('learned_initial_state'):
+            raise ValueError('Learned initial state requires causal streaming')
+        model = STNet(args)
     try:
         model.load_state_dict(checkpoint['model_state_dict'], strict=True)
     except RuntimeError as error:

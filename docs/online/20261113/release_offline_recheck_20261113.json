@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "protocol": "3ET test_aug full-100-frame STNet + KTCAL",
+  "config": {
+    "h5": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/test_aug.h5",
+    "stnet": "weights/3et/stnet_best.pt",
+    "matcher": "weights/3et/matcher_best.pt",
+    "output": "local_run/release_offline_recheck_20261113.json",
+    "device": "cuda",
+    "batch_size": 1,
+    "track_batch": 1,
+    "repeats": 2,
+    "views": "0:0:0,0:0:1,-2:0:0,-2:0:1,2:0:0,2:0:1,0:-2:0,0:-2:1,0:2:0,0:2:1",
+    "temperature": 0.65,
+    "ensemble": "median",
+    "filter": "ma7",
+    "search_size": "37x32",
+    "confidence": 0.28,
+    "min_psr": 2.55,
+    "q_pos": 0.05,
+    "q_vel": 0.2,
+    "r_px": 32.0,
+    "fusion_alpha": 0.75,
+    "tolerance": 1.0,
+    "no_graph": false,
+    "medium_policy": "state",
+    "template_refresh": 0,
+    "reset_velocity_scale": 1.0,
+    "tau1": 3.0,
+    "tau2": 5.0
+  },
+  "stnet_config": {
+    "dataset": "3ET+2025",
+    "window": 100,
+    "readout": "attention",
+    "temporal_variant": "dense",
+    "temporal_spatial_kernel": 1,
+    "block3_kernel": 5,
+    "unidirectional": false,
+    "input_divisor": 1.0,
+    "preprocessing": "raw_event_counts",
+    "best_epoch": 0
+  },
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "stnet_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "metrics": {
+    "stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.629179103560678,
+      "median_error_px": 1.1901905692255963,
+      "p1": 0.38268817204301075,
+      "p3": 0.9031182795698924,
+      "p5": 0.9618279569892473,
+      "p10": 0.9924731182795699,
+      "p15": 0.9970967741935484
+    },
+    "ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.614474379009159,
+      "median_error_px": 1.224597088598506,
+      "p1": 0.3735483870967742,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699,
+      "p15": 0.9970967741935484
+    }
+  },
+  "tracker_stats": {
+    "tier1": 5648,
+    "tier2": 27,
+    "tier3": 3625,
+    "fusion_calls": 4,
+    "small_fusion_calls": 0,
+    "medium_rollbacks": 23,
+    "medium_refinements": 4,
+    "border_peaks": 490,
+    "frames": 9300,
+    "stnet_requests": 3652,
+    "global_predictions_precomputed": 9300
+  },
+  "latency": [
+    {
+      "stnet_ms": 3410.1532828062773,
+      "stnet_filtered_ms": 3414.758563041687,
+      "total_ms": 15179.390946403146,
+      "ms_per_frame": 1.6321925748820587,
+      "metrics": {
+        "stnet": {
+          "frames": 9300,
+          "mean_error_px": 1.629179103560678,
+          "median_error_px": 1.1901905692255963,
+          "p1": 0.38268817204301075,
+          "p3": 0.9031182795698924,
+          "p5": 0.9618279569892473,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        },
+        "ktcal": {
+          "frames": 9300,
+          "mean_error_px": 1.614474379009159,
+          "median_error_px": 1.224597088598506,
+          "p1": 0.3735483870967742,
+          "p3": 0.9110752688172044,
+          "p5": 0.964516129032258,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        }
+      },
+      "tracker_stats": {
+        "tier1": 5648,
+        "tier2": 27,
+        "tier3": 3625,
+        "fusion_calls": 4,
+        "small_fusion_calls": 0,
+        "medium_rollbacks": 23,
+        "medium_refinements": 4,
+        "border_peaks": 490,
+        "frames": 9300,
+        "stnet_requests": 3652,
+        "global_predictions_precomputed": 9300
+      }
+    },
+    {
+      "stnet_ms": 3717.0725390315056,
+      "stnet_filtered_ms": 3721.674395725131,
+      "total_ms": 16744.26863156259,
+      "ms_per_frame": 1.8004589926411387,
+      "metrics": {
+        "stnet": {
+          "frames": 9300,
+          "mean_error_px": 1.629179103560678,
+          "median_error_px": 1.1901905692255963,
+          "p1": 0.38268817204301075,
+          "p3": 0.9031182795698924,
+          "p5": 0.9618279569892473,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        },
+        "ktcal": {
+          "frames": 9300,
+          "mean_error_px": 1.614474379009159,
+          "median_error_px": 1.224597088598506,
+          "p1": 0.3735483870967742,
+          "p3": 0.9110752688172044,
+          "p5": 0.964516129032258,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        }
+      },
+      "tracker_stats": {
+        "tier1": 5648,
+        "tier2": 27,
+        "tier3": 3625,
+        "fusion_calls": 4,
+        "small_fusion_calls": 0,
+        "medium_rollbacks": 23,
+        "medium_refinements": 4,
+        "border_peaks": 490,
+        "frames": 9300,
+        "stnet_requests": 3652,
+        "global_predictions_precomputed": 9300
+      }
+    }
+  ],
+  "median_ms_per_frame": 1.7163257837615986,
+  "latency_scope": "warm H2D + all STNet views + soft decode + matching + KF + D2H + record filter; excludes disk/model loading/scoring/graph capture",
+  "validation_selected": true,
+  "final_holdout_used": false,
+  "labels_used_for_inference": false,
+  "environment": {
+    "torch": "2.1.0+cu121",
+    "numpy": "1.24.1",
+    "gpu": "NVIDIA GeForce RTX 3090"
+  }
+}

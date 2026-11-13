@@ -19,7 +19,7 @@ def build_parser():
                         default='last',
                         help='last, final_hidden, or parameter-free temporal attention')
     parser.add_argument('--selection-metric',
-                        choices=('hard_argmax', 'soft_ma11', 'offline_soft_ma11'),
+                        choices=('hard_argmax', 'soft_ma11', 'offline_soft_ma11', 'causal_soft'),
                         metavar='{hard_argmax,soft_ma11}', default='hard_argmax',
                         help='soft_ma11: select by per-record soft decode + MA11 P3')
     parser.add_argument('--persistent-boost', type=float, default=0.,
@@ -30,11 +30,17 @@ def build_parser():
                         help='Train and validate current-frame predictions using historical windows')
     parser.add_argument('--train-stride', type=int, default=8,
                         help='Target-frame stride for causal training; validation always uses stride 1')
+    parser.add_argument('--history-stride', type=int, default=1,
+                        help='Temporal spacing of frames inside a causal window')
+    parser.add_argument('--preload-frames', action='store_true',
+                        help='Cache HDF5 in RAM for repeated random historical-window reads')
     parser.add_argument('--batch-size', type=int, default=8)
     parser.add_argument('--lr', type=float, default=2e-4)
     parser.add_argument('--min-lr', type=float, default=2e-5)
     parser.add_argument('--weight-decay', type=float, default=1e-4)
     parser.add_argument('--sigma', type=float, default=1.0)
+    parser.add_argument('--pixel-loss-weight', type=float, default=0.,
+                        help='Additional soft-coordinate Huber loss in pixel units')
     parser.set_defaults(distill_weight=0., feature_distill_weight=0.)
     parser.add_argument('--min-delta', type=float, default=0.001)
     parser.add_argument('--gradient-clip', type=float, default=5.0)

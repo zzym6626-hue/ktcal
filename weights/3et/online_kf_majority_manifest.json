@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "profile": "causal_online_kf_majority",
+  "base_commit": "98c1c0cc61d23da3948a1b76b2bac572fe1df8f8",
+  "stnet": {
+    "path": "weights/3et/stnet_online_current_readout.pt",
+    "sha256": "2c0d6d7b18176d0a0dc89f1980e28a9fa51ad956757f68bccd657f24f955bd9e",
+    "source_checkpoint_sha256": "adbe50043ec76b64d164e80eed67439359530e815cb237ca7ef16e4790d3c50e",
+    "format": "inference_only",
+    "tensor_values_preserved": true,
+    "tensor_count": 60,
+    "selected_epoch": 13,
+    "architecture": "models.current_readout_streaming_stnet.CurrentReadoutStreamingSTNet"
+  },
+  "matcher": {
+    "path": "weights/3et/matcher_best.pt",
+    "sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f"
+  },
+  "config": {
+    "path": "configs/3et_online_kf_majority.json",
+    "sha256": "05d6b489ec3645c5c305d6c55c3bb7af1c38b311a6e0f24f7aea6370ba074df6"
+  },
+  "training_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "validation_h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "validation_selected": true,
+  "final_holdout_used": false,
+  "future_frames_used": 0,
+  "labels_used_for_inference": false,
+  "activity_gate": "disabled",
+  "precision": {
+    "inputs_weights": "float32",
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false
+  },
+  "metrics": {
+    "frames": 9300,
+    "mean_error_px": 2.08704341457282,
+    "median_error_px": 1.394143155224491,
+    "p1": 0.31967741935483873,
+    "p3": 0.845268817204301,
+    "p5": 0.9238709677419354,
+    "p10": 0.9847311827956989,
+    "p15": 0.9919354838709677
+  },
+  "tracker_stats": {
+    "tier1": 5192,
+    "tier2": 0,
+    "tier3": 4108,
+    "fusion_calls": 0,
+    "small_fusion_calls": 0,
+    "medium_rollbacks": 0,
+    "medium_refinements": 0,
+    "border_peaks": 924,
+    "frames": 9300,
+    "stnet_requests": 4108,
+    "matcher_requests": 9207,
+    "activity_forced_large_frames": 0,
+    "global_predictions_precomputed": 0,
+    "model_forward_passes": 9672,
+    "feature_updates": 9672,
+    "received_frame_updates": 9300,
+    "synthetic_feature_updates": 372,
+    "coordinate_head_requests": 4108,
+    "coordinate_head_forward_passes": 4108
+  },
+  "evidence": "docs/online/kf_majority_20261113/release_clean_3x.json",
+  "prediction_consistency": "docs/online/kf_majority_20261113/prediction_consistency.json",
+  "median_ms_per_frame": 1.2246754493123742,
+  "latency_repeats_ms_per_frame": [
+    1.236612122225505,
+    1.2246754493123742,
+    1.2124387675555803
+  ]
+}
