@@ -1,0 +1,11 @@
+{
+  "source_checkpoint_sha256": "adbe50043ec76b64d164e80eed67439359530e815cb237ca7ef16e4790d3c50e",
+  "packaged_path": "weights/3et/stnet_online_current_readout.pt",
+  "packaged_sha256": "2c0d6d7b18176d0a0dc89f1980e28a9fa51ad956757f68bccd657f24f955bd9e",
+  "packaged_bytes": 11004331,
+  "tensor_count": 60,
+  "tensor_values_preserved": true,
+  "optimizer_state_included": false,
+  "config_preserved": true,
+  "selected_epoch": 13
+}

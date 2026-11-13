@@ -1,0 +1,61 @@
+{
+  "protocol": "packaged inference weights versus selected training weights; full 9300 causal predictions",
+  "checks": [
+    {
+      "configuration": "balanced",
+      "array": "predicted_px",
+      "shape": [
+        93,
+        100,
+        2
+      ],
+      "max_abs_diff": 0.0
+    },
+    {
+      "configuration": "balanced",
+      "array": "labels",
+      "shape": [
+        93,
+        100,
+        2
+      ],
+      "max_abs_diff": 0.0
+    },
+    {
+      "configuration": "accuracy",
+      "array": "predicted_px",
+      "shape": [
+        93,
+        100,
+        2
+      ],
+      "max_abs_diff": 0.0
+    },
+    {
+      "configuration": "accuracy",
+      "array": "labels",
+      "shape": [
+        93,
+        100,
+        2
+      ],
+      "max_abs_diff": 0.0
+    }
+  ],
+  "passed": true,
+  "final_holdout_used": false,
+  "source_files_sha256": {
+    "ktcal_paper/offline_batch.py": "f6b2cb6f11433ccc7f91cff238228b538263cbd6972cc78083acda6baf1d8f97",
+    "ktcal_paper/online_inference.py": "708b645a6653477a6de8392164ad2905902de0ca0a249d9687bc75729e5fde6c",
+    "ktcal_paper/stnet_sequence.py": "177aa8b57ad975f647bc466ac7713a54509fcc85fd60262c3eb5755ca6549229",
+    "scripts/evaluate_3et_online.py": "9fa4420864539deb198b528dfa5cde0311ec638702265076870113484b2c663c",
+    "scripts/select_online_kf.py": "7a5d3a110f1d25f4a16d8ad7c5c311cb35a070d01346d4921f1920f00c990abd",
+    "scripts/train_stnet_3et.py": "ff338e42a920981ed254426fa834c639fad3cec96a293e933cfc53793d3ee7cc",
+    "configs/3et_online.json": "030bfb45ad56f3e47bc1ebf62b5670c45d3c97950d9ab657137e9917aa51fd98",
+    "configs/3et_online_accuracy.json": "3f6071dfc48fc15de6dba15957ca6f70e505014719b43009faf5a55dd34db16f",
+    "tests/ktcal_paper/test_online_callback.py": "a136bf56623ee86ee493b85daea49e92f089f7ccb3a979f2c00d86ce40fc00b1",
+    "tests/ktcal_paper/test_online_inference.py": "f6815d279c35e53c29e30945121f936331ae851c31caf3fb1234382033cfb1d2",
+    "tests/ktcal_paper/test_online_cli.py": "ee660a01e35a761c7eeaa690f2c2a4a92c7aa8915fe7de5437428f4d35480b92",
+    "tests/ktcal_paper/test_stnet_sequence.py": "d65d880125b44ba321b0569f0e16c588b2d72a5137fc4ba8ca707058301e6c39"
+  }
+}

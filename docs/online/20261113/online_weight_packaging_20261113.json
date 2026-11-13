@@ -1,0 +1,13 @@
+{
+  "stnet_sha256": "20f5b9fc06ebff50203dd7216fcb70e8fcffb247e12ba8955573f1bf4a1df397",
+  "source_sha256": "60c3053eead3e62e7fade70a8c3b73cce6583c52f56e626dd7b73927df415810",
+  "all_tensors_identical": true,
+  "selected_epoch": 1,
+  "model_parameters_and_buffers": 57,
+  "input_divisor": 1.0,
+  "window": 16,
+  "history_stride": 2,
+  "training_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "validation_h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "final_holdout_used": false
+}

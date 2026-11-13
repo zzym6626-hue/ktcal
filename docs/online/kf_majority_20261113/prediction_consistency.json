@@ -1,0 +1,15 @@
+{
+  "frames": 9300,
+  "prediction_max_abs_difference_px": 0.0,
+  "predictions_identical": true,
+  "metrics_identical": true,
+  "routing_identical": true,
+  "original_checkpoint_sha256": "adbe50043ec76b64d164e80eed67439359530e815cb237ca7ef16e4790d3c50e",
+  "packaged_checkpoint_sha256": "2c0d6d7b18176d0a0dc89f1980e28a9fa51ad956757f68bccd657f24f955bd9e",
+  "source_hashes_identical": true,
+  "release_config_sha256": "05d6b489ec3645c5c305d6c55c3bb7af1c38b311a6e0f24f7aea6370ba074df6",
+  "original_config_sha256": "c881d9b60fc62d9b23f90dc570e941ca71034fd683e7bd0805e37495e77ac76c",
+  "release_prediction_sha256": "b4d770f5ffc44ef92ee92d1a58f64c3461aa3d3ff691bcd88997d83a6a361b89",
+  "original_prediction_sha256": "b4d770f5ffc44ef92ee92d1a58f64c3461aa3d3ff691bcd88997d83a6a361b89",
+  "final_holdout_used": false
+}

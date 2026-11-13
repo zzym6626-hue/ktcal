@@ -106,11 +106,20 @@ class FlatH5CausalWindowDataset(FlatH5ChunkDataset):
     supervised predictions from a bidirectional model.
     """
 
-    def __init__(self, path, window=16, stride=1, input_divisor=1.0):
+    def __init__(self, path, window=16, stride=1, input_divisor=1.0,
+                 history_stride=1, preload_frames=False):
         if stride < 1:
             raise ValueError('Causal stride must be positive')
+        if isinstance(history_stride, bool) or not isinstance(history_stride, int) or history_stride < 1:
+            raise ValueError('Positive integer history stride required')
         super().__init__(path, window=window, input_divisor=input_divisor)
         self.stride = int(stride)
+        self.history_stride = history_stride
+        self._frames_cache = self._labels_cache = None
+        if preload_frames:
+            with h5py.File(self.path, 'r') as handle:
+                self._frames_cache = handle['frames'][:]
+                self._labels_cache = handle[self.label_key][:]
         self.targets = [
             (sequence, target)
             for sequence in range(self.frames_shape[0])
@@ -121,19 +130,24 @@ class FlatH5CausalWindowDataset(FlatH5ChunkDataset):
         return len(self.targets)
 
     def __getitem__(self, index):
-        if self._handle is None:
+        if self._frames_cache is None and self._handle is None:
             self._handle = h5py.File(
                 self.path, 'r', rdcc_nbytes=32 * 1024 * 1024)
         sequence, target = self.targets[index]
-        start = max(0, target - self.window + 1)
-        frames = self._handle['frames'][sequence, start:target + 1].astype(
-            np.float32)
+        start = max(0, target - (self.window - 1) * self.history_stride)
+        frame_data = self._frames_cache if self._frames_cache is not None else self._handle['frames']
+        label_data = self._labels_cache if self._labels_cache is not None else self._handle[self.label_key]
+        frames = frame_data[sequence, start:target + 1].astype(np.float32)
+        if self.history_stride != 1:
+            indices = np.maximum(0, target - np.arange(self.window - 1, -1, -1)
+                                 * self.history_stride) - start
+            frames = frames[indices]
         frames /= self.input_divisor
         if len(frames) < self.window:
             frames = np.concatenate((
                 np.repeat(frames[:1], self.window - len(frames), axis=0),
                 frames))
-        labels = self._handle[self.label_key][
+        labels = label_data[
             sequence, target:target + 1, :2].astype(np.float32)
         return (torch.from_numpy(frames), torch.from_numpy(labels),
                 torch.ones(1, dtype=torch.bool))
@@ -305,17 +319,22 @@ def masked_official_simdr_loss(logits_x, logits_y, labels, valid, sigma=1.0,
     """Vectorized Gaussian SimDR KL objective."""
     coordinates, valid = _validated_coordinates(
         logits_x, logits_y, labels, valid)
+    # Mask before generating targets: a NaN target has NaN KL derivatives
+    # even when its loss is discarded after computation.
+    coordinates = coordinates[valid]
+    if not bool(torch.isfinite(coordinates).all()):
+        raise ValueError('Valid SimDR coordinates must be finite')
     target_x = _official_simdr_target(
         coordinates[..., 0], logits_x.shape[-1], sigma)
     target_y = _official_simdr_target(
         coordinates[..., 1], logits_y.shape[-1], sigma)
     loss_x = F.kl_div(
-        F.log_softmax(logits_x, dim=-1), target_x,
+        F.log_softmax(logits_x[valid], dim=-1), target_x,
         reduction='none').mean(-1)
     loss_y = F.kl_div(
-        F.log_softmax(logits_y, dim=-1), target_y,
+        F.log_softmax(logits_y[valid], dim=-1), target_y,
         reduction='none').mean(-1)
-    per_frame = (loss_x + loss_y)[valid]
+    per_frame = loss_x + loss_y
     if weights is None:
         return per_frame.mean()
     if weights.shape != valid.shape:
@@ -734,12 +753,14 @@ def _initialize_3et_student(model, checkpoint_path, temporal_spatial_kernel,
 
 @torch.inference_mode()
 def evaluate_flat_stnet(model, loader, device, causal_last_step=False,
-                        offline_ma_window=None):
+                        offline_ma_window=None, decode='hard'):
     """Hard-argmax metrics, or per-record soft+MA offline checkpoint selection."""
     if offline_ma_window is not None and (causal_last_step or offline_ma_window < 1
                                           or offline_ma_window % 2 == 0):
         raise ValueError('Offline MA window must be positive/odd and non-causal')
     model.eval()
+    if decode not in ('hard', 'soft'):
+        raise ValueError('Validation decode must be hard or soft')
     errors = []
     offline_predictions = []
     offline_labels = []
@@ -767,10 +788,10 @@ def evaluate_flat_stnet(model, loader, device, causal_last_step=False,
         if causal_last_step:
             logits_x = logits_x[:, -1:]
             logits_y = logits_y[:, -1:]
-        prediction = torch.stack((
+        prediction = (decode_soft_expectation(logits_x, logits_y) if decode == 'soft' else torch.stack((
             logits_x.argmax(-1).to(logits_x.dtype) / logits_x.shape[-1],
             logits_y.argmax(-1).to(logits_y.dtype) / logits_y.shape[-1],
-        ), dim=-1)
+        ), dim=-1))
         labels = labels.to(device)
         valid = valid.to(device).bool()
         if not bool(valid.any()):
@@ -821,7 +842,8 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
                     seed=42, threads=4, device='auto',
                     causal_last_step=False, train_stride=8, readout='last',
                     selection_metric='hard_argmax', persistent_boost=0.,
-                    sparse_boost=0.):
+                    sparse_boost=0., history_stride=1, preload_frames=False,
+                    pixel_loss_weight=0.):
     """Train our STNet on labeled 3ET train/validation HDF5."""
     if output is None:
         raise ValueError("Training output is required")
@@ -829,6 +851,8 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
         raise ValueError("External teacher distillation is not available")
     if min(epochs, patience, window, batch_size, train_stride) < 1:
         raise ValueError('Epochs, patience, window, batch size and stride must be positive')
+    if not np.isfinite(pixel_loss_weight) or pixel_loss_weight < 0:
+        raise ValueError('Pixel loss weight must be finite and nonnegative')
     if (lr <= 0 or min_lr <= 0 or min_lr > lr or weight_decay < 0
             or sigma <= 0 or distill_weight < 0
             or feature_distill_weight < 0
@@ -839,11 +863,13 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
         raise ValueError('Temporal spatial kernel must be 1 or 3')
     if readout not in ('last', 'final_hidden', 'attention'):
         raise ValueError('STNet readout must be last, final_hidden, or attention')
-    if readout == 'attention' and causal_last_step:
-        raise ValueError(
-            'attention readout uses the complete window and is not causal')
-    if selection_metric not in ('hard_argmax', 'offline_soft_ma11'):
+    if (isinstance(history_stride, bool) or not isinstance(history_stride, int)
+            or history_stride < 1 or (history_stride != 1 and not causal_last_step)):
+        raise ValueError('History stride is positive and requires causal training')
+    if selection_metric not in ('hard_argmax', 'offline_soft_ma11', 'causal_soft'):
         raise ValueError('Unknown 3ET checkpoint selection metric')
+    if selection_metric == 'causal_soft' and not causal_last_step:
+        raise ValueError('Causal soft selection requires past-only current-frame training')
     if (not np.isfinite(persistent_boost) or persistent_boost < 0
             or not np.isfinite(sparse_boost) or sparse_boost < 0):
         raise ValueError('Training hard-frame boosts must be nonnegative and finite')
@@ -872,10 +898,12 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
     if causal_last_step:
         train_data = FlatH5CausalWindowDataset(
             train_h5, window=window, stride=train_stride,
-            input_divisor=input_divisor)
+            input_divisor=input_divisor, history_stride=history_stride,
+            preload_frames=preload_frames)
         val_data = FlatH5CausalWindowDataset(
             val_h5, window=window, stride=1,
-            input_divisor=input_divisor)
+            input_divisor=input_divisor, history_stride=history_stride,
+            preload_frames=preload_frames)
     else:
         train_data = FlatH5ChunkDataset(
             train_h5, window=window, input_divisor=input_divisor)
@@ -913,6 +941,7 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
         'batch_size': batch_size, 'lr': lr, 'min_lr': min_lr,
         'weight_decay': weight_decay, 'sigma': sigma,
         'distill_weight': distill_weight,
+        'pixel_loss_weight': float(pixel_loss_weight),
         'hard_frame_persistent_boost': float(persistent_boost),
         'hard_frame_sparse_boost': float(sparse_boost),
         'hard_frame_min_run': 5,
@@ -948,6 +977,9 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
         'training_stride': train_stride if causal_last_step else None,
         'validation_stride': 1 if causal_last_step else None,
         'causal_last_step': bool(causal_last_step),
+        'history_stride': history_stride,
+        'preload_frames': bool(preload_frames),
+        'attention_scope': 'historical_window_only' if causal_last_step else 'complete_window',
         'window_padding': 'repeat_first_frame_on_left' if causal_last_step else 'repeat_last_frame_on_right',
         'seed': seed, 'threads': threads, 'device': device,
         'resolved_device': str(resolved_device),
@@ -960,13 +992,16 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
         config['training_supervision'] = (
             'Gaussian SimDR KL for the last step of each historical window '
             'without external teacher distillation')
-        config['selection_metric'] = 'hard_argmax_last_step_p3'
+        config['selection_metric'] = ('soft_expectation_last_step_p3'
+                                      if selection_metric == 'causal_soft'
+                                      else 'hard_argmax_last_step_p3')
     output.mkdir(parents=True, exist_ok=False)
     _write_json(output / 'config.json', config)
     history = []
     initial = evaluate_flat_stnet(
         model, val_loader, resolved_device, causal_last_step,
-        offline_ma_window=11 if selection_metric == 'offline_soft_ma11' else None)
+        offline_ma_window=11 if selection_metric == 'offline_soft_ma11' else None,
+        decode='soft' if selection_metric == 'causal_soft' else 'hard')
     best_error = initial['mean_error_px']
     best_p3 = initial['p3']
     best_epoch = 0
@@ -999,7 +1034,7 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
             for group in optimizer.param_groups:
                 group['lr'] = rate
             model.train()
-            sums = np.zeros(4, dtype=np.float64)
+            sums = np.zeros(5, dtype=np.float64)
             valid_timesteps = 0
             for frames, labels, valid in train_loader:
                 frames = frames.to(resolved_device)
@@ -1025,8 +1060,11 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
                              if persistent_boost or sparse_boost else None))
                 distilled = supervised.new_zeros(())
                 feature_distilled = supervised.new_zeros(())
+                pixel = (masked_pixel_loss(logits_x, logits_y, labels, valid)
+                         if pixel_loss_weight else supervised.new_zeros(()))
                 loss = (supervised + distill_weight * distilled
-                        + feature_distill_weight * feature_distilled)
+                        + feature_distill_weight * feature_distilled
+                        + pixel_loss_weight * pixel)
                 if not torch.isfinite(loss):
                     raise RuntimeError('Non-finite 3ET STNet training loss')
                 loss.backward()
@@ -1036,13 +1074,14 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
                 count = int(valid.sum())
                 sums += np.array([
                     loss.item(), supervised.item(), distilled.item(),
-                    feature_distilled.item()]) * count
+                    feature_distilled.item(), pixel.item()]) * count
                 valid_timesteps += count
             if valid_timesteps < 1:
                 raise ValueError('Training HDF5 has no valid frames')
             validation = evaluate_flat_stnet(
                 model, val_loader, resolved_device, causal_last_step,
-                offline_ma_window=11 if selection_metric == 'offline_soft_ma11' else None)
+                offline_ma_window=11 if selection_metric == 'offline_soft_ma11' else None,
+                decode='soft' if selection_metric == 'causal_soft' else 'hard')
             error = validation['mean_error_px']
             p3 = validation['p3']
             selected = select_3et_checkpoint(
@@ -1061,7 +1100,7 @@ def train_stnet_3et(train_h5, val_h5, initialize_from=None, output=None, *,
                 'epoch': epoch, 'learning_rate': rate,
                 'train': dict(zip(
                     ('loss', 'supervised_simdr_loss', 'distillation_loss',
-                     'feature_distillation_loss'),
+                     'feature_distillation_loss', 'pixel_huber_loss'),
                     (sums / valid_timesteps).tolist())),
                 'training_valid_timesteps': valid_timesteps,
                 'validation': validation,

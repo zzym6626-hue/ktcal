@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "base_commit": "98c1c0cc61d23da3948a1b76b2bac572fe1df8f8",
+  "report_checks_passed": true,
+  "final_holdout_used": false,
+  "artifacts_sha256": {
+    "local_tests.log": "db429997d2368ee80f46d8fb9c5f1c4ac74f831bdaeb22be8dc4a1d2e011129d",
+    "online_accuracy_clean_3x_20261113.json": "d7c0bb4f188f63c0cc3a354f4ec9a34fa973666f0a049202747ad19a773d1b54",
+    "online_balanced_clean_3x_20261113.json": "95ab6e5bd4519ace2c8f52791832dc2c49ae677cf2c0d138e288b5196d639666",
+    "online_baseline_clean_3x_20261113.json": "7dbb874f5e535baf295164180c4de331009491715c3418ccd2cedf5fdc2cd70f",
+    "online_equivalence_20261113.json": "1bbad587c75804dfe64a1687c19ef5cd78e3258c505646a257ed3b0488b713c1",
+    "online_final_prediction_consistency_20261113.json": "e7d70ffcace7f078e49cbe11815bb5764571b21cd31fa87103439516ffd2042d",
+    "online_weight_packaging_20261113.json": "4e9b91d4c7358d407c76cc9bf5c6cfa9c74a5e2c638047aed74d82d87699c862",
+    "release_offline_recheck_20261113.json": "d50f0dad5c8d254ab7e1cf6004b977b536e202c1f933b472372abe00aa5860a8",
+    "remote_tests.log": "d886b9b77e8146d846ec52ca510dd9c74019e63eb3643e12cf0ca6f3d0e5b32d",
+    "soft_pixel_config.json": "8cffccc01c4c27ef160332bc2581fbbe8b973977a4c63c0106649b543805b450",
+    "soft_pixel_history.json": "570040096aad420a81683cb484a780a2123e34bb02cad2cbf95c6dc4e7b93a03"
+  }
+}

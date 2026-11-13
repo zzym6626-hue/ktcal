@@ -1,0 +1,389 @@
+test_all_forced_warm_record_initializes_matcher_before_measurement (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_cli_and_json_config_accept_current_activity_gate_and_validate_threshold (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_cuda_all_forced_warm_record_has_matcher_graph_before_low_record (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_cuda_graph_mixed_activity_batches_match_eager (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_current_activity_forces_large_reset_and_skips_unneeded_matcher (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_default_and_high_threshold_preserve_existing_causal_prefix_and_reset (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_mixed_batches_match_only_low_activity_and_remain_independent (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_nonfinite_or_nonpositive_activity_threshold_is_rejected (tests.ktcal_paper.test_activity_online_gate.ActivityOnlineGateTests) ... ok
+test_group_diagnostics_do_not_use_truth_for_membership (tests.ktcal_paper.test_adaptive_offline.AdaptiveOfflineTests) ... ok
+test_match_fallback_only_when_high_disagreement_and_low_confidence (tests.ktcal_paper.test_adaptive_offline.AdaptiveOfflineTests) ... ok
+test_runner_produces_validation_only_report (tests.ktcal_paper.test_adaptive_offline.AdaptiveOfflineTests) ... Validated 1/1 chunks
+ok
+test_runner_rejects_holdout_without_reading_model (tests.ktcal_paper.test_adaptive_offline.AdaptiveOfflineTests) ... ok
+test_slow_frames_use_ma11_and_motion_uses_ma3_without_labels (tests.ktcal_paper.test_adaptive_offline.AdaptiveOfflineTests) ... ok
+test_warm_start_bidir_selection_and_cosine_resume_preserve_predictions (tests.ktcal_paper.test_bidirectional.BidirectionalExperimentTests) ... ok
+test_causal_adapter_decodes_only_the_last_step_and_scales_input (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_checkpoint_loader_uses_opt_in_final_hidden_readout (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_checkpoint_loaders_keep_stnet_and_matcher_separate (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_combined_cli_accepts_smoothing_and_keeps_old_option (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_combined_cli_prints_offline_accuracy_and_latency (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_combined_report_can_add_offline_moving_average_metrics (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_evaluation_records_opt_in_prediction_gate_without_using_holdout (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_holdout_is_rejected_by_name_before_file_lookup (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_holdout_is_rejected_by_official_shape (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_missing_checkpoints_explain_which_weight_is_needed (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_moving_average_filters_each_sequence_with_edge_padding (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_online_causal_report_uses_on_demand_model_without_holdout (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_online_cli_is_validation_only_with_default_gate (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_precompute_soft_decode_uses_expectation (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_precompute_uses_hard_argmax_pixels_and_checkpoint_divisor (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_published_3et_weights_load_without_training_or_teacher_state (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_sequence_metrics_are_weighted_by_frames (tests.ktcal_paper.test_combined_3et.Combined3ETTests) ... ok
+test_active_head_is_causal_and_matches_stream_steps_and_reset (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... ok
+test_auxiliary_logits_train_even_at_zero_scale_and_invalid_frames_have_zero_gradient (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... ok
+test_cuda_graph_active_branch_and_reset_match_eager_and_cache (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... ok
+test_loader_restores_direct_readout_checkpoint (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... ok
+test_warm_teacher_augmented_training_counts_real_frames_and_updates_branch (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 16.07803141691681, "median_error_px": 8.353300847508267, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.8, "p15": 0.8, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.6271471977233887, "simdr_loss": 0.27492010593414307, "pixel_huber_loss": 4.278408050537109, "teacher_huber_loss": 4.278408050537109, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.27481865882873535, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 16.739067774047445, "median_error_px": 9.132532768694336, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.8, "p15": 0.8, "first_10_p3": 0.0}, "selected": false, "seconds": 0.24108728393912315}
+ok
+test_zero_scale_preserves_compatible_streaming_checkpoint (tests.ktcal_paper.test_current_readout_streaming.CurrentReadoutStreamingTests) ... ok
+test_original_label_state_is_preserved_and_placeholder_rejected (tests.ktcal_paper.test_data.DataTests) ... ok
+test_subjects_are_disjoint_and_split_is_stable (tests.ktcal_paper.test_data.DataTests) ... ok
+test_window_padding_no_future_and_no_recording_crossing (tests.ktcal_paper.test_data.DataTests) ... ok
+test_diagnostics_keep_subjects_and_heads_separate_and_refuse_holdout (tests.ktcal_paper.test_diagnostics.DiagnosticTests) ... ok
+test_hard_argmax_decode_returns_normalized_bin_coordinates (tests.ktcal_paper.test_evaluation_protocol.DecoderAndMetricTests) ... ok
+test_pixel_summary_scales_normalized_coordinates_by_80_and_60 (tests.ktcal_paper.test_evaluation_protocol.DecoderAndMetricTests) ... ok
+test_pixel_tolerance_is_strictly_less_than_three_pixels (tests.ktcal_paper.test_evaluation_protocol.DecoderAndMetricTests) ... ok
+test_low_confidence_prediction_uses_previous_valid_prediction (tests.ktcal_paper.test_evaluation_protocol.OfficialPostprocessTests) ... ok
+test_low_event_mask_is_dilated_twice (tests.ktcal_paper.test_evaluation_protocol.OfficialPostprocessTests) ... ok
+test_masked_first_frame_does_not_wrap_to_last_prediction (tests.ktcal_paper.test_evaluation_protocol.OfficialPostprocessTests) ... ok
+test_replacement_and_dilation_do_not_cross_record_boundaries (tests.ktcal_paper.test_evaluation_protocol.OfficialPostprocessTests) ... ok
+test_invalid_h5_shape_has_actionable_error (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_missing_event_statistics_has_actionable_error (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_official_singular_label_dataset_is_accepted (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_stnet_checkpoint_mismatch_fails_loudly (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_stnet_preprocessing_uses_checkpoint_divisor_with_legacy_default (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_temporal_protocol_reports_unidirectional_stnet_truthfully (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_unsupported_architecture_is_rejected_by_parser (tests.ktcal_paper.test_evaluation_protocol.OfficialProtocolCliTests) ... ok
+test_adjacent_recordings_do_not_leak_padding_across_boundary (tests.ktcal_paper.test_evaluation_protocol.RecordBoundaryTests) ... ok
+test_all_full_chunks_are_flattened_in_order (tests.ktcal_paper.test_evaluation_protocol.RecordBoundaryTests) ... ok
+test_inconsistent_chunk_count_is_rejected (tests.ktcal_paper.test_evaluation_protocol.RecordBoundaryTests) ... ok
+test_partial_final_chunk_drops_only_its_padding (tests.ktcal_paper.test_evaluation_protocol.RecordBoundaryTests) ... ok
+test_chunked_checkpoint_cli_restores_final_hidden (tests.ktcal_paper.test_evaluation_readout.EvaluationReadoutTests) ... ok
+test_full_sequence_cli_restores_final_hidden (tests.ktcal_paper.test_evaluation_readout.EvaluationReadoutTests) ... ok
+test_official_checkpoint_restores_final_hidden_and_legacy_last (tests.ktcal_paper.test_evaluation_readout.EvaluationReadoutTests) ... ok
+test_metrics_are_pixel_euclidean_and_do_not_clip_predictions (tests.ktcal_paper.test_experiment.ExperimentTests) ... ok
+test_resume_matches_uninterrupted_training_and_evaluation_writes_real_rows (tests.ktcal_paper.test_experiment.ExperimentTests) ... ok
+test_diagnosis_uses_real_tracking_on_validation_only (tests.ktcal_paper.test_gate_diagnostics.GateDiagnosticsTests) ... ok
+test_oracle_recovery_checks_only_failed_fast_frames_without_future (tests.ktcal_paper.test_gate_diagnostics.GateDiagnosticsTests) ... ok
+test_rejects_missing_or_misaligned_trace_instead_of_silent_miscounts (tests.ktcal_paper.test_gate_diagnostics.GateDiagnosticsTests) ... ok
+test_reports_missed_errors_and_match_consensus_not_ground_truth (tests.ktcal_paper.test_gate_diagnostics.GateDiagnosticsTests) ... ok
+test_board_export_rejects_offline_and_incompatible_windows (tests.ktcal_paper.test_hardware_export.HardwareExportTests) ... ok
+test_board_logits_are_last_frame_only_with_training_divisor (tests.ktcal_paper.test_hardware_export.HardwareExportTests) ... ok
+test_cpp_matcher_matches_python_reference_on_identical_frames (tests.ktcal_paper.test_hardware_export.HardwareExportTests) ... ok
+test_export_preserves_matcher_weights_and_channel_count (tests.ktcal_paper.test_hardware_export.HardwareExportTests) ... ok
+test_rejects_missing_matcher_checkpoint (tests.ktcal_paper.test_hardware_export.HardwareExportTests) ... ok
+test_active_initialization_full_step_future_and_last_decoder (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_cuda_five_states_active_init_partial_views_warm_and_reset (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_initialized_training_resumes_current_head_and_records_lr_groups (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 22.110694640386807, "median_error_px": 22.11514067211222, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.7213040590286255, "simdr_loss": 0.27983272075653076, "pixel_huber_loss": 13.70503044128418, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.2838730216026306, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 18.775885981276037, "median_error_px": 18.783479003247958, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.24758265167474747}
+ok
+test_loader_selects_initialized_architecture_and_rejects_invalid_flags (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_marker_seeds_hidden_once_and_reset_isolates_stream (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_partial_views_warm_reset_agree_with_cache (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_zero_initial_scale_reproduces_current_checkpoint_both_hidden_sizes (tests.ktcal_paper.test_initialized_streaming.InitializedStreamingTests) ... ok
+test_cli_exposes_final_offline_options (tests.ktcal_paper.test_ktcal_official_holdout.KTCalOfficialHoldoutTests) ... ok
+test_evaluation_refuses_to_overwrite_an_existing_report (tests.ktcal_paper.test_ktcal_official_holdout.KTCalOfficialHoldoutTests) ... ok
+test_evaluation_trims_padding_and_records_frozen_protocol (tests.ktcal_paper.test_ktcal_official_holdout.KTCalOfficialHoldoutTests) ... Processed 2/2 chunks
+ok
+test_offline_filter_and_selected_decode_are_recorded (tests.ktcal_paper.test_ktcal_official_holdout.KTCalOfficialHoldoutTests) ... Processed 1/1 chunks
+ok
+test_offline_filter_ignores_record_padding (tests.ktcal_paper.test_ktcal_official_holdout.KTCalOfficialHoldoutTests) ... Processed 1/1 chunks
+ok
+test_cuda_graph_localization_features_and_reset_match_eager (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_dense_spatial_loss_backpropagates_with_zero_residual_scale (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_full_sequence_steps_and_future_prefix_agree_with_active_spatial_head (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_last_step_decodes_active_localization_head (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_loader_selects_localization_architecture (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_trainer_updates_spatial_head_and_records_learning_rates (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.434419855701455, "median_error_px": 9.411863822766655, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.2264517545700073, "simdr_loss": 0.2697983384132385, "pixel_huber_loss": 6.124835014343262, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 3.441699504852295, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 10, "validation": {"frames": 10, "mean_error_px": 9.443344852285612, "median_error_px": 9.479804660526014, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": false, "seconds": 0.17135689593851566}
+ok
+test_zero_residual_scale_reproduces_pretrained_causal_model (tests.ktcal_paper.test_localization_streaming.LocalizationStreamingTests) ... ok
+test_search_size_parser_preserves_width_height_order (tests.ktcal_paper.test_matcher_diagnostics.MatcherDiagnosticTests) ... ok
+test_search_size_parser_rejects_a_patch_smaller_than_template (tests.ktcal_paper.test_matcher_diagnostics.MatcherDiagnosticTests) ... ok
+test_summary_accepts_the_actual_search_capture_span (tests.ktcal_paper.test_matcher_diagnostics.MatcherDiagnosticTests) ... ok
+test_summary_reports_geometry_and_matching_failures_separately (tests.ktcal_paper.test_matcher_diagnostics.MatcherDiagnosticTests) ... ok
+test_zero_mean_response_is_invariant_to_patch_offset (tests.ktcal_paper.test_matcher_diagnostics.MatcherDiagnosticTests) ... ok
+test_checkpoint_replaces_only_matcher_state (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_checkpoint_requires_full_ktcal_state (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_cli_defaults_to_recommended_matcher_only_recipe (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_empty_capture_batches_do_not_apply_optimizer_weight_decay (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... {"epoch": 1, "learning_rate": 0.001, "training_loss": 0.0, "training_samples": 2, "training_valid_samples": 0, "validation": [{"gap": 1, "frames": 4, "mean_error_px": 92.1004867553711, "median_error_px": 92.1004867553711, "p1": 0.0, "p3": 0.0, "p5": 0.0}], "validation_error_px": 92.1004867553711, "selected": true, "seconds": 0.007514502853155136}
+ok
+test_one_epoch_training_writes_matcher_only_checkpoint_and_history (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... {"epoch": 1, "learning_rate": 0.001, "training_loss": 0.043790786216656365, "training_samples": 6, "training_valid_samples": 6, "validation": [{"gap": 1, "frames": 12, "mean_error_px": 2.7406911849975586, "median_error_px": 2.666794538497925, "p1": 0.0, "p3": 0.75, "p5": 1.0}, {"gap": 4, "frames": 3, "mean_error_px": 2.667187452316284, "median_error_px": 3.034740686416626, "p1": 0.0, "p3": 0.3333333333333333, "p5": 1.0}], "validation_error_px": 2.7259904384613036, "selected": true, "seconds": 0.030719343572854996}
+ok
+test_prediction_cache_shape_must_match_h5_sequences_and_timesteps (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_renamed_official_holdout_shape_is_rejected (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_stnet_prediction_cache_respects_checkpoint_input_divisor (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_stnet_predictions_are_cached_as_pixel_coordinates (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_validation_error_is_weighted_by_scored_frames (tests.ktcal_paper.test_matcher_finetune.MatcherFinetuneUtilityTests) ... ok
+test_border_peak_and_low_psr_escalate_instead_of_updating_kalman (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_coarse_proposal_recovers_motion_outside_the_fine_capture_range (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_empty_events_remain_finite (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_even_rectangle_center_and_response_coordinates (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_kalman_covariances_are_tunable_without_changing_defaults (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_local_cosine_matches_independent_manual_calculation (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_match_fetches_fine_and_coarse_diagnostics_with_one_host_transfer (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_matching_loss_trains_depthwise_and_pointwise_features (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_pixel_covariances_and_gating_boundaries (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_predicted_center_loss_empty_capture_is_differentiable_zero (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_predicted_center_loss_trains_only_geometry_captured_samples (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_subpixel_does_not_read_tensor_predicates_for_batched_or_thin_maps (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_subpixel_handles_mixed_border_and_interior_peaks_in_one_batch (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_subpixel_leaves_border_peaks_alone_and_stays_inside_one_cell (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_subpixel_peak_recovers_offset_the_argmax_lattice_misses (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_tracker_forwards_subpixel_flag_and_keeps_paper_default (tests.ktcal_paper.test_matching.MatchingTests) ... ok
+test_active_memory_full_step_future_reset_last_step_and_window_agree (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_actual_cuda_memory_teacher_mini_epoch (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.471804948450071, "median_error_px": 9.533561982433284, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.21929931640625, "simdr_loss": 0.27530643343925476, "pixel_huber_loss": 5.950881004333496, "teacher_huber_loss": 5.950881004333496, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.29446306824684143, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.28370943665504456}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.33155675806295, "median_error_px": 9.346550802414818, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.2459993790835142}
+ok
+test_actual_training_masks_prefix_nan_teacher_and_groups_parameters (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.471796006267162, "median_error_px": 9.533557744579, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.2377407550811768, "simdr_loss": 0.2756310999393463, "pixel_huber_loss": 6.01658821105957, "teacher_huber_loss": 6.01658821105957, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.29684069752693176, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.27641087770462036}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.325083346937507, "median_error_px": 9.344063516780913, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.28036375530064106}
+ok
+test_cli_exposes_memory_training_flags (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.471796006267162, "median_error_px": 9.533557744579, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.2377407550811768, "simdr_loss": 0.2756310999393463, "pixel_huber_loss": 6.01658821105957, "teacher_huber_loss": 6.01658821105957, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.29684069752693176, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.27641087770462036}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.325083346937507, "median_error_px": 9.344063516780913, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.2710616048425436}
+{
+  "best_epoch": 1,
+  "metrics": {
+    "frames": 10,
+    "mean_error_px": 9.325083346937507,
+    "median_error_px": 9.344063516780913,
+    "p1": 0.0,
+    "p3": 0.0,
+    "p5": 0.0,
+    "p10": 1.0,
+    "p15": 1.0,
+    "first_10_p3": 0.0
+  },
+  "checkpoint": "/tmp/tmp3fpjn1su/run/best.pt",
+  "final_holdout_used": false
+}
+ok
+test_cuda_memory_replay_warm_partial_requests_and_record_reset_agree_with_full (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_invalid_memory_windows_and_states_are_rejected (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_left_history_is_invalid_and_only_received_hidden_is_appended_once (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_loader_restores_memory_window_and_rejects_incompatible_architectures (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_memory_auxiliary_trains_at_zero_scale_with_finite_nan_masked_gradients (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_trainer_rejects_invalid_memory_options_before_reading_data (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_zero_memory_scale_preserves_current_checkpoint_and_strict_initialization (tests.ktcal_paper.test_memory_readout_streaming.MemoryReadoutStreamingTests) ... ok
+test_ablation_variants_keep_single_coordinate_interface (tests.ktcal_paper.test_model.ModelTests) ... ok
+test_both_coordinate_heads_and_directions_receive_gradient (tests.ktcal_paper.test_model.ModelTests) ... ok
+test_export_preserves_trained_forward_prediction (tests.ktcal_paper.test_model.ModelTests) ... ok
+test_final_hidden_readout_trains_reverse_recurrence_and_preserves_forward_export (tests.ktcal_paper.test_model.ModelTests) ... ok
+test_graph_matches_eager_with_changed_input_and_centers (tests.ktcal_paper.test_offline_cuda.GraphTests) ... ok
+test_bad_input_and_no_accidental_fusion (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... ok
+test_equal_1px_is_refinement_without_reset_and_issued_is_immutable (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... ok
+test_large_disagreement_resets_immediately_and_no_future_labels_used (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... ok
+test_medium_issues_matched_kalman_then_rolls_back_when_over_1px (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... ok
+test_validation_report_counts_all_frames_without_claiming_online_speed (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... Validated 1/1 sequences
+ok
+test_validation_report_rejects_holdout_before_loading_models (tests.ktcal_paper.test_offline_deferred_medium.DeferredMediumTests) ... ok
+test_alternative_filters_do_not_cross_record_boundaries (tests.ktcal_paper.test_offline_experiment.RobustFilterTests) ... ok
+test_robust_ensemble_rejects_one_outlier (tests.ktcal_paper.test_offline_experiment.RobustFilterTests) ... ok
+test_ensemble_never_uses_labels_and_filter_preserves_records (tests.ktcal_paper.test_offline_experiment.ViewTests) ... ok
+test_invalid_views_or_weights_are_rejected (tests.ktcal_paper.test_offline_experiment.ViewTests) ... ok
+test_shift_and_mirror_restore_coordinate_system (tests.ktcal_paper.test_offline_experiment.ViewTests) ... ok
+test_persistent_errors_do_not_cross_sequences_or_invalid_frames (tests.ktcal_paper.test_offline_hard_cases.HardFrameWeightsTests) ... ok
+test_sparse_quartile_is_computed_per_record (tests.ktcal_paper.test_offline_hard_cases.HardFrameWeightsTests) ... ok
+test_weighted_simdr_is_normalized_and_masks_padding (tests.ktcal_paper.test_offline_hard_cases.HardFrameWeightsTests) ... ok
+test_offline_metrics_use_the_same_pixel_roundtrip_and_precision_as_combined (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_offline_model_selection_rejects_final_holdout_before_any_writes (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_offline_selection_uses_strict_mean_error_tiebreak (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_soft_ma11_is_independent_for_each_chunk_and_differs_from_argmax (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_training_input_rejects_named_final_holdout_before_any_writes (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_training_input_rejects_renamed_holdout_shape_before_any_writes (tests.ktcal_paper.test_offline_hard_cases.OfflineSelectionTests) ... ok
+test_callback_receives_only_past_frames_and_matches_precomputed_resets (tests.ktcal_paper.test_online_callback.OnlineCallbackTests) ... ok
+test_complete_tracker_prefix_is_invariant_to_future_frame_changes (tests.ktcal_paper.test_online_callback.OnlineCallbackTests) ... ok
+test_small_tier_never_calls_global_predictor (tests.ktcal_paper.test_online_callback.OnlineCallbackTests) ... ok
+test_template_graph_crops_match_eager_and_do_not_alias_previous_template (tests.ktcal_paper.test_online_callback.OnlineCallbackTests) ... ok
+test_defaults_are_causal_kf60 (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_invalid_online_configuration_rejected (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_persistent_state_control_is_forwarded_without_changing_work_counters (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_reviewable_json_config_and_explicit_cli_override (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_streaming_cli_builds_stateful_predictor_and_counts_all_updates (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_streaming_cli_rejects_stride_or_synthetic_future (tests.ktcal_paper.test_online_cli.OnlineCLITests) ... ok
+test_cuda_graph_matches_eager_and_replays_new_input (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_current_step_optimization_preserves_synthetic_context_predictions (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_decoder_undoes_shift_and_flip_before_even_view_median (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_last_step_optimization_preserves_all_supported_readouts (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_output_smoothing_is_invariant_to_future_changes (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_predictor_return_is_not_aliased_by_next_graph_replay (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_real_stnet_graph_matches_eager_for_changed_histories (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_ring_contains_only_received_strided_frames (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_soft_decoder_uses_current_logits_only (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_synthetic_right_context_repeats_received_current_frame_and_reads_original_index (tests.ktcal_paper.test_online_inference.OnlineInferenceTests) ... ok
+test_cuda_replay_copies_only_current_frame_and_honors_external_reset (tests.ktcal_paper.test_persistent_streaming_state.PersistentStreamingStateTests) ... ok
+test_four_and_five_states_update_supplied_storage_and_match_reference (tests.ktcal_paper.test_persistent_streaming_state.PersistentStreamingStateTests) ... ok
+test_predictor_persistent_and_control_warm_partial_requests_reset_are_equivalent (tests.ktcal_paper.test_persistent_streaming_state.PersistentStreamingStateTests) ... ok
+test_active_residual_full_step_future_reset_and_last_step_agree (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_actual_cli_enables_raw_training_and_auxiliary_weight (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.343848074392074, "median_error_px": 9.344120070519061, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.322268486022949, "simdr_loss": 0.27663588523864746, "pixel_huber_loss": 6.2926788330078125, "teacher_huber_loss": 6.2926788330078125, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.2958851456642151, "raw_current_readout_loss": 0.2795258164405823, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.76249669448946, "median_error_px": 9.755264824790668, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": false, "seconds": 0.27126921340823174}
+{
+  "best_epoch": 0,
+  "metrics": {
+    "frames": 10,
+    "mean_error_px": 9.343848074392074,
+    "median_error_px": 9.344120070519061,
+    "p1": 0.0,
+    "p3": 0.0,
+    "p5": 0.0,
+    "p10": 1.0,
+    "p15": 1.0,
+    "first_10_p3": 0.0
+  },
+  "checkpoint": "/tmp/tmphlnjkuxs/run/best.pt",
+  "final_holdout_used": false
+}
+ok
+test_cuda_graph_warm_multiview_partial_reset_matches_causal_sequence (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_cuda_raw_teacher_training_has_finite_gradients (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.343945906555486, "median_error_px": 9.344215037313635, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.3718297481536865, "simdr_loss": 0.2740781903266907, "pixel_huber_loss": 6.472533226013184, "teacher_huber_loss": 6.472533226013184, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.290368914604187, "raw_current_readout_loss": 0.2779977321624756, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.752689787981824, "median_error_px": 9.746740858480923, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": false, "seconds": 0.04932720027863979}
+ok
+test_loader_restores_raw_architecture_and_rejects_incompatible_flags (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_raw_auxiliary_trains_at_zero_scale_and_masks_invalid_targets (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_raw_encoder_reuses_one_spatial_call_and_only_the_received_map (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_teacher_warm_training_masks_raw_logits_and_records_all_parameter_groups (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 9.343848074392074, "median_error_px": 9.344120070519061, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.322268486022949, "simdr_loss": 0.27663588523864746, "pixel_huber_loss": 6.2926788330078125, "teacher_huber_loss": 6.2926788330078125, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.2958851456642151, "raw_current_readout_loss": 0.2795258164405823, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 9.76249669448946, "median_error_px": 9.755264824790668, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 1.0, "p15": 1.0, "first_10_p3": 0.0}, "selected": false, "seconds": 0.3090524710714817}
+ok
+test_zero_raw_scale_preserves_current_checkpoint_for_both_hidden_sizes (tests.ktcal_paper.test_raw_current_streaming.RawCurrentStreamingTests) ... ok
+test_default_gate_updates_kf_without_reading_low_tier_stnet (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_default_reliability_gate_rejects_low_confidence_and_psr (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_documented_command_has_a_complete_default_configuration (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_holdout_refused_before_open_and_existing_report_preserved (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_invalid_config_rejected_before_dataset_or_weights_are_opened (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_terminal_summary_includes_scores_timing_and_raw_gate_ratios (tests.ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ok
+test_low_global_perturbations_cannot_change_entire_raw_trajectory (tests.ktcal_paper.test_sequence_release.SequenceStatePolicyTests) ... ok
+test_medium_refines_only_within_one_pixel_of_updated_kf (tests.ktcal_paper.test_sequence_release.SequenceStatePolicyTests) ... ok
+test_all_timesteps_are_supervised_and_resume_reproduces_weights (tests.ktcal_paper.test_sequence_training.SequenceTrainingTests) ... ok
+test_unfinalized_bidirectional_checkpoint_is_rejected_unless_allowed (tests.ktcal_paper.test_sequence_training.SequenceTrainingTests) ... ok
+test_independent_pixel_score_uses_strict_thresholds_and_record_filter (tests.ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ok
+test_reproduction_must_match_counts_and_forbid_low_tier_fusion (tests.ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ok
+test_wrong_hdf5_sha_rejected_before_loading_frames_or_model (tests.ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ok
+test_3et_attention_readout_supports_past_only_current_step_training (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 0.0002, "train": {"loss": 0.1941884160041809, "supervised_simdr_loss": 0.1941884160041809, "distillation_loss": 0.0, "feature_distillation_loss": 0.0, "pixel_huber_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 10, "mean_error_px": 42.03460693359375, "median_error_px": 42.01190185546875, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 42.03460693359375, "validation_p3": 0.0, "selected": true, "seconds": 0.14952703937888145}
+ok
+test_3et_causal_training_records_final_hidden_readout (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.22470277547836304, "supervised_simdr_loss": 0.22470277547836304, "distillation_loss": 0.0, "feature_distillation_loss": 0.0, "pixel_huber_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 52.76972198486328, "median_error_px": 52.76972198486328, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 52.76972198486328, "validation_p3": 0.0, "selected": false, "seconds": 0.07966393232345581}
+ok
+test_3et_causal_training_uses_all_validation_frames_and_p3_selection (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 1.8633748292922974, "supervised_simdr_loss": 0.22965475916862488, "distillation_loss": 0.0, "feature_distillation_loss": 0.0, "pixel_huber_loss": 32.674400329589844}, "training_valid_timesteps": 2, "validation": {"frames": 6, "mean_error_px": 47.5893440246582, "median_error_px": 47.589080810546875, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 47.5893440246582, "validation_p3": 0.0, "selected": true, "seconds": 0.13080845959484577}
+ok
+test_3et_causal_validation_scores_only_current_frame (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_3et_causal_windows_match_online_history_without_future_leakage (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_3et_cli_defaults_to_raw_100_frame_training (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_3et_finetuning_uses_validation_only_and_records_raw_preprocessing (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.22830483317375183, "supervised_simdr_loss": 0.22830483317375183, "distillation_loss": 0.0, "feature_distillation_loss": 0.0, "pixel_huber_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 40.78615188598633, "median_error_px": 40.78615188598633, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 40.78615188598633, "validation_p3": 0.0, "selected": true, "seconds": 0.07780407555401325}
+ok
+test_3et_training_cli_maps_short_selection_name_to_existing_metric (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+ok
+test_3et_training_rejects_external_teacher (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_3et_training_supports_random_initialization (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.23341180384159088, "supervised_simdr_loss": 0.23341180384159088, "distillation_loss": 0.0, "feature_distillation_loss": 0.0, "pixel_huber_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 55.45108413696289, "median_error_px": 55.45108413696289, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 55.45108413696289, "validation_p3": 0.0, "selected": false, "seconds": 0.051341449841856956}
+ok
+test_all_steps_selection_scores_every_valid_timestep (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.5267301968165805, "simdr_loss": 4.283609867095947, "pixel_huber_loss": 32.43120302472796}, "training_valid_timesteps": 7, "validation_error_px": 48.755340576171875, "validation": {"frames": 2, "mean_error_px": 48.755340576171875, "median_error_px": 48.755340576171875, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.2062325719743967}
+ok
+test_attention_readout_is_parameter_free_and_uses_temporal_context (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_causal_checkpoint_prefers_p3_over_mean_error (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_causal_training_refuses_final_holdout_before_making_output (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_chunks_stay_in_record_and_tail_padding_is_not_supervised (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_cosine_schedule_decays_learning_rate_and_records_it (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 0.010000000000000002, "train": {"loss": 6.936935186386108, "simdr_loss": 4.075177073478699, "pixel_huber_loss": 28.6175799369812}, "training_valid_timesteps": 8, "validation_error_px": 32.44554901123047, "validation": {"frames": 1, "mean_error_px": 32.44554901123047, "median_error_px": 32.44554901123047, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.20498908311128616}
+{"epoch": 2, "learning_rate": 0.0055000000000000005, "train": {"loss": 4.534440755844116, "simdr_loss": 3.116969257593155, "pixel_huber_loss": 14.174716114997864}, "training_valid_timesteps": 8, "validation_error_px": 11.385229110717773, "validation": {"frames": 1, "mean_error_px": 11.385229110717773, "median_error_px": 11.385229110717773, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.20593804679811}
+{"epoch": 3, "learning_rate": 0.001, "train": {"loss": 3.2733559012413025, "simdr_loss": 2.673734813928604, "pixel_huber_loss": 5.996210768818855}, "training_valid_timesteps": 8, "validation_error_px": 9.770524978637695, "validation": {"frames": 1, "mean_error_px": 9.770524978637695, "median_error_px": 9.770524978637695, "p3": 0.0, "p5": 0.0, "p10": 1.0}, "selected": true, "seconds": 0.204770153388381}
+ok
+test_distillation_is_zero_for_identical_logits_and_validates_temperature (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_feature_distillation_masks_padding_and_detaches_teacher (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_feature_taps_preserve_stnet_predictions (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_final_hidden_current_frame_loss_trains_reverse_recurrence (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_final_hidden_readout_uses_reverse_state_from_complete_history (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_flat_h5_chunks_preserve_raw_inputs_and_mask_padded_tail (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_flat_h5_rejects_incompatible_shapes_and_divisor (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_full_temporal_convolution_variant_uses_three_by_three_spatial_support (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_legacy_last_readout_preserves_old_weights_and_predictions (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_masked_losses_ignore_invalid_timesteps (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_masked_losses_reject_an_empty_supervision_mask (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_official_simdr_and_distillation_losses_respect_mask (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_random_chunk_split_is_seeded_disjoint_and_complete (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_random_split_trains_on_every_recording_and_records_policy (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.5267301968165805, "simdr_loss": 4.283609867095947, "pixel_huber_loss": 32.43120302472796}, "training_valid_timesteps": 7, "validation_error_px": 48.035160064697266, "validation": {"frames": 1, "mean_error_px": 48.035160064697266, "median_error_px": 48.035160064697266, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.20889467559754848}
+ok
+test_simdr_targets_peak_at_pixel_coordinate (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_strided_causal_training_windows_match_ring_and_preload (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... ok
+test_training_selects_on_validation_and_records_provenance (tests.ktcal_paper.test_stnet_sequence.STNetSequenceTests) ... {"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.452259608677456, "simdr_loss": 4.2181340626307895, "pixel_huber_loss": 32.34125518798828}, "training_valid_timesteps": 7, "validation_error_px": 49.4210090637207, "validation": {"frames": 1, "mean_error_px": 49.4210090637207, "median_error_px": 49.4210090637207, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": false, "seconds": 0.4319889768958092}
+ok
+test_active_warp_preserves_invalid_labels_and_finite_image_gradients (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_actual_teacher_augmented_epoch_does_not_revalidate_out_of_bounds_target (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.139968221529056, "median_error_px": 23.13700867794063, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 5.084750175476074, "simdr_loss": 0.29279154539108276, "pixel_huber_loss": 15.973194122314453, "teacher_huber_loss": 15.973194122314453, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 9, "validation": {"frames": 10, "mean_error_px": 22.879973509601747, "median_error_px": 22.876793559460815, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.25211217626929283}
+ok
+test_actual_training_epoch_augments_only_train_before_startup_and_excludes_original_invalid (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.504549030877975, "median_error_px": 23.54315438342617, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.6572879552841187, "simdr_loss": 0.28999486565589905, "pixel_huber_loss": 12.887503623962402, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.31417086720466614, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 7, "validation": {"frames": 10, "mean_error_px": 22.878508141805288, "median_error_px": 22.868511034205923, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.2779934722930193}
+ok
+test_cli_passes_optional_augmentation_and_preserves_zero_defaults (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... {}
+{}
+ok
+test_cuda_teacher_augmented_training_has_finite_gradients_with_invalid_targets (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.504736770778454, "median_error_px": 23.543292719273513, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 4.322412967681885, "simdr_loss": 0.2916761338710785, "pixel_huber_loss": 13.17934513092041, "teacher_huber_loss": 13.17934513092041, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.3077334463596344, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 7, "validation": {"frames": 10, "mean_error_px": 22.89866254940872, "median_error_px": 22.888171719342928, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.05692005716264248}
+ok
+test_identity_is_exact_and_preserves_invalid_nan (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_invalid_parameters_and_mismatched_record_shapes_are_rejected (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_rotation_inverse_image_and_forward_points_use_physical_centers (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_scale_and_gain_apply_to_both_polarities_with_constant_record_transform (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_teacher_excludes_original_invalid_target_moved_into_image (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_training_rejects_illegal_augmentation_before_creating_output (tests.ktcal_paper.test_streaming_augmentation.StreamingAugmentationTests) ... ok
+test_checkpoint_loader_detects_streaming_architecture (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_cuda_graph_state_replay_and_reset_matches_eager (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_cuda_replay_includes_preprocessing_without_new_python_view_calls (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_explicit_checkpoint_flip_axis_matches_cache_and_stateful_requests (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_graph_step_can_include_shift_flip_and_normalization (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_loader_rejects_invalid_flip_axis_before_selection_can_use_it (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_request_must_match_received_prefix (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_requested_coordinates_match_full_causal_view_history (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_reset_prevents_record_leakage_and_results_do_not_alias (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_selection_cache_retains_full_history_and_agrees_with_streaming (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_warm_start_repeats_only_first_received_frame_and_counts_its_work (tests.ktcal_paper.test_streaming_inference.StreamingInferenceTests) ... ok
+test_configuration_and_selected_weights_are_validated (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_default_huber_matches_existing_pixel_objective (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_empty_trust_mask_retains_zero_gradient_graph (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_persistent_errors_use_soft_decoder_instead_of_argmax (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_soft_persistent_cold_invalid_and_record_boundaries (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_weighted_huber_masks_invalid_targets_and_gradients (tests.ktcal_paper.test_streaming_objectives.StreamingObjectiveTests) ... ok
+test_bidirectional_initialization_preserves_gate_groups (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_cuda_stateful_sequence_equivalence (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_full_sequence_and_stateful_steps_agree (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_perturbing_future_frames_preserves_every_prefix_logit (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_reset_removes_prior_record_information (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_stream_step_rejects_training_mode (tests.ktcal_paper.test_streaming_stnet.StreamingSTNetTests) ... ok
+test_difficulty_training_masks_prefix_and_records_temperature (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.60098891013423, "median_error_px": 23.66498631750165, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 4.5042266845703125, "simdr_loss": 0.27727654576301575, "pixel_huber_loss": 14.08983325958252, "teacher_huber_loss": 14.08983325958252, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 10, "validation": {"frames": 10, "mean_error_px": 22.56129883390303, "median_error_px": 22.550514596764906, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.2484480571001768}
+ok
+test_explicit_flip_convention_matches_released_normalized_labels (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_full_record_dataset_preload_preserves_frames_and_labels (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_official_simdr_invalid_nan_targets_have_finite_zero_gradients (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_one_epoch_trains_all_timesteps_and_saves_causal_metadata (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.195598093920427, "median_error_px": 23.20875952945427, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.8406792879104614, "simdr_loss": 0.27266955375671387, "pixel_huber_loss": 15.680096626281738, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 10, "validation": {"frames": 10, "mean_error_px": 22.710075006136552, "median_error_px": 22.725227481851284, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.16856642439961433}
+ok
+test_pixel_teacher_loss_ignores_bad_training_teacher_points (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_teacher_cache_requires_training_hash_and_split (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_teacher_loss_ignores_coordinates_shifted_outside_image (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_temperature_validation_matches_stateful_soft_decode (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_training_dataset_refuses_validation_or_final_holdout (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_training_spatial_view_transforms_coordinates_consistently (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_warmed_spatial_training_supervises_only_real_timesteps (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.504549030877975, "median_error_px": 23.54315438342617, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 2.1363329887390137, "simdr_loss": 0.27854618430137634, "pixel_huber_loss": 15.61931324005127, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 2.9585533142089844, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 10, "validation": {"frames": 10, "mean_error_px": 22.81477016068283, "median_error_px": 22.80702640457085, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.2670658640563488}
+ok
+test_warmed_validation_agrees_with_received_only_streaming (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_weighted_main_and_current_training_accept_invalid_nan_labels (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... {"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.60098891013423, "median_error_px": 23.66498631750165, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.8036260604858398, "simdr_loss": 0.2737879157066345, "pixel_huber_loss": 15.298381805419922, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.0, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 22.537728100219827, "median_error_px": 22.52344720157663, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.23866481706500053}
+{"epoch": 0, "train": null, "validation": {"frames": 10, "mean_error_px": 23.60098891013423, "median_error_px": 23.66498631750165, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true}
+{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 1.8608192205429077, "simdr_loss": 0.2722112536430359, "pixel_huber_loss": 15.169631004333496, "teacher_huber_loss": 0.0, "spatial_heatmap_loss": 0.0, "current_readout_loss": 0.2865794599056244, "raw_current_readout_loss": 0.0, "memory_readout_loss": 0.0}, "training_valid_timesteps": 8, "validation": {"frames": 10, "mean_error_px": 22.609267061772123, "median_error_px": 22.597621099595155, "p1": 0.0, "p3": 0.0, "p5": 0.0, "p10": 0.0, "p15": 0.0, "first_10_p3": 0.0}, "selected": true, "seconds": 0.26641265489161015}
+ok
+test_weighted_teacher_loss_uses_only_trusted_targets (tests.ktcal_paper.test_streaming_training.StreamingTrainingTests) ... ok
+test_longer_moving_average_windows_are_available (tests.ktcal_paper.test_temporal_filters.TemporalFilterTests) ... ok
+test_accuracy_fusion_blends_stnet_with_the_kalman_output_only (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_external_global_predictions_are_validated_before_tracking (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_external_global_predictions_drive_resets_without_calling_model (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_gate_trace_distinguishes_skip_match_and_reset_without_changing_output (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_medium_correction_is_asynchronous_and_online_output_is_immutable (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_prediction_fast_path_rejects_bad_limits_and_matches_when_uncertain (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_prediction_only_fast_path_is_opt_in_and_preserves_replay (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_sync_reset_discards_older_async_observation (tests.ktcal_paper.test_tracker.TrackerTests) ... ok
+test_mapping_rejects_other_variants_and_shape_mismatches (tests.ktcal_paper.test_transfer.TransferTests) ... ok
+test_sequence_weights_map_into_itd_and_gru_without_touching_the_head (tests.ktcal_paper.test_transfer.TransferTests) ... ok
+
+----------------------------------------------------------------------
+Ran 297 tests in 32.688s
+
+OK

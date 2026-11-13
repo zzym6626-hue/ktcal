@@ -1,0 +1,22 @@
+{
+  "stnet": "weights/3et/stnet_online_soft_pixel.pt",
+  "matcher": "weights/3et/matcher_best.pt",
+  "window": 16,
+  "history_stride": 2,
+  "right_context": 0,
+  "views": "0:0:0,0:0:1,-2:0:0,-2:0:1,2:0:0,2:0:1,0:-2:0,0:-2:1,0:2:0,0:2:1",
+  "temperature": 1.0,
+  "ensemble": "mean",
+  "search_size": "35x30",
+  "confidence": 0.82,
+  "no_psr": true,
+  "q_pos": 0.1,
+  "q_vel": 0.5,
+  "r_px": 2.0,
+  "fusion_alpha": 0.75,
+  "tolerance": 1.0,
+  "reset_velocity_scale": 1.0,
+  "ema_alpha": 0.5,
+  "ema_max_step": 2.5,
+  "threads": 1
+}

@@ -5,6 +5,8 @@
 /checkpoint_ktcal_*/
 *.pth
 *.pt
+!/weights/3et/stnet_online_soft_pixel.pt
+!/weights/3et/stnet_online_current_readout.pt
 *.rknn
 *.bin
 *.npz

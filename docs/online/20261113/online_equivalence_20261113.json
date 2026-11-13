@@ -1,0 +1,43 @@
+{
+  "protocol": "actual released and causal weights; eager versus optimized graph with changed historical inputs",
+  "checks": [
+    {
+      "stnet": "weights/3et/stnet_best.pt",
+      "sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+      "right_context": 0,
+      "max_pixel_difference": 3.814697265625e-06
+    },
+    {
+      "stnet": "weights/3et/stnet_best.pt",
+      "sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+      "right_context": 2,
+      "max_pixel_difference": 7.62939453125e-06
+    },
+    {
+      "stnet": "/root/tdtracker_opt_20261112/local_run/stnet_ca16_stride2_dense8_epoch2_20261112.pt",
+      "sha256": "2dd5055d143c5a4ad4809aa1eacb4718461ae37ea9d95e43e969ad28795d2be4",
+      "right_context": 0,
+      "max_pixel_difference": 4.57763671875e-05
+    },
+    {
+      "stnet": "/root/tdtracker_opt_20261112/local_run/stnet_ca16_stride2_dense8_epoch2_20261112.pt",
+      "sha256": "2dd5055d143c5a4ad4809aa1eacb4718461ae37ea9d95e43e969ad28795d2be4",
+      "right_context": 2,
+      "max_pixel_difference": 3.814697265625e-06
+    },
+    {
+      "stnet": "local_run/causal_soft_pixel_w16s2_donor_20261113/best.pt",
+      "sha256": "60c3053eead3e62e7fade70a8c3b73cce6583c52f56e626dd7b73927df415810",
+      "right_context": 0,
+      "max_pixel_difference": 9.918212890625e-05
+    },
+    {
+      "stnet": "local_run/causal_soft_pixel_w16s2_donor_20261113/best.pt",
+      "sha256": "60c3053eead3e62e7fade70a8c3b73cce6583c52f56e626dd7b73927df415810",
+      "right_context": 2,
+      "max_pixel_difference": 7.62939453125e-06
+    }
+  ],
+  "future_frames_used": 0,
+  "final_holdout_used": false
+}

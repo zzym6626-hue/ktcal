@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "base_commit": "98c1c0cc61d23da3948a1b76b2bac572fe1df8f8",
+  "stnet": {
+    "path": "weights/3et/stnet_online_soft_pixel.pt",
+    "sha256": "20f5b9fc06ebff50203dd7216fcb70e8fcffb247e12ba8955573f1bf4a1df397",
+    "source_checkpoint_sha256": "60c3053eead3e62e7fade70a8c3b73cce6583c52f56e626dd7b73927df415810",
+    "initialization_checkpoint_sha256": "2dd5055d143c5a4ad4809aa1eacb4718461ae37ea9d95e43e969ad28795d2be4",
+    "format": "inference_only",
+    "tensor_values_preserved": true,
+    "selected_epoch": 1,
+    "window": 16,
+    "history_stride": 2,
+    "readout": "last",
+    "input_divisor": 1.0,
+    "pixel_loss_weight": 0.05,
+    "selection_metric": "soft_expectation_last_step_p3"
+  },
+  "matcher": {
+    "path": "weights/3et/matcher_best.pt",
+    "sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f"
+  },
+  "configs": ["configs/3et_online.json", "configs/3et_online_accuracy.json"],
+  "training_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "validation_h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "validation_selected": true,
+  "final_holdout_used": false,
+  "future_frames_used": 0
+}

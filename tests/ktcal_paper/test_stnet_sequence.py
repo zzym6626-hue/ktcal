@@ -180,6 +180,20 @@ class STNetSequenceTests(unittest.TestCase):
                                    places=5)
             data.close()
 
+    def test_strided_causal_training_windows_match_ring_and_preload(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = self.make_flat_h5(Path(directory), sequences=1, timesteps=5)
+            with h5py.File(path, 'r+') as handle:
+                for step in range(5):
+                    handle['frames'][0, step] = step
+            for preload in (False, True):
+                data = FlatH5CausalWindowDataset(path, window=3, stride=1,
+                                                history_stride=2, preload_frames=preload)
+                expected = ([0, 0, 0], [0, 0, 1], [0, 0, 2], [0, 1, 3], [0, 2, 4])
+                for index, values in enumerate(expected):
+                    self.assertEqual(data[index][0][:, 0, 0, 0].tolist(), values)
+                data.close()
+
     def test_3et_causal_training_uses_all_validation_frames_and_p3_selection(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -191,6 +205,7 @@ class STNetSequenceTests(unittest.TestCase):
             output = root / 'causal'
             train_stnet_3et(train, val, source, output, epochs=1, patience=1,
                             window=2, train_stride=2, causal_last_step=True,
+                            selection_metric='causal_soft', pixel_loss_weight=.05,
                             batch_size=2, lr=1e-5, min_lr=1e-6,
                             distill_weight=0, threads=1, device='cpu')
             config = json.loads((output / 'config.json').read_text())
@@ -202,7 +217,9 @@ class STNetSequenceTests(unittest.TestCase):
             self.assertEqual(history[0]['validation']['frames'], 6)
             self.assertEqual(history[1]['validation']['frames'], 6)
             self.assertEqual(history[1]['training_valid_timesteps'], 2)
-            self.assertEqual(config['selection_metric'], 'hard_argmax_last_step_p3')
+            self.assertEqual(config['selection_metric'], 'soft_expectation_last_step_p3')
+            self.assertEqual(config['pixel_loss_weight'], .05)
+            self.assertGreater(history[1]['train']['pixel_huber_loss'], 0.)
             self.assertIn('last step', config['training_supervision'])
             summary = json.loads((output / 'summary.json').read_text())
             self.assertEqual(summary['best_validation_p3'],
@@ -234,7 +251,7 @@ class STNetSequenceTests(unittest.TestCase):
             main()
         self.assertEqual(train.call_args.kwargs['selection_metric'], 'offline_soft_ma11')
 
-    def test_3et_attention_readout_is_offline_only(self):
+    def test_3et_attention_readout_supports_past_only_current_step_training(self):
         args = build_3et_train_parser().parse_args([
             '--train-h5', 'train.h5', '--val-h5', 'val.h5',
             '--initialize-from', 'best.pth', '--output', 'run',
@@ -249,11 +266,14 @@ class STNetSequenceTests(unittest.TestCase):
             source = root / 'source.pt'
             torch.save({'model_state_dict': STNet().state_dict(),
                         'config': {'input_divisor': 1.}}, source)
-            with self.assertRaisesRegex(ValueError, 'causal'):
-                train_stnet_3et(train, val, source, root / 'run',
-                                epochs=1, patience=1, window=2,
-                                causal_last_step=True, readout='attention',
-                                distill_weight=0, threads=1, device='cpu')
+            train_stnet_3et(train, val, source, root / 'run',
+                            epochs=1, patience=1, window=2,
+                            causal_last_step=True, readout='attention',
+                            history_stride=2, preload_frames=True,
+                            distill_weight=0, threads=1, device='cpu')
+            config = json.loads((root / 'run' / 'config.json').read_text())
+            self.assertEqual(config['attention_scope'], 'historical_window_only')
+            self.assertEqual(config['history_stride'], 2)
 
     def test_3et_causal_training_records_final_hidden_readout(self):
         with tempfile.TemporaryDirectory() as directory:
