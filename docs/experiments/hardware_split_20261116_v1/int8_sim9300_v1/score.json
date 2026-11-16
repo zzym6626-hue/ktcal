@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "predictions_sha256": "7798e25134947967fdc618db3ea7b7d85252d7c8a264956a38867c8b25b4466d",
+  "metrics": {
+    "frames": 9300,
+    "mean_error_px": 1.6376002456550327,
+    "median_error_px": 1.2232449781222374,
+    "p1": 0.3825806451612903,
+    "p3": 0.9078494623655914,
+    "p5": 0.963763440860215,
+    "p10": 0.9926881720430107,
+    "p15": 0.9970967741935484
+  },
+  "tier_counts": {
+    "1": 5647,
+    "2": 32,
+    "3": 3621
+  },
+  "timing_included": false,
+  "note": "scores supplied board CSV; does not certify model provenance or NPU execution"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "purpose": "quantized conversion preflight; not accuracy-qualified calibration",
+  "source": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/train_aug.h5",
+  "source_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "source_shape": [
+    2608,
+    100,
+    2,
+    60,
+    80
+  ],
+  "keys_read": [
+    "frames"
+  ],
+  "records_read": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "raw_counts": true,
+  "normalization_applied": false,
+  "labels_read": false,
+  "validation_used": false,
+  "dataset": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_inputs.txt",
+  "dataset_sha256": "739a1f8b674a79693a0f9b9c3fe791a4268d8bcc9c91084669184d9374ecc3d3"
+}

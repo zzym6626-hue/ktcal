@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/hardware/rv1106/convert_rknn.py", line 69, in <module>
+    main()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/hardware/rv1106/convert_rknn.py", line 64, in main
+    print(json.dumps(convert(args.onnx, args.verified_report, args.output,
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/hardware/rv1106/convert_rknn.py", line 32, in convert
+    from rknn.api import RKNN
+ModuleNotFoundError: No module named 'rknn'

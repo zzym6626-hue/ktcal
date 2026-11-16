@@ -1,0 +1,9 @@
+{
+  "record": 41,
+  "logits_max_abs": 8.0108642578125e-05,
+  "onnx_vs_torch_decoded_max_px": 8.0108642578125e-05,
+  "cpp_vs_same_onnx_logits_max_px": 1.52587890625e-05,
+  "cpp_vs_torch_decoded_max_px": 8.20159912109375e-05,
+  "cpp_vs_same_onnx_ma7_max_px": 7.62939453125e-06,
+  "cpp_vs_torch_ma7_max_px": 6.866455078125e-05
+}

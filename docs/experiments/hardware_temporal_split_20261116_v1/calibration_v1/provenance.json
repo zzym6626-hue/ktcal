@@ -1,0 +1,6311 @@
+{
+  "schema": 1,
+  "purpose": "hardware-first probe, no accuracy floor",
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "source": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/train_aug.h5",
+  "source_shape": [
+    2608,
+    100,
+    2,
+    60,
+    80
+  ],
+  "source_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "keys_read": [
+    "frames"
+  ],
+  "labels_read": false,
+  "validation_used": false,
+  "runtime_divisor": 1.0,
+  "intermediate_source": "original floating model, not mapped/quantized approximation",
+  "datasets": [
+    {
+      "stage": 1,
+      "name": "spatial1",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/train_inputs.txt",
+      "dataset_sha256": "503dd4245e6251004cf47de8ffd04a72c4694396c1dcb986829d72b941dc257e",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "13881169917f6913477238e0c6c5d2b7daf7d6995ab8426c3c5ba899de3c4330"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "a07d90eab6f97bd0dc07f921d081a9dfff39c5c81b649353455a977192f0d480"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "0028734a7af3d38e6cc9988a51fb3a2f4fbf5a7d510a6ebade2995dd6be77a09"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "899d8ee76b3178636b455b1f5a1a9019c296ce94a8aa2cdf1a2545a7c33f2eb5"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "d86a15fae98b11c58fb9c359a012221c1761d1c5c211444efd5b01ba8f169053"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "a1fc755e2ffe27595332ffc7d2537ed7448a733c48ebfc563199c8eae9e21ccc"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "4ef25353c3f82e1be05742b3382cec9d93b6ca8f2c30f97a4335b60730013c20"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3785bb27dddedb97dc0b11feb2572f0f015c124d032aa95cf6806bf77f5cb2db"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "13e00aed3214c3cf2ef91eb6226c465089e5be75bf991975dfa4dcddf7b086dc"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r0_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "a464aad3a38e5094fd33f43fd220f3e646fd3c8570009127a2fdfb32d4993502"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "0028734a7af3d38e6cc9988a51fb3a2f4fbf5a7d510a6ebade2995dd6be77a09"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "899d8ee76b3178636b455b1f5a1a9019c296ce94a8aa2cdf1a2545a7c33f2eb5"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3d419895b73c7be0c1086e4397b22ac5b6894ec2d24807fe922d3183c93c7c1a"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "b4e40a8f405d49fdbb0645c8f5a8bf11fd8cdee9017602e52e104f9ae23330f3"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "39acf2ec46323fafdba0cd2d9745501c09f01e867f5f34c644b3cbb6545907ba"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3785bb27dddedb97dc0b11feb2572f0f015c124d032aa95cf6806bf77f5cb2db"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "13e00aed3214c3cf2ef91eb6226c465089e5be75bf991975dfa4dcddf7b086dc"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "1221db0d8d11ba0295fe3c4dffb9ee7c8a7ca5399f45b39e417fce4b4673a1f2"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "91825f913aad6df13997afbfa2e22c36ea4d14550ed0a9f08a5ef4b8b56a66c1"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r1_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "5c49417a64b8c3ad912a8dbb70187108211e7df52054d2900235ef66058994e8"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3d419895b73c7be0c1086e4397b22ac5b6894ec2d24807fe922d3183c93c7c1a"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "b4e40a8f405d49fdbb0645c8f5a8bf11fd8cdee9017602e52e104f9ae23330f3"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "7a28fbd7bb91661d5d870d3b06c3fb126566e5d6dbba918460dd162d06d50181"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "f489a6ad41f5809287e0939d6dee9c7b57b03ace2616a71fc3e77c5bc4300c70"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "51ad1a9dce35251a011e28d8eeb18e35cc35110656743ceca8775bd93e3c45a2"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "1221db0d8d11ba0295fe3c4dffb9ee7c8a7ca5399f45b39e417fce4b4673a1f2"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "91825f913aad6df13997afbfa2e22c36ea4d14550ed0a9f08a5ef4b8b56a66c1"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "be9cce83677d234bc45db7cf5d1278bd148ad9f88408be0b3aac7714358dd8e2"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "304c99e7ccc693427da8d4ad12c2bd633af8ab457d21d0bd0c388b3d00a4dc1c"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r2_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "70bc18f133c25cc6e8817a4695d0d8787e0ea35fae472ecd22715abceb4dc8e3"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "7a28fbd7bb91661d5d870d3b06c3fb126566e5d6dbba918460dd162d06d50181"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "f489a6ad41f5809287e0939d6dee9c7b57b03ace2616a71fc3e77c5bc4300c70"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "2195bbf1f792fa15021307bd7e42656e83b8e59a76d5b15dbb1a661e7482b292"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "004485fbe48e66c4ad6dd53032e7dc56439e00d409b8ac5cae9a85bb22b0b846"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "67f7109203fcecd9eaa005f4c0adee1239a0ea5b1fde01b1a3e2a57ca55dec01"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "be9cce83677d234bc45db7cf5d1278bd148ad9f88408be0b3aac7714358dd8e2"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "304c99e7ccc693427da8d4ad12c2bd633af8ab457d21d0bd0c388b3d00a4dc1c"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "a0486041668df28c0d647f350521a658b2461588e49f9cea86c004876619ce33"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "708faf2159a6783a2040cebfaa8663a20b2b9efd510e9ec7b10bfb2e7fc21762"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r3_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "6ee0d07893c224f9f993fe8784c6b4fe44241f2aca1a40cf3c4c642ec2ea5c48"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "2195bbf1f792fa15021307bd7e42656e83b8e59a76d5b15dbb1a661e7482b292"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "004485fbe48e66c4ad6dd53032e7dc56439e00d409b8ac5cae9a85bb22b0b846"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3221b22e0d14bbeb95dae2398b9f6c66a1f960818aace7c7ff2a761918369281"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "23fd74a09c036223f06ee97fef74799e4eb36db2afd053000e8719ecf2cfd75a"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "46d56c6e32f51732424aeda31c52ea8fc6aee72cba7aa93770d3e274119adc29"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "a0486041668df28c0d647f350521a658b2461588e49f9cea86c004876619ce33"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "708faf2159a6783a2040cebfaa8663a20b2b9efd510e9ec7b10bfb2e7fc21762"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "f94c0b13ca6baafd8d9207c00afda47d85239fc235ea26c51aab5ed56b3d7311"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "2274e2b2aa71e4347fef216ed67899b99eec1cde8ac2317e6ef1aeee77af953c"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r4_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "8ef875e24acb7976ab29d52514e396347613e16344b29badf88d214985ca7fc5"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "3221b22e0d14bbeb95dae2398b9f6c66a1f960818aace7c7ff2a761918369281"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "23fd74a09c036223f06ee97fef74799e4eb36db2afd053000e8719ecf2cfd75a"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "089837ac9d2c1cf67b2616bb2c673406d6aeee423c979abce168a50736e8b936"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "168ab99284b78637950b4292a99c65576bc963276ede3d5c05931bb6a8b66e3f"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "e8718010cf8cf27e486ff1106f06a815ad904f484c6d4dfd702c278dac084020"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "f94c0b13ca6baafd8d9207c00afda47d85239fc235ea26c51aab5ed56b3d7311"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "2274e2b2aa71e4347fef216ed67899b99eec1cde8ac2317e6ef1aeee77af953c"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "25ba8e2c35d1bd9bba0d23fbc6656966f461164f8512969bbcdbe1633a4feee2"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "8fe680c2c94605efd986c4166d3a5cc4a1580fadc0f63a8c24e42c9748f70e50"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r5_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "ceada3bfb14f7d3f0d648f84c2688cbb9f8533a81b8a60a166db463d4d168c2b"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "089837ac9d2c1cf67b2616bb2c673406d6aeee423c979abce168a50736e8b936"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "168ab99284b78637950b4292a99c65576bc963276ede3d5c05931bb6a8b66e3f"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "5eafc728c27deca762de7c170fc85cfddb744a9a3beff1db9b8d019ac7300846"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "823184858976ff8eb7a8eadc417941a42eb43c4c9406448b82d53129be76152b"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "c5cf7da84f4cc5302bf1782a3ab58e788639737d1cc1f3ed0fa6d8b5f346b703"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "25ba8e2c35d1bd9bba0d23fbc6656966f461164f8512969bbcdbe1633a4feee2"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "8fe680c2c94605efd986c4166d3a5cc4a1580fadc0f63a8c24e42c9748f70e50"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "18070447b2e2260764023b350d6f6d22ea83d30b8c1932dfbb4359d329908527"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "4c2acfcc91ff4d5138ea2ea8318ae14ea5d6ba69314608dcbcabb61a44f7d8b0"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r6_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "5b5edbe5d78864e7e0a177a69a367ac5429c77ac7a702bd6cd60d8b7ac92d68a"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t0_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "5eafc728c27deca762de7c170fc85cfddb744a9a3beff1db9b8d019ac7300846"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t25_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "823184858976ff8eb7a8eadc417941a42eb43c4c9406448b82d53129be76152b"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t50_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "41c574ec856b9891dc378fb989e0032d9c59a77e8e05549c12af8de7d03375e4"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t75_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "72b261bb9b761d6328d174c635964b11d5964ec4d2613d8a85596ec47305edd6"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t99_m0.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "8cfd8efae3bbc31be2b5c0277b73ebdce011fdc46ed66a6aef53b3c8eb1a2382"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t0_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "18070447b2e2260764023b350d6f6d22ea83d30b8c1932dfbb4359d329908527"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t25_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "4c2acfcc91ff4d5138ea2ea8318ae14ea5d6ba69314608dcbcabb61a44f7d8b0"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t50_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "c4eab7465a160e9532cca19662cc87bf9b005ddd74e3ef6ca76a054a2a3aa5d0"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t75_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "c26ac2fb0c7e0613b7164dd07cbbd89dea1b63dab6dec9239b81a33a9e7c81a0"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial1/r7_t99_m1.npy",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ],
+          "sha256": "80f958f4a64e6ca8ee206e704c19046b5c22f613d9aebcf1e71cabc25ab444c8"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "temporal1",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/train_inputs.txt",
+      "dataset_sha256": "b6cd41b8feb5541f997b61a5fdf0deeb56f630555fdd19c44cce385758a4c470",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "68d9ad7dbfeee3fdaa690246fa3847d3b7bd00984b06792d78f5ad87a641a26e"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "63c723311e1c712295dfab4810a0bb7bd9a750838d8dfa4e24d999bd2ada57d2"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "ff821b9b5badf47a4bc0bd8f4604fbc36b9897771096732c9a11bb89f6f480ba"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "3dd01742a6c887f3bc0acbb9fc4ede45013bc5270a433974ec03ad473c1e4d12"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "8c9dd37296681ef1ec4fa9e6f468cd8aa285a73233fbba6ac5281177ff11679a"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "c7754a7496a2a012b1d25f4d5d43f92368fb70bdb71856cd4a4e45af474da9c4"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "1a0280094dbe22b804f045589f8fffac5c4359842267478bb0c76007d42aebfb"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "9b66da9009bfa2982e9b02fc5c133db1a09d5bdf48517c940d166233a8e68425"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "07da3f331fab4d26d41c33fd5241daba35a462afe8df578d63c543246fff0d98"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r0_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "8ed5334dbb8cad0daaa819564228bcf6efc85355f4a796fe5d87311683733f33"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "b0738baa3f2ff7fd5ed0b4777eec7f6d9b5043ce68fb06d3f3b24389fcecac04"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "3dd01742a6c887f3bc0acbb9fc4ede45013bc5270a433974ec03ad473c1e4d12"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "f5683626b43cfa879a521bdecd1245e90044a3c3d8823c37e4885ca26dde458a"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "070c4140473bff22a8ae4ef8741eef017fad3d8455460b376e807efc92fd77b9"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "3653775147f261001bfec6434a7fe549a597744e364a875bb6dc18d95694f488"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e469183676098bc59b3acadadeee512dcc61a36e3a113bcad2264974d70a6d2c"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "07da3f331fab4d26d41c33fd5241daba35a462afe8df578d63c543246fff0d98"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "188856c735c8ff2cc4e4666a909a616dda1df6af35307802d2262b125bd750e7"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "6133f1d81d54a1d78caebe78e404c548384a52f1cbe5fa4fc4665d48c12f23aa"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r1_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "694098232ea4b0d634d64e4ae230f3594004ea61c9899f9ee000316feebc7191"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "57b6fe054c8d32e29fb3e9e6b31c62137b0ff44df7e4aeee0aa2d4eb9aa48148"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "070c4140473bff22a8ae4ef8741eef017fad3d8455460b376e807efc92fd77b9"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "26e88783c4516172061aed3b2de983b76a4cf338bdc3da1a6f96f80dcb063f4a"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "6633731dfb21314cefc67a64ccb313455c9dcb8708a068efbcc3e0fb75e604ce"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "cdf5974209c5d1a18af5c040a33725e31970347abecf4e447a3d1bcd0cb640b1"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d276a4312797a620aac951dccc849159de60a1282e2691c95a66bc5fdd099c48"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "6133f1d81d54a1d78caebe78e404c548384a52f1cbe5fa4fc4665d48c12f23aa"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "c26e08cc2e6cc0171cb8263152125e01bd0e01b70b314cc78d6278a4f951dd6f"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e9a26a143a0ccf7555127e505cb4dd8646fa855576d03b6133bb43cc4794349f"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r2_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "4b653082941f82bdbf997ccd51c1b5a3b48442a381cc050b88ae05ef3a8f952b"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "8ad5e8285fdcaa47318be3c75cade567c3bdeaf438adb74bd6246ea0ea0b58fe"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "6633731dfb21314cefc67a64ccb313455c9dcb8708a068efbcc3e0fb75e604ce"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "760ae00c9a3300dd50f2bc12f7d085448b8d7992b738a20bcdd7a3e36ef1967e"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "eb80a810a078ea0257bac6f42c88a0541d9da0091a05cda98b236abcf3cbaadc"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "34ba380830a7dddaae0d4896472e77fc00fe8556b43ee850e7bf3ec97d2b7e1e"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "f32105feec02de65a1c9404b2f961958501eec637b9c4e08b7570ba5a65f2046"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e9a26a143a0ccf7555127e505cb4dd8646fa855576d03b6133bb43cc4794349f"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "3e70d7b5d1a4f1f5c606ccb83db4e91c4b7bf1ed87ad18df31e25518b09f47ba"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e14545e8c099fb25d2487c0b22e152d6a0b053b1900b8618d07f6640433132f7"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r3_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "a4afdea135e26fb9cbbdbfac45343361c4ad0ef699eb4df35a8c47b232ee790a"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "5dd2b4967fab3c25bc079fea98a9f5d8fc72b7428b69deab7f377eef2c443fb0"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "eb80a810a078ea0257bac6f42c88a0541d9da0091a05cda98b236abcf3cbaadc"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "6cbee8cb8cffbdf10b1bfc5fcec0fa4f4b1f057c1cfd30df8e974ff4f49350f6"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e9b3c5837c6f5dbbf3708e970a20174fb83fb49495bbde84f6ef9032f21c8cdb"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "a500e53ac4d1bb7b02501e6536571584834063bd7d9eede17f1f570c8b1c26fa"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "f88beecb254ae252cec53dcd06917fce8300ea3c92d9e6677548b3f5e6109960"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e14545e8c099fb25d2487c0b22e152d6a0b053b1900b8618d07f6640433132f7"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "893bc524f58c55684e0affa6371630bb2b447744aa7eb8a8ebe2fca76310261f"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "827e27377ae1b7289e09410009331de159962cf36b4d51513026e84f9b4652da"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r4_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "50d20bac574ebd65e4985511e19fa6757215158aedd75b755666437aa7fc7471"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "2a2feb4babd2349958b7c4a1a990e0e8a4f47f58efd207ce2e5739cf098bb4a9"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "e9b3c5837c6f5dbbf3708e970a20174fb83fb49495bbde84f6ef9032f21c8cdb"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "5c91a8bbc3a20d41ee418b929cbd758c4fff2f5383c78d789a6e8c00ad8a2a78"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "7ec6fdac72750d1738fd0dbe98d9f961054ffeb3f8c0659840d2addfff16c579"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "66b537254f34c52a93b160f8c63995d38fd41e6ca12a7a7fb0445a7473b131f3"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "8c5e4822df8ff362abb00efe09657501eca2b168234c88421b7d99d6d9eb8f11"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "827e27377ae1b7289e09410009331de159962cf36b4d51513026e84f9b4652da"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "b847793bb46499924314ae2a760f93e3e53873baf2d8bd283fd954ddfe263c2c"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d2d00f58fd31da4a48a49bf91e12b967cc0cc4bfd571beac30f85222f8e25663"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r5_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "106e03a84192b19a8342cd1dfcfcd0e5ddcb12056943e4165e6b5482ba689bf8"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "f91720ee3bc8eb7c7dac6440159f2e6ca6deb7198e015e378966c7aaf49dee8b"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "7ec6fdac72750d1738fd0dbe98d9f961054ffeb3f8c0659840d2addfff16c579"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "665eb531db0e3464f71a4fa85e8c03b9c58887a99e91643c991a4d3e8dd71deb"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "a52fd0b62af6bb957b86303f02771637f26b98a9625dd00fa5a4e23daf130f92"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "813093350dac1606c8d8d6a1e7c1235333e0d40cfb8815a3c842726a9e17c60e"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d1b198646c0a4de5fa640efb404bd478b259136c92d846998f63429665b3f153"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d2d00f58fd31da4a48a49bf91e12b967cc0cc4bfd571beac30f85222f8e25663"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "79f7dd613e1bf74d2ea75f0aeefa9ab0a5bb986c0091b3b3e3cd6388ea8995c7"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d1e94f133fc19c1f25a3de983ed6c6cb3ab7b37b82632e02e50f25e6bd33ac15"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r6_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "bd8b630840f21ff3eebcf8597458fa24b6233e31b5badd95a3c513ba46b39925"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t0_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "835c17bade536a3f71dd3e39b994215b4fbbc9582739683dee491e962f854fc2"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t25_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "a52fd0b62af6bb957b86303f02771637f26b98a9625dd00fa5a4e23daf130f92"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t50_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "10ac6019c3be110060b35d53d0959741c0b9130da78b9407313f9b05db87a067"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t75_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "42ce8eb2dbaeebdbdf648c985e90defbeccd8dde08e5c0b5a305b4d2db4704ce"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t99_m0.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "843967cdc381e8b6d4004a17beda8f90b175db207aaa17caf13ffe126d19d4d1"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t0_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "5084d4d409e37d384f68bcddc7f99379b7dea2a79b9a6b423c7ea2b3fe7fa55f"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t25_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d1e94f133fc19c1f25a3de983ed6c6cb3ab7b37b82632e02e50f25e6bd33ac15"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t50_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "f312c00370e31f76d14d315f58e8368eb3246a4dc250b84bca1a9c557e475339"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t75_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "385d4e94b2e807b149be78a6daa3f37f7f126168046b458ab1228818a0d7655b"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal1/r7_t99_m1.npy",
+          "shape": [
+            1,
+            96,
+            60,
+            80
+          ],
+          "sha256": "d00e9734bede075bbba8f8e8a2a238cc79902943cc02bae347d979d18d81760c"
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "spatial2",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/train_inputs.txt",
+      "dataset_sha256": "07325bf82f0487a4854300a332a37caec130b8fa941ea93f1faa72afc2d0c340",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "196b43b1317eb95ac8e7fdc022c273ce62a27e1f35fa962871c1ef64433ae506"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "204193b3f1466ccb609e26e8934640a5c101add72d25361b0c0c630f9d946ed7"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "ac634c2643d4e0b30a618ade3b5e1540b03af0829022c36e12116ed12cb2d543"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "e5cd71db68ec6b75c0d9110493269853d14bb9ef9300211b42b0907ad929403d"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "c109056406b7e8f7c88b24301463810e3df8f1f663acdd6ec635f8c7ca28a474"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "a226d372c1238d10f90834e5e2c12e232886100d2d07e62d10fc40e86a0e9669"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "5f1e7f9ab8e5f2af70f84f6236c97e3a3b44e92026da8b8d3a71613183c3a5bd"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "8925519760c702cfbb349e1e097ec05fef104878d850d24d8db5d3dc5ec0860d"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4733b5cc08de5d115b1b1743cfddc4313cdfeb38777c84d4ff16860c117376cc"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r0_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fd43b3ed0537ef95b5f47dc548a14fbfa9bf0c128551bec37231cef0a7322da9"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "880853d02dd8bbac044eea0b754e3d0f9bff29da13045b87be3469ac8e3259f7"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "e5cd71db68ec6b75c0d9110493269853d14bb9ef9300211b42b0907ad929403d"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "62ef6c44d72cd5c5d9d2628820225b5aef956929de3622ad78c0919ee99e8718"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "05ff210cdcfbfbcda337e3ebacce164c2594aa9cd5f6160e3e7fa96203bf0cd6"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "74545a7bcd57ecc19a55af1697ca84d6bc203701489a2eef57435bd7824a1a14"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "c0b547af35e705534ee6be1764587c6dcd60a6365d76e5e9e2d4c2f8166af6ee"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4733b5cc08de5d115b1b1743cfddc4313cdfeb38777c84d4ff16860c117376cc"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "1c93e0377ab8a8d900164c94c56926465f6e5a5b3bb5bf25bb7b49a1b3220420"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "6d14e359c8d41bbd62983f1508bc5506329d7d224a7a81f6a4fd104fafb3ef94"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r1_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "c8fbb31edac4097d07fb75b7a68613e93300d96ddd18483df468f79aef492ead"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "1cd2eb903c0eb463297af236ceb868d561112a1c6dbf6e9de2badb68c4e777cc"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "05ff210cdcfbfbcda337e3ebacce164c2594aa9cd5f6160e3e7fa96203bf0cd6"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "40764e13c43c4857ef5a419f1f41fa3673f17a24c87a147e91f190ad407fb1dc"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fe8d398a5e73834f8e5fde249c6e4cf12d2c8c1d163d4d2ad3c32b1a3ce6473c"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "52abaaa76080d3009bc2d6c9270241b9f9581f6021dcdebe61b196ba462dd316"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "d2e30cb0c2800c11f94e4265d1e46e65a96971069074ddec659dd467a5b57900"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "6d14e359c8d41bbd62983f1508bc5506329d7d224a7a81f6a4fd104fafb3ef94"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "73acbe73045b6f322b6e36f87a3ef2fa85a140c7682e90cc4d6ce72bc8afabce"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "51be30e4316d9e898300d74d685afbc42e177ef65f8b2ec0c8748c9f659fcbe6"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r2_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "5be9a8e94bb39f841d56b4bfbfcf630fd7c3ae7ebfeced67843f225af1d28bc0"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "44995ad0afb7e2983e600f8b2000a8959c3bd7e6230e7013db4537df8e0bac1f"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fe8d398a5e73834f8e5fde249c6e4cf12d2c8c1d163d4d2ad3c32b1a3ce6473c"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "b953be00d55c3225506c9e0d3094c2608e5f15fbd7ad43b664d667e9914cc356"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "3a3b9812b987b55e689d92024878193fae3273ecba9424c005b771cfffef6543"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "25f4a48caddbd792255ca677c031e25be5f284f35ec3be2dbfea9a3a6bd30db2"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "7be3d1397113b6b479cd91ec96c0f4d0e9a278fd19a96b33a70bd78efa8d0fd5"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "51be30e4316d9e898300d74d685afbc42e177ef65f8b2ec0c8748c9f659fcbe6"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "b64e2997f0ae925afdcb3d8739fba56cab8d2443877c9f2cc25f866a4a04486e"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "afa7d41291852ccb8c29f1c24741494c62b67df2c2118437ed2512bba551ffca"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r3_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "b91f65d85a9d398dbbb28c7a280ca67cedbd4340fd77530eb4a3b2fbb250d756"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "6a1f86138494f9e25ba1c299ad77618a98914f60b00c2e1b7f16dd8504dbb721"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "3a3b9812b987b55e689d92024878193fae3273ecba9424c005b771cfffef6543"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "5fa1146d8d1b734a3c86b6ba90f7eb1a8389f42144118a1764ccdad4990c4099"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "bbcf06b7716bb97b139ade9b0af696bb8bf20287f7dfeb048149633ab270da91"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "c22375260994713709a42aeacee2d796d4d7451fe885e8f0b5eabf41227d9a1e"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "3e2338d4ae1e7b4c5b50e8306589443e7a76080e026df8f0a1b43af66e98408d"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "afa7d41291852ccb8c29f1c24741494c62b67df2c2118437ed2512bba551ffca"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "5aa7949653e30ceaca3deb144f7f48f3190d89dfde97e7a3df08e667274c4b8e"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "b6f363f425dbdaa072adda7a67758d61ab160974bd48955dda84975bed318fa1"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r4_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "826ec120767da92b66d7deaa8a58a0e2e15eac760f915a3268df4d28185205c3"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "cb02acb97dba23948dfe1c1a703acc8fad7be6f0da695221f9157b5546b95687"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "bbcf06b7716bb97b139ade9b0af696bb8bf20287f7dfeb048149633ab270da91"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4599796ca3caccf71deb166086bf15f25eacff6f607706bb12be3f3c8836dc1c"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "d997843dda057b3f3a435368e3a8ab6f6762a029e553778e5cd1d44bce28a459"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "1a878d9ec2c89c6743f0bbe468c06122cf0563c1021a3ac8284c2bd01284a008"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fafa85117ec86f870c770e9802440225c1c5c1719975250a9184b7d2d68168eb"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "b6f363f425dbdaa072adda7a67758d61ab160974bd48955dda84975bed318fa1"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "294d995421df2ca09b7c72013897bb059c083c3fb635ef37c10dbe1f971728ed"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "bde52845fb736cccf25b1c9705bbcd2c0773e7b82695a8ec109d17f3e8cff1a3"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r5_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "ddf1b1673a487a11b33e9a032317cf151467ee443271d06d1800dea0a0873074"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "14281960107bf8c913c25d609e7f5e8431cf99bfec5dc4428b72f242fe1fa88b"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "d997843dda057b3f3a435368e3a8ab6f6762a029e553778e5cd1d44bce28a459"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "731a79c11ea14db52e4e872df820ab84efbe3c0796225fee30b128a40e639b2e"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "143e9b86a1383869c927d99fa78ecd8290130abd194d686175ee831f115eb92d"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4eacc44fe82e9e244d4cfe7fe3a9c4dd847256a8fd3c380a1c84ff3249292981"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "08b89844afd949800693ff652fbc9fce4b67efdb0ec970f59b38834d4ee7a74c"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "bde52845fb736cccf25b1c9705bbcd2c0773e7b82695a8ec109d17f3e8cff1a3"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "adb3a55b5434f542f676afffbdabb5595713433468685a631e34715d513c6752"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4ab378c2a40b3fc52b85718cc4a98bd96bec8e8ccda750bbd285779d048fbe3a"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r6_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "79f3e10f064488a5bfe1704e8f8b8ea95e37a2cd6202bc1a66973b107f2f3c8b"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t0_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "280378dc982f9fc3a3aa27479fc94bfc296234392b448cb19f3d981bb5ca5ee6"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t25_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "143e9b86a1383869c927d99fa78ecd8290130abd194d686175ee831f115eb92d"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t50_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "7067f9fbee28406c6f196c5b8711d39be762b14a229325827fc3323958a14e39"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t75_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "3171fb15f5379ff40a09aa091c91e5daa4b47fe1149f5e51bb190a3868e224ad"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t99_m0.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fef1e9cdd18a2674b1875b23a5cff8c4461e2ab5ab28c3aedb4ec24af4bf1ad8"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t0_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "c090c05e89d573a9a8a784d81aa7d7d3d91c5676771d1176abbba0b779916fd3"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t25_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "4ab378c2a40b3fc52b85718cc4a98bd96bec8e8ccda750bbd285779d048fbe3a"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t50_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "d81011e3a2e2f1681816896d711b78e2425f029ce3194324b67ba6cf809afbbc"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t75_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "622fe9f1ba01d07a3855ccceb6c21d6c247924dd99af6c64b51f7056333acefd"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial2/r7_t99_m1.npy",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ],
+          "sha256": "fbe34df1bbe296455616f2ae7a0b134f775beecf8d0ed9a69f55d0649a95c18c"
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "temporal2",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/train_inputs.txt",
+      "dataset_sha256": "4af81b10a0326381b386910f7b3a9b1bf170f057d5e60280d8d3b2a8ab5c7a43",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "e7fd164e47f142aec84a1b4ed6836c99ddac2e0d64291e4bedf6e3669f17e3bf"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "969e0b5d295fa74d4240464b08b3a1d32d498b9438dba4b68143f92be3d669a0"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "20054f263d91b8b075f08b078c08a5793104609162f3f9fd2737a5f4bd6f1c8a"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "39e62c566549afd32d53ae291800f42a3916ba75f2cde906c15d90d819fe3246"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a457cff8964ebc1dd78292ff2d34f14a3bc049db04b630abbc4529e4f0b8339d"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0677704000838a9db4aab92442e9cdb8a42514475f20480c6540cc287e3838c8"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "1e6fd6acc20fb915464b72bad58f8f12df9d6e17c7fde8d99baafef7e2cdb527"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "082323471ff71ec71ebaa5b9e9bb551559b5272cc7c7b8d03c0c545eeb97ce41"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f64c58512913803491bda3a2566884f8f6f9669f9a3ca03f8992494bb68f7b26"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r0_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "3783cc2b6b697704970a0db40f7ed51f9fb77aaea4aeb530939fd24050922c81"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "de571be1cd5474fec901557a68bb04caa90e59b1078f661baa6a58cfd6cc9179"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "39e62c566549afd32d53ae291800f42a3916ba75f2cde906c15d90d819fe3246"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "2a2e53a178e1b107bb66d213cc34292bc1377c6590687978796895994939a267"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f1701ebf51b162352988609b1b40ea4edc3ed99903ff667ad0166d7db7fdf8e6"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "372894c578f92ed5fedd56f7d30e970fb84a2b6f56524c3f4a0c4f14727814cb"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "376690519f6124b18fdb95967d68ad840ea9d73b365d907f2fa032a0e56f9dbf"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f64c58512913803491bda3a2566884f8f6f9669f9a3ca03f8992494bb68f7b26"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "e058a9c7da1868863699fe47bbcb18d30ba8da19bb4d289fce7d441db451e2d1"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "bc24ec127b0292bec8f9571cad3cf966a9b3dc9f76e7d54a6f04dfd2577bce82"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r1_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "5d716d73e61ca6398dfde27546fd9e5593f7c85f295a210319769255f748fee2"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "63a61854754397db5d094c5a1c380e402ab3c1490d87743797e123169c13e677"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f1701ebf51b162352988609b1b40ea4edc3ed99903ff667ad0166d7db7fdf8e6"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "08de5463284f48999a11231e858dbbd89895cc6ef3dd05608445160e183578f9"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "e416650ee09cee4f7731809831bc7244f9fb563986dc1a8011242afe795b0afa"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "d5ce6e04c58986a474ba70ee92b008614f0495f20863190425e603401948f91a"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "68e286d2c774e3aecc0fb452073b377d4cecf1246f94658031304c53f1492eed"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "bc24ec127b0292bec8f9571cad3cf966a9b3dc9f76e7d54a6f04dfd2577bce82"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "9683b8a7d41ebea40ed23c07cee94c7f258f22e2811ce57f00447acf799313fe"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f97efcc005dfa5223c9a1ca36512c3e8311ed6f5598d75cea2963eadf1e0ff5a"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r2_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "1a01bd3b4b6cbf65eb4234233ea1331f3e3965c276e4691a0cb66554bd35c570"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "cd70d45b9499764895dedbd5b9ac977ef30a1c7f4012e5a3875827dacf2529c9"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "e416650ee09cee4f7731809831bc7244f9fb563986dc1a8011242afe795b0afa"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a64ae66dc3c6dc3d448097b013e46c5be902ca4a0ff6de5d4ee1f44d4d79a0d9"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "eab7ecebeac293179bcbf53f58f540b368aa764a10debed7238032031f90290a"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "78ddebe692294aa2f255569852484c8821ef78f1f50820625b6781628e8594d1"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "d5d324e47e72fd0100fa8d5fb4ee16a308af2f330bb99cacd23fbd772663c386"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "f97efcc005dfa5223c9a1ca36512c3e8311ed6f5598d75cea2963eadf1e0ff5a"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "7af7d45807d4ca25d0d2d1195a2a5c39f18172540c40f5940d34b4bc3af3d638"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8e40bcde1b8f6d8e02d9e2034744e03791bd0c0ef014136c51974460d753cc8d"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r3_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "15938534e6e1547bfc14beffa442d5d078da9c5c010f6dea0d86127a7b023762"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "5a884990aa3249d285cdeca99682a2a3a3f05b5351ed472bda7fb9f95af7963e"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "eab7ecebeac293179bcbf53f58f540b368aa764a10debed7238032031f90290a"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "c13c7e9d20457fa3c604ea96fd5a2006e0b63d7ec035f03c5322fdb7999b454d"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0ae494609c5d4bd04b9147d57a8994d584a8892b0cee72ea9481a7581d8dc69b"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "c03e6825849d82c73d2e4ff4d0619cda5ba585dab4191efd3f23bd62c3af4b3c"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "4e810f4dbadeab17d99081fdb641cadd7381513525254ab658f65c66b9d7a35c"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8e40bcde1b8f6d8e02d9e2034744e03791bd0c0ef014136c51974460d753cc8d"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "65c15e7ae3f3652ba9f7d210df0db8bc62976aa2f3e844773966466ba400961e"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "4c0d9a168ed55ffbad18b35d1c7d5e299fe9a3f183004295a63c1e6ad63b8b54"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r4_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a8690550f5cf0b7a35295fa3c589797932c2afe747ca6dc016e3dda8335182cc"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a834ea033565e911bb87de73105c7e361f745f857131a54daeaa470cdb3ce81d"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0ae494609c5d4bd04b9147d57a8994d584a8892b0cee72ea9481a7581d8dc69b"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "5f60b0e0b121396f0f6251c6dbf6cd606eebcdedd5c16e03e87045ff54c2cb2e"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "cc18975a2fa3d7fcc8ca5818340d39a1d6bd812da7f4127d86ad309d5fa876f1"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "fb124a85b38eb1b25c56d41c5fd7932f04dd01859e7521fe31346685dd31fb7e"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "067d16505d71ea5b5bae45827d554b99a1689754146aa73e4a8b924791f6226f"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "4c0d9a168ed55ffbad18b35d1c7d5e299fe9a3f183004295a63c1e6ad63b8b54"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0ec84dbcf5e8de8f0fbffaaac13f40f7b99c21465c6e1edb010f1199e490004b"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "09f06e25033eeeb4becc70e0c4a95508b2c8374351425fa96beaf705e729c5d1"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r5_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "15176039fd024b3917c39a61d7f7914c6f61a2ca1f9e3cc731359eb1395b7dc6"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "d3c93a92d738dd82b4254f5e6b80d46691eac478473dad3767586d1b022f7824"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "cc18975a2fa3d7fcc8ca5818340d39a1d6bd812da7f4127d86ad309d5fa876f1"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "7fcec5f189480c7f05415aba7f9b228dbbc4bd2a46f54a6512efa53837738842"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8afa7a4d18841386b208a958b8029b0663abd49a3d8cdb78dd692a2319461945"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "516ab21dbf844f86e6e51e546a5bca859af12e290102fd9d89d4b97da77af5a8"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "1a2af6241b11878aabe05922e6849651943bd89101c7ce608d52c32a25bdf9ba"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "09f06e25033eeeb4becc70e0c4a95508b2c8374351425fa96beaf705e729c5d1"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8c3c94cac8e1f43b830b5db54c1503b83714e471e5763debe1b85a4ad2f503b8"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0b4f5aa0652c3a53fe848882584c53e96a69b09fdec4f79b08b96a1a06926a5c"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r6_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8d2a90a486454cf933f4e1276c1f6e276af0f2416fc91f3f477469242376e168"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t0_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a09f9e378569add98a12823edf2359538691e2291538417691c5eed61f27d246"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t25_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "8afa7a4d18841386b208a958b8029b0663abd49a3d8cdb78dd692a2319461945"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t50_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0f492ed7efbc5bfa2740773b150ed649e3a25ab6b18f4652d7930e5e62e0f79d"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t75_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "eed3c7d584e941acd3900e64c7e2860ac8e7677d92203fcf6a9bd2192d1f1ba1"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t99_m0.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "bcca6219ec76044f3e80d8f63b8622d38f7ae05d501fd8d5e0c130de10cb490e"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t0_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "dce760374751315dcb42d32b0782e935a44b641f67e7355f0e75ac044e17c17e"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t25_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "0b4f5aa0652c3a53fe848882584c53e96a69b09fdec4f79b08b96a1a06926a5c"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t50_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "81d6486cb324afc8401d1865edfe1c508de1df16d0c3e3d18ea754d877396e2e"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t75_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "e19dd3227b4009e9b961d2e694b16cca503f8c2425a7145e3b67f84dde9e95ed"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal2/r7_t99_m1.npy",
+          "shape": [
+            1,
+            192,
+            20,
+            26
+          ],
+          "sha256": "a2f54ae395618b839674b0f1e3389cb6f699a761544cf02bf646abd08bcbe525"
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "name": "spatial3",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/train_inputs.txt",
+      "dataset_sha256": "af5e92f57ea75424d4fcc0c0b4ec3639d67df26d5509483f0a322581ba23de2a",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "95a1edc88d142a194e25f4f160da5b36c33674e519682353828dcc594b5871b8"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "217d65db41cf52f8912727d3740aaff0efe1edb0529bdcb286442fa1419ac213"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "79770049e153bc448c56fb321a931b09880abcba903cc077e7e0cf8600dcfb40"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "c23508dc075877cbe79d98a5e205a3651ae16dc8e24831b9093211b50bcd26a6"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "8216b4c6d98423cca6bfff65c08c15bf0ecc730829254bd5ce8513c1eadbeb11"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "b53e9207430b91b62d86b0b0de10d433055605a57cb5dbff262461e6ccf6681c"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "aececa80e982840f4e85486fd3e481fbccf64d8edc196ec134c588592bdd78c0"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "3296ecf643afc3876f07f84a184314b7ed9027014b7384c697a591dc924cea75"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "a753c395523cbea490b7b6d4a34c4f185e5aabb39dbb0ec4b26f6153caf098c8"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r0_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "9ab2f8653c6e427e7a62559a784404b5d3376926c75379e03f2cfc51df0c3846"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "e49a927d19c24fb73e749d8c5fbd58c8ff473c090dd2610987026f400d0ee18a"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "c23508dc075877cbe79d98a5e205a3651ae16dc8e24831b9093211b50bcd26a6"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ba9166790f178139032b9f9020d4151935834327e865a6f4a034da9164cc2c93"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "f6880664201523e7c92f5deea0844db8a7df03668fb4440d7862874d42b937cf"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "4be0ed3bfae521c8fb7097a5b8a41a7a79cace2d0fc3d16b30037c73684e59de"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "71ff14a4848c8715b795859a353d417633694a8aafdfc0155e6375602807c166"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "a753c395523cbea490b7b6d4a34c4f185e5aabb39dbb0ec4b26f6153caf098c8"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "9557316efd002db770306971247063190f5c6aa53c9b2dd9a04e8cbb20bb60aa"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "3b9557b0fcc42fcc2d9aac62fa7160a8aa69296d5bd0d23b3400873ebdbe9fa6"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r1_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "2c72c671305f12c5955b975d2f4c1ac78ef7843f5dd71f9b09e1062baec70757"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ed7bacae21bf93ba397916b2bf37b91c2a31a7bd8a8eea7f3d65a149eb8e5585"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "f6880664201523e7c92f5deea0844db8a7df03668fb4440d7862874d42b937cf"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "f2814981b858d546553c17592d70ac46c8dbc7baeee2e4d5466836cf846b5663"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "bd6946181d53026d9f10049e48ce0dd8261d07d032d46894b91224e0d5da92fe"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "75f0b69df7c517b8d187502e692baf404e8fecb5ea7308586d74f954fdcb6fcf"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "a448cfb8bc545d6cf99eae6c3648d6ef06064d9a765cee068c2a702d4091ed38"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "3b9557b0fcc42fcc2d9aac62fa7160a8aa69296d5bd0d23b3400873ebdbe9fa6"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d98ae61cda58a9c0de40f40f2d97c24273f0f58df97cbd45cf7a0d348d8d7987"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "5fdcf40d3cdcd14bf5bb14c30ed70a253ed6d26268cc6526fc7afb88e2885a0a"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r2_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "8ce6a13c9d35a9cf9580de14cfa27e3f700a4dedb53dce89c23cd3bd6a4b7819"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "889883287eb15d51160737d1cf5e49e757d4b13999b8e02972043e0af3035699"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "bd6946181d53026d9f10049e48ce0dd8261d07d032d46894b91224e0d5da92fe"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "0a405344126ae151789c313f1741c1444ad90a5eb5928e34d2e5a20d388ca6aa"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d21c9db79be81a7c5f59fa236e9c2879164a1521e667d1f5062a2f22901e8f9b"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "8e7e233070d43f548d3f9866a1932b04fdfaa284bf2603314e8566e4f20ecfaa"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "77ef77fcbbd2b5fe576fb4f55c00fb51936be2bd26f7644e409e1b8dc902b6c1"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "5fdcf40d3cdcd14bf5bb14c30ed70a253ed6d26268cc6526fc7afb88e2885a0a"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ab4a7dfe920eee64ba624df078544c3ddf0061e55814eefebdec1783f7da3e10"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "35f52bd88de582d57e45befc7a1b2c546754189f0e9f599ffa0ab3a140eaec60"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r3_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "51501c540a2fa1deffb1b65c37681f4ab420a16e826816b60950b3552df61bde"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "5864ee9619f92c1018a7c14a41214e73acfd84fdfb40664101170ff55b22ba22"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d21c9db79be81a7c5f59fa236e9c2879164a1521e667d1f5062a2f22901e8f9b"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "aa5a1db4e3790ec7a9bfa0279853b037871cfb9f84cfea50781ebe6b4cbec3bf"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "bf8f920c38434b31b3a1bc26731d723af8c50e9b248cd7e97b8fff4ef914c0f5"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d89b1ec97aec64b3ed331efe37de3d71ebd6918ab2144f34d8d8599e1d0f3cf6"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d48e883fbf1f4406ac1d3b3b81cd43dbd7cfbe013eacb6dd96699cf6b44f2b9f"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "35f52bd88de582d57e45befc7a1b2c546754189f0e9f599ffa0ab3a140eaec60"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d9db32959cb6077d9fdefeaf7550d7d518777b688884b755b21d5097469be889"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "70fb23a4924a2ffea0a437311839f7b435bd9a2fbbdd836205d083dbfcd44a79"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r4_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "355189c9557ca4ba870c747755fa6ee0b36145bdf7fcd29b7fe5d5d34801e561"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "83d3e09d8b05ad50833dd8d2f41b0580ea5c22c5af587b90e3042823fbe1da52"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "bf8f920c38434b31b3a1bc26731d723af8c50e9b248cd7e97b8fff4ef914c0f5"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "058aa921090b44d20976c31fcbaac156a7f76f657ae0fbc02147ad841524b500"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "86295a0ea9403093554032e097c60546c1a57928b371c706af64b6f96384991f"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "09b369287e2ffcb2b0a18127c74f15804b28c1f7625acf609dca44fae40ee419"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "5359c744daa995a49e27b35f2dbe81871b9b5b04ff94a9d7ef27ffceffe18e15"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "70fb23a4924a2ffea0a437311839f7b435bd9a2fbbdd836205d083dbfcd44a79"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "d68ca7a9a075449406531b348d8a96a32578f95a9da20013d082ead13ba9da47"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "15864861abaf9706d2b5cb64cc3eee037a8a2a7af0956f760e32f664837b5adb"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r5_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "51a57806bde87fa48ce07446438a1c52dc5faed2a3e47fb57542f39deac6b0bb"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "4e7358d8fdfac5e2ec30b27ca9efe7f5d4e0725cd3da6b7b12bd358d206db4a4"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "86295a0ea9403093554032e097c60546c1a57928b371c706af64b6f96384991f"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "0d3287e64c02a455a99a226808d43c832bc25c5830befdacd7daf5fa8434c2b8"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ad0d2c1b27885a0eab8ebd38b4ac5862b8b064af6cbd785362accc0cd6ad6231"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ffb42bcdfed36f4199681ecdffc274ab2d1eeeab3802c00bfa965d094321e9b1"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "afd0db90f64ca2124514ab7a7d640b24dad9a2ec97e70ea1f0d4db8349936505"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "15864861abaf9706d2b5cb64cc3eee037a8a2a7af0956f760e32f664837b5adb"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "f06b07dd1712882e1826cd4398508294aa1800e6057cb414eed3deb544f64c1d"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "35e6512df9de8bef3aa19d2ee718ec61be8ca2db5968095ae08f41cdd2dfaa61"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r6_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "da73e92fe427d5f130c9cd572dae369d952bea3f156af8c7dbfcd1984a11a754"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t0_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "fd23dba4e8f90bab9b0a805038bdf451eadf32aabd248a1607e18a20a8b6f999"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t25_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "ad0d2c1b27885a0eab8ebd38b4ac5862b8b064af6cbd785362accc0cd6ad6231"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t50_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "c4eaf33e4d4a5ae90c95756e2aa84dfbe634f96873b7e124d4fd5ba49f9ec953"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t75_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "1286a99c970adc4fdd4de16d775064faaf4b943201c49c95775e222708445c8a"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t99_m0.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "a5cae557d55eecefa1888e8f9ee02e010685ec5e98bf225529d48d575c0846fc"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t0_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "5802aafceabbfc97d8723c28ddada1d4c11856d4f6639ab5a944af55e154e08d"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t25_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "35e6512df9de8bef3aa19d2ee718ec61be8ca2db5968095ae08f41cdd2dfaa61"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t50_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "2c3d970ec64eeef3e188bfeb063d403153ca1ef40b9c7504cea7afa60e7ddd4d"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t75_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "fde9ffabc22eb76099322ef158bff39bc2692f67c8f9f5bc22ce81347e8e6f2c"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/spatial3/r7_t99_m1.npy",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ],
+          "sha256": "e986afc362c56dffe33eb0b24c7d07e8d39e6c824d9d79cbe53c6a7479e3a1ee"
+        }
+      ]
+    },
+    {
+      "stage": 6,
+      "name": "temporal3",
+      "dataset": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/train_inputs.txt",
+      "dataset_sha256": "b8355981d3191ffb2c339abdd14d155b8b8ea47616bdb5c167cdb91a5f10115c",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "477f1a3d85a987d4f55188fdd4540bddccca272114e80fd72e2d073a901c0739"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "a54d4ae0e3d5ee4b7ad9ad45f00d9ab05cc5545988887c99b439a389ab3001a8"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "b56ee7c7f66f008bc7a747fdccf96e14f40d534dc9fb87beadd712a31d435a1f"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c6517c11ac64ea6c72d2cae28c4b64e011d979c43a4417825912ae97a64897c8"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "8252a7c492765022bdb06ba610a933b45f53fc406fbef93a35e0dd8e74b77968"
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "062d3d245250875f897c12409f1cddf47bc5656dfbb257f35756e5004c4b4e4b"
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "10595bd4145e0bc2829a655b39189edfdd2f7c1eb417d7aad33529cc92b7545c"
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "158f19f74252a1742fcbdb8f475eb58b999f5463b55c735cc2d589110391d54d"
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "2731ccd2d192215b47113550d50c1726725078b48491d3a7ab5dcada94546d32"
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r0_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "03b80e16934dc596757b9da79af8eb32082985e41fb56ac031975a27bfd4e4fa"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "df4e9f4e5742530a66f70237923abdcac9f392498a93b466f8d337d79276cda3"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c6517c11ac64ea6c72d2cae28c4b64e011d979c43a4417825912ae97a64897c8"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "3dc238d60195c291d091882d2abd1b528b5d17465eece7138f93028645a26553"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "df85d03467a69a03ca3da02d8be5b88cc797dc6f5e9443f3701022107864c536"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "d17e40e27745a1e643b35df191b830aae929a8acfb1de22885ddc32f62a49f89"
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "74f0a00b64a8ed2977f5eb4829fc6488f227257068ba2c5ccc354f66b45d0e42"
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "2731ccd2d192215b47113550d50c1726725078b48491d3a7ab5dcada94546d32"
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "fe9e5f099ba47eba6c2a95f4dd1f0e4a9545b710b0694444da1da35f00283d3e"
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1ace63b7110d3cca01cd1a1617fb2cb0a86f643f51bd28f9a146354adb1aee24"
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r1_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "63c6d9384188c120fe9e89a6410e711ec979fca108a8b3b6797b10162d6c8cdc"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "269f4ebb01cb594a73cc37c575ac8a282a709d2e57e86239b47db102dd3777fd"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "df85d03467a69a03ca3da02d8be5b88cc797dc6f5e9443f3701022107864c536"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "efce2fdce2e9552f91c530715ddd67f413fe9e337abeb0706a811c76ffd206ac"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1de70a2172225de5754e9a044315c9a1d77de4f7aa845bdad970109f2015a40f"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "a39c50df0f84313be670940567c2c5c8bdfd7584b5db9eba5dc6844e8ea69008"
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "d63dcd8e4e3e9cd590eafcf93e8eb0d26858d0e2f2d4f19f7668b4f1f743d929"
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1ace63b7110d3cca01cd1a1617fb2cb0a86f643f51bd28f9a146354adb1aee24"
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "598d9c405dc45d1a01c6d80991a5b286fd74c1b47b0b291ee8820ff57d01e853"
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c39fa3746f632fb9aebe4dab6b09404059bdb7dbfcd2e95c75663a973797a52f"
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r2_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "86b915c2a0a578a759a2c50ad576bbc9e0806ccab7897fecf18ab77e2d2b3938"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "3bb2797fafb3bbd15037d1a5296e745286f29cc729a20b484f905c44c9606a2a"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1de70a2172225de5754e9a044315c9a1d77de4f7aa845bdad970109f2015a40f"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "b7ceee40ecd602bc46d19905d4fbaac02935cfdf50faf0f506df20ee515d44b3"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "829f5b74f761e81f58f0c23b8d47cce414a05a988d3521a47a4c87ea9819aed0"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1946d375b67e10d8b65e8bb739196ed514cdfc4f14254d3f402e60cd40c93858"
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "4fb5f3d95cf8475926472c35bb8bb2822e0d4ea43ff3a98ed983ab1278986318"
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c39fa3746f632fb9aebe4dab6b09404059bdb7dbfcd2e95c75663a973797a52f"
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c6b67e2c294caa5b16e62155736d1fde1a0ec78fdd862aa36d95e74c49658015"
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "13e77c6d1729ae8bf4925ea434c768320f469f25a9f5a39dd0d144bb9830baba"
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r3_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "54d4604db8ca45727b7b705c2ff8dd27d25a64e962c58fd00ab789b9707096e5"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "ae8eac3e1549163a4bad842c19f0a5ee5c63e9bc7b9a59bd173a3cf66fa80660"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "829f5b74f761e81f58f0c23b8d47cce414a05a988d3521a47a4c87ea9819aed0"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "f179700b5ec44f6fb7029ecce6c8b6abc92ded888062761a5e5a4320e9a928da"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "b4585f6be3a957aa1106c8d5d1cf0bfbcc478bbdb83817ec6ebb56df95da7f48"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "b67d176cc0f19e676f812cbe83a42021f5e25f543d8b657d11b55d3eb8acfa98"
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "69d7a34915a7a955bed5629fdc354a928e4bf2e75d99835b24bcf13d568861e4"
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "13e77c6d1729ae8bf4925ea434c768320f469f25a9f5a39dd0d144bb9830baba"
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "402549f6861bcaa6470298a97ad65217630f6865bad03e181d528c68c57a43af"
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1a378cc7f1841777f7708fd388d2cfd35a4da02dc8fe0206c819d4ff2dbc3f40"
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r4_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "dfd108a4baee2118445828bd9f381cc022d8c8bedc66c4467730f883d56143de"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "468780c97374e86e096a87baac845a8679de30afccf3ab2ee04b68744ee78b55"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "b4585f6be3a957aa1106c8d5d1cf0bfbcc478bbdb83817ec6ebb56df95da7f48"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "d16c57fd8c213e5d17e6732ea37d462962969c71a6f731d8262ed0de93739013"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "deded5666c1f123ba9e1ed1937f30c0ae9afeb33fcab6fbdd9e4bc41f3c69b7f"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "e8b805169383de6f44139434713bb825bcadf9c3b73c430346ac1a23062c88ba"
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "c7d488cf4f6740179afb49b3b61579d8f56083cd345a22bc983c3fd6b5fd0744"
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1a378cc7f1841777f7708fd388d2cfd35a4da02dc8fe0206c819d4ff2dbc3f40"
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "e8f0a063094c6947457f3cf94e8cdd1da9abd521310be0f4f6b4c06a711ba7d0"
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "ac6258fd5296f57b38934f916d6642c389b45bcaa79a585ccd4d91fc39803693"
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r5_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "04781ced80dd3852cdaf1bf1666bb5ec2332addfe802aaee900c4af4d85639bc"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "9b6acd7ce1a1deab03325e4d1bbb89c277d7808811e1934309a9674c777a3070"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "deded5666c1f123ba9e1ed1937f30c0ae9afeb33fcab6fbdd9e4bc41f3c69b7f"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "e02f5544b42101b51e7eb7f9d7fd80f87ec5011478012335bd387c803ed42395"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "25a3042a170aec33ed003e8d1dd46a6f9849ead9bb54ddfc55f434ac8dca45f0"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "5bb085b9e4d4c657c345d04727556df98f6bcf4653ca41c5ca03b9748d9d5699"
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "96e29a27fdfae649ff8a42fc2c7b042ede82268a8bf952254f80f4fc271de384"
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "ac6258fd5296f57b38934f916d6642c389b45bcaa79a585ccd4d91fc39803693"
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "dcb42ff714481a28cf4aaef0ad99671cdcdbb14e9de5d172daf2f740e8f5c863"
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1a84658bbc2fcc4f5eeaba5787b252642c3c492ba7edb65d0958799824a14670"
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r6_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "ccb7761bfdbf02d5bb93f39997b22f9f271b243cc614899f756e71ada7a6f614"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t0_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "47178a23d2316b804d58e13a9c78cc38e8d9216644af02d538bc9ce7f170e2b6"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t25_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "25a3042a170aec33ed003e8d1dd46a6f9849ead9bb54ddfc55f434ac8dca45f0"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t50_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "2af2142a095a66569a22348a199014cca3fdf5190ca2ef00ccdc0da7091619b1"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t75_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "32b5692d0dbf2307fc3de15cef11442b240df680df8f5163f8e79d2ca49e6960"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t99_m0.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "63ce6bb8da40376358a8e9d76384e5fed954e4eb9071f594e2ad98ce1be243f6"
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t0_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "0552f5f5c9ef48dc98ae0548ca024355a210d51571571166b4820ed5b9340c11"
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t25_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "1a84658bbc2fcc4f5eeaba5787b252642c3c492ba7edb65d0958799824a14670"
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t50_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "e5b26429263539e9e104d97fd5e6910ff576bdec255c36087a702c4af413b053"
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t75_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "94a1319be853b9ebe7080e24d7723c55046f17cdf614bc64ea0ca54aaf35377e"
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_temporal_split_20261116_v1/calibration_v1/temporal3/r7_t99_m1.npy",
+          "shape": [
+            1,
+            384,
+            6,
+            8
+          ],
+          "sha256": "db48e24f500ed7c31b44df40313736d56b2a5917c757e3134c0adec6b3522305"
+        }
+      ]
+    }
+  ]
+}

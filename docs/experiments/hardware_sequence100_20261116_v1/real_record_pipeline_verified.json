@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "records": 1,
+  "frames": 100,
+  "views": 10,
+  "input_source": "test_aug record0 frames only",
+  "stnet_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "max_onnx_logit_error": 8.392333984375e-05,
+  "max_global_pixel_error": 1.3351453905130484e-05,
+  "max_raw_pixel_error": 2.7583748682502574e-05,
+  "max_filtered_pixel_error": 1.335142480485274e-05,
+  "tiers_equal": true,
+  "small_fusion_calls": 0,
+  "tier_counts": [
+    37,
+    0,
+    63
+  ],
+  "rknn_conversion_verified": false,
+  "board_verified": false,
+  "scope": "PyTorch -> ONNX Runtime CPU -> C++ pipeline; not board precision or timing"
+}

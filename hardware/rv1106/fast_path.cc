@@ -13,7 +13,6 @@ static_assert(sizeof(float) == 4 && std::numeric_limits<float>::is_iec559,
               "matcher file requires IEEE754 32-bit float");
 namespace {
 constexpr int kTemplateWidth = 30, kTemplateHeight = 25;
-constexpr int kSearchWidth = 35, kSearchHeight = 30;
 
 float distance(Point a, Point b) { return std::hypot(a.x - b.x, a.y - b.y); }
 
@@ -73,8 +72,12 @@ void read_exact(std::ifstream& stream, char* destination, std::size_t bytes) {
 }
 } // namespace
 
-Route route(float error_px, float confidence, bool border) {
-  if (!std::isfinite(error_px) || !std::isfinite(confidence) || border || confidence < 0.5f)
+Route route(float error_px, float confidence, bool border, float confidence_threshold) {
+  if (!std::isfinite(confidence_threshold) || confidence_threshold < 0 ||
+      confidence_threshold > 1)
+    throw std::invalid_argument("invalid confidence threshold");
+  if (!std::isfinite(error_px) || !std::isfinite(confidence) || border ||
+      confidence < confidence_threshold)
     return Route::Reset;
   return error_px < 3 ? Route::Fast : error_px < 5 ? Route::Deferred : Route::Reset;
 }
@@ -103,18 +106,34 @@ MatcherWeights load_matcher_weights(const char* file) {
   return weights;
 }
 
-Matcher::Matcher(MatcherWeights weights) : weights_(std::move(weights)) {
+Matcher::Matcher(MatcherWeights weights, MatcherConfig config)
+    : weights_(std::move(weights)), config_(config) {
   if (!weights_.channels || weights_.pointwise.size() != 2 * weights_.channels)
     throw std::invalid_argument("matcher requires depthwise and pointwise weights");
+  if (config.search_width < kTemplateWidth || config.search_height < kTemplateHeight ||
+      config.search_width > kWidth || config.search_height > kHeight)
+    throw std::invalid_argument("invalid matcher search size");
+}
+
+std::vector<float> Matcher::template_patch(const Frame& image, Point center) const {
+  return crop(image, center, kTemplateWidth, kTemplateHeight);
 }
 
 MatchResult Matcher::match(const Frame& previous, const Frame& current,
                            Point template_center, Point search_center) const {
-  const auto templ = features(crop(previous, template_center, kTemplateWidth,
-                                   kTemplateHeight), kTemplateWidth, kTemplateHeight, weights_);
-  const auto search = features(crop(current, search_center, kSearchWidth,
-                                    kSearchHeight), kSearchWidth, kSearchHeight, weights_);
-  const int tw = kTemplateWidth, th = kTemplateHeight, sw = kSearchWidth, sh = kSearchHeight;
+  return match_patch(template_patch(previous, template_center), current, search_center);
+}
+
+MatchResult Matcher::match_patch(const std::vector<float>& patch, const Frame& current,
+                                 Point search_center) const {
+  if (patch.size() != 2 * kTemplateWidth * kTemplateHeight)
+    throw std::invalid_argument("invalid template patch");
+  const auto templ = features(patch, kTemplateWidth, kTemplateHeight, weights_);
+  const int tw = kTemplateWidth, th = kTemplateHeight;
+  const int sw = config_.search_width, sh = config_.search_height;
+  const auto search = features(crop(current, search_center, sw, sh), sw, sh, weights_);
+  const int rw = sw - tw + 1, rh = sh - th + 1;
+  std::vector<float> response(rw * rh);
   float best = -std::numeric_limits<float>::infinity();
   int best_x = 0, best_y = 0;
   for (int y = 0; y <= sh - th; ++y) for (int x = 0; x <= sw - tw; ++x) {
@@ -128,10 +147,30 @@ MatchResult Matcher::match(const Frame& previous, const Frame& current,
         norm_s += static_cast<double>(b)*b;
       }
     const float value = static_cast<float>(dot / std::sqrt(std::max(1e-12, norm_t*norm_s)));
+    response[y * rw + x] = value;
     if (value > best) { best = value; best_x = x; best_y = y; }
   }
-  return {{search_center.x + best_x - 2.5f, search_center.y + best_y - 2.5f},
-          best, best_x == 0 || best_x == 5 || best_y == 0 || best_y == 5};
+  const bool border = best_x == 0 || best_x == rw - 1 || best_y == 0 || best_y == rh - 1;
+  auto offset = [](float lower, float peak, float upper) {
+    const float denominator = lower - 2 * peak + upper;
+    return denominator < -1e-9f ? std::clamp(.5f * (lower - upper) / denominator, -.5f, .5f) : 0.f;
+  };
+  float dx = 0, dy = 0;
+  if (config_.subpixel && best_x > 0 && best_x < rw - 1)
+    dx = offset(response[best_y * rw + best_x - 1], best, response[best_y * rw + best_x + 1]);
+  if (config_.subpixel && best_y > 0 && best_y < rh - 1)
+    dy = offset(response[(best_y - 1) * rw + best_x], best, response[(best_y + 1) * rw + best_x]);
+  double sum = 0, variance = 0;
+  const int index = best_y * rw + best_x;
+  for (int i = 0; i < rw * rh; ++i) if (i != index) sum += response[i];
+  const double count = std::max(1, rw * rh - 1), mean = sum / count;
+  for (int i = 0; i < rw * rh; ++i) if (i != index) variance += std::pow(response[i] - mean, 2);
+  const float psr = static_cast<float>((best - mean) / std::sqrt(std::max(1e-12, variance / count)));
+  // Match Python's normalized local-coordinate -> pixel roundtrip in float32.
+  const float span_x = sw - tw, span_y = sh - th;
+  return {{search_center.x + ((best_x + dx) / std::max(span_x, 1.f) - .5f) * span_x,
+           search_center.y + ((best_y + dy) / std::max(span_y, 1.f) - .5f) * span_y},
+          best, border, psr};
 }
 
 void Kalman::reset(Point observation, std::optional<Point> previous) {
@@ -188,7 +227,12 @@ Point Kalman::update(Point observation) {
   return position();
 }
 
-Tracker::Tracker(Matcher matcher) : matcher_(std::move(matcher)) {}
+Tracker::Tracker(Matcher matcher, float confidence_threshold)
+    : matcher_(std::move(matcher)), confidence_threshold_(confidence_threshold) {
+  if (!std::isfinite(confidence_threshold) || confidence_threshold < 0 ||
+      confidence_threshold > 1)
+    throw std::invalid_argument("invalid confidence threshold");
+}
 
 Window Tracker::history_window() const {
   Window window;
@@ -257,7 +301,8 @@ Output Tracker::process(const Frame& frame, Backend& backend,
   const Point prediction = kalman_.predict();
   const MatchResult matched = override_match ? *override_match
       : matcher_.match(template_frame_, frame, template_center_, prediction);
-  Route path = route(distance(prediction, matched.position), matched.confidence, matched.border);
+  Route path = route(distance(prediction, matched.position), matched.confidence,
+                     matched.border, confidence_threshold_);
   // Do not silently turn a medium-error frame into a fast-path hit if the
   // single NPU context is busy; synchronously re-anchor instead.
   if (path == Route::Deferred && pending_) path = Route::Reset;

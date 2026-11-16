@@ -1,0 +1,83 @@
+"""Isolated probe tests: wrong channel order/edge padding must change results."""
+import importlib.util
+import unittest
+from types import SimpleNamespace
+
+import torch
+from models.STNet import STNet
+
+
+class TemporalProbeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        torch.set_num_threads(4)
+
+    def module(self):
+        self.assertIsNotNone(importlib.util.find_spec('temporal_probe'),
+                             'temporal hardware probe not implemented')
+        import temporal_probe
+        return temporal_probe
+
+    def test_channel_stack_uses_previous_current_next_with_zero_edges(self):
+        module = self.module()
+        value = torch.tensor([[[[[1.]], [[10.]]], [[[2.]], [[20.]]],
+                               [[[3.]], [[30.]]]]])
+        actual = module.stack_neighbors(value)
+        expected = torch.tensor([[0., 0., 1., 10., 2., 20.],
+                                 [1., 10., 2., 20., 3., 30.],
+                                 [2., 20., 3., 30., 0., 0.]]).reshape(3, 6, 1, 1)
+        self.assertTrue(torch.equal(actual, expected))
+
+    def test_temporal_graph_matches_conv3d_bn_relu_pool_nontrivial_weights(self):
+        module = self.module()
+        torch.manual_seed(427)
+        model = STNet(SimpleNamespace(stnet_readout='attention')).eval()
+        for block, shape in zip((model.block1, model.block2, model.block3),
+                                ((32, 60, 80), (64, 20, 26), (128, 6, 8))):
+            block.temporal[1].running_mean.copy_(torch.randn(shape[0]))
+            block.temporal[1].running_var.copy_(torch.rand(shape[0]) + .5)
+            value = torch.randn(2, 5, *shape)
+            with torch.inference_mode():
+                expected = block.temporal(value.permute(0, 2, 1, 3, 4))
+                actual = module.Temporal2D(block)(module.stack_neighbors(value))
+                expected = expected.permute(0, 2, 1, 3, 4).reshape_as(actual)
+            torch.testing.assert_close(actual, expected, atol=3e-5, rtol=3e-5)
+
+    def test_full100_keeps_divisor_and_source_weights(self):
+        module = self.module()
+        torch.manual_seed(417)
+        model = STNet(SimpleNamespace(stnet_readout='attention')).eval()
+        before = {k: v.clone() for k, v in model.state_dict().items()}
+        value = torch.randn(1, 100, 2, 60, 80)
+        value[:, 0] += 2.
+        value[:, -1] -= 3.
+        split = module.SixGraphSTNet(model, 7.)
+        with torch.inference_mode():
+            expected, actual = model(value / 7.), split(value)
+        for a, b in zip(actual, expected):
+            torch.testing.assert_close(a, b, atol=3e-5, rtol=3e-5)
+        for key, value in model.state_dict().items():
+            self.assertTrue(torch.equal(value, before[key]), key)
+
+    def test_rejects_short_window_bad_runner_shape_and_incompatible_temporal(self):
+        module = self.module()
+        model = STNet(SimpleNamespace(stnet_readout='attention')).eval()
+        split = module.SixGraphSTNet(model, 1.)
+        with self.assertRaises(ValueError):
+            split(torch.zeros(1, 16, 2, 60, 80))
+        with self.assertRaises(ValueError):
+            split(torch.zeros(1, 100, 2, 60, 80), runner=lambda *_: torch.zeros(1))
+        for divisor in (0., float('inf'), float('nan')):
+            with self.assertRaises(ValueError):
+                module.SixGraphSTNet(model, divisor)
+        bad = STNet(SimpleNamespace(stnet_readout='attention')).eval()
+        # Reject a real grouped kernel without relying on an unpublished
+        # experimental STNet constructor option.
+        bad.block1.temporal[0] = torch.nn.Conv3d(
+            32, 32, (3, 1, 1), padding=(1, 0, 0), groups=32, bias=False)
+        with self.assertRaises(ValueError):
+            module.SixGraphSTNet(bad, 1.)
+
+
+if __name__ == '__main__':
+    unittest.main()

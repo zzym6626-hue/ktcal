@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-16",
+  "scope": "host validation of sequence100 adapter; not RKNN or board deployment",
+  "stnet_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "tests": {
+    "command": ".venv/bin/python -B -m unittest discover -s tests -t .",
+    "total": 255,
+    "passed": 248,
+    "skipped": 7,
+    "exit_code": 0
+  },
+  "cpp_tests": {
+    "command": "make -C hardware/rv1106 test",
+    "exit_code": 0
+  },
+  "official_header_host_check": {
+    "header_sha256": "2d4160cd868efd7b83a72587e411c16d6972da5876e067bd73665cea778ce666",
+    "backend_and_main_compile_exit_code": 0,
+    "npu_executed": false
+  },
+  "rknn_conversion_verified": false,
+  "board_verified": false,
+  "blocker": "RKNN Python toolkit not installed; no connected RV1106 board/runtime/cross-toolchain",
+  "source_sha256": {
+    "hardware/rv1106/Makefile": "fa5b33fe7c12e1a188e3b4a2c607e1c1e76bd3585943d87603d80a1829c8f317",
+    "hardware/rv1106/README.md": "2b99cfa0a6efb7a861e88e4c91c11baf95b9b004304cf6a6f7dea867ff4eb7cb",
+    "hardware/rv1106/convert_rknn.py": "a338eeedce847491fce923e0e6817bfdc5be9cfa9e183ad4c9a0dd5dd1ebc463",
+    "hardware/rv1106/export_matcher.py": "1b18b18165e87a738dd34751262a0103c4a96b1b83bc6af50680f810918148f1",
+    "hardware/rv1106/export_stnet.py": "55494009e5ab7203564df1b59f39ba20f279aa6964fad10f8f8c8a127e263ed6",
+    "hardware/rv1106/fast_path.cc": "d23711dca0ff3687f32b5292b81fecb637f52099704d6ebd84e24dfb39426c94",
+    "hardware/rv1106/fast_path.h": "31b94219184b52aff32cfabd1adf351975ba37a779725cdf5a612a24314eddbb",
+    "hardware/rv1106/main.cc": "1e616db1106aa195dc9470226d223eea10bcce51cd6e42427b84c3851ef6b560",
+    "hardware/rv1106/parity_cli.cc": "e453addfcfa1ff45641e79e97e4bef4d3c142618c2b1e0e341502b37a6801038",
+    "hardware/rv1106/records.py": "13ce178ec822431788a09c4fda0f7643f2452ad8f5f241238bdf4b9655b8c54a",
+    "hardware/rv1106/rknn_backend.cc": "96a14e077ba233584cc76e5668fdab528e8dea609ac159c6ce77c9745e0b7e0e",
+    "hardware/rv1106/rknn_backend.h": "ac6cc27bd8cf20f4cae48452e393248f65ba3c737d95486c0e4acccc4e0f9910",
+    "hardware/rv1106/rknn_sequence_backend.cc": "da75f5a13a8365f4e6c8b46b398c98a97f28098548fe310bec7e6a82a9bb5078",
+    "hardware/rv1106/rknn_sequence_backend.h": "6335b8da2a99e3a425af609a8a7630500c5256662331a059351d394e53abff68",
+    "hardware/rv1106/sequence_main.cc": "0ddba61fde0d9c48fce32250deff01e76beb330aa68046223263e9d42b375f60",
+    "hardware/rv1106/sequence_parity_cli.cc": "bb02e917e3b2338bd10b6287dd09df52a015823a4c6f3a6b57eeb9db6fa20f13",
+    "hardware/rv1106/sequence_path.cc": "24f96e5e766d79b0daa846a1e49d216a75be876b644a47ca379af4847abdf21d",
+    "hardware/rv1106/sequence_path.h": "a06305e36dfcd161793c87d2ccd4741400204c7eef53e3cffbef7846b2edd3c4",
+    "hardware/rv1106/test_fast_path.cc": "2dce75b0ccced161a3900875c29d39a2d3b140db5fc225245ec9cec2b5cab358",
+    "hardware/rv1106/test_rknn_backend.cc": "107c1422356d5335cae9222fef7213791ec9ed89a033d6bf96e07cd1c037501f",
+    "hardware/rv1106/test_sequence_backend.cc": "597d8f5f792f1f3b61e5cb5d0f10afb9666235518e632a55f507ffb545d97f0d",
+    "hardware/rv1106/verify_stnet.py": "6f131329711b81c6c7e74211a9e3f0cd59992b46139ee2784b1c1494f67e5806",
+    "tests/fixtures/rknn/rknn_api.h": "fabbddec7231e306f0146e2c49cac26a636b29f1579175c964bc97850f981a20",
+    "tests/ktcal_paper/test_hardware_sequence.py": "408a8c5f11f5ef93fb3e2d10b0f505e7b7669312a6b9e380d4efbf739fd352ee"
+  },
+  "weights_changed_by_this_task": false,
+  "pushed": false
+}

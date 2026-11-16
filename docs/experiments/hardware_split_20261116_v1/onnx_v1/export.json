@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "experimental": true,
+  "passed": true,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "config": {
+    "dataset": "3ET+2025",
+    "window": 100,
+    "readout": "attention",
+    "temporal_variant": "dense",
+    "temporal_spatial_kernel": 1,
+    "block3_kernel": 5,
+    "unidirectional": false,
+    "input_divisor": 1.0,
+    "preprocessing": "raw_event_counts",
+    "best_epoch": 0
+  },
+  "runtime_divisor": 1.0,
+  "stages": [
+    {
+      "stage": 1,
+      "input_shape": [
+        1,
+        2,
+        60,
+        80
+      ],
+      "output_shape": [
+        1,
+        32,
+        60,
+        80
+      ],
+      "onnx": "/root/ktcal_hardware_split_20261116_v1/artifacts/onnx_v1/spatial1.onnx",
+      "onnx_sha256": "a2a496edd1197ab8023184175bfb7658b71629ac2f44bcc5a310a93d9e798af8",
+      "bytes": 13068,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "random_scaled_zero_max_abs_error": 0.001220703125
+    },
+    {
+      "stage": 2,
+      "input_shape": [
+        1,
+        32,
+        20,
+        26
+      ],
+      "output_shape": [
+        1,
+        64,
+        20,
+        26
+      ],
+      "onnx": "/root/ktcal_hardware_split_20261116_v1/artifacts/onnx_v1/spatial2.onnx",
+      "onnx_sha256": "76430bb5c174f3e6c8a058cacba4db6650db2b55f928e0a367f81486449542b9",
+      "bytes": 205455,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "random_scaled_zero_max_abs_error": 0.000762939453125
+    },
+    {
+      "stage": 3,
+      "input_shape": [
+        1,
+        64,
+        6,
+        8
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        8
+      ],
+      "onnx": "/root/ktcal_hardware_split_20261116_v1/artifacts/onnx_v1/spatial3.onnx",
+      "onnx_sha256": "c72545651ef2b78fd73527c02f1747e0002c11b8c1b31e1ec11a33c8daf9a2b9",
+      "bytes": 820114,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "random_scaled_zero_max_abs_error": 0.0008544921875
+    }
+  ],
+  "cpu_path": "original temporal Conv3D/BN/ReLU/pool + full100 BiGRU/attention/FC",
+  "checkpoint_values_changed": false,
+  "board_verified": false
+}

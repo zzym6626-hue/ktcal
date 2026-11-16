@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "passed": true,
+  "frames": 9300,
+  "report_sha256": "8a38fbb090880e8b8c37a10ea397c0529af604c38fc68c9d73098f517c7650ba",
+  "published_reference_sha256": "02e30b984683cc9939d64faf75ef7ec451ae59e928c1a116cc44853be6962221",
+  "predictions_sha256": "abc6808a6610ddb1896d45d28c32c5ac8dfc0bed812a43b51873c9c7357c781d",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "independently_scored_metrics": {
+    "onnx_cpp_ktcal_ma7": {
+      "frames": 9300,
+      "mean_error_px": 1.6149431351886339,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699
+    },
+    "pytorch_ktcal_ma7": {
+      "frames": 9300,
+      "mean_error_px": 1.6149432232726586,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699
+    },
+    "onnx_cpp_stnet_ma7": {
+      "frames": 9300,
+      "mean_error_px": 1.629334259889705,
+      "p3": 0.9031182795698924,
+      "p5": 0.9619354838709677,
+      "p10": 0.9924731182795699
+    },
+    "pytorch_stnet_ma7": {
+      "frames": 9300,
+      "mean_error_px": 1.629334434912157,
+      "p3": 0.9031182795698924,
+      "p5": 0.9619354838709677,
+      "p10": 0.9924731182795699
+    }
+  },
+  "pixel_csv_mean_tolerance_px": 1e-07,
+  "threshold_classification_mismatches": {
+    "stnet_ma7": {
+      "p3": 0,
+      "p5": 0,
+      "p10": 0
+    },
+    "ktcal_ma7": {
+      "p3": 0,
+      "p5": 0,
+      "p10": 0
+    }
+  },
+  "published_release_deltas": {
+    "stnet": {
+      "p3": 0.0,
+      "p5": 0.00010752688172044333,
+      "p10": 0.0,
+      "mean_error_px": 0.00015515632902696197
+    },
+    "ktcal": {
+      "p3": 0.0,
+      "p5": 0.0,
+      "p10": 0.0,
+      "mean_error_px": 0.0004687561794749495
+    }
+  },
+  "published_gate_count_deltas": {
+    "tier1": -5,
+    "tier2": -1,
+    "tier3": 6,
+    "medium_refinements": -1,
+    "medium_rollbacks": 0,
+    "fusion_calls": -1,
+    "small_fusion_calls": 0,
+    "stnet_requests": 5,
+    "border_peaks": 0
+  },
+  "published_gate_counts_equal": false,
+  "scope": "CPU PyTorch/ONNX+C++ parity; historical CUDA differences recorded, not certified equal",
+  "board_execution": false
+}

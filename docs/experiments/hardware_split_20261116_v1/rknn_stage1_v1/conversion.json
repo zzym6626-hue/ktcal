@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "stage": 1,
+  "conversion_completed": true,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "onnx_sha256": "a2a496edd1197ab8023184175bfb7658b71629ac2f44bcc5a310a93d9e798af8",
+  "rknn_sha256": "aae833b6f78b84d5920c403dbdbb57721ce585fa4c767899ce8db0322889cb2a",
+  "rknn_bytes": 14548,
+  "calibration_sha256": "8c02f6623a90dfeb5d749ec36ff6a04d4691b96604be14fff7e24447a48506a8",
+  "quantized": true,
+  "target": "rv1106",
+  "simulator_verified": false,
+  "board_verified": false
+}

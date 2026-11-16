@@ -1,0 +1,18 @@
+{
+  "languages_detected": [
+    "python"
+  ],
+  "language_file_counts": {
+    "python": 4
+  },
+  "changed_files": [
+    "local_run/hardware_preflight_20261116_v1/evaluate_full.py",
+    "local_run/hardware_preflight_20261116_v1/diagnose_record41.py",
+    "local_run/hardware_preflight_20261116_v1/prepare_calibration.py",
+    "local_run/hardware_preflight_20261116_v1/verify_full_csv.py"
+  ],
+  "changed_methods": {},
+  "call_chains": [],
+  "module_contexts": {},
+  "risk_analysis": []
+}

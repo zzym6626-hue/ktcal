@@ -1,0 +1,9 @@
+test_channel_stack_uses_previous_current_next_with_zero_edges (test_temporal_probe.TemporalProbeTests) ... ok
+test_full100_keeps_divisor_and_source_weights (test_temporal_probe.TemporalProbeTests) ... ok
+test_rejects_short_window_bad_runner_shape_and_incompatible_temporal (test_temporal_probe.TemporalProbeTests) ... ok
+test_temporal_graph_matches_conv3d_bn_relu_pool_nontrivial_weights (test_temporal_probe.TemporalProbeTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.670s
+
+OK

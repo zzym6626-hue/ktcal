@@ -1,0 +1,35 @@
+{
+  "languages_detected": [
+    "python"
+  ],
+  "language_file_counts": {
+    "python": 21
+  },
+  "changed_files": [
+    "tests/ktcal_paper/test_stnet_sequence.py",
+    "scripts/evaluate_stnet_decode_variants.py",
+    "scripts/evaluate_stnet_checkpoint.py",
+    "tests/ktcal_paper/test_combined_3et.py",
+    "scripts/train_stnet_3et.py",
+    "scripts/evaluate_official_3et_protocol.py",
+    "hardware/rv1106/export_stnet.py",
+    "scripts/evaluate_stnet_temporal_filters.py",
+    "tests/ktcal_paper/test_matching.py",
+    "tests/ktcal_paper/test_tracker.py",
+    "ktcal_paper/matcher_finetune.py",
+    "ktcal_paper/stnet_sequence.py",
+    "ktcal_paper/tracker.py",
+    "models/STNet.py",
+    "scripts/evaluate_3et_causal_online.py",
+    "scripts/evaluate_3et_combined_ktcal.py",
+    "tests/ktcal_paper/test_matcher_finetune.py",
+    "ktcal_paper/matching.py",
+    "scripts/evaluate_stnet_sequences.py",
+    "ktcal_paper/combined_3et.py",
+    "scripts/finetune_3et_matcher.py"
+  ],
+  "changed_methods": {},
+  "call_chains": [],
+  "module_contexts": {},
+  "risk_analysis": []
+}

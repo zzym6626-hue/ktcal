@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "experimental": true,
+  "passed": true,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "config": {
+    "dataset": "3ET+2025",
+    "window": 100,
+    "readout": "attention",
+    "temporal_variant": "dense",
+    "temporal_spatial_kernel": 1,
+    "block3_kernel": 5,
+    "unidirectional": false,
+    "input_divisor": 1.0,
+    "preprocessing": "raw_event_counts",
+    "best_epoch": 0
+  },
+  "runtime_divisor": 1.0,
+  "stages": [
+    {
+      "stage": 1,
+      "name": "spatial1",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/spatial1.onnx",
+      "input_shape": [
+        1,
+        2,
+        60,
+        80
+      ],
+      "output_shape": [
+        1,
+        32,
+        60,
+        80
+      ],
+      "onnx_sha256": "8af8fc9f316b9a5f01429cb5eb4f2922695ac247ef738c0f78c76d030daec664",
+      "bytes": 13060,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 0.001220703125
+    },
+    {
+      "stage": 2,
+      "name": "temporal1",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/temporal1.onnx",
+      "input_shape": [
+        1,
+        96,
+        60,
+        80
+      ],
+      "output_shape": [
+        1,
+        32,
+        20,
+        26
+      ],
+      "onnx_sha256": "31dbdedf5827316eab1dc1a8c22fc8af3a3249593d466a1bc918c35a94a27d19",
+      "bytes": 12976,
+      "operators": [
+        "Conv",
+        "Relu",
+        "AveragePool"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 9.1552734375e-05
+    },
+    {
+      "stage": 3,
+      "name": "spatial2",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/spatial2.onnx",
+      "input_shape": [
+        1,
+        32,
+        20,
+        26
+      ],
+      "output_shape": [
+        1,
+        64,
+        20,
+        26
+      ],
+      "onnx_sha256": "7b166924e8456f48a190c1f2fe5160c16566e0f3aa27b621bc5351038d0bf1aa",
+      "bytes": 205447,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 0.000946044921875
+    },
+    {
+      "stage": 4,
+      "name": "temporal2",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/temporal2.onnx",
+      "input_shape": [
+        1,
+        192,
+        20,
+        26
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        8
+      ],
+      "onnx_sha256": "664f10575c46fe36ba3d02ad0a62b8bf4a2cf05d0adf8756d1fe39f960729466",
+      "bytes": 49973,
+      "operators": [
+        "Conv",
+        "Relu",
+        "AveragePool"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 9.1552734375e-05
+    },
+    {
+      "stage": 5,
+      "name": "spatial3",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/spatial3.onnx",
+      "input_shape": [
+        1,
+        64,
+        6,
+        8
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        8
+      ],
+      "onnx_sha256": "9d0e689767a9eb876d59b61de612a972c579c038f9c28a1a2f076d58b51e5d00",
+      "bytes": 820106,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 0.0008544921875
+    },
+    {
+      "stage": 6,
+      "name": "temporal3",
+      "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/temporal3.onnx",
+      "input_shape": [
+        1,
+        384,
+        6,
+        8
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        8
+      ],
+      "onnx_sha256": "156cbd81a08e120ab584428255cb35cb23980b3e77937063dc73382dd560425f",
+      "bytes": 197516,
+      "operators": [
+        "Conv",
+        "Relu"
+      ],
+      "onnx_verified": true,
+      "max_abs_error": 0.00103759765625
+    }
+  ],
+  "cpu_tail": {
+    "onnx": "/root/ktcal_hardware_temporal_split_20261116_v1/export_v1/cpu_tail.onnx",
+    "onnx_sha256": "1ad114a5c011a85580b7551bdf3ec8ca37c563a43d0a58edd4f80428b8a23ee3",
+    "bytes": 7075294,
+    "input_shape": [
+      1,
+      100,
+      128,
+      6,
+      8
+    ],
+    "output_shapes": [
+      [
+        1,
+        100,
+        80
+      ],
+      [
+        1,
+        100,
+        60
+      ]
+    ],
+    "max_abs_error": 4.9591064453125e-05,
+    "host_onnx_verified": true,
+    "board_verified": false
+  },
+  "checkpoint_values_changed": false,
+  "board_verified": false
+}

@@ -1,0 +1,196 @@
+{
+  "protocol": "test_aug full 100-frame bidirectional STNet+KTCAL",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "stnet_sha256": "879c4434fc31df7bd6e171633afa441edf62bc716fc37705ef0257f8ebabb691",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "config": {
+    "h5": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/test_aug.h5",
+    "stnet": "/root/tdtracker_temporal_20261110_v1/local_run/compare_3et_dense_20261110_v1/best.pt",
+    "matcher": "/root/tdtracker_release_eval_20261112_v1/weights/3et/matcher_best.pt",
+    "output": "local_run/kf60_sixty_record1_complete_v1.json",
+    "views": "0:0:0,0:0:1,-2:0:0,-2:0:1,2:0:0,2:0:1,0:-2:0,0:-2:1,0:2:0,0:2:1",
+    "search_size": "37x32",
+    "confidence": 0.28,
+    "min_psr": 2.55,
+    "q_pos": 0.05,
+    "q_vel": 0.2,
+    "r_px": 32.0,
+    "medium_policy": "state",
+    "fusion_alpha": 0.75,
+    "tolerance": 1.0,
+    "template_refresh": 0,
+    "reset_velocity_scale": 1.0,
+    "filter": "ma7",
+    "temperature": 0.65,
+    "ensemble": "median",
+    "batch_size": 1,
+    "track_batch": 1,
+    "repeats": 3,
+    "no_graph": false,
+    "require_kf60": false,
+    "cache_output": null,
+    "device": "cuda"
+  },
+  "metrics": {
+    "stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.629179103560678,
+      "median_error_px": 1.1901905692255963,
+      "p1": 0.38268817204301075,
+      "p3": 0.9031182795698924,
+      "p5": 0.9618279569892473,
+      "p10": 0.9924731182795699,
+      "p15": 0.9970967741935484
+    },
+    "ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.614474379009159,
+      "median_error_px": 1.224597088598506,
+      "p1": 0.3735483870967742,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699,
+      "p15": 0.9970967741935484
+    }
+  },
+  "tracker_stats": {
+    "tier1": 5648,
+    "tier2": 27,
+    "tier3": 3625,
+    "fusion_calls": 4,
+    "small_fusion_calls": 0,
+    "medium_rollbacks": 23,
+    "medium_refinements": 4,
+    "border_peaks": 490,
+    "frames": 9300,
+    "stnet_requests": 3652,
+    "global_predictions_precomputed": 9300
+  },
+  "latency": [
+    {
+      "stnet_ms": 3305.0565868616104,
+      "total_ms": 9834.061639383435,
+      "ms_per_frame": 1.0574259827294017,
+      "metrics": {
+        "stnet": {
+          "frames": 9300,
+          "mean_error_px": 1.629179103560678,
+          "median_error_px": 1.1901905692255963,
+          "p1": 0.38268817204301075,
+          "p3": 0.9031182795698924,
+          "p5": 0.9618279569892473,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        },
+        "ktcal": {
+          "frames": 9300,
+          "mean_error_px": 1.614474379009159,
+          "median_error_px": 1.224597088598506,
+          "p1": 0.3735483870967742,
+          "p3": 0.9110752688172044,
+          "p5": 0.964516129032258,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        }
+      },
+      "tracker_stats": {
+        "tier1": 5648,
+        "tier2": 27,
+        "tier3": 3625,
+        "fusion_calls": 4,
+        "small_fusion_calls": 0,
+        "medium_rollbacks": 23,
+        "medium_refinements": 4,
+        "border_peaks": 490,
+        "frames": 9300,
+        "stnet_requests": 3652,
+        "global_predictions_precomputed": 9300
+      }
+    },
+    {
+      "stnet_ms": 3367.900924757123,
+      "total_ms": 9787.542404606938,
+      "ms_per_frame": 1.0524239144738643,
+      "metrics": {
+        "stnet": {
+          "frames": 9300,
+          "mean_error_px": 1.629179103560678,
+          "median_error_px": 1.1901905692255963,
+          "p1": 0.38268817204301075,
+          "p3": 0.9031182795698924,
+          "p5": 0.9618279569892473,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        },
+        "ktcal": {
+          "frames": 9300,
+          "mean_error_px": 1.614474379009159,
+          "median_error_px": 1.224597088598506,
+          "p1": 0.3735483870967742,
+          "p3": 0.9110752688172044,
+          "p5": 0.964516129032258,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        }
+      },
+      "tracker_stats": {
+        "tier1": 5648,
+        "tier2": 27,
+        "tier3": 3625,
+        "fusion_calls": 4,
+        "small_fusion_calls": 0,
+        "medium_rollbacks": 23,
+        "medium_refinements": 4,
+        "border_peaks": 490,
+        "frames": 9300,
+        "stnet_requests": 3652,
+        "global_predictions_precomputed": 9300
+      }
+    },
+    {
+      "stnet_ms": 3369.926417246461,
+      "total_ms": 9760.605975985527,
+      "ms_per_frame": 1.049527524299519,
+      "metrics": {
+        "stnet": {
+          "frames": 9300,
+          "mean_error_px": 1.629179103560678,
+          "median_error_px": 1.1901905692255963,
+          "p1": 0.38268817204301075,
+          "p3": 0.9031182795698924,
+          "p5": 0.9618279569892473,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        },
+        "ktcal": {
+          "frames": 9300,
+          "mean_error_px": 1.614474379009159,
+          "median_error_px": 1.224597088598506,
+          "p1": 0.3735483870967742,
+          "p3": 0.9110752688172044,
+          "p5": 0.964516129032258,
+          "p10": 0.9924731182795699,
+          "p15": 0.9970967741935484
+        }
+      },
+      "tracker_stats": {
+        "tier1": 5648,
+        "tier2": 27,
+        "tier3": 3625,
+        "fusion_calls": 4,
+        "small_fusion_calls": 0,
+        "medium_rollbacks": 23,
+        "medium_refinements": 4,
+        "border_peaks": 490,
+        "frames": 9300,
+        "stnet_requests": 3652,
+        "global_predictions_precomputed": 9300
+      }
+    }
+  ],
+  "median_ms_per_frame": 1.0524239144738643,
+  "latency_scope": "warm complete H2D+all STNet views+soft decode+tracking+output D2H+record filter; excludes disk/model loading/metrics/graph capture",
+  "final_holdout_used": false,
+  "labels_used_for_inference": false,
+  "published_weights_modified": false
+}

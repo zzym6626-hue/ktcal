@@ -1,0 +1,83 @@
+..Validated 1/1 chunks
+...[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+........s.ss.s................[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+...................[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+...[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+...................................{
+  "schema": 1,
+  "h5_sha256": "2c1b19ac01f44e9a0d5e00346c872ea58ef93228187c0effc9b0d5ce62b9e434",
+  "predictions_sha256": "02ebe61414298593f0e210eaae098231422c16ec9183b063874eca7b67267567",
+  "metrics": {
+    "frames": 200,
+    "mean_error_px": 0.0,
+    "median_error_px": 0.0,
+    "p1": 1.0,
+    "p3": 1.0,
+    "p5": 1.0,
+    "p10": 1.0,
+    "p15": 1.0
+  },
+  "tier_counts": {
+    "1": 200,
+    "2": 0,
+    "3": 0
+  },
+  "timing_included": false,
+  "note": "scores supplied board CSV; does not certify model provenance or NPU execution"
+}
+Processed 2/2 chunks
+.Processed 1/1 chunks
+.Processed 1/1 chunks
+............[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 0.001, "training_loss": 0.0, "training_samples": 2, "training_valid_samples": 0, "validation": [{"gap": 1, "frames": 4, "mean_error_px": 92.1004867553711, "median_error_px": 92.1004867553711, "p1": 0.0, "p3": 0.0, "p5": 0.0}], "validation_error_px": 92.1004867553711, "selected": true, "seconds": 0.005210250000001082}
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 0.001, "training_loss": 0.04379088059067726, "training_samples": 6, "training_valid_samples": 6, "validation": [{"gap": 1, "frames": 12, "mean_error_px": 2.7406911849975586, "median_error_px": 2.666795253753662, "p1": 0.0, "p3": 0.75, "p5": 1.0}, {"gap": 4, "frames": 3, "mean_error_px": 2.6671876907348633, "median_error_px": 3.034738540649414, "p1": 0.0, "p3": 0.3333333333333333, "p5": 1.0}], "validation_error_px": 2.7259904861450197, "selected": true, "seconds": 0.016622540999996716}
+.............................[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+....s....Validated 1/1 sequences
+.......................[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"phase": "head_distillation", "validation": {"primary": {"frames": 1, "mean_error_px": 0.6534336890815751, "mse_px2": 0.21348779301337828, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}, "forward": {"frames": 1, "mean_error_px": 0.6534336890815751, "mse_px2": 0.21348779301337828, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}}}
+{"phase": "bidirectional", "epoch": 1, "loss": {"loss": 1.299765944480896, "coordinate_mse_px2": 0.21348771452903748, "forward_mse_px2": 0.21348771452903748, "matching_mse_px2": 2.909301519393921}, "validation": {"primary": {"frames": 1, "mean_error_px": 0.9151911015295738, "mse_px2": 0.4187873761594574, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}, "forward": {"frames": 1, "mean_error_px": 0.6022829340477166, "mse_px2": 0.18137236632256304, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}}}
+{"phase": "forward_finetune", "epoch": 1, "validation": {"frames": 1, "mean_error_px": 0.6279181908146858, "mse_px2": 0.19714062717799408, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}}
+{"phase": "forward_finetune", "epoch": 2, "validation": {"frames": 1, "mean_error_px": 0.48070290914737296, "mse_px2": 0.11553764343137374, "p3": 1.0, "p5": 1.0, "p10": 1.0, "out_of_bounds_ratio": 0.0}}
+...........[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+......[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.2284233272075653, "supervised_simdr_loss": 0.2284233272075653, "distillation_loss": 0.0, "feature_distillation_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 5.70156192779541, "median_error_px": 5.70156192779541, "p3": 0.0, "p5": 0.0, "p10": 1.0}, "validation_error_px": 5.70156192779541, "validation_p3": 0.0, "selected": true, "seconds": 0.08746966699999703}
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.21180899441242218, "supervised_simdr_loss": 0.21180899441242218, "distillation_loss": 0.0, "feature_distillation_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 6, "mean_error_px": 62.20579147338867, "median_error_px": 62.201290130615234, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 62.20579147338867, "validation_p3": 0.0, "selected": false, "seconds": 0.04280312499999894}
+....{"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.231306254863739, "supervised_simdr_loss": 0.231306254863739, "distillation_loss": 0.0, "feature_distillation_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 66.35134887695312, "median_error_px": 66.35134887695312, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 66.35134887695312, "validation_p3": 0.0, "selected": false, "seconds": 0.02040537499999928}
+.ok
+..[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.22540095448493958, "supervised_simdr_loss": 0.22540095448493958, "distillation_loss": 0.0, "feature_distillation_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 55.45108413696289, "median_error_px": 55.45108413696289, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 55.45108413696289, "validation_p3": 0.0, "selected": false, "seconds": 0.018085916999996954}
+.{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.505601746695382, "simdr_loss": 4.2571611404418945, "pixel_huber_loss": 32.48440497262137}, "training_valid_timesteps": 7, "validation_error_px": 48.77789306640625, "validation": {"frames": 2, "mean_error_px": 48.77789306640625, "median_error_px": 48.77789306640625, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.10185037500000149}
+........{"epoch": 1, "learning_rate": 0.010000000000000002, "train": {"loss": 6.412670254707336, "simdr_loss": 3.7458412647247314, "pixel_huber_loss": 26.668287754058838}, "training_valid_timesteps": 8, "validation_error_px": 15.36948299407959, "validation": {"frames": 1, "mean_error_px": 15.36948299407959, "median_error_px": 15.36948299407959, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.08752745800000028}
+{"epoch": 2, "learning_rate": 0.0055000000000000005, "train": {"loss": 4.508899092674255, "simdr_loss": 3.351356655359268, "pixel_huber_loss": 11.575423926115036}, "training_valid_timesteps": 8, "validation_error_px": 3.713440179824829, "validation": {"frames": 1, "mean_error_px": 3.713440179824829, "median_error_px": 3.713440179824829, "p3": 0.0, "p5": 1.0, "p10": 1.0}, "selected": true, "seconds": 0.08294866699999659}
+{"epoch": 3, "learning_rate": 0.001, "train": {"loss": 3.1093691289424896, "simdr_loss": 2.6014579236507416, "pixel_huber_loss": 5.079112336039543}, "training_valid_timesteps": 8, "validation_error_px": 3.418536901473999, "validation": {"frames": 1, "mean_error_px": 3.418536901473999, "median_error_px": 3.418536901473999, "p3": 0.0, "p5": 1.0, "p10": 1.0}, "selected": true, "seconds": 0.0788304999999987}
+................{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.505601746695382, "simdr_loss": 4.2571611404418945, "pixel_huber_loss": 32.48440497262137}, "training_valid_timesteps": 7, "validation_error_px": 48.06074905395508, "validation": {"frames": 1, "mean_error_px": 48.06074905395508, "median_error_px": 48.06074905395508, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": true, "seconds": 0.08395274999999813}
+.[W ParallelNative.cpp:230] Warning: Cannot set number of intraop threads after parallel work has started or after set_num_threads call when using native parallel backend (function set_num_threads)
+{"epoch": 1, "learning_rate": 1e-05, "train": {"loss": 0.22540095448493958, "supervised_simdr_loss": 0.22540095448493958, "distillation_loss": 0.0, "feature_distillation_loss": 0.0}, "training_valid_timesteps": 2, "validation": {"frames": 2, "mean_error_px": 55.45108413696289, "median_error_px": 55.45108413696289, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "validation_error_px": 55.45108413696289, "validation_p3": 0.0, "selected": false, "seconds": 0.020061874999999674}
+....{"epoch": 1, "learning_rate": 0.0001, "train": {"loss": 7.469027042388916, "simdr_loss": 4.228537491389683, "pixel_huber_loss": 32.404894965035574}, "training_valid_timesteps": 7, "validation_error_px": 49.463714599609375, "validation": {"frames": 1, "mean_error_px": 49.463714599609375, "median_error_px": 49.463714599609375, "p3": 0.0, "p5": 0.0, "p10": 0.0}, "selected": false, "seconds": 0.13433795899999978}
+.........ss................
+----------------------------------------------------------------------
+Ran 255 tests in 27.903s
+
+OK (skipped=7)

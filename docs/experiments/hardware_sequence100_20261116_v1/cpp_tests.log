@@ -1,0 +1,5 @@
+c++ -O3 -std=c++17 -Wall -Wextra -Werror -pthread fast_path.cc test_fast_path.cc -o ktcal_fast_test
+./ktcal_fast_test
+c++ -O3 -std=c++17 -Wall -Wextra -Werror -pthread -I../../tests/fixtures/rknn fast_path.cc sequence_path.cc \
+	    rknn_sequence_backend.cc test_sequence_backend.cc -o /tmp/ktcal_sequence_backend_test
+/tmp/ktcal_sequence_backend_test

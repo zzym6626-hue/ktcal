@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "onnx_sha256": "fdb9b9691b4de6ce08d6165f22ad5e70a39d1c728f956f3aaf7f8baa8de114a6",
+  "records": 1,
+  "input_source": "/private/tmp/ktcal_hardware_real_record_20261116.npy",
+  "max_logit_error": 6.103515625e-05,
+  "atol": 0.0002,
+  "rtol": 0.0002,
+  "runtime": "ONNX Runtime CPU",
+  "rknn_conversion_verified": false,
+  "board_verified": false
+}

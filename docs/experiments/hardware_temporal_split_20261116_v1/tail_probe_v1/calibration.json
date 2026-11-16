@@ -1,0 +1,110 @@
+{
+  "source": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/train_aug.h5",
+  "source_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "onnx_sha256": "1ad114a5c011a85580b7551bdf3ec8ca37c563a43d0a58edd4f80428b8a23ee3",
+  "dataset_sha256": "10e493fb91be0235339409b7bc1228348593e7e77cb90a053fe25d619c7dafa8",
+  "keys_read": [
+    "frames"
+  ],
+  "labels_read": false,
+  "validation_used": false,
+  "samples": [
+    {
+      "record": 0,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r0_m0.npy",
+      "sha256": "82e4c3e549deafbd4ce8df21909a22216d1dd9a8eda47700ac0e88fbc66d7ef8"
+    },
+    {
+      "record": 0,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r0_m1.npy",
+      "sha256": "3ba4ad68a3a9daaa7b8f969c24be54094d5ede3211c5fe917667ec3e3f3fc7ad"
+    },
+    {
+      "record": 1,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r1_m0.npy",
+      "sha256": "992739a0444ca97f6d9b1dfb53dc76cb8ae3af587f98dd745b78b0470b83b87f"
+    },
+    {
+      "record": 1,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r1_m1.npy",
+      "sha256": "3441407c51a2ab6736a413629179f2ab2928dd6cd7dd783400b3cbcefaba8200"
+    },
+    {
+      "record": 2,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r2_m0.npy",
+      "sha256": "f7f2718a39d1f61bde21f1a2dabcdcab24b2c5bf9ca00018cfe81988f9ee6269"
+    },
+    {
+      "record": 2,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r2_m1.npy",
+      "sha256": "633b29474a642b8100816b6b458d13cabdc00ed0225d9eacac95fc8dc2977135"
+    },
+    {
+      "record": 3,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r3_m0.npy",
+      "sha256": "58f0f4e09cc193fce6d8171fd398ddb00264dcc623d9c8ad36d09775dd5ff51c"
+    },
+    {
+      "record": 3,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r3_m1.npy",
+      "sha256": "671d65abeb3fe3aa1855050d6fd4cad1708f2c82a9182da6b9be1f7b2354e0c4"
+    },
+    {
+      "record": 4,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r4_m0.npy",
+      "sha256": "348e5399383817806a0e8a02ad4ed0c66c2afeb6309d8d96fcfc6ffbc4bf5c78"
+    },
+    {
+      "record": 4,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r4_m1.npy",
+      "sha256": "2e6bd7cf2cbb3674e1934021e46a4a1624b9586dae68b09ee76b5c12e88a388d"
+    },
+    {
+      "record": 5,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r5_m0.npy",
+      "sha256": "7d3029d2c9e31f7e04eecc1be819b3745e84498cf9ec49f1a54555ba6da6cb93"
+    },
+    {
+      "record": 5,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r5_m1.npy",
+      "sha256": "37bb5d7c287bd385f130d8e0f232272224e34e9b8ddd9e21287841b7066e5f3f"
+    },
+    {
+      "record": 6,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r6_m0.npy",
+      "sha256": "c5dc22abcf39851752078bb3730c57d0a632ed8280cffb191b5066068e26aeaf"
+    },
+    {
+      "record": 6,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r6_m1.npy",
+      "sha256": "e6360060f2a9c2e657dcfd6548122432057fd06833e1e38789906b8a8e1772e9"
+    },
+    {
+      "record": 7,
+      "flip": false,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r7_m0.npy",
+      "sha256": "ccdc65201bcc2a6bdd2159333391d183077527a6d460ac4cfa5ebccdc78491fb"
+    },
+    {
+      "record": 7,
+      "flip": true,
+      "path": "/root/ktcal_hardware_temporal_split_20261116_v1/tail_probe_v1/train_r7_m1.npy",
+      "sha256": "6519c269d5db0caff6a2089dc4953d0a4d8e4c3cf0d7f4b78c3f8c9c5f87d7af"
+    }
+  ]
+}

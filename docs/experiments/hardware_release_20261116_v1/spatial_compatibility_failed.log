@@ -1,0 +1,17 @@
+test_each_spatial_stage_matches_original_nontrivial_bn (test_split_probe.SplitProbeTests) ... ok
+test_full_100_frame_split_keeps_temporal_edges_and_applies_divisor_once (test_split_probe.SplitProbeTests) ... ok
+test_spatial_probe_refuses_temporal_or_depthwise_variant (test_split_probe.SplitProbeTests) ... FAIL
+test_split_rejects_non_100_frame_raw_contract (test_split_probe.SplitProbeTests) ... ok
+
+======================================================================
+FAIL: test_spatial_probe_refuses_temporal_or_depthwise_variant (test_split_probe.SplitProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/ktcal_publish_hardware_20261116_v1/docs/experiments/hardware_split_20261116_v1/test_split_probe.py", line 78, in test_spatial_probe_refuses_temporal_or_depthwise_variant
+    module.SplitSTNet(model, 1.)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.847s
+
+FAILED (failures=1)

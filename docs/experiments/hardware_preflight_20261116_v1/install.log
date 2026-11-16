@@ -1,0 +1,55 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Collecting onnx==1.16.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/ca/a6/366248892aef34fa4c4e45098b4f10596240c9f67f84b82f6cb263f07033/onnx-1.16.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (15.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.9/15.9 MB 300.4 kB/s eta 0:00:00
+Collecting onnxruntime==1.19.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/29/0e/2a5cfe2d7113f4b5c47b51a4dd0a961196cb2cf72d6f1952de36ba1e3147/onnxruntime-1.19.2-cp38-cp38-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (13.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.2/13.2 MB 314.3 kB/s eta 0:00:00
+Collecting rknn-toolkit2==2.3.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/5b/f3/8750e35fa032957cbbd7a321bc4fea03dae4cbb020fd69c14d4cb7f8ef63/rknn_toolkit2-2.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.6/41.6 MB 339.0 kB/s eta 0:00:00
+Requirement already satisfied: protobuf>=3.20.2 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from onnx==1.16.2) (5.29.5)
+Requirement already satisfied: numpy>=1.20 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from onnx==1.16.2) (1.24.1)
+Requirement already satisfied: packaging in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from onnxruntime==1.19.2) (25.0)
+Collecting flatbuffers
+  Downloading http://mirrors.aliyun.com/pypi/packages/e8/2d/d2a548598be01649e2d46231d151a6c56d10b964d94043a335ae56ea2d92/flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+Requirement already satisfied: sympy in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from onnxruntime==1.19.2) (1.13.3)
+Collecting coloredlogs
+  Downloading http://mirrors.aliyun.com/pypi/packages/a7/06/3d6badcf13db419e25b07041d9c7b4a2c331d3f4e7134445ec5df57714cd/coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.0/46.0 kB 39.6 MB/s eta 0:00:00
+Collecting psutil>=5.9.0
+  Downloading http://mirrors.aliyun.com/pypi/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 356.9 kB/s eta 0:00:00
+Requirement already satisfied: opencv-python>=4.5.5.64 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from rknn-toolkit2==2.3.2) (4.12.0.88)
+Requirement already satisfied: tqdm>=4.64.0 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from rknn-toolkit2==2.3.2) (4.67.1)
+Requirement already satisfied: scipy>=1.5.4 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from rknn-toolkit2==2.3.2) (1.10.1)
+Collecting protobuf>=3.20.2
+  Downloading http://mirrors.aliyun.com/pypi/packages/ca/6c/cc7ab2fb3a4a7f07f211d8a7bbb76bba633eb09b148296dbd4281e217f95/protobuf-4.25.4-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.6/294.6 kB 352.5 kB/s eta 0:00:00
+Collecting fast-histogram>=0.11
+  Downloading http://mirrors.aliyun.com/pypi/packages/03/eb/676928fe70eee38ff176c34d64dbb0815532b55c4948c9850309920b4e43/fast_histogram-0.13-cp38-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.2/57.2 kB 28.6 MB/s eta 0:00:00
+Requirement already satisfied: torch<=2.4.0,>=1.10.1 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from rknn-toolkit2==2.3.2) (2.1.0+cu121)
+Collecting ruamel.yaml>=0.17.4
+  Downloading http://mirrors.aliyun.com/pypi/packages/0f/73/bb1bc2529f852e7bf64a2dec885e89ff9f5cc7bbf6c9340eed30ff2c69c5/ruamel.yaml-0.18.16-py3-none-any.whl (119 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.9/119.9 kB 522.5 kB/s eta 0:00:00
+Collecting ruamel.yaml.clib>=0.2.7
+  Downloading http://mirrors.aliyun.com/pypi/packages/22/fa/b2a8fd49c92693e9b9b6b11eef4c2a8aedaca2b521ab3e020aa4778efc23/ruamel.yaml.clib-0.2.8-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (596 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 596.0/596.0 kB 362.7 kB/s eta 0:00:00
+Requirement already satisfied: filelock in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (3.13.1)
+Requirement already satisfied: fsspec in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (2024.6.1)
+Requirement already satisfied: networkx in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (3.0)
+Requirement already satisfied: triton==2.1.0 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (2.1.0)
+Requirement already satisfied: jinja2 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (3.1.4)
+Requirement already satisfied: typing-extensions in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (4.12.2)
+Collecting humanfriendly>=9.1
+  Downloading http://mirrors.aliyun.com/pypi/packages/f0/0f/310fb31e39e2d734ccaa2c0fb981ee41f7bd5056ce9bc29b2248bd569169/humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 378.7 kB/s eta 0:00:00
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from sympy->onnxruntime==1.19.2) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./miniconda3/envs/TDTracker/lib/python3.8/site-packages (from jinja2->torch<=2.4.0,>=1.10.1->rknn-toolkit2==2.3.2) (2.1.5)
+Installing collected packages: flatbuffers, ruamel.yaml.clib, psutil, protobuf, humanfriendly, fast-histogram, ruamel.yaml, onnx, coloredlogs, onnxruntime, rknn-toolkit2
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 5.29.5
+    Not uninstalling protobuf at /root/miniconda3/envs/TDTracker/lib/python3.8/site-packages, outside environment /root/ktcal_hardware_preflight_20261116_v1/env
+    Can't uninstall 'protobuf'. No files were found to uninstall.
+Successfully installed coloredlogs-15.0.1 fast-histogram-0.13 flatbuffers-25.12.19 humanfriendly-10.0 onnx-1.16.2 onnxruntime-1.19.2 protobuf-4.25.4 psutil-7.2.2 rknn-toolkit2-2.3.2 ruamel.yaml-0.18.16 ruamel.yaml.clib-0.2.8

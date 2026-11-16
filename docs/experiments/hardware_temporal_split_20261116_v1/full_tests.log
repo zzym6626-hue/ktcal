@@ -1,0 +1,662 @@
+ktcal_paper.test_adaptive_offline (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_bidirectional (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_combined_3et (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_data (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_diagnostics (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_evaluation_protocol (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_evaluation_readout (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_experiment (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_forward_simdr (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_gate_diagnostics (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_hardware_export (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_hardware_sequence (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_kf60_experiment (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_ktcal_official_holdout (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_matcher_diagnostics (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_matcher_finetune (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_matching (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_medium_only_fusion (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_model (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_batch_tracker (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_cuda (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_deferred_medium (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_evidence (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_experiment (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_hard_cases (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_offline_low_global_invariance (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_paper_3et (unittest.loader._FailedTest) ... ERROR
+test_default_gate_updates_kf_without_reading_low_tier_stnet (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_default_reliability_gate_rejects_low_confidence_and_psr (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_documented_command_has_a_complete_default_configuration (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_holdout_refused_before_open_and_existing_report_preserved (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_invalid_config_rejected_before_dataset_or_weights_are_opened (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_terminal_summary_includes_scores_timing_and_raw_gate_ratios (ktcal_paper.test_sequence_release.SequenceReleaseTests) ... ERROR
+test_low_global_perturbations_cannot_change_entire_raw_trajectory (ktcal_paper.test_sequence_release.SequenceStatePolicyTests) ... ERROR
+test_medium_refines_only_within_one_pixel_of_updated_kf (ktcal_paper.test_sequence_release.SequenceStatePolicyTests) ... ERROR
+ktcal_paper.test_sequence_training (unittest.loader._FailedTest) ... ERROR
+test_independent_pixel_score_uses_strict_thresholds_and_record_filter (ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ERROR
+test_reproduction_must_match_counts_and_forbid_low_tier_fusion (ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ERROR
+test_wrong_hdf5_sha_rejected_before_loading_frames_or_model (ktcal_paper.test_sequence_verification.SequenceVerificationTests) ... ERROR
+ktcal_paper.test_stnet_sequence (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_stnet_temporal_variants (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_tdtracker_initialization (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_temporal_filters (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_tracker (unittest.loader._FailedTest) ... ERROR
+ktcal_paper.test_transfer (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: ktcal_paper.test_adaptive_offline (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_adaptive_offline
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_adaptive_offline.py", line 10, in <module>
+    from ktcal_paper.adaptive_offline import (
+ModuleNotFoundError: No module named 'ktcal_paper.adaptive_offline'
+
+
+======================================================================
+ERROR: ktcal_paper.test_bidirectional (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_bidirectional
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_bidirectional.py", line 13, in <module>
+    from ktcal_paper.experiment import train, load_deployed, evaluate, sha256, write_json
+ModuleNotFoundError: No module named 'ktcal_paper.experiment'
+
+
+======================================================================
+ERROR: ktcal_paper.test_combined_3et (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_combined_3et
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_combined_3et.py", line 14, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+
+======================================================================
+ERROR: ktcal_paper.test_data (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_data
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_data.py", line 7, in <module>
+    from ktcal_paper.data import subject_split, read_labels, WindowDataset, load_manifest
+ModuleNotFoundError: No module named 'ktcal_paper.data'
+
+
+======================================================================
+ERROR: ktcal_paper.test_diagnostics (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_diagnostics
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_diagnostics.py", line 11, in <module>
+    from ktcal_paper import diagnostics
+ImportError: cannot import name 'diagnostics' from 'ktcal_paper' (/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/__init__.py)
+
+
+======================================================================
+ERROR: ktcal_paper.test_evaluation_protocol (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_evaluation_protocol
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_evaluation_protocol.py", line 11, in <module>
+    from ktcal_paper.evaluation_protocol import (
+ModuleNotFoundError: No module named 'ktcal_paper.evaluation_protocol'
+
+
+======================================================================
+ERROR: ktcal_paper.test_evaluation_readout (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_evaluation_readout
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_evaluation_readout.py", line 17, in <module>
+    from scripts import evaluate_official_3et_protocol as official
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_official_3et_protocol.py", line 18, in <module>
+    from ktcal_paper.evaluation_protocol import (
+ModuleNotFoundError: No module named 'ktcal_paper.evaluation_protocol'
+
+
+======================================================================
+ERROR: ktcal_paper.test_experiment (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_experiment
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_experiment.py", line 10, in <module>
+    from ktcal_paper.experiment import train,evaluate,metrics
+ModuleNotFoundError: No module named 'ktcal_paper.experiment'
+
+
+======================================================================
+ERROR: ktcal_paper.test_forward_simdr (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_forward_simdr
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_forward_simdr.py", line 13, in <module>
+    from ktcal_paper.combined_3et import evaluate_online_causal_3et
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+
+======================================================================
+ERROR: ktcal_paper.test_gate_diagnostics (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_gate_diagnostics
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_gate_diagnostics.py", line 10, in <module>
+    from ktcal_paper.gate_diagnostics import (
+ModuleNotFoundError: No module named 'ktcal_paper.gate_diagnostics'
+
+
+======================================================================
+ERROR: ktcal_paper.test_hardware_export (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_hardware_export
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_hardware_export.py", line 11, in <module>
+    from hardware.rv1106.export_matcher import export_matcher
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/hardware/rv1106/export_matcher.py", line 13, in <module>
+    from ktcal_paper.matching import PaperMatcher
+ModuleNotFoundError: No module named 'ktcal_paper.matching'
+
+
+======================================================================
+ERROR: ktcal_paper.test_hardware_sequence (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_hardware_sequence
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_hardware_sequence.py", line 13, in <module>
+    from ktcal_paper.matching import PaperMatcher, crop_rectangle
+ModuleNotFoundError: No module named 'ktcal_paper.matching'
+
+
+======================================================================
+ERROR: ktcal_paper.test_kf60_experiment (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_kf60_experiment
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_kf60_experiment.py", line 2, in <module>
+    from ktcal_paper.kf60_experiment import assess_candidate
+ModuleNotFoundError: No module named 'ktcal_paper.kf60_experiment'
+
+
+======================================================================
+ERROR: ktcal_paper.test_ktcal_official_holdout (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_ktcal_official_holdout
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_ktcal_official_holdout.py", line 10, in <module>
+    from ktcal_paper.official_holdout import evaluate_ktcal_official_holdout
+ModuleNotFoundError: No module named 'ktcal_paper.official_holdout'
+
+
+======================================================================
+ERROR: ktcal_paper.test_matcher_diagnostics (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_matcher_diagnostics
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_matcher_diagnostics.py", line 6, in <module>
+    from ktcal_paper.matcher_diagnostics import (
+ModuleNotFoundError: No module named 'ktcal_paper.matcher_diagnostics'
+
+
+======================================================================
+ERROR: ktcal_paper.test_matcher_finetune (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_matcher_finetune
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_matcher_finetune.py", line 13, in <module>
+    from ktcal_paper.matcher_finetune import (
+ModuleNotFoundError: No module named 'ktcal_paper.matcher_finetune'
+
+
+======================================================================
+ERROR: ktcal_paper.test_matching (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_matching
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_matching.py", line 5, in <module>
+    from ktcal_paper.matching import (COARSE_SEARCH, COARSE_TEMPLATE, SEARCH,
+ModuleNotFoundError: No module named 'ktcal_paper.matching'
+
+
+======================================================================
+ERROR: ktcal_paper.test_medium_only_fusion (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_medium_only_fusion
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_medium_only_fusion.py", line 7, in <module>
+    from ktcal_paper.matching import PaperMatcher, TEMPLATE, response_to_pixel
+ModuleNotFoundError: No module named 'ktcal_paper.matching'
+
+
+======================================================================
+ERROR: ktcal_paper.test_model (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_model
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_model.py", line 3, in <module>
+    from ktcal_paper.model import PaperSTNet
+ModuleNotFoundError: No module named 'ktcal_paper.model'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_batch_tracker (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_batch_tracker
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_batch_tracker.py", line 6, in <module>
+    from ktcal_paper.tracker import PaperTracker, PixelKalman
+ModuleNotFoundError: No module named 'ktcal_paper.tracker'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_cuda (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_cuda
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_cuda.py", line 3, in <module>
+    from ktcal_paper.matching import PaperMatcher, TEMPLATE, crop_rectangle
+ModuleNotFoundError: No module named 'ktcal_paper.matching'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_deferred_medium (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_deferred_medium
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_deferred_medium.py", line 11, in <module>
+    from ktcal_paper.tracker import PaperTracker, PixelKalman
+ModuleNotFoundError: No module named 'ktcal_paper.tracker'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_evidence (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_evidence
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_evidence.py", line 10, in <module>
+    from ktcal_paper.offline_experiment import validate_candidate_metrics
+ModuleNotFoundError: No module named 'ktcal_paper.offline_experiment'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_experiment (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_experiment
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_experiment.py", line 4, in <module>
+    from ktcal_paper.offline_experiment import spatial_view, undo_view, average_views, smooth_pixels
+ModuleNotFoundError: No module named 'ktcal_paper.offline_experiment'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_hard_cases (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_hard_cases
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_hard_cases.py", line 12, in <module>
+    from ktcal_paper.stnet_sequence import (
+ModuleNotFoundError: No module named 'ktcal_paper.stnet_sequence'
+
+
+======================================================================
+ERROR: ktcal_paper.test_offline_low_global_invariance (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_offline_low_global_invariance
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_offline_low_global_invariance.py", line 4, in <module>
+    from ktcal_paper.offline_batch import OfflineBatchTracker
+ModuleNotFoundError: No module named 'ktcal_paper.offline_batch'
+
+
+======================================================================
+ERROR: ktcal_paper.test_paper_3et (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_paper_3et
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_paper_3et.py", line 11, in <module>
+    from ktcal_paper.model import PaperSTNet
+ModuleNotFoundError: No module named 'ktcal_paper.model'
+
+
+======================================================================
+ERROR: test_default_gate_updates_kf_without_reading_low_tier_stnet (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 32, in test_default_gate_updates_kf_without_reading_low_tier_stnet
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_default_reliability_gate_rejects_low_confidence_and_psr (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 47, in test_default_reliability_gate_rejects_low_confidence_and_psr
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_documented_command_has_a_complete_default_configuration (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 22, in test_documented_command_has_a_complete_default_configuration
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_holdout_refused_before_open_and_existing_report_preserved (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 71, in test_holdout_refused_before_open_and_existing_report_preserved
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_invalid_config_rejected_before_dataset_or_weights_are_opened (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 62, in test_invalid_config_rejected_before_dataset_or_weights_are_opened
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_terminal_summary_includes_scores_timing_and_raw_gate_ratios (ktcal_paper.test_sequence_release.SequenceReleaseTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 82, in test_terminal_summary_includes_scores_timing_and_raw_gate_ratios
+    module = self.release()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 18, in release
+    from scripts import evaluate_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_3et.py", line 12, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_low_global_perturbations_cannot_change_entire_raw_trajectory (ktcal_paper.test_sequence_release.SequenceStatePolicyTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 141, in test_low_global_perturbations_cannot_change_entire_raw_trajectory
+    tracker = self.tracker(.5)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 116, in tracker
+    from ktcal_paper.offline_batch import OfflineBatchTracker
+ModuleNotFoundError: No module named 'ktcal_paper.offline_batch'
+
+======================================================================
+ERROR: test_medium_refines_only_within_one_pixel_of_updated_kf (ktcal_paper.test_sequence_release.SequenceStatePolicyTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 126, in test_medium_refines_only_within_one_pixel_of_updated_kf
+    result, stats = self.tracker(3.5).track(frames, globals_px)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_release.py", line 116, in tracker
+    from ktcal_paper.offline_batch import OfflineBatchTracker
+ModuleNotFoundError: No module named 'ktcal_paper.offline_batch'
+
+======================================================================
+ERROR: ktcal_paper.test_sequence_training (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_sequence_training
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_training.py", line 12, in <module>
+    from ktcal_paper.experiment import evaluate, load_deployed, train_sequence
+ModuleNotFoundError: No module named 'ktcal_paper.experiment'
+
+
+======================================================================
+ERROR: test_independent_pixel_score_uses_strict_thresholds_and_record_filter (ktcal_paper.test_sequence_verification.SequenceVerificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 20, in test_independent_pixel_score_uses_strict_thresholds_and_record_filter
+    module = self.verifier()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 16, in verifier
+    from scripts import verify_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/verify_3et.py", line 11, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_reproduction_must_match_counts_and_forbid_low_tier_fusion (ktcal_paper.test_sequence_verification.SequenceVerificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 32, in test_reproduction_must_match_counts_and_forbid_low_tier_fusion
+    module = self.verifier()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 16, in verifier
+    from scripts import verify_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/verify_3et.py", line 11, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: test_wrong_hdf5_sha_rejected_before_loading_frames_or_model (ktcal_paper.test_sequence_verification.SequenceVerificationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 43, in test_wrong_hdf5_sha_rejected_before_loading_frames_or_model
+    module = self.verifier()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_sequence_verification.py", line 16, in verifier
+    from scripts import verify_3et
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/verify_3et.py", line 11, in <module>
+    from ktcal_paper.combined_3et import (
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+======================================================================
+ERROR: ktcal_paper.test_stnet_sequence (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_stnet_sequence
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_stnet_sequence.py", line 14, in <module>
+    from scripts.train_stnet_3et import build_parser as build_3et_train_parser
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/train_stnet_3et.py", line 6, in <module>
+    from ktcal_paper.stnet_sequence import train_stnet_3et
+ModuleNotFoundError: No module named 'ktcal_paper.stnet_sequence'
+
+
+======================================================================
+ERROR: ktcal_paper.test_stnet_temporal_variants (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_stnet_temporal_variants
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_stnet_temporal_variants.py", line 11, in <module>
+    from ktcal_paper.combined_3et import load_stnet_checkpoint
+ModuleNotFoundError: No module named 'ktcal_paper.combined_3et'
+
+
+======================================================================
+ERROR: ktcal_paper.test_tdtracker_initialization (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_tdtracker_initialization
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_tdtracker_initialization.py", line 9, in <module>
+    from ktcal_paper.stnet_sequence import _initialize_3et_student
+ModuleNotFoundError: No module named 'ktcal_paper.stnet_sequence'
+
+
+======================================================================
+ERROR: ktcal_paper.test_temporal_filters (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_temporal_filters
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_temporal_filters.py", line 3, in <module>
+    from scripts.evaluate_stnet_temporal_filters import build_filter_variants
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/scripts/evaluate_stnet_temporal_filters.py", line 17, in <module>
+    from ktcal_paper.evaluation_protocol import soft_expectation_decode
+ModuleNotFoundError: No module named 'ktcal_paper.evaluation_protocol'
+
+
+======================================================================
+ERROR: ktcal_paper.test_tracker (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_tracker
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_tracker.py", line 6, in <module>
+    from ktcal_paper.tracker import PaperTracker, PixelKalman
+ModuleNotFoundError: No module named 'ktcal_paper.tracker'
+
+
+======================================================================
+ERROR: ktcal_paper.test_transfer (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ktcal_paper.test_transfer
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/tests/ktcal_paper/test_transfer.py", line 4, in <module>
+    from ktcal_paper.model import PaperSTNet
+ModuleNotFoundError: No module named 'ktcal_paper.model'
+
+
+----------------------------------------------------------------------
+Ran 45 tests in 0.023s
+
+FAILED (errors=45)

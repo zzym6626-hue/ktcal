@@ -1,0 +1,49 @@
+test_each_spatial_stage_matches_original_nontrivial_bn (test_split_probe.SplitProbeTests) ... FAIL
+test_full_100_frame_split_keeps_temporal_edges_and_applies_divisor_once (test_split_probe.SplitProbeTests) ... FAIL
+test_spatial_probe_refuses_temporal_or_depthwise_variant (test_split_probe.SplitProbeTests) ... FAIL
+test_split_rejects_non_100_frame_raw_contract (test_split_probe.SplitProbeTests) ... FAIL
+
+======================================================================
+FAIL: test_each_spatial_stage_matches_original_nontrivial_bn (test_split_probe.SplitProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 32, in test_each_spatial_stage_matches_original_nontrivial_bn
+    module, model = self.module(), self.model()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('split_probe'),
+AssertionError: unexpectedly None : equivalent split probe is not implemented
+
+======================================================================
+FAIL: test_full_100_frame_split_keeps_temporal_edges_and_applies_divisor_once (test_split_probe.SplitProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 47, in test_full_100_frame_split_keeps_temporal_edges_and_applies_divisor_once
+    module, model = self.module(), self.model()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('split_probe'),
+AssertionError: unexpectedly None : equivalent split probe is not implemented
+
+======================================================================
+FAIL: test_spatial_probe_refuses_temporal_or_depthwise_variant (test_split_probe.SplitProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 75, in test_spatial_probe_refuses_temporal_or_depthwise_variant
+    module = self.module()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('split_probe'),
+AssertionError: unexpectedly None : equivalent split probe is not implemented
+
+======================================================================
+FAIL: test_split_rejects_non_100_frame_raw_contract (test_split_probe.SplitProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 64, in test_split_rejects_non_100_frame_raw_contract
+    module, model = self.module(), self.model()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_split_20261116_v1/test_split_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('split_probe'),
+AssertionError: unexpectedly None : equivalent split probe is not implemented
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=4)

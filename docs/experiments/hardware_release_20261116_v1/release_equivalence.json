@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "input_shape": [
+    1,
+    100,
+    2,
+    60,
+    80
+  ],
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "config": {
+    "dataset": "3ET+2025",
+    "window": 100,
+    "readout": "attention",
+    "temporal_variant": "dense",
+    "temporal_spatial_kernel": 1,
+    "block3_kernel": 5,
+    "unidirectional": false,
+    "input_divisor": 1.0,
+    "preprocessing": "raw_event_counts",
+    "best_epoch": 0
+  },
+  "max_logit_errors": {
+    "spatial_split": 2.6702880859375e-05,
+    "six_graph_split": 3.0517578125e-05
+  },
+  "note": "fresh CPU synthetic equivalence, not accuracy or board latency",
+  "board_verified": false
+}

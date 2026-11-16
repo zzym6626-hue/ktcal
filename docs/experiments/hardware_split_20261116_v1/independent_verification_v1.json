@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "passed": true,
+  "independently_scored_metrics": {
+    "reference_stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.629334434912157,
+      "p3": 0.9031182795698924,
+      "p5": 0.9619354838709677,
+      "p10": 0.9924731182795699
+    },
+    "split_fp_stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.6293342616147983,
+      "p3": 0.9031182795698924,
+      "p5": 0.9619354838709677,
+      "p10": 0.9924731182795699
+    },
+    "reference_ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.6149432232726586,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699
+    },
+    "split_fp_ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.6149431753301517,
+      "p3": 0.9110752688172044,
+      "p5": 0.964516129032258,
+      "p10": 0.9924731182795699
+    },
+    "split_int8_stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.6707965611608189,
+      "p3": 0.9016129032258065,
+      "p5": 0.9589247311827958,
+      "p10": 0.9848387096774194
+    },
+    "split_int8_ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.6376002456550327,
+      "p3": 0.9078494623655914,
+      "p5": 0.963763440860215,
+      "p10": 0.9926881720430107
+    }
+  },
+  "floating_individual_classification_mismatches": {
+    "stnet": {
+      "p3": 0,
+      "p5": 0,
+      "p10": 0
+    },
+    "ktcal": {
+      "p3": 0,
+      "p5": 0,
+      "p10": 0
+    }
+  },
+  "int8_simulation_deltas": {
+    "stnet": {
+      "vs_same_cpu": {
+        "p3": -0.0015053763440859846,
+        "p5": -0.0030107526881719693,
+        "p10": -0.0076344086021504776,
+        "mean_error_px": 0.04146212624866186
+      },
+      "vs_published_cuda": {
+        "p3": -0.0015053763440859846,
+        "p5": -0.002903225806451526,
+        "p10": -0.0076344086021504776,
+        "mean_error_px": 0.041617457600140906
+      }
+    },
+    "ktcal": {
+      "vs_same_cpu": {
+        "p3": -0.003225806451612967,
+        "p5": -0.0007526881720429923,
+        "p10": 0.00021505376344088667,
+        "mean_error_px": 0.022657022382374103
+      },
+      "vs_published_cuda": {
+        "p3": -0.003225806451612967,
+        "p5": -0.0007526881720429923,
+        "p10": 0.00021505376344088667,
+        "mean_error_px": 0.023125866645873794
+      }
+    }
+  },
+  "floating_report_sha256": "66d97bd5a90e3c5b4d9a9c1a78c74786a2f9296148043cdf8ff4ae092e75f544",
+  "int8_report_sha256": "1344d37285f2cdc90271b37ebc204355affda350228a070745dac6a0a3d3950e",
+  "floating_csv_sha256": "a708b5ed7a15e2946d450100b4c92a7171c63192bb993dd670f3a4bfb170243e",
+  "int8_csv_sha256": "7798e25134947967fdc618db3ea7b7d85252d7c8a264956a38867c8b25b4466d",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "float_and_int8_low_global_fusion_calls": 0,
+  "simulation_only": true,
+  "board_verified": false,
+  "hardware_latency_measured": false
+}

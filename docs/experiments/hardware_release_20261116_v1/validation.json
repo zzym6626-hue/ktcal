@@ -1,0 +1,33 @@
+{
+  "base_commit": "98c1c0cc61d23da3948a1b76b2bac572fe1df8f8",
+  "files_to_publish": 230,
+  "board_verified": false,
+  "full_tests": {
+    "total": 189,
+    "passed": 188,
+    "skipped": 1
+  },
+  "probe_tests": {
+    "spatial": 4,
+    "temporal": 4,
+    "passed": true
+  },
+  "cpp_tests_passed": true,
+  "release_weights_unchanged": true,
+  "model_code_unchanged": true,
+  "primary_readme_unchanged": true,
+  "archives_verified": true,
+  "largest_file_bytes": 7075294,
+  "review": {
+    "method": "author source/call-chain inspection and Python AST, no external reviewer",
+    "critical_issues": [],
+    "limitations": [
+      "no real board",
+      "RKNN mini-runtime CPU fallback and memory unverified",
+      "seven-graph production adapter not implemented",
+      "archived absolute paths must be rebuilt, not treated as portable artifacts"
+    ]
+  },
+  "source_documentation_whitespace_check_passed": true,
+  "raw_artifact_whitespace_preserved": "original CSV CRLF and SDK log trailing whitespace intentionally unchanged for archived SHA"
+}

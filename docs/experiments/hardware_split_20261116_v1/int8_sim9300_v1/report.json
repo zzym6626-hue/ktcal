@@ -1,0 +1,1847 @@
+{
+  "schema": 1,
+  "completed": true,
+  "complete": true,
+  "records": 93,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "calibration_sha256": "8c02f6623a90dfeb5d749ec36ff6a04d4691b96604be14fff7e24447a48506a8",
+  "export_sha256": "546385f2dbb52a7bb9a2d67ccb86530006fde6b4d5c3614301c58a9dd04a0571",
+  "metrics": {
+    "stnet": {
+      "frames": 9300,
+      "mean_error_px": 1.6707965611608189,
+      "p3": 0.9016129032258065,
+      "p5": 0.9589247311827958,
+      "p10": 0.9848387096774194
+    },
+    "ktcal": {
+      "frames": 9300,
+      "mean_error_px": 1.6376002456550327,
+      "p3": 0.9078494623655914,
+      "p5": 0.963763440860215,
+      "p10": 0.9926881720430107
+    }
+  },
+  "tracker_stats": {
+    "tier1": 5647,
+    "tier2": 32,
+    "tier3": 3621,
+    "medium_refinements": 4,
+    "medium_rollbacks": 28,
+    "fusion_calls": 4,
+    "small_fusion_calls": 0,
+    "stnet_requests": 3653,
+    "border_peaks": 464
+  },
+  "low_global_invariant_all_records": true,
+  "raw_transforms_byte_equal_all_records": true,
+  "simulator_calls": [
+    93000,
+    93000,
+    93000
+  ],
+  "shapes_seen": [
+    [
+      [
+        1,
+        32,
+        60,
+        80
+      ]
+    ],
+    [
+      [
+        1,
+        64,
+        20,
+        26
+      ]
+    ],
+    [
+      [
+        1,
+        128,
+        6,
+        8
+      ]
+    ]
+  ],
+  "simulation_only": true,
+  "board_verified": false,
+  "cpu_tail": "original floating temporal conv/BN/pool, full100 BiGRU/attention/FC",
+  "host_wall_seconds_per_record": [
+    5.302751997485757,
+    5.028504395857453,
+    5.0595849975943565,
+    5.0410763546824455,
+    4.901065776124597,
+    4.924572803080082,
+    4.976573586463928,
+    4.860660707578063,
+    5.094333380460739,
+    4.95258198492229,
+    4.9032713528722525,
+    4.971848031505942,
+    4.9849529676139355,
+    5.101025694981217,
+    5.016793832182884,
+    4.9374232944101095,
+    4.9929217752069235,
+    5.026932444423437,
+    4.938560163602233,
+    4.950959721580148,
+    4.923372194170952,
+    4.840793304145336,
+    5.089672148227692,
+    5.1187185402959585,
+    5.0154809560626745,
+    4.9021296594291925,
+    4.976632844656706,
+    5.0110886469483376,
+    5.035491295158863,
+    4.965651070699096,
+    4.859187668189406,
+    5.079522347077727,
+    5.03267764300108,
+    5.078606503084302,
+    4.8959074802696705,
+    4.961100813001394,
+    5.0669424422085285,
+    4.957129158079624,
+    4.916321260854602,
+    4.933827141299844,
+    5.073379997164011,
+    4.993896052241325,
+    4.955786366015673,
+    4.969563074409962,
+    5.0445522870868444,
+    4.9725007917732,
+    4.930905302986503,
+    4.844661928713322,
+    4.97078787907958,
+    4.942836729809642,
+    4.957018900662661,
+    4.882063120603561,
+    4.880783911794424,
+    4.975087907165289,
+    4.93216160312295,
+    4.81412148848176,
+    4.888734977692366,
+    4.9881382174789906,
+    4.988711539655924,
+    4.9152736105024815,
+    4.891856135800481,
+    5.029972210526466,
+    4.973284620791674,
+    5.026631677523255,
+    4.917912861332297,
+    5.056142967194319,
+    5.055434327572584,
+    4.972747778519988,
+    4.9459181018173695,
+    4.908252064138651,
+    4.927085518836975,
+    4.960616149008274,
+    4.8939002845436335,
+    4.920481935143471,
+    4.794832659885287,
+    4.87220124900341,
+    4.9285202622413635,
+    4.872192300856113,
+    4.937987487763166,
+    4.807109795510769,
+    4.983058884739876,
+    5.05612170137465,
+    5.026533383876085,
+    5.01132570579648,
+    4.915081821382046,
+    4.902343345806003,
+    5.0083029586821795,
+    5.0063685644418,
+    4.981027893722057,
+    4.795070489868522,
+    4.915686899796128,
+    4.799608463421464,
+    4.802006704732776
+  ],
+  "timing_scope": "SDK simulator plus Python/CPU/replay/IO, no warmup, not NPU latency",
+  "csv_sha256": "7798e25134947967fdc618db3ea7b7d85252d7c8a264956a38867c8b25b4466d",
+  "record_checks": [
+    {
+      "record": 0,
+      "seconds": 5.302751997485757,
+      "stats": {
+        "tier1": 34,
+        "tier2": 1,
+        "tier3": 65,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 66,
+        "border_peaks": 13,
+        "replay_and_cpp_ms": 131.598,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 1,
+      "seconds": 5.028504395857453,
+      "stats": {
+        "tier1": 45,
+        "tier2": 0,
+        "tier3": 55,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 55,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 131.232,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 2,
+      "seconds": 5.0595849975943565,
+      "stats": {
+        "tier1": 50,
+        "tier2": 0,
+        "tier3": 50,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 50,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 132.399,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 3,
+      "seconds": 5.0410763546824455,
+      "stats": {
+        "tier1": 36,
+        "tier2": 1,
+        "tier3": 63,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 64,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 134.074,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 4,
+      "seconds": 4.901065776124597,
+      "stats": {
+        "tier1": 40,
+        "tier2": 1,
+        "tier3": 59,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 60,
+        "border_peaks": 11,
+        "replay_and_cpp_ms": 132.707,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 5,
+      "seconds": 4.924572803080082,
+      "stats": {
+        "tier1": 57,
+        "tier2": 2,
+        "tier3": 41,
+        "medium_refinements": 0,
+        "medium_rollbacks": 2,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 43,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 134.297,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 6,
+      "seconds": 4.976573586463928,
+      "stats": {
+        "tier1": 25,
+        "tier2": 0,
+        "tier3": 75,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 75,
+        "border_peaks": 13,
+        "replay_and_cpp_ms": 130.655,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 7,
+      "seconds": 4.860660707578063,
+      "stats": {
+        "tier1": 78,
+        "tier2": 0,
+        "tier3": 22,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 22,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 131.628,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 8,
+      "seconds": 5.094333380460739,
+      "stats": {
+        "tier1": 56,
+        "tier2": 0,
+        "tier3": 44,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 44,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.86,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 9,
+      "seconds": 4.95258198492229,
+      "stats": {
+        "tier1": 79,
+        "tier2": 0,
+        "tier3": 21,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 21,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.557,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 10,
+      "seconds": 4.9032713528722525,
+      "stats": {
+        "tier1": 71,
+        "tier2": 0,
+        "tier3": 29,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 6,
+        "replay_and_cpp_ms": 131.971,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 11,
+      "seconds": 4.971848031505942,
+      "stats": {
+        "tier1": 75,
+        "tier2": 0,
+        "tier3": 25,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 25,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 132.391,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 12,
+      "seconds": 4.9849529676139355,
+      "stats": {
+        "tier1": 86,
+        "tier2": 0,
+        "tier3": 14,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 14,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 131.857,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 13,
+      "seconds": 5.101025694981217,
+      "stats": {
+        "tier1": 69,
+        "tier2": 0,
+        "tier3": 31,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 31,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 262.378,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 14,
+      "seconds": 5.016793832182884,
+      "stats": {
+        "tier1": 78,
+        "tier2": 0,
+        "tier3": 22,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 22,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.219,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 15,
+      "seconds": 4.9374232944101095,
+      "stats": {
+        "tier1": 62,
+        "tier2": 0,
+        "tier3": 38,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 38,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 133.432,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 16,
+      "seconds": 4.9929217752069235,
+      "stats": {
+        "tier1": 75,
+        "tier2": 0,
+        "tier3": 25,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 25,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.229,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 17,
+      "seconds": 5.026932444423437,
+      "stats": {
+        "tier1": 62,
+        "tier2": 0,
+        "tier3": 38,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 38,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.962,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 18,
+      "seconds": 4.938560163602233,
+      "stats": {
+        "tier1": 48,
+        "tier2": 1,
+        "tier3": 51,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 52,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 133.208,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 19,
+      "seconds": 4.950959721580148,
+      "stats": {
+        "tier1": 81,
+        "tier2": 1,
+        "tier3": 18,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 19,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 131.744,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 20,
+      "seconds": 4.923372194170952,
+      "stats": {
+        "tier1": 69,
+        "tier2": 0,
+        "tier3": 31,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 31,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 145.804,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 21,
+      "seconds": 4.840793304145336,
+      "stats": {
+        "tier1": 57,
+        "tier2": 0,
+        "tier3": 43,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 43,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.366,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 22,
+      "seconds": 5.089672148227692,
+      "stats": {
+        "tier1": 60,
+        "tier2": 0,
+        "tier3": 40,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 40,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 131.978,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 23,
+      "seconds": 5.1187185402959585,
+      "stats": {
+        "tier1": 76,
+        "tier2": 0,
+        "tier3": 24,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 24,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 132.269,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 24,
+      "seconds": 5.0154809560626745,
+      "stats": {
+        "tier1": 98,
+        "tier2": 0,
+        "tier3": 2,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 2,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 133.777,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 25,
+      "seconds": 4.9021296594291925,
+      "stats": {
+        "tier1": 68,
+        "tier2": 1,
+        "tier3": 31,
+        "medium_refinements": 1,
+        "medium_rollbacks": 0,
+        "fusion_calls": 1,
+        "small_fusion_calls": 0,
+        "stnet_requests": 32,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.328,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 26,
+      "seconds": 4.976632844656706,
+      "stats": {
+        "tier1": 75,
+        "tier2": 0,
+        "tier3": 25,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 25,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 132.048,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 27,
+      "seconds": 5.0110886469483376,
+      "stats": {
+        "tier1": 71,
+        "tier2": 1,
+        "tier3": 28,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 6,
+        "replay_and_cpp_ms": 133.678,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 28,
+      "seconds": 5.035491295158863,
+      "stats": {
+        "tier1": 54,
+        "tier2": 1,
+        "tier3": 45,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 46,
+        "border_peaks": 15,
+        "replay_and_cpp_ms": 132.633,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 29,
+      "seconds": 4.965651070699096,
+      "stats": {
+        "tier1": 67,
+        "tier2": 0,
+        "tier3": 33,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 33,
+        "border_peaks": 13,
+        "replay_and_cpp_ms": 131.611,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 30,
+      "seconds": 4.859187668189406,
+      "stats": {
+        "tier1": 64,
+        "tier2": 3,
+        "tier3": 33,
+        "medium_refinements": 0,
+        "medium_rollbacks": 3,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 36,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 149.287,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 31,
+      "seconds": 5.079522347077727,
+      "stats": {
+        "tier1": 78,
+        "tier2": 0,
+        "tier3": 22,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 22,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 132.495,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 32,
+      "seconds": 5.03267764300108,
+      "stats": {
+        "tier1": 62,
+        "tier2": 0,
+        "tier3": 38,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 38,
+        "border_peaks": 6,
+        "replay_and_cpp_ms": 132.891,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 33,
+      "seconds": 5.078606503084302,
+      "stats": {
+        "tier1": 65,
+        "tier2": 0,
+        "tier3": 35,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 35,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 131.462,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 34,
+      "seconds": 4.8959074802696705,
+      "stats": {
+        "tier1": 64,
+        "tier2": 0,
+        "tier3": 36,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 36,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 133.301,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 35,
+      "seconds": 4.961100813001394,
+      "stats": {
+        "tier1": 82,
+        "tier2": 0,
+        "tier3": 18,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 18,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.265,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 36,
+      "seconds": 5.0669424422085285,
+      "stats": {
+        "tier1": 64,
+        "tier2": 1,
+        "tier3": 35,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 36,
+        "border_peaks": 12,
+        "replay_and_cpp_ms": 131.637,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 37,
+      "seconds": 4.957129158079624,
+      "stats": {
+        "tier1": 50,
+        "tier2": 0,
+        "tier3": 50,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 50,
+        "border_peaks": 9,
+        "replay_and_cpp_ms": 132.154,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 38,
+      "seconds": 4.916321260854602,
+      "stats": {
+        "tier1": 57,
+        "tier2": 1,
+        "tier3": 42,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 43,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 132.972,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 39,
+      "seconds": 4.933827141299844,
+      "stats": {
+        "tier1": 63,
+        "tier2": 1,
+        "tier3": 36,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 37,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 132.841,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 40,
+      "seconds": 5.073379997164011,
+      "stats": {
+        "tier1": 52,
+        "tier2": 1,
+        "tier3": 47,
+        "medium_refinements": 1,
+        "medium_rollbacks": 0,
+        "fusion_calls": 1,
+        "small_fusion_calls": 0,
+        "stnet_requests": 48,
+        "border_peaks": 5,
+        "replay_and_cpp_ms": 132.612,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 41,
+      "seconds": 4.993896052241325,
+      "stats": {
+        "tier1": 95,
+        "tier2": 0,
+        "tier3": 5,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 5,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 130.367,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 42,
+      "seconds": 4.955786366015673,
+      "stats": {
+        "tier1": 79,
+        "tier2": 0,
+        "tier3": 21,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 21,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 133.101,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 43,
+      "seconds": 4.969563074409962,
+      "stats": {
+        "tier1": 52,
+        "tier2": 0,
+        "tier3": 48,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 48,
+        "border_peaks": 17,
+        "replay_and_cpp_ms": 132.686,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 44,
+      "seconds": 5.0445522870868444,
+      "stats": {
+        "tier1": 49,
+        "tier2": 0,
+        "tier3": 51,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 51,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 132.718,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 45,
+      "seconds": 4.9725007917732,
+      "stats": {
+        "tier1": 86,
+        "tier2": 0,
+        "tier3": 14,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 14,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 133.165,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 46,
+      "seconds": 4.930905302986503,
+      "stats": {
+        "tier1": 68,
+        "tier2": 1,
+        "tier3": 31,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 32,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 187.062,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 47,
+      "seconds": 4.844661928713322,
+      "stats": {
+        "tier1": 71,
+        "tier2": 0,
+        "tier3": 29,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 131.757,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 48,
+      "seconds": 4.97078787907958,
+      "stats": {
+        "tier1": 61,
+        "tier2": 0,
+        "tier3": 39,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 39,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 131.062,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 49,
+      "seconds": 4.942836729809642,
+      "stats": {
+        "tier1": 22,
+        "tier2": 0,
+        "tier3": 78,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 78,
+        "border_peaks": 12,
+        "replay_and_cpp_ms": 131.614,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 50,
+      "seconds": 4.957018900662661,
+      "stats": {
+        "tier1": 27,
+        "tier2": 0,
+        "tier3": 73,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 73,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 132.082,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 51,
+      "seconds": 4.882063120603561,
+      "stats": {
+        "tier1": 41,
+        "tier2": 0,
+        "tier3": 59,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 59,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.869,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 52,
+      "seconds": 4.880783911794424,
+      "stats": {
+        "tier1": 76,
+        "tier2": 0,
+        "tier3": 24,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 24,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 133.559,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 53,
+      "seconds": 4.975087907165289,
+      "stats": {
+        "tier1": 83,
+        "tier2": 0,
+        "tier3": 17,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 17,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 132.729,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 54,
+      "seconds": 4.93216160312295,
+      "stats": {
+        "tier1": 71,
+        "tier2": 0,
+        "tier3": 29,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 129.996,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 55,
+      "seconds": 4.81412148848176,
+      "stats": {
+        "tier1": 58,
+        "tier2": 0,
+        "tier3": 42,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 42,
+        "border_peaks": 15,
+        "replay_and_cpp_ms": 133.33,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 56,
+      "seconds": 4.888734977692366,
+      "stats": {
+        "tier1": 68,
+        "tier2": 0,
+        "tier3": 32,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 32,
+        "border_peaks": 10,
+        "replay_and_cpp_ms": 131.154,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 57,
+      "seconds": 4.9881382174789906,
+      "stats": {
+        "tier1": 71,
+        "tier2": 1,
+        "tier3": 28,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 9,
+        "replay_and_cpp_ms": 131.587,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 58,
+      "seconds": 4.988711539655924,
+      "stats": {
+        "tier1": 76,
+        "tier2": 0,
+        "tier3": 24,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 24,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 132.366,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 59,
+      "seconds": 4.9152736105024815,
+      "stats": {
+        "tier1": 74,
+        "tier2": 0,
+        "tier3": 26,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 26,
+        "border_peaks": 6,
+        "replay_and_cpp_ms": 131.866,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 60,
+      "seconds": 4.891856135800481,
+      "stats": {
+        "tier1": 88,
+        "tier2": 0,
+        "tier3": 12,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 12,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 132.609,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 61,
+      "seconds": 5.029972210526466,
+      "stats": {
+        "tier1": 59,
+        "tier2": 2,
+        "tier3": 39,
+        "medium_refinements": 0,
+        "medium_rollbacks": 2,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 41,
+        "border_peaks": 15,
+        "replay_and_cpp_ms": 133.705,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 62,
+      "seconds": 4.973284620791674,
+      "stats": {
+        "tier1": 64,
+        "tier2": 1,
+        "tier3": 35,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 36,
+        "border_peaks": 12,
+        "replay_and_cpp_ms": 132.845,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 63,
+      "seconds": 5.026631677523255,
+      "stats": {
+        "tier1": 67,
+        "tier2": 1,
+        "tier3": 32,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 33,
+        "border_peaks": 6,
+        "replay_and_cpp_ms": 132.933,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 64,
+      "seconds": 4.917912861332297,
+      "stats": {
+        "tier1": 68,
+        "tier2": 4,
+        "tier3": 28,
+        "medium_refinements": 1,
+        "medium_rollbacks": 3,
+        "fusion_calls": 1,
+        "small_fusion_calls": 0,
+        "stnet_requests": 32,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 131.975,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 65,
+      "seconds": 5.056142967194319,
+      "stats": {
+        "tier1": 77,
+        "tier2": 0,
+        "tier3": 23,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 23,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 134.402,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 66,
+      "seconds": 5.055434327572584,
+      "stats": {
+        "tier1": 65,
+        "tier2": 1,
+        "tier3": 34,
+        "medium_refinements": 1,
+        "medium_rollbacks": 0,
+        "fusion_calls": 1,
+        "small_fusion_calls": 0,
+        "stnet_requests": 35,
+        "border_peaks": 9,
+        "replay_and_cpp_ms": 133.177,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 67,
+      "seconds": 4.972747778519988,
+      "stats": {
+        "tier1": 48,
+        "tier2": 2,
+        "tier3": 50,
+        "medium_refinements": 0,
+        "medium_rollbacks": 2,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 52,
+        "border_peaks": 12,
+        "replay_and_cpp_ms": 134.131,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 68,
+      "seconds": 4.9459181018173695,
+      "stats": {
+        "tier1": 70,
+        "tier2": 0,
+        "tier3": 30,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 30,
+        "border_peaks": 11,
+        "replay_and_cpp_ms": 140.003,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 69,
+      "seconds": 4.908252064138651,
+      "stats": {
+        "tier1": 73,
+        "tier2": 1,
+        "tier3": 26,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 27,
+        "border_peaks": 8,
+        "replay_and_cpp_ms": 148.862,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 70,
+      "seconds": 4.927085518836975,
+      "stats": {
+        "tier1": 62,
+        "tier2": 0,
+        "tier3": 38,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 38,
+        "border_peaks": 17,
+        "replay_and_cpp_ms": 132.947,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 71,
+      "seconds": 4.960616149008274,
+      "stats": {
+        "tier1": 65,
+        "tier2": 0,
+        "tier3": 35,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 35,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.277,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 72,
+      "seconds": 4.8939002845436335,
+      "stats": {
+        "tier1": 79,
+        "tier2": 0,
+        "tier3": 21,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 21,
+        "border_peaks": 7,
+        "replay_and_cpp_ms": 131.617,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 73,
+      "seconds": 4.920481935143471,
+      "stats": {
+        "tier1": 61,
+        "tier2": 0,
+        "tier3": 39,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 39,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 133.354,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 74,
+      "seconds": 4.794832659885287,
+      "stats": {
+        "tier1": 65,
+        "tier2": 1,
+        "tier3": 34,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 35,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 132.118,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 75,
+      "seconds": 4.87220124900341,
+      "stats": {
+        "tier1": 79,
+        "tier2": 0,
+        "tier3": 21,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 21,
+        "border_peaks": 4,
+        "replay_and_cpp_ms": 146.156,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 76,
+      "seconds": 4.9285202622413635,
+      "stats": {
+        "tier1": 66,
+        "tier2": 0,
+        "tier3": 34,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 34,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 131.573,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 77,
+      "seconds": 4.872192300856113,
+      "stats": {
+        "tier1": 78,
+        "tier2": 0,
+        "tier3": 22,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 22,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 131.47,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 78,
+      "seconds": 4.937987487763166,
+      "stats": {
+        "tier1": 82,
+        "tier2": 0,
+        "tier3": 18,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 18,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 137.262,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 79,
+      "seconds": 4.807109795510769,
+      "stats": {
+        "tier1": 90,
+        "tier2": 0,
+        "tier3": 10,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 10,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 132.227,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 80,
+      "seconds": 4.983058884739876,
+      "stats": {
+        "tier1": 74,
+        "tier2": 0,
+        "tier3": 26,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 26,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 130.875,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 81,
+      "seconds": 5.05612170137465,
+      "stats": {
+        "tier1": 30,
+        "tier2": 0,
+        "tier3": 70,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 70,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 183.686,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 82,
+      "seconds": 5.026533383876085,
+      "stats": {
+        "tier1": 27,
+        "tier2": 0,
+        "tier3": 73,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 73,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.205,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 83,
+      "seconds": 5.01132570579648,
+      "stats": {
+        "tier1": 39,
+        "tier2": 0,
+        "tier3": 61,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 61,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 131.853,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 84,
+      "seconds": 4.915081821382046,
+      "stats": {
+        "tier1": 39,
+        "tier2": 0,
+        "tier3": 61,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 61,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 145.424,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 85,
+      "seconds": 4.902343345806003,
+      "stats": {
+        "tier1": 71,
+        "tier2": 0,
+        "tier3": 29,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 29,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 132.314,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 86,
+      "seconds": 5.0083029586821795,
+      "stats": {
+        "tier1": 22,
+        "tier2": 0,
+        "tier3": 78,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 78,
+        "border_peaks": 3,
+        "replay_and_cpp_ms": 134.434,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 87,
+      "seconds": 5.0063685644418,
+      "stats": {
+        "tier1": 6,
+        "tier2": 0,
+        "tier3": 94,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 94,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 132.454,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 88,
+      "seconds": 4.981027893722057,
+      "stats": {
+        "tier1": 35,
+        "tier2": 0,
+        "tier3": 65,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 65,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 133.565,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 89,
+      "seconds": 4.795070489868522,
+      "stats": {
+        "tier1": 50,
+        "tier2": 0,
+        "tier3": 50,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 50,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 135.012,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 90,
+      "seconds": 4.915686899796128,
+      "stats": {
+        "tier1": 5,
+        "tier2": 0,
+        "tier3": 95,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 95,
+        "border_peaks": 1,
+        "replay_and_cpp_ms": 132.573,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 91,
+      "seconds": 4.799608463421464,
+      "stats": {
+        "tier1": 9,
+        "tier2": 0,
+        "tier3": 91,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 91,
+        "border_peaks": 2,
+        "replay_and_cpp_ms": 142.242,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    },
+    {
+      "record": 92,
+      "seconds": 4.802006704732776,
+      "stats": {
+        "tier1": 3,
+        "tier2": 0,
+        "tier3": 97,
+        "medium_refinements": 0,
+        "medium_rollbacks": 0,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 97,
+        "border_peaks": 0,
+        "replay_and_cpp_ms": 131.109,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    }
+  ]
+}

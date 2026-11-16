@@ -1,0 +1,14 @@
+Loading complete. Warming up STNet and matcher...
+Repeat 1/3: P3=91.11%, 1.044 ms/frame
+Repeat 2/3: P3=91.11%, 1.050 ms/frame
+Repeat 3/3: P3=91.11%, 1.043 ms/frame
+
+3ET validation: 100-frame sequences
+Method                 Mean(px)        P3        P5       P10   ms/frame
+STNet                     1.629   90.31%   96.18%   99.25%      0.360
+STNet + KTCAL             1.614   91.11%   96.45%   99.25%      1.044
+Raw routes: KF 60.73%, medium 0.29%, reset/init 38.98%
+Low-tier STNet fusion calls: 0
+STNet is precomputed for every frame; KF route ratio is not a network skip ratio.
+Timing is warm 100-frame processing, divided by frame count; excludes disk/model loading.
+JSON report: ../artifacts/current_release_cuda_v1.json

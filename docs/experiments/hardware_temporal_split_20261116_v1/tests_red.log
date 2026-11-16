@@ -1,0 +1,49 @@
+test_channel_stack_uses_previous_current_next_with_zero_edges (test_temporal_probe.TemporalProbeTests) ... FAIL
+test_full100_keeps_divisor_and_source_weights (test_temporal_probe.TemporalProbeTests) ... FAIL
+test_rejects_short_window_bad_runner_shape_and_incompatible_temporal (test_temporal_probe.TemporalProbeTests) ... FAIL
+test_temporal_graph_matches_conv3d_bn_relu_pool_nontrivial_weights (test_temporal_probe.TemporalProbeTests) ... FAIL
+
+======================================================================
+FAIL: test_channel_stack_uses_previous_current_next_with_zero_edges (test_temporal_probe.TemporalProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 22, in test_channel_stack_uses_previous_current_next_with_zero_edges
+    module = self.module()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('temporal_probe'),
+AssertionError: unexpectedly None : temporal hardware probe not implemented
+
+======================================================================
+FAIL: test_full100_keeps_divisor_and_source_weights (test_temporal_probe.TemporalProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 47, in test_full100_keeps_divisor_and_source_weights
+    module = self.module()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('temporal_probe'),
+AssertionError: unexpectedly None : temporal hardware probe not implemented
+
+======================================================================
+FAIL: test_rejects_short_window_bad_runner_shape_and_incompatible_temporal (test_temporal_probe.TemporalProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 63, in test_rejects_short_window_bad_runner_shape_and_incompatible_temporal
+    module = self.module()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('temporal_probe'),
+AssertionError: unexpectedly None : temporal hardware probe not implemented
+
+======================================================================
+FAIL: test_temporal_graph_matches_conv3d_bn_relu_pool_nontrivial_weights (test_temporal_probe.TemporalProbeTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 32, in test_temporal_graph_matches_conv3d_bn_relu_pool_nontrivial_weights
+    module = self.module()
+  File "/Users/zhangyimeng.39/IdeaProjects/tdtracker/local_run/hardware_temporal_split_20261116_v1/test_temporal_probe.py", line 16, in module
+    self.assertIsNotNone(importlib.util.find_spec('temporal_probe'),
+AssertionError: unexpectedly None : temporal hardware probe not implemented
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (failures=4)

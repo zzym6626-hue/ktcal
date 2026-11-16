@@ -1,0 +1,19 @@
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                            | 0/25 [00:00<?, ?it/s]I Loading : 100%|████████████████████████████████████████████████| 25/25 [00:00<00:00, 16186.72it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+[1;31mE[0m [1;31mbuild: Current target_platform(rv1106) not support do_quantization = False![0m
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/TDTracker/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/root/miniconda3/envs/TDTracker/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/root/ktcal_hardware_preflight_20261116_v1/source/hardware/rv1106/convert_rknn.py", line 69, in <module>
+    main()
+  File "/root/ktcal_hardware_preflight_20261116_v1/source/hardware/rv1106/convert_rknn.py", line 64, in main
+    print(json.dumps(convert(args.onnx, args.verified_report, args.output,
+  File "/root/ktcal_hardware_preflight_20261116_v1/source/hardware/rv1106/convert_rknn.py", line 41, in convert
+    check(rknn.build(do_quantization=dataset is not None,
+  File "/root/ktcal_hardware_preflight_20261116_v1/source/hardware/rv1106/convert_rknn.py", line 37, in check
+    raise RuntimeError(f'RKNN {stage} failed ({status}); do not use the output')
+RuntimeError: RKNN build failed (-1); do not use the output

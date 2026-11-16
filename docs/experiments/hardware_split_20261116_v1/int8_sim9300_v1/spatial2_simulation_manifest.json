@@ -1,0 +1,8 @@
+{
+  "stage": 2,
+  "onnx_sha256": "76430bb5c174f3e6c8a058cacba4db6650db2b55f928e0a367f81486449542b9",
+  "rknn_sha256": "4cf3ae213b8f87a373f0ea118907c70aa1ec3bf264626c7e6d17d1018e96d15a",
+  "calibration_sha256": "8c02f6623a90dfeb5d749ec36ff6a04d4691b96604be14fff7e24447a48506a8",
+  "simulation_only": true,
+  "board_verified": false
+}

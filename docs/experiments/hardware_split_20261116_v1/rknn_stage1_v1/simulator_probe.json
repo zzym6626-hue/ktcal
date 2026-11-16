@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "executed": true,
+  "stage": 1,
+  "simulation_only": true,
+  "board_verified": false,
+  "calibration_sample_probes": [
+    {
+      "sample_sha256": "13881169917f6913477238e0c6c5d2b7daf7d6995ab8426c3c5ba899de3c4330",
+      "max_abs": 0.03860381245613098,
+      "mean_abs": 0.011838740669190884,
+      "reference_max": 4.1292948722839355
+    },
+    {
+      "sample_sha256": "a07d90eab6f97bd0dc07f921d081a9dfff39c5c81b649353455a977192f0d480",
+      "max_abs": 0.04682058095932007,
+      "mean_abs": 0.01187155582010746,
+      "reference_max": 4.467275142669678
+    },
+    {
+      "sample_sha256": "0028734a7af3d38e6cc9988a51fb3a2f4fbf5a7d510a6ebade2995dd6be77a09",
+      "max_abs": 0.06814049184322357,
+      "mean_abs": 0.008366025984287262,
+      "reference_max": 9.251666069030762
+    },
+    {
+      "sample_sha256": "899d8ee76b3178636b455b1f5a1a9019c296ce94a8aa2cdf1a2545a7c33f2eb5",
+      "max_abs": 0.052438974380493164,
+      "mean_abs": 0.01309354417026043,
+      "reference_max": 6.2388505935668945
+    },
+    {
+      "sample_sha256": "d86a15fae98b11c58fb9c359a012221c1761d1c5c211444efd5b01ba8f169053",
+      "max_abs": 0.04839375615119934,
+      "mean_abs": 0.011878622695803642,
+      "reference_max": 6.7211222648620605
+    }
+  ]
+}

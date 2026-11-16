@@ -1,0 +1,242 @@
+{
+  "schema": 1,
+  "purpose": "quantized conversion preflight; not accuracy-qualified calibration",
+  "source": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/train_aug.h5",
+  "source_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "source_shape": [
+    2608,
+    100,
+    2,
+    60,
+    80
+  ],
+  "keys_read": [
+    "frames"
+  ],
+  "records_read": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "samples": [
+    {
+      "record": 0,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0000_flip0.npy",
+      "sha256": "8c956296d65e51cdc8b3ed767850960c1ba07ae4eafba25f1f14428c1c8345d1",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 0,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0000_flip1.npy",
+      "sha256": "f31e6a3110994cb23766ce733b149c7d46c89601d081c2bdec20a58e50b386bd",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 1,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0001_flip0.npy",
+      "sha256": "6c6715720d6f1d9114232ae6db5c636a077d7c4eec005166fca2f9648597cd2f",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 1,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0001_flip1.npy",
+      "sha256": "ef51439efc17277c3bf5e7f7f917e7e8228f9c3d2ff677ed2f93c1548ac3eff2",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 2,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0002_flip0.npy",
+      "sha256": "51013f95f79f33e7b5a188b26163d18f277570d70c8ac470cb780922a7abe4f1",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 2,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0002_flip1.npy",
+      "sha256": "62cfbb2c6ba87a5d1087d861d612cde16a660ef8caf76ddcea43a2bcf8e2702c",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 3,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0003_flip0.npy",
+      "sha256": "64bf3cfd4071300f08e54ba83b45aa1bfea5a6aeca322776090844b382876369",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 3,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0003_flip1.npy",
+      "sha256": "6452e59aa00178555168267af96c6ef56c14faecf186fae31ada14604433ae1c",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 4,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0004_flip0.npy",
+      "sha256": "ab3ea998e6a448e0a46959be76ad5aca305d036e945791fc338eec293a9c2e6b",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 4,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0004_flip1.npy",
+      "sha256": "762b7ea76464cc9cec79811ac73e334fbb9a0cd6312d9c181171fcbb15f2a40c",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 5,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0005_flip0.npy",
+      "sha256": "d0bc637a59e760e634b53d211c3418ad9f1fd3e36096579e7cc8b33a334589cb",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 5,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0005_flip1.npy",
+      "sha256": "50f5c2f9d9a33ea9a83ded903b253e45289201bac8acb7e3368d6de484fa7df3",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 6,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0006_flip0.npy",
+      "sha256": "45a1ac52ec2be6a3e456aac93ad4913d81869389351b6ca9a28685bf6b49c95a",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 6,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0006_flip1.npy",
+      "sha256": "27ac8c114fa841c504febc8b9e4a7b43f04c29cbae4ff4b4257353d1f5363ca7",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 7,
+      "flip": false,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0007_flip0.npy",
+      "sha256": "ac8486245392d0da9c4efc185683c92ba91dc56f680012b4a60758a4d18891ae",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    },
+    {
+      "record": 7,
+      "flip": true,
+      "path": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_r0007_flip1.npy",
+      "sha256": "90d84f2e4f120fb1c5b335f79b599e78c924ccc98eabe5913b377a5817cb82d4",
+      "shape": [
+        1,
+        100,
+        2,
+        60,
+        80
+      ]
+    }
+  ],
+  "raw_counts": true,
+  "normalization_applied": false,
+  "labels_read": false,
+  "validation_used": false,
+  "dataset": "/root/ktcal_hardware_preflight_20261116_v1/artifacts/train_calibration_v1/train_inputs.txt",
+  "dataset_sha256": "739a1f8b674a79693a0f9b9c3fe791a4268d8bcc9c91084669184d9374ecc3d3"
+}

@@ -1,0 +1,34 @@
+{
+  "executed": true,
+  "simulation_only": true,
+  "board_verified": false,
+  "stage": 6,
+  "name": "temporal3",
+  "probes": [
+    {
+      "sample_sha256": "477f1a3d85a987d4f55188fdd4540bddccca272114e80fd72e2d073a901c0739",
+      "max_abs": 0.11280137300491333,
+      "mean_abs": 0.005105145275592804
+    },
+    {
+      "sample_sha256": "a54d4ae0e3d5ee4b7ad9ad45f00d9ab05cc5545988887c99b439a389ab3001a8",
+      "max_abs": 0.14928197860717773,
+      "mean_abs": 0.006840329617261887
+    },
+    {
+      "sample_sha256": "b56ee7c7f66f008bc7a747fdccf96e14f40d534dc9fb87beadd712a31d435a1f",
+      "max_abs": 0.2693328857421875,
+      "mean_abs": 0.013715666718780994
+    },
+    {
+      "sample_sha256": "c6517c11ac64ea6c72d2cae28c4b64e011d979c43a4417825912ae97a64897c8",
+      "max_abs": 0.18662810325622559,
+      "mean_abs": 0.009138289839029312
+    },
+    {
+      "sample_sha256": "8252a7c492765022bdb06ba610a933b45f53fc406fbef93a35e0dd8e74b77968",
+      "max_abs": 0.17856216430664062,
+      "mean_abs": 0.008516144007444382
+    }
+  ]
+}

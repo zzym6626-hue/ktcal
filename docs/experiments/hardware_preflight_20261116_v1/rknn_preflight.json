@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "conversion_completed": false,
+  "rknn_outputs_verified": false,
+  "board_verified": false,
+  "toolchain": "RKNN-Toolkit2 2.3.2",
+  "target": "rv1106",
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "onnx_sha256": "fdb9b9691b4de6ce08d6165f22ad5e70a39d1c728f956f3aaf7f8baa8de114a6",
+  "nonquantized": {
+    "exit_code": 1,
+    "stage": "build",
+    "error": "Current target_platform(rv1106) not support do_quantization = False!"
+  },
+  "quantized": {
+    "exit_code": 139,
+    "signal": "SIGSEGV",
+    "stage": "native compiler/build",
+    "calibration_inputs": 16,
+    "training_records": 8,
+    "calibration_provenance_sha256": "90e95e738adc32abc4b8a2764e5782a5c3517aab81e5b06cceac452758413332",
+    "intermediate_weight_warning_MiB": 12470,
+    "cpu_fallback_ops": [
+      "GRU",
+      "exNorm",
+      "Gather",
+      "Transpose"
+    ],
+    "allocator_requested_size": 18446744072822027648,
+    "output_created": false,
+    "conversion_log_sha256": "a907b0d51ad99375f1df60ea4b53fc0f05c4b2dec0c1deaafec5032179a06cab"
+  },
+  "observation": "Compiler expanded 100-frame Conv3D to very large Conv2D channel tensors, reported allocation failure, exited139. Original ONNX is8379481bytes; warning is compiler intermediate, not published checkpoint size.",
+  "root_cause_confidence": "Observed compiler graph expansion and allocation crash; exact SDK allocator defect not proven.",
+  "hardware_precision_measured": false,
+  "hardware_latency_measured": false,
+  "publication_changed": false
+}

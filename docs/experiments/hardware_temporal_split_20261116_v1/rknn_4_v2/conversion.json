@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "stage": 4,
+  "name": "temporal2",
+  "conversion_completed": true,
+  "target": "rv1106",
+  "quantized": true,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "onnx_sha256": "664f10575c46fe36ba3d02ad0a62b8bf4a2cf05d0adf8756d1fe39f960729466",
+  "rknn_sha256": "047656cc7c0c8c1d5a0736e9ffe88b2631c602833e63db67a9a6a3b7fd459311",
+  "rknn_bytes": 24758,
+  "calibration_sha256": "9108f7f716b06a51e19f0f53a6bddca8b095da323203a8fcc1c9f3f175458c2d",
+  "board_verified": false
+}

@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "completed": true,
+  "complete": false,
+  "records": 1,
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f",
+  "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e",
+  "calibration_sha256": "9108f7f716b06a51e19f0f53a6bddca8b095da323203a8fcc1c9f3f175458c2d",
+  "export_sha256": "6fb572ef57f022504b8de659c4181d54471abe73942bb3813b49f91d0a01c1b5",
+  "metrics": {
+    "stnet": {
+      "frames": 100,
+      "mean_error_px": 1.1051284872504892,
+      "p3": 0.96,
+      "p5": 1.0,
+      "p10": 1.0
+    },
+    "ktcal": {
+      "frames": 100,
+      "mean_error_px": 1.1018253011230132,
+      "p3": 0.96,
+      "p5": 1.0,
+      "p10": 1.0
+    }
+  },
+  "tracker_stats": {
+    "tier1": 35,
+    "tier2": 1,
+    "tier3": 64,
+    "medium_refinements": 0,
+    "medium_rollbacks": 1,
+    "fusion_calls": 0,
+    "small_fusion_calls": 0,
+    "stnet_requests": 65,
+    "border_peaks": 14
+  },
+  "low_global_invariant_all_records": true,
+  "raw_transforms_byte_equal_all_records": true,
+  "simulator_calls": [
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000
+  ],
+  "shapes_seen": [
+    [
+      [
+        1,
+        32,
+        60,
+        80
+      ]
+    ],
+    [
+      [
+        1,
+        32,
+        20,
+        26
+      ]
+    ],
+    [
+      [
+        1,
+        64,
+        20,
+        26
+      ]
+    ],
+    [
+      [
+        1,
+        64,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        1,
+        128,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        1,
+        128,
+        6,
+        8
+      ]
+    ]
+  ],
+  "simulation_only": true,
+  "board_verified": false,
+  "cpu_tail": "RKNN full100 readout with CPU fallback; not all-NPU",
+  "cpu_tail_calls": 10,
+  "host_wall_seconds_per_record": [
+    8.503562834113836
+  ],
+  "timing_scope": "seven SDK simulator graphs including readout CPU fallback plus Python/replay/IO, no warmup, not NPU latency",
+  "csv_sha256": "6bae132d0cea415fc9b4250ac894f86f3c0781aae295c1f4b77bec40ef69f80d",
+  "record_checks": [
+    {
+      "record": 0,
+      "seconds": 8.503562834113836,
+      "stats": {
+        "tier1": 35,
+        "tier2": 1,
+        "tier3": 64,
+        "medium_refinements": 0,
+        "medium_rollbacks": 1,
+        "fusion_calls": 0,
+        "small_fusion_calls": 0,
+        "stnet_requests": 65,
+        "border_peaks": 14,
+        "replay_and_cpp_ms": 129.753,
+        "low_global_invariant": true,
+        "all_raw_views_equal": true
+      }
+    }
+  ]
+}

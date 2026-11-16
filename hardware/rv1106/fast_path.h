@@ -18,7 +18,8 @@ using Window = std::array<Frame, kHistory>;            // oldest first
 
 struct Point { float x, y; }; // 80x60 pixel coordinates, NOT normalized
 enum class Route { Fast, Deferred, Reset };
-Route route(float error_px, float confidence, bool border);
+Route route(float error_px, float confidence, bool border,
+            float confidence_threshold = 0.5f);
 
 struct MatcherWeights {
   std::uint32_t channels = 0;
@@ -27,14 +28,20 @@ struct MatcherWeights {
 };
 MatcherWeights load_matcher_weights(const char* file);
 
-struct MatchResult { Point position; float confidence; bool border; };
+struct MatchResult { Point position; float confidence; bool border; float psr = 0; };
+struct MatcherConfig { int search_width = 35, search_height = 30; bool subpixel = false; };
 class Matcher {
  public:
-  explicit Matcher(MatcherWeights weights);
+  explicit Matcher(MatcherWeights weights, MatcherConfig config = {});
+  // Cache the raw cropped template, not its re-cropped source frame.
+  std::vector<float> template_patch(const Frame& image, Point center) const;
+  MatchResult match_patch(const std::vector<float>& patch, const Frame& current,
+                          Point search_center) const;
   MatchResult match(const Frame& previous, const Frame& current,
                     Point template_center, Point search_center) const;
  private:
   MatcherWeights weights_;
+  MatcherConfig config_;
 };
 
 class Kalman {
@@ -60,7 +67,7 @@ class Backend {
 struct Output { Point position; Route path; };
 class Tracker {
  public:
-  explicit Tracker(Matcher matcher);
+  explicit Tracker(Matcher matcher, float confidence_threshold = 0.5f);
   Output tick(const Frame& frame, Backend& backend);
   // An externally supplied observation is useful when matching runs on a separate CPU core.
   Output tick_with_match(const Frame& frame, Backend& backend, MatchResult match);
@@ -75,6 +82,7 @@ class Tracker {
   Window history_window() const;
   void collect();
   Matcher matcher_;
+  float confidence_threshold_;
   Kalman kalman_;
   std::deque<Frame> history_;
   Frame template_frame_{};

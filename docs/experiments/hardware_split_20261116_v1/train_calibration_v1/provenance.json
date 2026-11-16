@@ -1,0 +1,3164 @@
+{
+  "schema": 1,
+  "purpose": "conversion probe, not accuracy-qualified INT8 calibration",
+  "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "source": "/root/autodl-tmp/TDTracker-main/TDTracker-main/3ET+2025/train_aug.h5",
+  "source_h5_sha256": "228b3bf77284587783c5ed1726e213f8799134edd48f665ade6546686b88b9a6",
+  "source_shape": [
+    2608,
+    100,
+    2,
+    60,
+    80
+  ],
+  "keys_read": [
+    "frames"
+  ],
+  "labels_read": false,
+  "validation_used": false,
+  "runtime_divisor": 1.0,
+  "intermediate_source": "unmodified floating checkpoint",
+  "datasets": [
+    {
+      "stage": 1,
+      "dataset": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_inputs.txt",
+      "dataset_sha256": "aaf768e529eb7d069f363965e93f964e345a91883eaf6db66cb09a3a97461cd9",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f0_m0.npy",
+          "sha256": "13881169917f6913477238e0c6c5d2b7daf7d6995ab8426c3c5ba899de3c4330",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f25_m0.npy",
+          "sha256": "a07d90eab6f97bd0dc07f921d081a9dfff39c5c81b649353455a977192f0d480",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f50_m0.npy",
+          "sha256": "0028734a7af3d38e6cc9988a51fb3a2f4fbf5a7d510a6ebade2995dd6be77a09",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f75_m0.npy",
+          "sha256": "899d8ee76b3178636b455b1f5a1a9019c296ce94a8aa2cdf1a2545a7c33f2eb5",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f99_m0.npy",
+          "sha256": "d86a15fae98b11c58fb9c359a012221c1761d1c5c211444efd5b01ba8f169053",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f0_m1.npy",
+          "sha256": "a1fc755e2ffe27595332ffc7d2537ed7448a733c48ebfc563199c8eae9e21ccc",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f25_m1.npy",
+          "sha256": "4ef25353c3f82e1be05742b3382cec9d93b6ca8f2c30f97a4335b60730013c20",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f50_m1.npy",
+          "sha256": "3785bb27dddedb97dc0b11feb2572f0f015c124d032aa95cf6806bf77f5cb2db",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f75_m1.npy",
+          "sha256": "13e00aed3214c3cf2ef91eb6226c465089e5be75bf991975dfa4dcddf7b086dc",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r0_f99_m1.npy",
+          "sha256": "a464aad3a38e5094fd33f43fd220f3e646fd3c8570009127a2fdfb32d4993502",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f0_m0.npy",
+          "sha256": "0028734a7af3d38e6cc9988a51fb3a2f4fbf5a7d510a6ebade2995dd6be77a09",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f25_m0.npy",
+          "sha256": "899d8ee76b3178636b455b1f5a1a9019c296ce94a8aa2cdf1a2545a7c33f2eb5",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f50_m0.npy",
+          "sha256": "3d419895b73c7be0c1086e4397b22ac5b6894ec2d24807fe922d3183c93c7c1a",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f75_m0.npy",
+          "sha256": "b4e40a8f405d49fdbb0645c8f5a8bf11fd8cdee9017602e52e104f9ae23330f3",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f99_m0.npy",
+          "sha256": "39acf2ec46323fafdba0cd2d9745501c09f01e867f5f34c644b3cbb6545907ba",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f0_m1.npy",
+          "sha256": "3785bb27dddedb97dc0b11feb2572f0f015c124d032aa95cf6806bf77f5cb2db",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f25_m1.npy",
+          "sha256": "13e00aed3214c3cf2ef91eb6226c465089e5be75bf991975dfa4dcddf7b086dc",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f50_m1.npy",
+          "sha256": "1221db0d8d11ba0295fe3c4dffb9ee7c8a7ca5399f45b39e417fce4b4673a1f2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f75_m1.npy",
+          "sha256": "91825f913aad6df13997afbfa2e22c36ea4d14550ed0a9f08a5ef4b8b56a66c1",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r1_f99_m1.npy",
+          "sha256": "5c49417a64b8c3ad912a8dbb70187108211e7df52054d2900235ef66058994e8",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f0_m0.npy",
+          "sha256": "3d419895b73c7be0c1086e4397b22ac5b6894ec2d24807fe922d3183c93c7c1a",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f25_m0.npy",
+          "sha256": "b4e40a8f405d49fdbb0645c8f5a8bf11fd8cdee9017602e52e104f9ae23330f3",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f50_m0.npy",
+          "sha256": "7a28fbd7bb91661d5d870d3b06c3fb126566e5d6dbba918460dd162d06d50181",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f75_m0.npy",
+          "sha256": "f489a6ad41f5809287e0939d6dee9c7b57b03ace2616a71fc3e77c5bc4300c70",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f99_m0.npy",
+          "sha256": "51ad1a9dce35251a011e28d8eeb18e35cc35110656743ceca8775bd93e3c45a2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f0_m1.npy",
+          "sha256": "1221db0d8d11ba0295fe3c4dffb9ee7c8a7ca5399f45b39e417fce4b4673a1f2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f25_m1.npy",
+          "sha256": "91825f913aad6df13997afbfa2e22c36ea4d14550ed0a9f08a5ef4b8b56a66c1",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f50_m1.npy",
+          "sha256": "be9cce83677d234bc45db7cf5d1278bd148ad9f88408be0b3aac7714358dd8e2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f75_m1.npy",
+          "sha256": "304c99e7ccc693427da8d4ad12c2bd633af8ab457d21d0bd0c388b3d00a4dc1c",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r2_f99_m1.npy",
+          "sha256": "70bc18f133c25cc6e8817a4695d0d8787e0ea35fae472ecd22715abceb4dc8e3",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f0_m0.npy",
+          "sha256": "7a28fbd7bb91661d5d870d3b06c3fb126566e5d6dbba918460dd162d06d50181",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f25_m0.npy",
+          "sha256": "f489a6ad41f5809287e0939d6dee9c7b57b03ace2616a71fc3e77c5bc4300c70",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f50_m0.npy",
+          "sha256": "2195bbf1f792fa15021307bd7e42656e83b8e59a76d5b15dbb1a661e7482b292",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f75_m0.npy",
+          "sha256": "004485fbe48e66c4ad6dd53032e7dc56439e00d409b8ac5cae9a85bb22b0b846",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f99_m0.npy",
+          "sha256": "67f7109203fcecd9eaa005f4c0adee1239a0ea5b1fde01b1a3e2a57ca55dec01",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f0_m1.npy",
+          "sha256": "be9cce83677d234bc45db7cf5d1278bd148ad9f88408be0b3aac7714358dd8e2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f25_m1.npy",
+          "sha256": "304c99e7ccc693427da8d4ad12c2bd633af8ab457d21d0bd0c388b3d00a4dc1c",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f50_m1.npy",
+          "sha256": "a0486041668df28c0d647f350521a658b2461588e49f9cea86c004876619ce33",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f75_m1.npy",
+          "sha256": "708faf2159a6783a2040cebfaa8663a20b2b9efd510e9ec7b10bfb2e7fc21762",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r3_f99_m1.npy",
+          "sha256": "6ee0d07893c224f9f993fe8784c6b4fe44241f2aca1a40cf3c4c642ec2ea5c48",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f0_m0.npy",
+          "sha256": "2195bbf1f792fa15021307bd7e42656e83b8e59a76d5b15dbb1a661e7482b292",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f25_m0.npy",
+          "sha256": "004485fbe48e66c4ad6dd53032e7dc56439e00d409b8ac5cae9a85bb22b0b846",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f50_m0.npy",
+          "sha256": "3221b22e0d14bbeb95dae2398b9f6c66a1f960818aace7c7ff2a761918369281",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f75_m0.npy",
+          "sha256": "23fd74a09c036223f06ee97fef74799e4eb36db2afd053000e8719ecf2cfd75a",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f99_m0.npy",
+          "sha256": "46d56c6e32f51732424aeda31c52ea8fc6aee72cba7aa93770d3e274119adc29",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f0_m1.npy",
+          "sha256": "a0486041668df28c0d647f350521a658b2461588e49f9cea86c004876619ce33",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f25_m1.npy",
+          "sha256": "708faf2159a6783a2040cebfaa8663a20b2b9efd510e9ec7b10bfb2e7fc21762",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f50_m1.npy",
+          "sha256": "f94c0b13ca6baafd8d9207c00afda47d85239fc235ea26c51aab5ed56b3d7311",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f75_m1.npy",
+          "sha256": "2274e2b2aa71e4347fef216ed67899b99eec1cde8ac2317e6ef1aeee77af953c",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r4_f99_m1.npy",
+          "sha256": "8ef875e24acb7976ab29d52514e396347613e16344b29badf88d214985ca7fc5",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f0_m0.npy",
+          "sha256": "3221b22e0d14bbeb95dae2398b9f6c66a1f960818aace7c7ff2a761918369281",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f25_m0.npy",
+          "sha256": "23fd74a09c036223f06ee97fef74799e4eb36db2afd053000e8719ecf2cfd75a",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f50_m0.npy",
+          "sha256": "089837ac9d2c1cf67b2616bb2c673406d6aeee423c979abce168a50736e8b936",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f75_m0.npy",
+          "sha256": "168ab99284b78637950b4292a99c65576bc963276ede3d5c05931bb6a8b66e3f",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f99_m0.npy",
+          "sha256": "e8718010cf8cf27e486ff1106f06a815ad904f484c6d4dfd702c278dac084020",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f0_m1.npy",
+          "sha256": "f94c0b13ca6baafd8d9207c00afda47d85239fc235ea26c51aab5ed56b3d7311",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f25_m1.npy",
+          "sha256": "2274e2b2aa71e4347fef216ed67899b99eec1cde8ac2317e6ef1aeee77af953c",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f50_m1.npy",
+          "sha256": "25ba8e2c35d1bd9bba0d23fbc6656966f461164f8512969bbcdbe1633a4feee2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f75_m1.npy",
+          "sha256": "8fe680c2c94605efd986c4166d3a5cc4a1580fadc0f63a8c24e42c9748f70e50",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r5_f99_m1.npy",
+          "sha256": "ceada3bfb14f7d3f0d648f84c2688cbb9f8533a81b8a60a166db463d4d168c2b",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f0_m0.npy",
+          "sha256": "089837ac9d2c1cf67b2616bb2c673406d6aeee423c979abce168a50736e8b936",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f25_m0.npy",
+          "sha256": "168ab99284b78637950b4292a99c65576bc963276ede3d5c05931bb6a8b66e3f",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f50_m0.npy",
+          "sha256": "5eafc728c27deca762de7c170fc85cfddb744a9a3beff1db9b8d019ac7300846",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f75_m0.npy",
+          "sha256": "823184858976ff8eb7a8eadc417941a42eb43c4c9406448b82d53129be76152b",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f99_m0.npy",
+          "sha256": "c5cf7da84f4cc5302bf1782a3ab58e788639737d1cc1f3ed0fa6d8b5f346b703",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f0_m1.npy",
+          "sha256": "25ba8e2c35d1bd9bba0d23fbc6656966f461164f8512969bbcdbe1633a4feee2",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f25_m1.npy",
+          "sha256": "8fe680c2c94605efd986c4166d3a5cc4a1580fadc0f63a8c24e42c9748f70e50",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f50_m1.npy",
+          "sha256": "18070447b2e2260764023b350d6f6d22ea83d30b8c1932dfbb4359d329908527",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f75_m1.npy",
+          "sha256": "4c2acfcc91ff4d5138ea2ea8318ae14ea5d6ba69314608dcbcabb61a44f7d8b0",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r6_f99_m1.npy",
+          "sha256": "5b5edbe5d78864e7e0a177a69a367ac5429c77ac7a702bd6cd60d8b7ac92d68a",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f0_m0.npy",
+          "sha256": "5eafc728c27deca762de7c170fc85cfddb744a9a3beff1db9b8d019ac7300846",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f25_m0.npy",
+          "sha256": "823184858976ff8eb7a8eadc417941a42eb43c4c9406448b82d53129be76152b",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f50_m0.npy",
+          "sha256": "41c574ec856b9891dc378fb989e0032d9c59a77e8e05549c12af8de7d03375e4",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f75_m0.npy",
+          "sha256": "72b261bb9b761d6328d174c635964b11d5964ec4d2613d8a85596ec47305edd6",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f99_m0.npy",
+          "sha256": "8cfd8efae3bbc31be2b5c0277b73ebdce011fdc46ed66a6aef53b3c8eb1a2382",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f0_m1.npy",
+          "sha256": "18070447b2e2260764023b350d6f6d22ea83d30b8c1932dfbb4359d329908527",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f25_m1.npy",
+          "sha256": "4c2acfcc91ff4d5138ea2ea8318ae14ea5d6ba69314608dcbcabb61a44f7d8b0",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f50_m1.npy",
+          "sha256": "c4eab7465a160e9532cca19662cc87bf9b005ddd74e3ef6ca76a054a2a3aa5d0",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f75_m1.npy",
+          "sha256": "c26ac2fb0c7e0613b7164dd07cbbd89dea1b63dab6dec9239b81a33a9e7c81a0",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial1/train_r7_f99_m1.npy",
+          "sha256": "80f958f4a64e6ca8ee206e704c19046b5c22f613d9aebcf1e71cabc25ab444c8",
+          "shape": [
+            1,
+            2,
+            60,
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "dataset": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_inputs.txt",
+      "dataset_sha256": "427e6c7cfd7f6fa26c73dcc470eb8d6bdb074742909267cc64f42c4a66395645",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f0_m0.npy",
+          "sha256": "dbaa5344188fc23f919a1426fb6986a7f87c6f8bc08455026c12c5e3c9726c00",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f25_m0.npy",
+          "sha256": "1fbcf4c14a0aa4d1ececc5a25f4a2d4a06f2ae36025719234ad7a8ef915363a2",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f50_m0.npy",
+          "sha256": "417ffdc7097da3095df0367224962a518051f45d38cc3f91fb48aea50b362425",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f75_m0.npy",
+          "sha256": "3cdc9d128de82a4de1fae79a4bce3435ab1b500034985d618672a34f22698793",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f99_m0.npy",
+          "sha256": "93759d1f0620d586ad3b05970c70fb1acfcfba0aa17361b5805d654693bec2d3",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f0_m1.npy",
+          "sha256": "5a2d52db9efaa9251223f17c24fbc9185ec339fed11169220e4281fd9385fd1d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f25_m1.npy",
+          "sha256": "2dd9accec6f9a3135340c77178ad47f51a4219abf89ce81a4404e707a9d077e0",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f50_m1.npy",
+          "sha256": "74327e626a969d3bc4488ae8f14ef41323a6245e554abdf93bc87201bad195a5",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f75_m1.npy",
+          "sha256": "5f133b3743cc5233577ef5e0a4019c7f34f7ac35ca1b0d7b003503af0bed01e9",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r0_f99_m1.npy",
+          "sha256": "c70fd0dac3cc765280159abfc528b9e1049c37e868426184177ce102eed8d284",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f0_m0.npy",
+          "sha256": "bacd49565d3a4623c83f3dd360e3870f71586e3179b23c0cc1d934471c88a3fb",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f25_m0.npy",
+          "sha256": "3cdc9d128de82a4de1fae79a4bce3435ab1b500034985d618672a34f22698793",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f50_m0.npy",
+          "sha256": "9fa5232ccb61c84d8f10697a25fa5cd6f082df42befabbcc78f1f0a680afc36d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f75_m0.npy",
+          "sha256": "fab25313dab9ba030cbe64cbdbb1c10070dae47fd6c75b8eb390b4086aa5afb9",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f99_m0.npy",
+          "sha256": "f943a3622e0e634b126a7edbd141c0aff844ac06077d0584d4ec6a50e6997244",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f0_m1.npy",
+          "sha256": "bdc1912934cad405894c166729da71a53b5507ae71540a05f9ad442c49375bb7",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f25_m1.npy",
+          "sha256": "5f133b3743cc5233577ef5e0a4019c7f34f7ac35ca1b0d7b003503af0bed01e9",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f50_m1.npy",
+          "sha256": "ff55a01d26c6d35ed2c89a0edd7883d1eef57c2db5e79bcd832ca004fea14421",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f75_m1.npy",
+          "sha256": "40deec502127486351074fbc06f1706e1dfeee7e59782003b8a9d2f8a6c0c8ac",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r1_f99_m1.npy",
+          "sha256": "5154812e94a5c9f011ff950799e5e3994f8a516512ee9ad4fcef4e2a535690a4",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f0_m0.npy",
+          "sha256": "93548e5ca305316f78f89770dd8c20fcdf38c10cab4a7c312afe6be1700cb264",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f25_m0.npy",
+          "sha256": "fab25313dab9ba030cbe64cbdbb1c10070dae47fd6c75b8eb390b4086aa5afb9",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f50_m0.npy",
+          "sha256": "864e8e4479f7ad69fb5555399ff84137399486fed564846f82c3c436fe12aabd",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f75_m0.npy",
+          "sha256": "d481d065cfaf0b1da53ca9d89112a6b5b4ed2de6ac633803a1faa541d7ed4d7a",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f99_m0.npy",
+          "sha256": "4940860ec6e95e2ab23af5f3922c91bceeac48e1c18b7107d6d06f5e891463ca",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f0_m1.npy",
+          "sha256": "17b4a52c7868b4c8ff8e23f720f59ff43fb920d8ca84a37e9656bb3943db7238",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f25_m1.npy",
+          "sha256": "40deec502127486351074fbc06f1706e1dfeee7e59782003b8a9d2f8a6c0c8ac",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f50_m1.npy",
+          "sha256": "e81eda43e119acfd57d1afb206b0b70e60ddb4a75a1af9678e40b234f265630d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f75_m1.npy",
+          "sha256": "047a498403d942d2c3be3edfb754fd07419fa091ace06b2ee1f29fd26c8ee814",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r2_f99_m1.npy",
+          "sha256": "433a6d6e9f3f51c6242cf4f5c9e4410db9fe6ccffcbe5eda6d0ab7e3a1aa03dd",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f0_m0.npy",
+          "sha256": "58210bed3d3e458579baf679e76ac5e3565dd3f35f84fc374f64b842d177440a",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f25_m0.npy",
+          "sha256": "d481d065cfaf0b1da53ca9d89112a6b5b4ed2de6ac633803a1faa541d7ed4d7a",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f50_m0.npy",
+          "sha256": "14e8b8df5f9d5e7e1117065d254d5d2cb09fab0a635f6edc84e687baec1acb9f",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f75_m0.npy",
+          "sha256": "2ed57fb3e623d7897d6195b820e67e97f0426632d278587b5f236eb2a49d6039",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f99_m0.npy",
+          "sha256": "6dad49a7fdb2f2fe89bfe70016d24f0522dc09d44c1a231c5e8126970c1eb5ae",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f0_m1.npy",
+          "sha256": "0392efcda1e74e4ff323d44e711e43bf212d7961e31db501351d5c2dfaa953a2",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f25_m1.npy",
+          "sha256": "047a498403d942d2c3be3edfb754fd07419fa091ace06b2ee1f29fd26c8ee814",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f50_m1.npy",
+          "sha256": "a87ad3f3a67f6b147a69aab45054c251d49380eb23799d0887a40cfcfbc113c0",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f75_m1.npy",
+          "sha256": "26ece893347baacaca605553c7fa2c298b300f17107de0f17d69f70051237586",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r3_f99_m1.npy",
+          "sha256": "a7dcbef44168a51fb0bcd3357ed49de6b21f4d69d38c1ac4621194b51f29b518",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f0_m0.npy",
+          "sha256": "bda34677c888add48dc7fe56034ec5a3890bf379fbed973289d318af5c10cbd9",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f25_m0.npy",
+          "sha256": "2ed57fb3e623d7897d6195b820e67e97f0426632d278587b5f236eb2a49d6039",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f50_m0.npy",
+          "sha256": "8a01d7d51a1495d79cf63ca642551a707d39b6a4714ab03bfacb202d06ce2bda",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f75_m0.npy",
+          "sha256": "9a6f3970fa89794511229d885637f99fe281b4e2a3f6fe3b96ce493a95242261",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f99_m0.npy",
+          "sha256": "173a4ef4067a66dc32de7bb1b93025bb421b5bc375679e83e3d652ca592f3391",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f0_m1.npy",
+          "sha256": "afbb56cbf462d32d0b8bc50400af3d4e9e388ff0f8178e831ef028e49d4f5bcc",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f25_m1.npy",
+          "sha256": "26ece893347baacaca605553c7fa2c298b300f17107de0f17d69f70051237586",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f50_m1.npy",
+          "sha256": "1260195c4e50f19c4cba0c04a9b3abb0581c7673189039fdb744fb7f95cc6a0b",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f75_m1.npy",
+          "sha256": "9ddfd7691b8a2094caa7899a47878c98178970d1ae2841f06809e0b21eb39b7d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r4_f99_m1.npy",
+          "sha256": "28919825a59c15457ff481ff009ef8ad0359a6388b2224835ae36b120e9eeb88",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f0_m0.npy",
+          "sha256": "d02bbb5e911b31fe299bc2be056c4788e353dac04e3fc5b195c603dfaf792649",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f25_m0.npy",
+          "sha256": "9a6f3970fa89794511229d885637f99fe281b4e2a3f6fe3b96ce493a95242261",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f50_m0.npy",
+          "sha256": "0b4df5f723d51747c12b440b11c3da8e797c8fbd44d01e50e22e38cb7c919e25",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f75_m0.npy",
+          "sha256": "b4feb4c34098ea4152153f3454a3e2a0ce9e286922f4e49edce423a2bba72035",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f99_m0.npy",
+          "sha256": "295ae737bb5e2d4afc299562547470e9265422a61bf6e4028edd1f45b66548dc",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f0_m1.npy",
+          "sha256": "d87216b9b69730ca700d310171bff63669a84e20447603790faec953184b22fe",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f25_m1.npy",
+          "sha256": "9ddfd7691b8a2094caa7899a47878c98178970d1ae2841f06809e0b21eb39b7d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f50_m1.npy",
+          "sha256": "1af41bacbaa0a8205c615e4f61d334de3649734dc75ab90c5e3f224da9cc8360",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f75_m1.npy",
+          "sha256": "0d6a320fb1755aa690f70495197a343a0a12c10fec1c01088139073cbfcd81b7",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r5_f99_m1.npy",
+          "sha256": "61bfa8204898f08ae3e9257e0e2c29b4b695fad9624c2835270bf83fdfb05eed",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f0_m0.npy",
+          "sha256": "971243d1e7c0820dd1375e275519247add7932cff56d6be23298c138838a57ca",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f25_m0.npy",
+          "sha256": "b4feb4c34098ea4152153f3454a3e2a0ce9e286922f4e49edce423a2bba72035",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f50_m0.npy",
+          "sha256": "80ac751fccd7a75614c0f5b3b6717531beb799bd88cb99da3d64a38392fe4a33",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f75_m0.npy",
+          "sha256": "04202309d87c4a3879b48097eb9f31fc81e70fa259000ec608dae2a6cfa56bee",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f99_m0.npy",
+          "sha256": "462da90114ef1725b96ff03b98cb5e5b59c9e55e4c012dcaac6ca3f2f9d64a3c",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f0_m1.npy",
+          "sha256": "76cf076d3450ec2bccb8d9d609f2c0ddd52ab7480645844f2e2d89e7ab1ab9c4",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f25_m1.npy",
+          "sha256": "0d6a320fb1755aa690f70495197a343a0a12c10fec1c01088139073cbfcd81b7",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f50_m1.npy",
+          "sha256": "48727945c003d9a8f5c1d26d00ef8459ec02c38355ae4e33eab9daee04b2420e",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f75_m1.npy",
+          "sha256": "754041f89346a48bb9ed12d834a9e97977fc3632732dfb05c7865c27b06a9d76",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r6_f99_m1.npy",
+          "sha256": "345120a9b889714852f78b24e015620624973fe69d27a65cbb8b9289f4dd3f18",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f0_m0.npy",
+          "sha256": "d092c887037065fdfc9bff70293e602b20bcf809b61c2b46e95a5d9d69a52f0d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f25_m0.npy",
+          "sha256": "04202309d87c4a3879b48097eb9f31fc81e70fa259000ec608dae2a6cfa56bee",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f50_m0.npy",
+          "sha256": "39100ddf221fad41298dc1a3dffa316ea583baed6faeab6501dad3b3c6c9057d",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f75_m0.npy",
+          "sha256": "d311a0aa44edb594ab4cfd2340b48fbe671f14cbb5500a3c80feb5349a29624a",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f99_m0.npy",
+          "sha256": "32820d35f7242949e44e817857fbf011ae5e1e1177b05cef311756973467fe5c",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f0_m1.npy",
+          "sha256": "97479e983a84370ee3150d0a9f52768d12deb13767114887cc125da26659be55",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f25_m1.npy",
+          "sha256": "754041f89346a48bb9ed12d834a9e97977fc3632732dfb05c7865c27b06a9d76",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f50_m1.npy",
+          "sha256": "8120bdba7c668b8ccb81ecf322e483ce940e45ceb005d936e743fa30da872785",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f75_m1.npy",
+          "sha256": "617d59be8d1154aded056e1a707832942a1e924173e23eafb006190e5fc5eb30",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial2/train_r7_f99_m1.npy",
+          "sha256": "663eb0281f5e1751e378ca4e25429a56352990c8fedf30758e87b9e28fd83b7f",
+          "shape": [
+            1,
+            32,
+            20,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "dataset": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_inputs.txt",
+      "dataset_sha256": "cceae466105d8ccb1b4abf6d53c0fffbf279cb186f7ec5d65d7e9a8c69c6687b",
+      "samples": [
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f0_m0.npy",
+          "sha256": "e629175fe296b55c97f4921fcc2f16a7f64881996a542d2a7a0d2ababc099e83",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f25_m0.npy",
+          "sha256": "e47375c9fe202ca89e478ad318c62af40a7c8916d4b11c02494068a2fa5d744c",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f50_m0.npy",
+          "sha256": "21bda71393b2d9ae5004455dfb457c2715a1d0022d2691fd88ce048582adc781",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f75_m0.npy",
+          "sha256": "2bb840a57baab55e0fe8a61af01ad77389bfb80a8f0b415e464d71d98fcf95e4",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f99_m0.npy",
+          "sha256": "91f5dbbdfbc86a0bdb11ed7167f353cc08197b273c7c31c2b5410e172e54d382",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f0_m1.npy",
+          "sha256": "f69bd322eccce63ab33aa28651f73465102004c414a55216d23142e0e059be08",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f25_m1.npy",
+          "sha256": "d0dcb2821df00a738c395b47f3fb8519fe76d4f8e3e6fb4c78584e0c19ebe688",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f50_m1.npy",
+          "sha256": "c76ac921d787facea18d95ed84eacaed7b21f38643aa644e9f58499c373ab2fd",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f75_m1.npy",
+          "sha256": "d800211f0f5473e464d3e0045ccf4b1a85b53326b143c645c5b3684e040dc3a1",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 0,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r0_f99_m1.npy",
+          "sha256": "5c9d55b65346dc40b90c90528ed33350d7a193eb31b6945f1d77fe43365606e2",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f0_m0.npy",
+          "sha256": "d798e5f2ab40b2c442565c2fc75f7eca67e8151528de12995b0adca5fc4fbe2b",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f25_m0.npy",
+          "sha256": "2bb840a57baab55e0fe8a61af01ad77389bfb80a8f0b415e464d71d98fcf95e4",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f50_m0.npy",
+          "sha256": "aa872b80f0d1ec0d51bdb1304fb33ce79603c1c164fbf088deab20494a08de3f",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f75_m0.npy",
+          "sha256": "c22ffb9d9652b93b69a1e231997e1bdb5a699dad350c579ec7fd9b68eeb765db",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f99_m0.npy",
+          "sha256": "e246477a64cd81b54f042ceb573ca05d1708ac0f9ddf65835f30654695966323",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f0_m1.npy",
+          "sha256": "664f79daa1d08f6edc7a7aaeddbe073de9e1805459bd7a05be312e8fcc7b83cf",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f25_m1.npy",
+          "sha256": "d800211f0f5473e464d3e0045ccf4b1a85b53326b143c645c5b3684e040dc3a1",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f50_m1.npy",
+          "sha256": "5644227de7367f126b7837120952281d3e879e8f9d4e4f4b81686ebd71c75e44",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f75_m1.npy",
+          "sha256": "3d719dfd79bf6cbed50a8da682f3a787f59d6ac85e0e8ef8769f23f0d9448790",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 1,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r1_f99_m1.npy",
+          "sha256": "be85214199d0ef8b658770e64bdac469f322332e9159609e85860ac4417edbec",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f0_m0.npy",
+          "sha256": "0c0276a7c1664ed464c9c22dd50f38915ef7ba14bbbf40cea002f369033fbfc8",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f25_m0.npy",
+          "sha256": "c22ffb9d9652b93b69a1e231997e1bdb5a699dad350c579ec7fd9b68eeb765db",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f50_m0.npy",
+          "sha256": "a8677950a6341f603908e09136b4febf7e1d4b7a7b910e880fe2a5537790c767",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f75_m0.npy",
+          "sha256": "e012eec32c3ae2745faafc690efb8c4f8086e0c84d8aeb18066c0d8c3de67b9a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f99_m0.npy",
+          "sha256": "aadd7bbe770413b2a15db3c34e9e6d082f87f8dc0584abc35594c8325719301a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f0_m1.npy",
+          "sha256": "83486792182ba24a5a58d473d14f5b3183049fec40c455b807cbcbc170078899",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f25_m1.npy",
+          "sha256": "3d719dfd79bf6cbed50a8da682f3a787f59d6ac85e0e8ef8769f23f0d9448790",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f50_m1.npy",
+          "sha256": "5cb78dacd3431710a71095211ac30b23bd50da74e8affdde40b4161fa1871dc6",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f75_m1.npy",
+          "sha256": "06a72107da39f6e5f85961fe97fe04038dd40a60a0bf4e9058e701dd71f862d4",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 2,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r2_f99_m1.npy",
+          "sha256": "e28c5a128503d889648781fcb69bd6fd872d230fc4ee548172a76f40c7f5ab7a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f0_m0.npy",
+          "sha256": "c53b5228563271b3878899f86b9752ffb14139e0b669400f4046b170aadf8f15",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f25_m0.npy",
+          "sha256": "e012eec32c3ae2745faafc690efb8c4f8086e0c84d8aeb18066c0d8c3de67b9a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f50_m0.npy",
+          "sha256": "e3b3ad9fe8a6b70ea3b4b340ab3940907353801df04e667241fb3964219ec8df",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f75_m0.npy",
+          "sha256": "6df855d6432d665ce01fa22b3f2a7295f16732055bac4ebf99b7cb929b1b1de9",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f99_m0.npy",
+          "sha256": "382821e66ab609def8475e5738e55ec07c23e2151eb2be583a76dc86f5ff4919",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f0_m1.npy",
+          "sha256": "78fd84d4704f996f6d1660f3a54405b01059ca0bd027e27d3265577b42272ebc",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f25_m1.npy",
+          "sha256": "06a72107da39f6e5f85961fe97fe04038dd40a60a0bf4e9058e701dd71f862d4",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f50_m1.npy",
+          "sha256": "1e4d24f0a6856961c074d2a0e4f06fc2dcb968564c1963181e8a5ea963a991d7",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f75_m1.npy",
+          "sha256": "84ebdd49fa25ea76218ecd49924b899a600da0768dcb5cecdbc2d4f9e4c07236",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 3,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r3_f99_m1.npy",
+          "sha256": "2fc1050bc349e1cd1b145437396239edf79f0a8d2955542ff0a18e0098e1461d",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f0_m0.npy",
+          "sha256": "4c3f275adb6bb4c324577ce01cc9b585711b017e326204b726f914d614a62e8d",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f25_m0.npy",
+          "sha256": "6df855d6432d665ce01fa22b3f2a7295f16732055bac4ebf99b7cb929b1b1de9",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f50_m0.npy",
+          "sha256": "335e0578dcb5d4402398e0c7f6b05cc9634869dfd586bea7396f900468c0ef5e",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f75_m0.npy",
+          "sha256": "b0cef3cdde82dc26a3a76eb79c6e39dae49e4ada78917b1945b0f77faad49ccc",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f99_m0.npy",
+          "sha256": "275a9796f3f2ed430c80164294763b244863c7a11dc91bd531f2ca1d1c43ab00",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f0_m1.npy",
+          "sha256": "4d168c4fed4450654e4392045073c8481688abeeba99a7c75e13f7c466b9c855",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f25_m1.npy",
+          "sha256": "84ebdd49fa25ea76218ecd49924b899a600da0768dcb5cecdbc2d4f9e4c07236",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f50_m1.npy",
+          "sha256": "7a9111911ffddc7fff5976b900b0b702fe6f799958046a5265219f919821b5f5",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f75_m1.npy",
+          "sha256": "64c24dd4f471dfc547513bf83e457a276f41a853e148b5dd1fcfd8bad64f888a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 4,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r4_f99_m1.npy",
+          "sha256": "dc83d6828771e83b9d75c0b80a3c4b9568ede446dc101b87882e82ae390394bd",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f0_m0.npy",
+          "sha256": "e6242868e108d50e46c3b6a013bb0b2084dc3c4611cf466caaf81dc946a8621c",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f25_m0.npy",
+          "sha256": "b0cef3cdde82dc26a3a76eb79c6e39dae49e4ada78917b1945b0f77faad49ccc",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f50_m0.npy",
+          "sha256": "c25e8ddf7d554bd62b2d17be8b076ad76ceb7d4148e5fe2eccbf566d4886f688",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f75_m0.npy",
+          "sha256": "24ec3e97700b562060ddc98545a6319ad9f6d14717ed3120ccc74e923e45aabf",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f99_m0.npy",
+          "sha256": "6137ce3fcbcc83c40838e731ec71dc68fa7e9f5a2f3f802a14a0777d03f94e5c",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f0_m1.npy",
+          "sha256": "efd66673663f162d7995e73283aa2dab9790ee311380ea3f7438d433053f6aeb",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f25_m1.npy",
+          "sha256": "64c24dd4f471dfc547513bf83e457a276f41a853e148b5dd1fcfd8bad64f888a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f50_m1.npy",
+          "sha256": "ce0226624e295bb91569b632010913e3519bc5b541f58932c0c61b5a6494e57c",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f75_m1.npy",
+          "sha256": "00f53ac6243c9f309be0aaa08960c551eeb8a84d7d6df6461bd90ec9294a2672",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 5,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r5_f99_m1.npy",
+          "sha256": "d037c56d71c6506f10f6ef71fd34cba8b163fbf131464807fc1bfb020d65801c",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f0_m0.npy",
+          "sha256": "ea644aeb88db318e238dacd35b093f4bf721475c99843794d33d5b5eedb3d85b",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f25_m0.npy",
+          "sha256": "24ec3e97700b562060ddc98545a6319ad9f6d14717ed3120ccc74e923e45aabf",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f50_m0.npy",
+          "sha256": "70860ad5780f4b79622a24b3306c54a2adb8ee0a6cd9ee03bb7bd5cae0bb751a",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f75_m0.npy",
+          "sha256": "34e644253c683aab512f0b82b015f1d1629b4768b8316d23ce43edc71ea99600",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f99_m0.npy",
+          "sha256": "8fc95dde86efe9604c1abad7c9dff973132323a2bebefcd550f860c33204015e",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f0_m1.npy",
+          "sha256": "2a12c143fbe09fc716b9d7f8b34a0ddbbe4659202482fd278ce62928dad11034",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f25_m1.npy",
+          "sha256": "00f53ac6243c9f309be0aaa08960c551eeb8a84d7d6df6461bd90ec9294a2672",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f50_m1.npy",
+          "sha256": "27d3cf8e2be997b9d2cbcd22b30e2d3da4e03c2ae8177b37c3b3fbec4b34c9f6",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f75_m1.npy",
+          "sha256": "7628a8d76b6001c94ce45697652911afd6c8d800f518925cfa8cf2449d6674f0",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 6,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r6_f99_m1.npy",
+          "sha256": "750ee8884e21638e5ca6911abb908c632271939b5288bc70994380254cbea9e7",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f0_m0.npy",
+          "sha256": "b6455a5dedd5c54644404768a4e30e803b24ddf52197935b862569d415301411",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f25_m0.npy",
+          "sha256": "34e644253c683aab512f0b82b015f1d1629b4768b8316d23ce43edc71ea99600",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f50_m0.npy",
+          "sha256": "9e37f0d945a2eceeae271d9a3a476040b74cae29137e7861ce89845e6f43db88",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f75_m0.npy",
+          "sha256": "038dab4156aa7642515f6b3a0e171c53901e41ffbb43c31e91761b3a078155a1",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": false,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f99_m0.npy",
+          "sha256": "34d46ab3f9c61312afe2406ea450eb3b0dba780aad9a255a296b5c5849b4683b",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 0,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f0_m1.npy",
+          "sha256": "ddd82c199131e2eedab9fa1a42a867374a06171a575ea3b4dcce5f8eda88e123",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 25,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f25_m1.npy",
+          "sha256": "7628a8d76b6001c94ce45697652911afd6c8d800f518925cfa8cf2449d6674f0",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 50,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f50_m1.npy",
+          "sha256": "1a63b7a68e4cbcfad4542a391f7733f74b9981642b6b16b93a2fcc54a2571f3b",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 75,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f75_m1.npy",
+          "sha256": "7ef30eec6fa49f5c3a9df3a49b65867bf6f9eecdaf8edcfaf79b3461d7c061bf",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        },
+        {
+          "record": 7,
+          "frame": 99,
+          "flip": true,
+          "path": "/root/ktcal_hardware_split_20261116_v1/artifacts/train_calibration_v1/spatial3/train_r7_f99_m1.npy",
+          "sha256": "9f7c33d3aaf6ed1052a6c1c7b61b2c1930e2c8e9755f1e6d19a331a926bbdfe7",
+          "shape": [
+            1,
+            64,
+            6,
+            8
+          ]
+        }
+      ]
+    }
+  ]
+}

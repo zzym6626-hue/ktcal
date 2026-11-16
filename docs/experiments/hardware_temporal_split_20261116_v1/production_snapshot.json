@@ -1,0 +1,9 @@
+{
+  "models/STNet.py": "7812f52407ad9107c52f50d5226837774575c34dfca285ad2cf203c12900bc0e",
+  "hardware/rv1106/export_stnet.py": "55494009e5ab7203564df1b59f39ba20f279aa6964fad10f8f8c8a127e263ed6",
+  "hardware/rv1106/sequence_path.cc": "24f96e5e766d79b0daa846a1e49d216a75be876b644a47ca379af4847abdf21d",
+  "hardware/rv1106/fast_path.cc": "d23711dca0ff3687f32b5292b81fecb637f52099704d6ebd84e24dfb39426c94",
+  "hardware/rv1106/rknn_sequence_backend.cc": "da75f5a13a8365f4e6c8b46b398c98a97f28098548fe310bec7e6a82a9bb5078",
+  "weights/3et/stnet_best.pt": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0",
+  "weights/3et/matcher_best.pt": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f"
+}

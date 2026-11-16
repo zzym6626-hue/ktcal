@@ -44,6 +44,8 @@ int main() {
   assert(route(3.0f, 0.8f, false) == Route::Deferred);
   assert(route(5.0f, 0.8f, false) == Route::Reset);
   assert(route(0, 0.49f, false) == Route::Reset);
+  assert(route(0, 0.70f, false, 0.75f) == Route::Reset);
+  assert(route(0, 0.70f, false, 0.65f) == Route::Fast);
   assert(route(0, 0.9f, true) == Route::Reset);
   assert(route(0, std::numeric_limits<float>::quiet_NaN(), false) == Route::Reset);
 
@@ -86,6 +88,16 @@ int main() {
   const Output normal = tracker.tick(shifted, backend);
   assert(normal.path == Route::Fast);
   assert(backend.synchronous == 1 && backend.asynchronous == 0);
+  FakeBackend stricter_backend;
+  Tracker stricter(matcher, 0.75f);
+  stricter.tick(prior, stricter_backend);
+  assert(stricter.tick_with_match(shifted, stricter_backend, {{40, 30}, 0.70f, false}).path
+         == Route::Reset);
+  assert(stricter_backend.synchronous == 2);
+  try {
+    Tracker invalid(matcher, std::numeric_limits<float>::quiet_NaN());
+    assert(false);
+  } catch (const std::invalid_argument&) { }
   const Output missing = tracker.tick(blank, backend);
   assert(missing.path == Route::Reset && backend.synchronous == 2);
 

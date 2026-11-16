@@ -1,0 +1,17 @@
+[1;33mW[0m [1;33mbuild: The weight (12470 MiB) of the model is too large, only the basic graph is saved to 'check3_fuse_ops.onnx'![0m
+E RKNN: [16:23:49.473] Transpose will fallback to CPU, because input shape has exceeded the max limit, pixels(2816) overflow
+W RKNN: [16:24:03.607] Warning: Tensor /model/pool/Slice_10_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by defaulE RKNN: [16:25:04.322] Unkown op target: 0
+E RKNN: [16:25:04.322] Unkown op target: 0
+E RKNN: [16:25:04.331] Unkown op target: 0
+E RKNN: [16:25:04.331] Unkown op target: 0
+E RKNN: [16:25:26.013] Unkown op target: 0
+E RKNN: [16:25:26.013] Unkown op target: 0
+D RKNN: [16:25:27.609] 68   Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/model/pool/Slice_output_0-rs_gather
+D RKNN: [16:25:27.609] 69   Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/model/pool/Slice_10_output_0-rs_gather
+D RKNN: [16:25:27.609] 71   Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/model/pool/Slice_5_output_0-rs_gather
+D RKNN: [16:25:27.609] 72   Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/model/pool/Slice_15_output_0-rs_gather
+D RKNN: [16:25:27.609] 99   exNorm             INT8     CPU    (100,2048,1,1),(1,2048,1,1),...          (100,2048,1,1)         0/0/0                    216          exNorm:/model/layernorm/LayerNormalization#1
+D RKNN: [16:25:27.609] 101  GRU                INT8     CPU    (100,1,2048),(2,384,2048),...            (100,2,1,128)          0/0/0                    6735         GRU:/model/gru/GRU
+D RKNN: [16:25:27.609] 106  Transpose          INT8     CPU    (1,100,11,256)                           (1,256,11,100)         0/0/0                    308          Transpose:/model/Mul_output_0_tp
+D RKNN: [16:25:27.609] 114  Transpose          INT8     CPU    (1,1,100,256)                            (1,256,1,100)          0/0/0                    400          Transpose:/model/ReduceSum_1_output_0_tp#1
+D RKNN: [16:25:27.609] 115  ConvRelu           INT8     NPU    (1,256,1,100),(128,256,1,1),(128)        (1,128,1,100)          11721E RKNN: [16:25:27.629] failed to malloc cpu memory, size: 18446744072822027648

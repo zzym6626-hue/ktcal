@@ -1,0 +1,21 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "temporal_cpu_mac_per100_view": 1474560000,
+      "spatial_feature_bytes_per100_view": 61440000
+    },
+    {
+      "stage": 2,
+      "temporal_cpu_mac_per100_view": 638976000,
+      "spatial_feature_bytes_per100_view": 13312000
+    },
+    {
+      "stage": 3,
+      "temporal_cpu_mac_per100_view": 235929600,
+      "spatial_feature_bytes_per100_view": 2457600
+    }
+  ],
+  "temporal_cpu_macs_per100_ten_views": 23494656000,
+  "scope": "arithmetic count only, no board performance measurement; current spike leaves dense temporal ops on CPU"
+}

@@ -1,0 +1,662 @@
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                            | 0/13 [00:00<?, ?it/s]I Loading : 100%|████████████████████████████████████████████████| 13/13 [00:00<00:00, 11989.00it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+D base_optimize ...
+D base_optimize done.
+D 
+D fold_constant ...
+D fold_constant done.
+D fold_constant remove nodes = ['/Pow', '/Clip', '/gru/Expand', '/gru/Concat', 'Unsqueeze_170', '/gru/Gather', '/gru/Shape']
+D Fixed the shape information of some tensor!
+D 
+D correct_ops ...
+D correct_ops done.
+D 
+D fuse_ops ...
+D fuse_ops results:
+D     replace_parallel_slice_by_split: remove node = ['/pool/Slice', '/pool/Slice_10', '/pool/Slice_5', '/pool/Slice_15'], add node = ['/pool/Slice_2sp', '/pool/Slice_2sp1']
+D     replace_parallel_slice_by_split: remove node = ['/pool/Slice_16', '/pool/Slice_17', '/pool/Slice_18', '/pool/Slice_19'], add node = ['/pool/Slice_16_2sp']
+D     fuse_transpose_reshape: remove node = ['/gru/Transpose_1']
+D     replace_parallel_slice_by_split: remove node = ['/pool/Slice_1', '/pool/Slice_2', '/pool/Slice_3', '/pool/Slice_4'], add node = ['/pool/Slice_1_2sp']
+D     replace_parallel_slice_by_split: remove node = ['/pool/Slice_11', '/pool/Slice_12', '/pool/Slice_13', '/pool/Slice_14'], add node = ['/pool/Slice_11_2sp']
+D     replace_parallel_slice_by_split: remove node = ['/pool/Slice_6', '/pool/Slice_7', '/pool/Slice_8', '/pool/Slice_9'], add node = ['/pool/Slice_6_2sp']
+D     fuse_reshape_transpose: remove node = ['/gru/Transpose_2']
+D     squeeze_to_4d_split: remove node = [], add node = ['post_block3_rs', '/pool/Slice_output_0-rs', '/pool/Slice_10_output_0-rs']
+D     squeeze_to_4d_split: remove node = [], add node = ['/pool/Slice_output_0_rs', '/pool/Slice_1_output_0-rs', '/pool/Slice_2_output_0-rs', '/pool/Slice_3_output_0-rs', '/pool/Slice_4_output_0-rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean'], add node = ['/pool/ReduceMean#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze'], add node = ['/pool/Unsqueeze_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_1'], add node = ['/pool/ReduceMean_1#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_1'], add node = ['/pool/Unsqueeze_1_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_2'], add node = ['/pool/ReduceMean_2#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_2'], add node = ['/pool/Unsqueeze_2_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_3'], add node = ['/pool/ReduceMean_3#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_3'], add node = ['/pool/Unsqueeze_3_2rs']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_16'], add node = ['/pool/Unsqueeze_16_2rs']
+D     squeeze_to_4d_split: remove node = [], add node = ['/pool/Slice_10_output_0_rs', '/pool/Slice_11_output_0-rs', '/pool/Slice_12_output_0-rs', '/pool/Slice_13_output_0-rs', '/pool/Slice_14_output_0-rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_8'], add node = ['/pool/ReduceMean_8#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_8'], add node = ['/pool/Unsqueeze_8_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_9'], add node = ['/pool/ReduceMean_9#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_9'], add node = ['/pool/Unsqueeze_9_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_10'], add node = ['/pool/ReduceMean_10#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_10'], add node = ['/pool/Unsqueeze_10_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_11'], add node = ['/pool/ReduceMean_11#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_11'], add node = ['/pool/Unsqueeze_11_2rs']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_18'], add node = ['/pool/Unsqueeze_18_2rs']
+D     squeeze_to_4d_split: remove node = [], add node = ['post_block3_rs#1', '/pool/Slice_5_output_0-rs', '/pool/Slice_15_output_0-rs']
+D     squeeze_to_4d_split: remove node = [], add node = ['/pool/Slice_5_output_0_rs', '/pool/Slice_6_output_0-rs', '/pool/Slice_7_output_0-rs', '/pool/Slice_8_output_0-rs', '/pool/Slice_9_output_0-rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_4'], add node = ['/pool/ReduceMean_4#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_4'], add node = ['/pool/Unsqueeze_4_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_5'], add node = ['/pool/ReduceMean_5#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_5'], add node = ['/pool/Unsqueeze_5_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_6'], add node = ['/pool/ReduceMean_6#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_6'], add node = ['/pool/Unsqueeze_6_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_7'], add node = ['/pool/ReduceMean_7#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_7'], add node = ['/pool/Unsqueeze_7_2rs']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_17'], add node = ['/pool/Unsqueeze_17_2rs']
+D     squeeze_to_4d_split: remove node = [], add node = ['/pool/Slice_15_output_0_rs', '/pool/Slice_16_output_0-rs', '/pool/Slice_17_output_0-rs', '/pool/Slice_18_output_0-rs', '/pool/Slice_19_output_0-rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_12'], add node = ['/pool/ReduceMean_12#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_12'], add node = ['/pool/Unsqueeze_12_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_13'], add node = ['/pool/ReduceMean_13#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_13'], add node = ['/pool/Unsqueeze_13_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_14'], add node = ['/pool/ReduceMean_14#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_14'], add node = ['/pool/Unsqueeze_14_2rs']
+D     convert_reducemean_to_einsum: remove node = ['/pool/ReduceMean_15'], add node = ['/pool/ReduceMean_15#1']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_15'], add node = ['/pool/Unsqueeze_15_2rs']
+D     convert_unsqueeze_to_reshape: remove node = ['/pool/Unsqueeze_19'], add node = ['/pool/Unsqueeze_19_2rs']
+D     squeeze_to_4d_concat: remove node = [], add node = ['/pool/Unsqueeze_16_output_0_rs', '/pool/Unsqueeze_17_output_0_rs', '/pool/Unsqueeze_18_output_0_rs', '/pool/Unsqueeze_19_output_0_rs', '/pool/Concat_4_output_0-rs']
+D     convert_layernorm_to_exnorm: remove node = ['/layernorm/LayerNormalization'], add node = ['/Reshape_output_0_tp', '/Reshape_output_0_tp_rs', '/layernorm/LayerNormalization#1', '/layernorm/LayerNormalization#1_rs', '/layernorm/LayerNormalization#1_rs_tp']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/layernorm/LayerNormalization_output_0_rs', '/gru/Transpose_output_0-rs']
+D     keepdims_gather: remove node = [], add node = ['/Gather_output_0-rs']
+D     convert_unsqueeze_to_reshape: remove node = ['/Unsqueeze'], add node = ['/Unsqueeze_2rs']
+D     convert_reduce_sum_to_conv: remove node = ['/ReduceSum'], add node = ['/Mul_output_0_tp', '/ReduceSum_2conv', '/ReduceSum_output_0_conv_tp', '/ReduceSum_output_0_conv_tp_rs']
+D     convert_div_to_mul: remove node = ['/Div'], add node = ['/Div_2mul']
+D     convert_softmax_to_exsoftmax13: remove node = ['/Softmax'], add node = ['/Softmax']
+D     convert_unsqueeze_to_reshape: remove node = ['/Unsqueeze_1'], add node = ['/Unsqueeze_1_2rs']
+D     convert_reduce_sum_to_conv: remove node = ['/ReduceSum_1'], add node = ['/Mul_1_output_0_tp', '/ReduceSum_1_2conv', '/ReduceSum_1_output_0_conv_tp', '/ReduceSum_1_output_0_conv_tp_rs']
+D     convert_matmul_to_exmatmul: remove node = ['/fc_w/fc_w.0/MatMul'], add node = ['/ReduceSum_1_output_0_tp', '/ReduceSum_1_output_0_tp_rs', '/fc_w/fc_w.0/MatMul#1', '/fc_w/fc_w.0/MatMul_output_0_mm_tp', '/fc_w/fc_w.0/MatMul_output_0_mm_tp_rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/fc_w/fc_w.0/MatMul_output_0_rs', '/fc_w/fc_w.0/Add_output_0-rs']
+D     unsqueeze_to_4d_relu: remove node = [], add node = ['/fc_w/fc_w.0/Add_output_0_rs', '/fc_w/fc_w.1/Relu_output_0-rs']
+D     convert_matmul_to_exmatmul: remove node = ['/fc_w/fc_w.3/MatMul'], add node = ['/fc_w/fc_w.1/Relu_output_0_tp', '/fc_w/fc_w.1/Relu_output_0_tp_rs', '/fc_w/fc_w.3/MatMul#1', '/fc_w/fc_w.3/MatMul_output_0_mm_tp', '/fc_w/fc_w.3/MatMul_output_0_mm_tp_rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/fc_w/fc_w.3/MatMul_output_0_rs', 'x_logits-rs']
+D     convert_matmul_to_exmatmul: remove node = ['/fc_h/fc_h.0/MatMul'], add node = ['/ReduceSum_1_output_0_tp#1', '/ReduceSum_1_output_0_tp#1_rs', '/fc_h/fc_h.0/MatMul#1', '/fc_h/fc_h.0/MatMul_output_0_mm_tp', '/fc_h/fc_h.0/MatMul_output_0_mm_tp_rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/fc_h/fc_h.0/MatMul_output_0_rs', '/fc_h/fc_h.0/Add_output_0-rs']
+D     unsqueeze_to_4d_relu: remove node = [], add node = ['/fc_h/fc_h.0/Add_output_0_rs', '/fc_h/fc_h.1/Relu_output_0-rs']
+D     convert_matmul_to_exmatmul: remove node = ['/fc_h/fc_h.3/MatMul'], add node = ['/fc_h/fc_h.1/Relu_output_0_tp', '/fc_h/fc_h.1/Relu_output_0_tp_rs', '/fc_h/fc_h.3/MatMul#1', '/fc_h/fc_h.3/MatMul_output_0_mm_tp', '/fc_h/fc_h.3/MatMul_output_0_mm_tp_rs']
+D     unsqueeze_to_4d_add: remove node = [], add node = ['/fc_h/fc_h.3/MatMul_output_0_rs', 'y_logits-rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean#1'], add node = ['/pool/Slice_1_output_0_rs', '/pool/Slice_1_output_0_rs_mm', '/pool/Slice_1_output_0_rs_mm_tp', '/pool/Slice_1_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_1#1'], add node = ['/pool/Slice_2_output_0_rs', '/pool/Slice_2_output_0_rs_mm', '/pool/Slice_2_output_0_rs_mm_tp', '/pool/Slice_2_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_2#1'], add node = ['/pool/Slice_3_output_0_rs', '/pool/Slice_3_output_0_rs_mm', '/pool/Slice_3_output_0_rs_mm_tp', '/pool/Slice_3_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_3#1'], add node = ['/pool/Slice_4_output_0_rs', '/pool/Slice_4_output_0_rs_mm', '/pool/Slice_4_output_0_rs_mm_tp', '/pool/Slice_4_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_8#1'], add node = ['/pool/Slice_11_output_0_rs', '/pool/Slice_11_output_0_rs_mm', '/pool/Slice_11_output_0_rs_mm_tp', '/pool/Slice_11_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_9#1'], add node = ['/pool/Slice_12_output_0_rs', '/pool/Slice_12_output_0_rs_mm', '/pool/Slice_12_output_0_rs_mm_tp', '/pool/Slice_12_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_10#1'], add node = ['/pool/Slice_13_output_0_rs', '/pool/Slice_13_output_0_rs_mm', '/pool/Slice_13_output_0_rs_mm_tp', '/pool/Slice_13_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_11#1'], add node = ['/pool/Slice_14_output_0_rs', '/pool/Slice_14_output_0_rs_mm', '/pool/Slice_14_output_0_rs_mm_tp', '/pool/Slice_14_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_4#1'], add node = ['/pool/Slice_6_output_0_rs', '/pool/Slice_6_output_0_rs_mm', '/pool/Slice_6_output_0_rs_mm_tp', '/pool/Slice_6_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_5#1'], add node = ['/pool/Slice_7_output_0_rs', '/pool/Slice_7_output_0_rs_mm', '/pool/Slice_7_output_0_rs_mm_tp', '/pool/Slice_7_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_6#1'], add node = ['/pool/Slice_8_output_0_rs', '/pool/Slice_8_output_0_rs_mm', '/pool/Slice_8_output_0_rs_mm_tp', '/pool/Slice_8_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_7#1'], add node = ['/pool/Slice_9_output_0_rs', '/pool/Slice_9_output_0_rs_mm', '/pool/Slice_9_output_0_rs_mm_tp', '/pool/Slice_9_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_12#1'], add node = ['/pool/Slice_16_output_0_rs', '/pool/Slice_16_output_0_rs_mm', '/pool/Slice_16_output_0_rs_mm_tp', '/pool/Slice_16_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_13#1'], add node = ['/pool/Slice_17_output_0_rs', '/pool/Slice_17_output_0_rs_mm', '/pool/Slice_17_output_0_rs_mm_tp', '/pool/Slice_17_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_14#1'], add node = ['/pool/Slice_18_output_0_rs', '/pool/Slice_18_output_0_rs_mm', '/pool/Slice_18_output_0_rs_mm_tp', '/pool/Slice_18_output_0_rs_mm_tp_rs']
+D     convert_2in_einsum_to_exmatmul: remove node = ['/pool/ReduceMean_15#1'], add node = ['/pool/Slice_19_output_0_rs', '/pool/Slice_19_output_0_rs_mm', '/pool/Slice_19_output_0_rs_mm_tp', '/pool/Slice_19_output_0_rs_mm_tp_rs']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/Reshape_output_0_rs', '/Reshape_output_0_tp-rs']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/layernorm/LayerNormalization#1_rs_rs', '/layernorm/LayerNormalization_output_0-rs']
+D     unsqueeze_to_4d_gather: remove node = [], add node = ['/gru/Transpose_2_output_0_rs', '/Gather_output_0-rs-rs']
+D     unsqueeze_to_4d_mul: remove node = [], add node = ['/ReduceSum_output_0_rs', '/Div_output_0-rs']
+D     unsqueeze_to_4d_exsoftmax13: remove node = [], add node = ['/Div_output_0_rs', '/Softmax_output_0-rs']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/ReduceSum_1_output_0_rs', '/ReduceSum_1_output_0_tp#1-rs']
+D     input_align_4D_add: remove node = ['/fc_h/fc_h.0/Add'], add node = ['/fc_h/fc_h.0/Add']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/fc_h/fc_h.1/Relu_output_0_rs', '/fc_h/fc_h.1/Relu_output_0_tp-rs']
+D     input_align_4D_add: remove node = ['/fc_h/fc_h.3/Add'], add node = ['/fc_h/fc_h.3/Add']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/ReduceSum_1_output_0_rs#1', '/ReduceSum_1_output_0_tp-rs']
+D     input_align_4D_add: remove node = ['/fc_w/fc_w.0/Add'], add node = ['/fc_w/fc_w.0/Add']
+D     unsqueeze_to_4d_transpose: remove node = [], add node = ['/fc_w/fc_w.1/Relu_output_0_rs', '/fc_w/fc_w.1/Relu_output_0_tp-rs']
+D     input_align_4D_add: remove node = ['/fc_w/fc_w.3/Add'], add node = ['/fc_w/fc_w.3/Add']
+D     remove_parallel_reshape: remove node = ['post_block3_rs', 'post_block3_rs#1'], add node = ['post_block3_rs']
+D     bypass_two_reshape: remove node = ['/pool/Slice_5_output_0_rs', '/pool/Slice_5_output_0-rs']
+D     fuse_two_reshape: remove node = ['/pool/Slice_6_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_6_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_7_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_7_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_8_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_8_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_9_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_9_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Unsqueeze_17_2rs']
+D     bypass_two_reshape: remove node = ['/pool/Slice_15_output_0_rs', '/pool/Slice_15_output_0-rs']
+D     fuse_two_reshape: remove node = ['/pool/Slice_16_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_16_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_17_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_17_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_18_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_18_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_19_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_19_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Unsqueeze_19_2rs', '/pool/Concat_4_output_0-rs']
+D     bypass_two_reshape: remove node = ['/Reshape_output_0_tp_rs', '/Reshape_output_0_tp-rs', '/layernorm/LayerNormalization#1_rs_rs', '/layernorm/LayerNormalization#1_rs', '/layernorm/LayerNormalization_output_0_rs', '/layernorm/LayerNormalization_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/gru/Transpose']
+D     remove_top_reshape: remove node = ['/gru/Reshape']
+D     remove_parallel_reshape: remove node = ['/gru/Transpose_2_output_0_rs', '/Unsqueeze_2rs'], add node = ['/gru/Transpose_2_output_0_rs']
+D     fuse_two_reshape: remove node = ['/ReduceSum_output_0_conv_tp_rs']
+D     bypass_two_reshape: remove node = ['/Div_output_0_rs', '/Div_output_0-rs']
+D     fuse_two_reshape: remove node = ['/Softmax_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/ReduceSum_1_output_0_conv_tp']
+D     remove_parallel_reshape: remove node = ['/ReduceSum_1_output_0_rs#1', '/ReduceSum_1_output_0_rs'], add node = ['/ReduceSum_1_output_0_rs#1']
+D     remove_parallel_transpose: remove node = ['/ReduceSum_1_output_0_tp#1', '/ReduceSum_1_output_0_tp'], add node = ['/ReduceSum_1_output_0_tp#1']
+D     bypass_two_reshape: remove node = ['/ReduceSum_1_output_0_tp#1_rs', '/ReduceSum_1_output_0_tp#1-rs', '/fc_h/fc_h.0/MatMul_output_0_rs', '/fc_h/fc_h.0/MatMul_output_0_mm_tp_rs', '/fc_h/fc_h.0/Add_output_0_rs', '/fc_h/fc_h.0/Add_output_0-rs', '/fc_h/fc_h.1/Relu_output_0_rs', '/fc_h/fc_h.1/Relu_output_0-rs', '/fc_h/fc_h.1/Relu_output_0_tp_rs', '/fc_h/fc_h.1/Relu_output_0_tp-rs', '/fc_h/fc_h.3/MatMul_output_0_rs', '/fc_h/fc_h.3/MatMul_output_0_mm_tp_rs']
+D     bypass_two_reshape: remove node = ['/pool/Slice_output_0_rs', '/pool/Slice_output_0-rs']
+D     fuse_two_reshape: remove node = ['/pool/Slice_1_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_1_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_2_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_2_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_3_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_3_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_4_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_4_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Unsqueeze_16_2rs']
+D     bypass_two_reshape: remove node = ['/pool/Slice_10_output_0_rs', '/pool/Slice_10_output_0-rs']
+D     fuse_two_reshape: remove node = ['/pool/Slice_11_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_11_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_12_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_12_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_13_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_13_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_14_output_0-rs']
+D     fuse_transpose_reshape: remove node = ['/pool/Slice_14_output_0_rs_mm_tp']
+D     fuse_two_reshape: remove node = ['/pool/Unsqueeze_18_2rs']
+D     reduce_reshape_op_around_split: remove node = ['/pool/Slice_6_output_0_rs', '/pool/Slice_7_output_0_rs', '/pool/Slice_8_output_0_rs', '/pool/Slice_9_output_0_rs', '/pool/Slice_6_2sp'], add node = ['/pool/Slice_5_output_0-rs_gather', '/pool/Slice_5_output_0-rs_gather_rs', '/pool/Slice_6_2sp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_9_output_0_rs_mm_tp_rs']
+D     reduce_reshape_op_around_split: remove node = ['/pool/Slice_16_output_0_rs', '/pool/Slice_17_output_0_rs', '/pool/Slice_18_output_0_rs', '/pool/Slice_19_output_0_rs', '/pool/Slice_16_2sp'], add node = ['/pool/Slice_15_output_0-rs_gather', '/pool/Slice_15_output_0-rs_gather_rs', '/pool/Slice_16_2sp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_19_output_0_rs_mm_tp_rs', '/Reshape', '/Gather_output_0-rs-rs']
+D     fuse_transpose_reshape: remove node = ['/ReduceSum_output_0_rs']
+D     fuse_two_reshape: remove node = ['/ReduceSum_1_output_0_conv_tp_rs']
+D     bypass_two_reshape: remove node = ['/ReduceSum_1_output_0_tp_rs', '/ReduceSum_1_output_0_tp-rs', '/fc_w/fc_w.0/MatMul_output_0_rs', '/fc_w/fc_w.0/MatMul_output_0_mm_tp_rs', '/fc_w/fc_w.0/Add_output_0_rs', '/fc_w/fc_w.0/Add_output_0-rs', '/fc_w/fc_w.1/Relu_output_0_rs', '/fc_w/fc_w.1/Relu_output_0-rs', '/fc_w/fc_w.1/Relu_output_0_tp_rs', '/fc_w/fc_w.1/Relu_output_0_tp-rs', '/fc_w/fc_w.3/MatMul_output_0_rs', '/fc_w/fc_w.3/MatMul_output_0_mm_tp_rs']
+D     reduce_tp_in_mesh_forward: remove node = ['/fc_h/fc_h.0/MatMul_output_0_mm_tp', '/fc_h/fc_h.1/Relu_output_0_tp']
+D     swap_transpose_add: remove node = ['/fc_h/fc_h.3/MatMul_output_0_mm_tp', '/fc_h/fc_h.3/Add'], add node = ['/fc_h/fc_h.3/Add', '/fc_h/fc_h.3/MatMul_output_0_mm_tp']
+D     reduce_reshape_op_around_split: remove node = ['/pool/Slice_1_output_0_rs', '/pool/Slice_2_output_0_rs', '/pool/Slice_3_output_0_rs', '/pool/Slice_4_output_0_rs', '/pool/Slice_1_2sp'], add node = ['/pool/Slice_output_0-rs_gather', '/pool/Slice_output_0-rs_gather_rs', '/pool/Slice_1_2sp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_4_output_0_rs_mm_tp_rs']
+D     reduce_reshape_op_around_split: remove node = ['/pool/Slice_11_output_0_rs', '/pool/Slice_12_output_0_rs', '/pool/Slice_13_output_0_rs', '/pool/Slice_14_output_0_rs', '/pool/Slice_11_2sp'], add node = ['/pool/Slice_10_output_0-rs_gather', '/pool/Slice_10_output_0-rs_gather_rs', '/pool/Slice_11_2sp']
+D     fuse_two_reshape: remove node = ['/pool/Slice_14_output_0_rs_mm_tp_rs', '/pool/Slice_6_output_0_rs_mm_tp_rs', '/pool/Slice_7_output_0_rs_mm_tp_rs', '/pool/Slice_8_output_0_rs_mm_tp_rs']
+D     reduce_reshape_op_around_concat: remove node = ['/pool/Unsqueeze_4_2rs', '/pool/Unsqueeze_5_2rs', '/pool/Unsqueeze_6_2rs', '/pool/Unsqueeze_7_2rs', '/pool/Concat_1'], add node = ['/pool/Concat_1']
+D     fuse_two_reshape: remove node = ['/pool/Slice_16_output_0_rs_mm_tp_rs', '/pool/Slice_17_output_0_rs_mm_tp_rs', '/pool/Slice_18_output_0_rs_mm_tp_rs']
+D     reduce_reshape_op_around_concat: remove node = ['/pool/Unsqueeze_12_2rs', '/pool/Unsqueeze_13_2rs', '/pool/Unsqueeze_14_2rs', '/pool/Unsqueeze_15_2rs', '/pool/Concat_3'], add node = ['/pool/Concat_3']
+D     reduce_reshape_op_around_concat: remove node = ['/pool/Unsqueeze_16_output_0_rs', '/pool/Unsqueeze_18_output_0_rs', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     swap_transpose_mul: remove node = ['/ReduceSum_output_0_conv_tp', '/Div_2mul'], add node = ['/Div_2mul', '/ReduceSum_output_0_conv_tp']
+D     fuse_reshape_transpose: remove node = ['/ReduceSum_1_output_0_rs#1']
+D     reduce_tp_in_mesh_forward: remove node = ['/fc_w/fc_w.0/MatMul_output_0_mm_tp', '/fc_w/fc_w.1/Relu_output_0_tp']
+D     swap_transpose_add: remove node = ['/fc_w/fc_w.3/MatMul_output_0_mm_tp', '/fc_w/fc_w.3/Add'], add node = ['/fc_w/fc_w.3/Add', '/fc_w/fc_w.3/MatMul_output_0_mm_tp']
+D     fuse_exmatmul_add: remove node = ['/fc_h/fc_h.0/Add', '/fc_h/fc_h.0/MatMul#1'], add node = ['/fc_h/fc_h.0/MatMul#1']
+D     fuse_exmatmul_add: remove node = ['/fc_h/fc_h.3/Add', '/fc_h/fc_h.3/MatMul#1'], add node = ['/fc_h/fc_h.3/MatMul#1']
+D     fuse_two_reshape: remove node = ['/pool/Slice_1_output_0_rs_mm_tp_rs', '/pool/Slice_2_output_0_rs_mm_tp_rs', '/pool/Slice_3_output_0_rs_mm_tp_rs']
+D     fuse_two_concat: remove node = ['/pool/Concat', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     fuse_mul_into_conv: remove node = ['/Div_2mul']
+D     fuse_exmatmul_add: remove node = ['/fc_w/fc_w.0/Add', '/fc_w/fc_w.0/MatMul#1'], add node = ['/fc_w/fc_w.0/MatMul#1']
+D     fuse_exmatmul_add: remove node = ['/fc_w/fc_w.3/Add', '/fc_w/fc_w.3/MatMul#1'], add node = ['/fc_w/fc_w.3/MatMul#1']
+D     fuse_two_reshape: remove node = ['/pool/Slice_11_output_0_rs_mm_tp_rs', '/pool/Slice_12_output_0_rs_mm_tp_rs', '/pool/Slice_13_output_0_rs_mm_tp_rs']
+D     fuse_two_concat: remove node = ['/pool/Concat_2', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     reduce_reshape_op_around_concat: remove node = ['/pool/Unsqueeze_2rs', '/pool/Unsqueeze_1_2rs', '/pool/Unsqueeze_2_2rs', '/pool/Unsqueeze_3_2rs', '/pool/Unsqueeze_17_output_0_rs', '/pool/Unsqueeze_8_2rs', '/pool/Unsqueeze_9_2rs', '/pool/Unsqueeze_10_2rs', '/pool/Unsqueeze_11_2rs', '/pool/Unsqueeze_19_output_0_rs', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     fuse_reshape_transpose: remove node = ['/Reshape_output_0_tp'], add node = ['/Reshape_output_0_tp']
+D     fuse_two_concat: remove node = ['/pool/Concat_1', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     reduce_tp_in_mesh_forward: remove node = ['/Reshape_output_0_tp']
+D     fuse_transpose_reshape: remove node = ['/layernorm/LayerNormalization#1_rs_tp']
+D     fuse_two_concat: remove node = ['/pool/Concat_3', '/pool/Concat_4'], add node = ['/pool/Concat_4']
+D     convert_reshape_to_transpose: remove node = ['/Unsqueeze_1_2rs'], add node = ['/Unsqueeze_1_2rs']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_1_output_0_rs_mm'], add node = ['/pool/Slice_1_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_2_output_0_rs_mm'], add node = ['/pool/Slice_2_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_3_output_0_rs_mm'], add node = ['/pool/Slice_3_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_4_output_0_rs_mm'], add node = ['/pool/Slice_4_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_11_output_0_rs_mm'], add node = ['/pool/Slice_11_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_12_output_0_rs_mm'], add node = ['/pool/Slice_12_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_13_output_0_rs_mm'], add node = ['/pool/Slice_13_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_14_output_0_rs_mm'], add node = ['/pool/Slice_14_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_6_output_0_rs_mm'], add node = ['/pool/Slice_6_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_7_output_0_rs_mm'], add node = ['/pool/Slice_7_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_8_output_0_rs_mm'], add node = ['/pool/Slice_8_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_9_output_0_rs_mm'], add node = ['/pool/Slice_9_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_16_output_0_rs_mm'], add node = ['/pool/Slice_16_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_17_output_0_rs_mm'], add node = ['/pool/Slice_17_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_18_output_0_rs_mm'], add node = ['/pool/Slice_18_output_0_rs_mm#1']
+D     convert_exmatmul_to_conv: remove node = ['/pool/Slice_19_output_0_rs_mm'], add node = ['/pool/Slice_19_output_0_rs_mm#1']
+D     gather_to_conv: remove node = ['/Gather'], add node = ['/Gather_2conv']
+D     convert_exmatmul_to_conv: remove node = ['/fc_w/fc_w.0/MatMul#1'], add node = ['/fc_w/fc_w.0/MatMul#2']
+D     convert_exmatmul_to_conv: remove node = ['/fc_w/fc_w.3/MatMul#1'], add node = ['/fc_w/fc_w.3/MatMul#2']
+D     convert_exmatmul_to_conv: remove node = ['/fc_h/fc_h.0/MatMul#1'], add node = ['/fc_h/fc_h.0/MatMul#2']
+D     convert_exmatmul_to_conv: remove node = ['/fc_h/fc_h.3/MatMul#1'], add node = ['/fc_h/fc_h.3/MatMul#2']
+D     fold_constant ...
+D     fold_constant done.
+D fuse_ops done.
+D 
+D sparse_weight ...
+D sparse_weight done.
+D 
+I GraphPreparing :   0%|                                                     | 0/59 [00:00<?, ?it/s]I GraphPreparing : 100%|█████████████████████████████████████████| 59/59 [00:00<00:00, 11661.28it/s]
+I Quantizating :   0%|                                                       | 0/59 [00:00<?, ?it/s]I Quantizating :   8%|███▉                                           | 5/59 [00:00<00:01, 49.56it/s]I Quantizating :  24%|██████████▉                                   | 14/59 [00:00<00:00, 72.46it/s]I Quantizating :  39%|█████████████████▉                            | 23/59 [00:00<00:00, 76.62it/s]I Quantizating :  58%|██████████████████████████▌                   | 34/59 [00:00<00:00, 83.33it/s]I Quantizating :  73%|█████████████████████████████████▌            | 43/59 [00:00<00:00, 76.16it/s]I Quantizating : 100%|██████████████████████████████████████████████| 59/59 [00:00<00:00, 98.50it/s]
+D 
+D quant_optimizer ...
+D quant_optimizer results:
+D     adjust_relu: ['/fc_w/fc_w.1/Relu', '/fc_h/fc_h.1/Relu']
+D quant_optimizer done.
+D 
+[1;33mW[0m [1;33mbuild: The default input dtype of 'post_block3' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'x_logits' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'y_logits' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+E RKNN: [17:05:28.537] Transpose will fallback to CPU, because input shape has exceeded the max limit, pixels(2816) overflow
+I RKNN: [17:05:28.491] compress = 0, conv_eltwise_activation_fuse = 1, global_fuse = 1, multi-core-model-mode = 7, output_optimize = 1, layout_match = 1, enable_argb_group = 0, op_group_sram_opt = 0, enable_flash_attention = 0, op_group_nbuf_opt = 0, safe_fuse = 0
+I RKNN: librknnc version: 2.3.2 (e045de294f@2025-04-07T19:48:25)
+D RKNN: [17:05:28.500] RKNN is invoked
+W RKNN: [17:05:28.534] Model initializer tensor data is empty, name: empty_placeholder_0
+D RKNN: [17:05:28.535] >>>>>> start: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [17:05:28.535] <<<<<<<< end: rknn::RKNNExtractCustomOpAttrs
+D RKNN: [17:05:28.535] >>>>>> start: rknn::RKNNSetOpTargetPass
+D RKNN: [17:05:28.535] <<<<<<<< end: rknn::RKNNSetOpTargetPass
+D RKNN: [17:05:28.535] >>>>>> start: rknn::RKNNBindNorm
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNBindNorm
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNEliminateQATDataConvert
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNEliminateQATDataConvert
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNConvStrideFixPass
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNConvStrideFixPass
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNTileGroupConv
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNTileGroupConv
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNTileFcBatchFuse
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNTileFcBatchFuse
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNAddConvBias
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNAddConvBias
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNTileChannel
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNTileChannel
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNDuplicateWeightPass
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNDuplicateWeightPass
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNInitRNNConst
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNInitRNNConst
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNPerChannelPrep
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNPerChannelPrep
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNBnQuant
+D RKNN: [17:05:28.536] <<<<<<<< end: rknn::RKNNBnQuant
+D RKNN: [17:05:28.536] >>>>>> start: rknn::RKNNFuseOptimizerPass
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNFuseOptimizerPass
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNTurnAutoPad
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNTurnAutoPad
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNInitCastConst
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNInitCastConst
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNMultiSurfacePass
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNMultiSurfacePass
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNReplaceConstantTensorPass
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.537] <<<<<<<< end: rknn::RKNNSubgraphManager
+D RKNN: [17:05:28.537] >>>>>> start: OpEmit
+D RKNN: [17:05:28.538] <<<<<<<< end: OpEmit
+D RKNN: [17:05:28.538] >>>>>> start: rknn::RKNNAddFirstConv
+D RKNN: [17:05:28.539] <<<<<<<< end: rknn::RKNNAddFirstConv
+D RKNN: [17:05:28.539] >>>>>> start: rknn::RKNNLayoutMatchPass
+W RKNN: [17:05:28.539] BroadcastLayoutConnFactory: op(Mul:/Mul) has undefined broadcast type, please check this op.
+W RKNN: [17:05:28.539] BroadcastLayoutConnFactory: op(Mul:/Mul) has undefined broadcast type, please check this op.
+W RKNN: [17:05:28.539] BroadcastLayoutConnFactory: op(Mul:/Mul_1) has undefined broadcast type, please check this op.
+W RKNN: [17:05:28.539] BroadcastLayoutConnFactory: op(Mul:/Mul_1) has undefined broadcast type, please check this op.
+W RKNN: [17:05:28.539] BroadcastLayoutConnFactory: op(Mul:/Mul_1) has undefined broadcast type, please check this op.
+D RKNN: [17:05:28.539] <<<<<<<< end: rknn::RKNNLayoutMatchPass
+D RKNN: [17:05:28.539] >>>>>> start: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.539] <<<<<<<< end: rknn::RKNNAddSecondaryNode
+D RKNN: [17:05:28.539] >>>>>> start: rknn::RKNNAllocateConvCachePass
+D RKNN: [17:05:28.539] <<<<<<<< end: rknn::RKNNAllocateConvCachePass
+D RKNN: [17:05:28.539] >>>>>> start: OpEmit
+D RKNN: [17:05:28.539] finish initComputeZoneMap
+D RKNN: [17:05:28.543] finish initComputeZoneMap
+D RKNN: [17:05:29.322] finish initComputeZoneMap
+D RKNN: [17:05:30.126] finish initComputeZoneMap
+D RKNN: [17:05:30.961] finish initComputeZoneMap
+D RKNN: [17:05:34.806] finish initComputeZoneMap
+D RKNN: [17:05:34.807] finish initComputeZoneMap
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.808] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.811] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.812] finish initComputeZoneMap
+D RKNN: [17:05:34.812] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.812] finish initComputeZoneMapByStepsVector
+D RKNN: [17:05:34.812] finish initComputeZoneMap
+D RKNN: [17:05:34.812] <<<<<<<< end: OpEmit
+D RKNN: [17:05:34.812] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [17:05:34.812] >>>>>> start: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [17:05:34.812] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [17:05:34.812] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [17:05:34.812] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [17:05:34.812] <<<<<<<< end: rknn::RKNNSubGraphMemoryPlanPass
+D RKNN: [17:05:34.812] >>>>>> start: rknn::RKNNProfileAnalysisPass
+D RKNN: [17:05:34.812] <<<<<<<< end: rknn::RKNNProfileAnalysisPass
+D RKNN: [17:05:34.813] >>>>>> start: rknn::RKNNOperatorIdGenPass
+D RKNN: [17:05:34.813] <<<<<<<< end: rknn::RKNNOperatorIdGenPass
+D RKNN: [17:05:34.813] >>>>>> start: rknn::RKNNWeightTransposePass
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_2sp1_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_2sp1_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_16_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_16_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_1_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_1_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_11_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_11_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_6_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [1E RKNN: [17:05:34.980] Unkown op target: 0
+E RKNN: [17:05:34.980] Unkown op target: 0
+E RKNN: [17:05:34.993] Unkown op target: 0
+E RKNN: [17:05:34.993] Unkown op target: 0
+E RKNN: [17:05:57.694] Unkown op target: 0
+E RKNN: [17:05:57.695] Unkown op target: 0
+7:05:34.818] Warning: Tensor /pool/Slice_6_2sp_split need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor post_block3_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor post_block3_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /gru/Transpose_output_0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /gru/Transpose_output_0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /Gather_output_0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /Gather_output_0-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor x_logits-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor x_logits-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor y_logits-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor y_logits-rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /Reshape_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /Reshape_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /gru/Transpose_2_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /gru/Transpose_2_output_0_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_5_output_0-rs_gather_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_5_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_5_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_15_output_0-rs_gather_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_15_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_15_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_output_0-rs_gather_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_10_output_0-rs_gather_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_10_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+W RKNN: [17:05:34.818] Warning: Tensor /pool/Slice_10_output_0-rs_gather_rs_i1 need parameter qtype, type is set to float16 by default!
+D RKNN: [17:05:34.819] <<<<<<<< end: rknn::RKNNWeightTransposePass
+D RKNN: [17:05:34.819] >>>>>> start: rknn::RKNNCPUWeightTransposePass
+D RKNN: [17:05:34.819] <<<<<<<< end: rknn::RKNNCPUWeightTransposePass
+D RKNN: [17:05:34.819] >>>>>> start: rknn::RKNNModelBuildPass
+W RKNN: [17:05:34.980] Can not found output tensor: /pool/Slice_2sp_invalid1
+W RKNN: [17:05:34.980] Can not found output tensor: /pool/Slice_2sp_invalid3
+W RKNN: [17:05:34.993] Can not found output tensor: /pool/Slice_2sp1_invalid0
+W RKNN: [17:05:34.993] Can not found output tensor: /pool/Slice_2sp1_invalid2
+D RKNN: [17:05:58.878] <<<<<<<< end: rknn::RKNNModelBuildPass
+D RKNN: [17:05:58.878] >>>>>> start: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [17:05:59.344] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.344]                                                         Network Layer Information Table                                                      
+D RKNN: [17:05:59.344] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.344] ID   OpType             DataType Target InputShape                               OutputShape            Cycles(DDR/NPU/Total)    RW(KB)       FullName        
+D RKNN: [17:05:59.344] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.344] 0    InputOperator      INT8     CPU    \                                        (1,100,128,6,8)        0/0/0                    0            InputOperator:post_block3
+D RKNN: [17:05:59.344] 1    Reshape            INT8     NPU    (1,100,128,6,8),(4)                      (100,128,6,8)          0/0/0                    600          Reshape:post_block3_rs
+D RKNN: [17:05:59.344] 2    Split              INT8     NPU    (100,128,6,8),(4)                        (100,128,2,8),...      0/0/0                    600          Split:/pool/Slice_2sp
+D RKNN: [17:05:59.344] 3    Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/pool/Slice_output_0-rs_gather
+D RKNN: [17:05:59.344] 4    Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/pool/Slice_10_output_0-rs_gather
+D RKNN: [17:05:59.344] 5    Split              INT8     NPU    (100,128,6,8),(4)                        (100,128,2,8),...      0/0/0                    600          Split:/pool/Slice_2sp1
+D RKNN: [17:05:59.344] 6    Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/pool/Slice_5_output_0-rs_gather
+D RKNN: [17:05:59.344] 7    Gather             INT8     CPU    (100,128,2,8),(8)                        (100,128,2,8)          0/0/0                    200          Gather:/pool/Slice_15_output_0-rs_gather
+D RKNN: [17:05:59.344] 8    Reshape            INT8     NPU    (100,128,2,8),(4)                        (12800,4,1,4)          0/0/0                    200          Reshape:/pool/Slice_output_0-rs_gather_rs
+D RKNN: [17:05:59.344] 9    Split              INT8     NPU    (12800,4,1,4),(4)                        (12800,4,1,1),...      0/0/0                    800          Split:/pool/Slice_1_2sp
+D RKNN: [17:05:59.344] 10   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_1_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 11   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_2_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 12   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_3_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 13   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_4_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 14   Reshape            INT8     NPU    (100,128,2,8),(4)                        (12800,4,1,4)          0/0/0                    200          Reshape:/pool/Slice_10_output_0-rs_gather_rs
+D RKNN: [17:05:59.344] 15   Split              INT8     NPU    (12800,4,1,4),(4)                        (12800,4,1,1),...      0/0/0                    800          Split:/pool/Slice_11_2sp
+D RKNN: [17:05:59.344] 16   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_11_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 17   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_12_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 18   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_13_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 19   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_14_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 20   Reshape            INT8     NPU    (100,128,2,8),(4)                        (12800,4,1,4)          0/0/0                    200          Reshape:/pool/Slice_5_output_0-rs_gather_rs
+D RKNN: [17:05:59.344] 21   Split              INT8     NPU    (12800,4,1,4),(4)                        (12800,4,1,1),...      0/0/0                    800          Split:/pool/Slice_6_2sp
+D RKNN: [17:05:59.344] 22   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_6_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 23   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_7_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 24   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_8_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 25   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_9_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 26   Reshape            INT8     NPU    (100,128,2,8),(4)                        (12800,4,1,4)          0/0/0                    200          Reshape:/pool/Slice_15_output_0-rs_gather_rs
+D RKNN: [17:05:59.344] 27   Split              INT8     NPU    (12800,4,1,4),(4)                        (12800,4,1,1),...      0/0/0                    800          Split:/pool/Slice_16_2sp
+D RKNN: [17:05:59.344] 28   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_16_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 29   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_17_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 30   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_18_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 31   Conv               INT8     NPU    (12800,4,1,1),(1,4,1,1),(1)              (12800,1,1,1)          66512/819200/819200      200          Conv:/pool/Slice_19_output_0_rs_mm#1
+D RKNN: [17:05:59.344] 32   Concat             INT8     NPU    (12800,1,1,1),(12800,1,1,1),...          (12800,16,1,1)         0/0/0                    3204         Concat:/pool/Concat_4
+D RKNN: [17:05:59.344] 33   Reshape            INT8     NPU    (12800,16,1,1),(4)                       (100,2048,1,1)         0/0/0                    200          Reshape:/Reshape_output_0_rs
+D RKNN: [17:05:59.344] 34   exNorm             INT8     CPU    (100,2048,1,1),(1,2048,1,1),...          (100,2048,1,1)         0/0/0                    216          exNorm:/layernorm/LayerNormalization#1
+D RKNN: [17:05:59.344] 35   Reshape            INT8     NPU    (100,2048,1,1),(3)                       (100,1,2048)           0/0/0                    200          Reshape:/gru/Transpose_output_0-rs
+D RKNN: [17:05:59.344] 36   GRU                INT8     CPU    (100,1,2048),(2,384,2048),...            (100,2,1,128)          0/0/0                    6735         GRU:/gru/GRU    
+D RKNN: [17:05:59.344] 37   Reshape            INT8     NPU    (100,2,1,128),(4)                        (1,100,1,256)          0/0/0                    25           Reshape:/gru/Transpose_2_output_0_rs
+D RKNN: [17:05:59.344] 38   Conv               INT8     NPU    (1,100,1,256),(1100,100,1,1),(1100)      (1,1100,1,256)         69832/70656/70656        144          Conv:/Gather_2conv
+D RKNN: [17:05:59.344] 39   Reshape            INT8     NPU    (1,1100,1,256),(4)                       (1,100,11,256)         0/0/0                    276          Reshape:/Gather_output_0-rs
+D RKNN: [17:05:59.344] 40   Mul                INT8     NPU    (1,100,1,256),(1,100,11,256)             (1,100,11,256)         0/0/0                    336          Mul:/Mul        
+D RKNN: [17:05:59.344] 41   Transpose          INT8     CPU    (1,100,11,256)                           (1,256,11,100)         0/0/0                    308          Transpose:/Mul_output_0_tp
+D RKNN: [17:05:59.344] 42   Conv               INT8     NPU    (1,256,11,100),(1,256,1,1),(1)           (1,1,11,100)           48628/8832/48628         275          Conv:/ReduceSum_2conv
+D RKNN: [17:05:59.344] 43   Transpose          INT8     NPU    (1,1,11,100)                             (1,100,1,11)           0/0/0                    17           Transpose:/ReduceSum_output_0_conv_tp
+D RKNN: [17:05:59.344] 44   exSoftmax13        INT8     NPU    (1,100,1,11),(16,16,1,1)                 (1,100,1,11)           0/0/0                    1            exSoftmax13:/Softmax
+D RKNN: [17:05:59.344] 45   Transpose          INT8     NPU    (1,100,1,11)                             (1,100,11,1)           0/0/0                    1            Transpose:/Unsqueeze_1_2rs
+D RKNN: [17:05:59.344] 46   Mul                INT8     NPU    (1,100,11,1),(1,100,11,256)              (1,100,11,256)         0/0/0                    309          Mul:/Mul_1      
+D RKNN: [17:05:59.344] 47   Transpose          INT8     NPU    (1,100,11,256)                           (1,11,100,256)         0/0/0                    308          Transpose:/Mul_1_output_0_tp
+D RKNN: [17:05:59.344] 48   Conv               INT8     NPU    (1,11,100,256),(1,11,1,1),(1)            (1,1,100,256)          133011/102400/133011     400          Conv:/ReduceSum_1_2conv
+D RKNN: [17:05:59.344] 49   Transpose          INT8     CPU    (1,1,100,256)                            (1,256,1,100)          0/0/0                    400          Transpose:/ReduceSum_1_output_0_tp#1
+D RKNN: [17:05:59.344] 50   ConvRelu           INT8     NPU    (1,256,1,100),(128,256,1,1),(128)        (1,128,1,100)          11721/7168/11721         58           Conv:/fc_h/fc_h.0/MatMul#2
+D RKNN: [17:05:59.344] 51   Conv               INT8     NPU    (1,128,1,100),(60,128,1,1),(60)          (1,60,1,100)           4448/1792/4448           20           Conv:/fc_h/fc_h.3/MatMul#2
+D RKNN: [17:05:59.344] 52   ConvRelu           INT8     NPU    (1,256,1,100),(128,256,1,1),(128)        (1,128,1,100)          11721/7168/11721         58           Conv:/fc_w/fc_w.0/MatMul#2
+D RKNN: [17:05:59.344] 53   Conv               INT8     NPU    (1,128,1,100),(80,128,1,1),(80)          (1,80,1,100)           5144/2240/5144           23           Conv:/fc_w/fc_w.3/MatMul#2
+D RKNN: [17:05:59.344] 54   Transpose          INT8     NPU    (1,60,1,100)                             (1,100,1,60)           0/0/0                    6            Transpose:/fc_h/fc_h.3/MatMul_output_0_mm_tp
+D RKNN: [17:05:59.344] 55   Reshape            INT8     NPU    (1,100,1,60),(3)                         (1,100,60)             0/0/0                    5            Reshape:y_logits-rs
+D RKNN: [17:05:59.344] 56   OutputOperator     INT8     CPU    (1,100,60)                               \                      0/0/0                    5            OutputOperator:y_logits
+D RKNN: [17:05:59.344] 57   Transpose          INT8     NPU    (1,80,1,100)                             (1,100,1,80)           0/0/0                    7            Transpose:/fc_w/fc_w.3/MatMul_output_0_mm_tp
+D RKNN: [17:05:59.344] 58   Reshape            INT8     NPU    (1,100,1,80),(3)                         (1,100,80)             0/0/0                    7            Reshape:x_logits-rs
+D RKNN: [17:05:59.344] 59   OutputOperator     INT8     CPU    (1,100,80)                               \                      0/0/0                    7            OutputOperator:x_logits
+D RKNN: [17:05:59.344] --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.345] <<<<<<<< end: rknn::RKNNModelRegCmdbuildPass
+D RKNN: [17:05:59.351] >>>>>> start: rknn::RKNNFlatcModelBuildPass
+D RKNN: [17:05:59.581] Export Mini RKNN model to /tmp/tmp1qwfyvav/check.rknn
+D RKNN: [17:05:59.581] >>>>>> end: rknn::RKNNFlatcModelBuildPass
+D RKNN: [17:05:59.591] >>>>>> start: rknn::RKNNMemStatisticsPass
+D RKNN: [17:05:59.601] ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.601]                                                      Feature Tensor Information Table                                               
+D RKNN: [17:05:59.601] -----------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] ID  User           Tensor                                            DataType  DataFormat   OrigShape       NativeShape      |     [Start       End)       Size
+D RKNN: [17:05:59.601] -----------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] 1   Reshape        post_block3                                       INT8      UNDEFINED    (1,100,128,6,8) (1,112,128,6,8)  | 0x06e17400 0x06ebf400 0x000a8000
+D RKNN: [17:05:59.601] 1   Reshape        post_block3_exSecondary                           INT8      NC1HWC2      (1,100,128,6,8) (1,50,128,6,16)  | 0x06ebf400 0x06f55400 0x00096000
+D RKNN: [17:05:59.601] 2   Split          post_block3_rs                                    INT8      NC1HWC2      (100,128,6,8)   (100,8,6,8,16)   | 0x06f55400 0x06feb400 0x00096000
+D RKNN: [17:05:59.601] 3   Gather         /pool/Slice_output_0-rs                           INT8      NC1HWC2      (100,128,2,8)   (100,8,2,8,16)   | 0x06e49400 0x06e7b400 0x00032000
+D RKNN: [17:05:59.601] 4   Gather         /pool/Slice_10_output_0-rs                        INT8      NC1HWC2      (100,128,2,8)   (100,8,2,8,16)   | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 5   Split          post_block3_rs                                    INT8      NC1HWC2      (100,128,6,8)   (100,8,6,8,16)   | 0x06f55400 0x06feb400 0x00096000
+D RKNN: [17:05:59.601] 6   Gather         /pool/Slice_5_output_0-rs                         INT8      NC1HWC2      (100,128,2,8)   (100,8,2,8,16)   | 0x06ead400 0x06edf400 0x00032000
+D RKNN: [17:05:59.601] 7   Gather         /pool/Slice_15_output_0-rs                        INT8      NC1HWC2      (100,128,2,8)   (100,8,2,8,16)   | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 8   Reshape        /pool/Slice_output_0-rs_gather                    INT8      UNDEFINED    (100,128,2,8)   (100,128,2,8)    | 0x06e7b400 0x06ead400 0x00032000
+D RKNN: [17:05:59.601] 8   Reshape        /pool/Slice_output_0-rs_gather_exSecondary        INT8      NC1HWC2      (100,128,2,8)   (100,256,2,8,16) | 0x06f11400 0x07551400 0x00640000
+D RKNN: [17:05:59.601] 9   Split          /pool/Slice_output_0-rs_gather_rs                 INT8      NC1HWC2      (12800,4,1,4)   (12800,1,1,4,16) | 0x07551400 0x07619400 0x000c8000
+D RKNN: [17:05:59.601] 10  Conv           /pool/Slice_1_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06f43400 0x06f75400 0x00032000
+D RKNN: [17:05:59.601] 11  Conv           /pool/Slice_2_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06f11400 0x06f43400 0x00032000
+D RKNN: [17:05:59.601] 12  Conv           /pool/Slice_3_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06e7b400 0x06ead400 0x00032000
+D RKNN: [17:05:59.601] 13  Conv           /pool/Slice_4_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 14  Reshape        /pool/Slice_10_output_0-rs_gather                 INT8      UNDEFINED    (100,128,2,8)   (100,128,2,8)    | 0x06e49400 0x06e7b400 0x00032000
+D RKNN: [17:05:59.601] 14  Reshape        /pool/Slice_10_output_0-rs_gather_exSecondary     INT8      NC1HWC2      (100,128,2,8)   (100,256,2,8,16) | 0x06fa7400 0x075e7400 0x00640000
+D RKNN: [17:05:59.601] 15  Split          /pool/Slice_10_output_0-rs_gather_rs              INT8      NC1HWC2      (12800,4,1,4)   (12800,1,1,4,16) | 0x075e7400 0x076af400 0x000c8000
+D RKNN: [17:05:59.601] 16  Conv           /pool/Slice_11_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06fd9400 0x0700b400 0x00032000
+D RKNN: [17:05:59.601] 17  Conv           /pool/Slice_12_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06fa7400 0x06fd9400 0x00032000
+D RKNN: [17:05:59.601] 18  Conv           /pool/Slice_13_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06e49400 0x06e7b400 0x00032000
+D RKNN: [17:05:59.601] 19  Conv           /pool/Slice_14_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 20  Reshape        /pool/Slice_5_output_0-rs_gather                  INT8      UNDEFINED    (100,128,2,8)   (100,128,2,8)    | 0x06edf400 0x06f11400 0x00032000
+D RKNN: [17:05:59.601] 20  Reshape        /pool/Slice_5_output_0-rs_gather_exSecondary      INT8      NC1HWC2      (100,128,2,8)   (100,256,2,8,16) | 0x0703d400 0x0767d400 0x00640000
+D RKNN: [17:05:59.601] 21  Split          /pool/Slice_5_output_0-rs_gather_rs               INT8      NC1HWC2      (12800,4,1,4)   (12800,1,1,4,16) | 0x0767d400 0x07745400 0x000c8000
+D RKNN: [17:05:59.601] 22  Conv           /pool/Slice_6_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x0703d400 0x0706f400 0x00032000
+D RKNN: [17:05:59.601] 23  Conv           /pool/Slice_7_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06edf400 0x06f11400 0x00032000
+D RKNN: [17:05:59.601] 24  Conv           /pool/Slice_8_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 25  Conv           /pool/Slice_9_output_0_rs                         INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x0706f400 0x070a1400 0x00032000
+D RKNN: [17:05:59.601] 26  Reshape        /pool/Slice_15_output_0-rs_gather                 INT8      UNDEFINED    (100,128,2,8)   (100,128,2,8)    | 0x06ead400 0x06edf400 0x00032000
+D RKNN: [17:05:59.601] 26  Reshape        /pool/Slice_15_output_0-rs_gather_exSecondary     INT8      NC1HWC2      (100,128,2,8)   (100,256,2,8,16) | 0x070d3400 0x07713400 0x00640000
+D RKNN: [17:05:59.601] 27  Split          /pool/Slice_15_output_0-rs_gather_rs              INT8      NC1HWC2      (12800,4,1,4)   (12800,1,1,4,16) | 0x07713400 0x077db400 0x000c8000
+D RKNN: [17:05:59.601] 28  Conv           /pool/Slice_16_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x07105400 0x07137400 0x00032000
+D RKNN: [17:05:59.601] 29  Conv           /pool/Slice_17_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x070d3400 0x07105400 0x00032000
+D RKNN: [17:05:59.601] 30  Conv           /pool/Slice_18_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x0706f400 0x070a1400 0x00032000
+D RKNN: [17:05:59.601] 31  Conv           /pool/Slice_19_output_0_rs                        INT8      NC1HWC2      (12800,4,1,1)   (12800,1,1,1,16) | 0x06ead400 0x06edf400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_1_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06f75400 0x06fa7400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_2_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06f43400 0x06f75400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_3_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06f11400 0x06f43400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_4_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06e7b400 0x06ead400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_6_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x070a1400 0x070d3400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_7_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x0703d400 0x0706f400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_8_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06edf400 0x06f11400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_9_output_0_rs_mm                      INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_11_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x0700b400 0x0703d400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_12_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06fd9400 0x0700b400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_13_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06fa7400 0x06fd9400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_14_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x06e49400 0x06e7b400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_16_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x07137400 0x07169400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_17_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x07105400 0x07137400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_18_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x070d3400 0x07105400 0x00032000
+D RKNN: [17:05:59.601] 32  Concat         /pool/Slice_19_output_0_rs_mm                     INT8      NC1HWC2      (12800,1,1,1)   (12800,1,1,1,16) | 0x0706f400 0x070a1400 0x00032000
+D RKNN: [17:05:59.601] 33  Reshape        /pool/Concat_4_output_0-rs                        INT8      NC1HWC2      (12800,16,1,1)  (12800,16,1,1,16) | 0x07169400 0x07489400 0x00320000
+D RKNN: [17:05:59.601] 34  exNorm         /Reshape_output_0_rs                              INT8      UNDEFINED    (100,2048,1,1)  (100,2048,1,1)   | 0x07169400 0x07489400 0x00320000
+D RKNN: [17:05:59.601] 35  Reshape        /layernorm/LayerNormalization#1                   INT8      UNDEFINED    (100,2048,1,1)  (100,2048,1,1)   | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 36  GRU            /gru/Transpose_output_0                           INT8      UNDEFINED    (100,1,2048)    (100,1,2048)     | 0x06e17400 0x06e49400 0x00032000
+D RKNN: [17:05:59.601] 37  Reshape        /gru/GRU_output_0                                 INT8      UNDEFINED    (100,2,1,128)   (100,2,1,128)    | 0x06e49400 0x06e7b400 0x00032000
+D RKNN: [17:05:59.601] 37  Reshape        /gru/GRU_output_0_exSecondary                     INT8      NC1HWC2      (100,2,1,128)   (100,0,1,128,16) | 0x06e17400 0x06e25400 0x0000e000
+D RKNN: [17:05:59.601] 38  Conv           /gru/Transpose_2_output_0_rs                      INT8      NC1HWC2      (1,100,1,256)   (1,7,1,256,16)   | 0x06e25400 0x06e2c400 0x00007000
+D RKNN: [17:05:59.601] 39  Reshape        /Gather_output_0-rs-rs                            INT8      NC1HWC2      (1,1100,1,256)  (1,69,1,256,16)  | 0x06e2c400 0x06e71400 0x00045000
+D RKNN: [17:05:59.601] 39  Reshape        /Gather_output_0-rs-rs_exSecondary                INT8      NC1HWC2      (1,1100,1,256)  (1,214,1,256,16) | 0x06e71400 0x06f48000 0x000d6c00
+D RKNN: [17:05:59.601] 40  Mul            /gru/Transpose_2_output_0_rs                      INT8      NC1HWC2      (1,100,1,256)   (1,7,1,256,16)   | 0x06e25400 0x06e2c400 0x00007000
+D RKNN: [17:05:59.601] 40  Mul            /Gather_output_0                                  INT8      NC1HWC2      (1,100,11,256)  (1,7,11,256,16)  | 0x06f48000 0x06f95000 0x0004d000
+D RKNN: [17:05:59.601] 40  Mul            /gru/Transpose_2_output_0_rs_exSecondary          INT8      NC1HWC2      (1,100,11,256)  (1,8,11,256,16)  | 0x06e2c400 0x06e84400 0x00058000
+D RKNN: [17:05:59.601] 41  Transpose      /Mul_output_0                                     INT8      NC1HWC2      (1,100,11,256)  (1,7,11,256,16)  | 0x06e84400 0x06ed1400 0x0004d000
+D RKNN: [17:05:59.601] 42  Conv           /Mul_output_0_tp                                  INT8      NC1HWC2      (1,256,11,100)  (1,16,11,100,16) | 0x06e17400 0x06e5c000 0x00044c00
+D RKNN: [17:05:59.601] 43  Transpose      /ReduceSum_output_0_rs_sw                         INT8      NC1HWC2      (1,1,11,100)    (1,1,11,100,16)  | 0x06e5c000 0x06e604c0 0x000044c0
+D RKNN: [17:05:59.601] 43  Transpose      /ReduceSum_output_0_rs_sw_exSecondary             INT8      NC1HWC2      (1,1,11,100)    (1,2,11,100,16)  | 0x06e17400 0x06e20e00 0x00009a00
+D RKNN: [17:05:59.601] 44  exSoftmax13    /Div_output_0-rs                                  INT8      NC1HWC2      (1,100,1,11)    (1,112,1,11,16)  | 0x06e20e00 0x06e25b00 0x00004d00
+D RKNN: [17:05:59.601] 44  exSoftmax13    /Div_output_0-rs_exSecondary                      INT8      NC1HWC2      (1,100,1,11)    (1,190,1,11,16)  | 0x06e17400 0x06e1f740 0x00008340
+D RKNN: [17:05:59.601] 45  Transpose      /Softmax_output_0-rs                              INT8      NC1HWC2      (1,100,1,11)    (1,7,1,11,16)    | 0x06e1f740 0x06e1fc80 0x00000540
+D RKNN: [17:05:59.601] 46  Mul            /Unsqueeze_1_output_0                             INT8      NC1HWC2      (1,100,11,1)    (1,7,11,1,16)    | 0x06e1f740 0x06e1fc80 0x00000540
+D RKNN: [17:05:59.601] 46  Mul            /Gather_output_0                                  INT8      NC1HWC2      (1,100,11,256)  (1,7,11,256,16)  | 0x06f48000 0x06f95000 0x0004d000
+D RKNN: [17:05:59.601] 46  Mul            /Unsqueeze_1_output_0_exSecondary                 INT8      NC1HWC2      (1,100,11,256)  (1,8,11,256,16)  | 0x06e1fc80 0x06e77c80 0x00058000
+D RKNN: [17:05:59.601] 47  Transpose      /Mul_1_output_0                                   INT8      NC1HWC2      (1,100,11,256)  (1,7,11,256,16)  | 0x06e77c80 0x06ec4c80 0x0004d000
+D RKNN: [17:05:59.601] 47  Transpose      /Mul_1_output_0_exSecondary                       INT8      NC1HWC2      (1,100,11,256)  (1,20,11,256,16) | 0x06ec4c80 0x06fa4c80 0x000e0000
+D RKNN: [17:05:59.601] 48  Conv           /Mul_1_output_0_tp                                INT8      NC1HWC2      (1,11,100,256)  (1,1,100,256,16) | 0x06fa4c80 0x07014c80 0x00070000
+D RKNN: [17:05:59.601] 49  Transpose      /ReduceSum_1_output_0_conv                        INT8      NC1HWC2      (1,1,100,256)   (1,1,100,256,16) | 0x06e17400 0x06e7b400 0x00064000
+D RKNN: [17:05:59.601] 50  ConvRelu       /ReduceSum_1_output_0_tp#1-rs                     INT8      NC1HWC2      (1,256,1,100)   (1,16,1,100,16)  | 0x06e7b440 0x06e81840 0x00006400
+D RKNN: [17:05:59.601] 51  Conv           /fc_h/fc_h.1/Relu_output_0-rs                     INT8      NC1HWC2      (1,128,1,100)   (1,8,1,100,16)   | 0x06e17400 0x06e1a600 0x00003200
+D RKNN: [17:05:59.601] 52  ConvRelu       /ReduceSum_1_output_0_tp#1-rs                     INT8      NC1HWC2      (1,256,1,100)   (1,16,1,100,16)  | 0x06e7b440 0x06e81840 0x00006400
+D RKNN: [17:05:59.601] 53  Conv           /fc_w/fc_w.1/Relu_output_0-rs                     INT8      NC1HWC2      (1,128,1,100)   (1,8,1,100,16)   | 0x06e17400 0x06e1a600 0x00003200
+D RKNN: [17:05:59.601] 54  Transpose      /fc_h/fc_h.3/MatMul_output_0_mm_tp_sw             INT8      NC1HWC2      (1,60,1,100)    (1,4,1,100,16)   | 0x06e1a600 0x06e1bf00 0x00001900
+D RKNN: [17:05:59.601] 54  Transpose      /fc_h/fc_h.3/MatMul_output_0_mm_tp_sw_exSecondary INT8      NC1HWC2      (1,60,1,100)    (1,8,1,100,16)   | 0x06e17400 0x06e1a600 0x00003200
+D RKNN: [17:05:59.601] 55  Reshape        y_logits-rs                                       INT8      UNDEFINED    (1,100,1,60)    (1,100,1,60)     | 0x06e1de40 0x06e1fa40 0x00001c00
+D RKNN: [17:05:59.601] 56  OutputOperator y_logits                                          INT8      UNDEFINED    (1,100,60)      (1,100,60)       | 0x06e17440 0x06e18e80 0x00001a40
+D RKNN: [17:05:59.601] 57  Transpose      /fc_w/fc_w.3/MatMul_output_0_mm_tp_sw             INT8      NC1HWC2      (1,80,1,100)    (1,5,1,100,16)   | 0x06e1bf00 0x06e1de40 0x00001f40
+D RKNN: [17:05:59.601] 57  Transpose      /fc_w/fc_w.3/MatMul_output_0_mm_tp_sw_exSecondary INT8      NC1HWC2      (1,80,1,100)    (1,5,1,100,16)   | 0x06e18e80 0x06e1adc0 0x00001f40
+D RKNN: [17:05:59.601] 58  Reshape        x_logits-rs                                       INT8      UNDEFINED    (1,100,1,80)    (1,100,1,80)     | 0x06e1de40 0x06e20140 0x00002300
+D RKNN: [17:05:59.601] 59  OutputOperator x_logits                                          INT8      UNDEFINED    (1,100,80)      (1,100,80)       | 0x06e18e80 0x06e1b180 0x00002300
+D RKNN: [17:05:59.601] -----------------------------------------------------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] ----------------------------------------------------------------------------------------------------------------
+D RKNN: [17:05:59.601]                                      Const Tensor Information Table                          
+D RKNN: [17:05:59.601] ------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] ID  User     Tensor                                  DataType  OrigShape      |     [Start       End)       Size
+D RKNN: [17:05:59.601] ------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] 1   Reshape  post_block3_rs_i1                       INT64     (4)            | 0x03345540 0x03345580 0x00000040
+D RKNN: [17:05:59.601] 2   Split    /pool/Slice_2sp_split                   INT64     (4)            | 0x033453c0 0x03345400 0x00000040
+D RKNN: [17:05:59.601] 3   Gather   /pool/Slice_output_0-rs_gather_i1       INT64     (8)            | 0x03345d40 0x03345d80 0x00000040
+D RKNN: [17:05:59.601] 4   Gather   /pool/Slice_10_output_0-rs_gather_i1    INT64     (8)            | 0x03345dc0 0x03345e00 0x00000040
+D RKNN: [17:05:59.601] 5   Split    /pool/Slice_2sp1_split                  INT64     (4)            | 0x03345400 0x03345440 0x00000040
+D RKNN: [17:05:59.601] 6   Gather   /pool/Slice_5_output_0-rs_gather_i1     INT64     (8)            | 0x03345c40 0x03345c80 0x00000040
+D RKNN: [17:05:59.601] 7   Gather   /pool/Slice_15_output_0-rs_gather_i1    INT64     (8)            | 0x03345cc0 0x03345d00 0x00000040
+D RKNN: [17:05:59.601] 8   Reshape  /pool/Slice_output_0-rs_gather_rs_i1    INT64     (4)            | 0x03345d80 0x03345dc0 0x00000040
+D RKNN: [17:05:59.601] 9   Split    /pool/Slice_1_2sp_split                 INT64     (4)            | 0x03345480 0x033454c0 0x00000040
+D RKNN: [17:05:59.601] 10  Conv     /pool/ReduceMean#1_i1                   INT8      (1,4,1,1)      | 0x03345580 0x033455c0 0x00000040
+D RKNN: [17:05:59.601] 10  Conv     /pool/ReduceMean#1_i1_bias_0            INT32     (1)            | 0x03345e80 0x03345ec0 0x00000040
+D RKNN: [17:05:59.601] 11  Conv     /pool/ReduceMean_1#1_i1                 INT8      (1,4,1,1)      | 0x033455c0 0x03345600 0x00000040
+D RKNN: [17:05:59.601] 11  Conv     /pool/ReduceMean_1#1_i1_bias_0          INT32     (1)            | 0x03345ec0 0x03345f00 0x00000040
+D RKNN: [17:05:59.601] 12  Conv     /pool/ReduceMean_2#1_i1                 INT8      (1,4,1,1)      | 0x03345600 0x03345640 0x00000040
+D RKNN: [17:05:59.601] 12  Conv     /pool/ReduceMean_2#1_i1_bias_0          INT32     (1)            | 0x03345f00 0x03345f40 0x00000040
+D RKNN: [17:05:59.601] 13  Conv     /pool/ReduceMean_3#1_i1                 INT8      (1,4,1,1)      | 0x03345640 0x03345680 0x00000040
+D RKNN: [17:05:59.601] 13  Conv     /pool/ReduceMean_3#1_i1_bias_0          INT32     (1)            | 0x03345f40 0x03345f80 0x00000040
+D RKNN: [17:05:59.601] 14  Reshape  /pool/Slice_10_output_0-rs_gather_rs_i1 INT64     (4)            | 0x03345e00 0x03345e40 0x00000040
+D RKNN: [17:05:59.601] 15  Split    /pool/Slice_11_2sp_split                INT64     (4)            | 0x033454c0 0x03345500 0x00000040
+D RKNN: [17:05:59.601] 16  Conv     /pool/ReduceMean_8#1_i1                 INT8      (1,4,1,1)      | 0x03345680 0x033456c0 0x00000040
+D RKNN: [17:05:59.601] 16  Conv     /pool/ReduceMean_8#1_i1_bias_0          INT32     (1)            | 0x03345f80 0x03345fc0 0x00000040
+D RKNN: [17:05:59.601] 17  Conv     /pool/ReduceMean_9#1_i1                 INT8      (1,4,1,1)      | 0x033456c0 0x03345700 0x00000040
+D RKNN: [17:05:59.601] 17  Conv     /pool/ReduceMean_9#1_i1_bias_0          INT32     (1)            | 0x03345fc0 0x03346000 0x00000040
+D RKNN: [17:05:59.601] 18  Conv     /pool/ReduceMean_10#1_i1                INT8      (1,4,1,1)      | 0x03345700 0x03345740 0x00000040
+D RKNN: [17:05:59.601] 18  Conv     /pool/ReduceMean_10#1_i1_bias_0         INT32     (1)            | 0x03346000 0x03346040 0x00000040
+D RKNN: [17:05:59.601] 19  Conv     /pool/ReduceMean_11#1_i1                INT8      (1,4,1,1)      | 0x03345740 0x03345780 0x00000040
+D RKNN: [17:05:59.601] 19  Conv     /pool/ReduceMean_11#1_i1_bias_0         INT32     (1)            | 0x03346040 0x03346080 0x00000040
+D RKNN: [17:05:59.601] 20  Reshape  /pool/Slice_5_output_0-rs_gather_rs_i1  INT64     (4)            | 0x03345c80 0x03345cc0 0x00000040
+D RKNN: [17:05:59.601] 21  Split    /pool/Slice_6_2sp_split                 INT64     (4)            | 0x03345500 0x03345540 0x00000040
+D RKNN: [17:05:59.601] 22  Conv     /pool/ReduceMean_4#1_i1                 INT8      (1,4,1,1)      | 0x03345780 0x033457c0 0x00000040
+D RKNN: [17:05:59.601] 22  Conv     /pool/ReduceMean_4#1_i1_bias_0          INT32     (1)            | 0x03346080 0x033460c0 0x00000040
+D RKNN: [17:05:59.601] 23  Conv     /pool/ReduceMean_5#1_i1                 INT8      (1,4,1,1)      | 0x033457c0 0x03345800 0x00000040
+D RKNN: [17:05:59.601] 23  Conv     /pool/ReduceMean_5#1_i1_bias_0          INT32     (1)            | 0x033460c0 0x03346100 0x00000040
+D RKNN: [17:05:59.601] 24  Conv     /pool/ReduceMean_6#1_i1                 INT8      (1,4,1,1)      | 0x03345800 0x03345840 0x00000040
+D RKNN: [17:05:59.601] 24  Conv     /pool/ReduceMean_6#1_i1_bias_0          INT32     (1)            | 0x03346100 0x03346140 0x00000040
+D RKNN: [17:05:59.601] 25  Conv     /pool/ReduceMean_7#1_i1                 INT8      (1,4,1,1)      | 0x03345840 0x03345880 0x00000040
+D RKNN: [17:05:59.601] 25  Conv     /pool/ReduceMean_7#1_i1_bias_0          INT32     (1)            | 0x03346140 0x03346180 0x00000040
+D RKNN: [17:05:59.601] 26  Reshape  /pool/Slice_15_output_0-rs_gather_rs_i1 INT64     (4)            | 0x03345d00 0x03345d40 0x00000040
+D RKNN: [17:05:59.601] 27  Split    /pool/Slice_16_2sp_split                INT64     (4)            | 0x03345440 0x03345480 0x00000040
+D RKNN: [17:05:59.601] 28  Conv     /pool/ReduceMean_12#1_i1                INT8      (1,4,1,1)      | 0x03345880 0x033458c0 0x00000040
+D RKNN: [17:05:59.601] 28  Conv     /pool/ReduceMean_12#1_i1_bias_0         INT32     (1)            | 0x03346180 0x033461c0 0x00000040
+D RKNN: [17:05:59.601] 29  Conv     /pool/ReduceMean_13#1_i1                INT8      (1,4,1,1)      | 0x033458c0 0x03345900 0x00000040
+D RKNN: [17:05:59.601] 29  Conv     /pool/ReduceMean_13#1_i1_bias_0         INT32     (1)            | 0x033461c0 0x03346200 0x00000040
+D RKNN: [17:05:59.601] 30  Conv     /pool/ReduceMean_14#1_i1                INT8      (1,4,1,1)      | 0x03345900 0x03345940 0x00000040
+D RKNN: [17:05:59.601] 30  Conv     /pool/ReduceMean_14#1_i1_bias_0         INT32     (1)            | 0x03346200 0x03346240 0x00000040
+D RKNN: [17:05:59.601] 31  Conv     /pool/ReduceMean_15#1_i1                INT8      (1,4,1,1)      | 0x03345940 0x03345980 0x00000040
+D RKNN: [17:05:59.601] 31  Conv     /pool/ReduceMean_15#1_i1_bias_0         INT32     (1)            | 0x03346240 0x03346280 0x00000040
+D RKNN: [17:05:59.601] 33  Reshape  /Reshape_output_0_rs_i1                 INT64     (4)            | 0x03345bc0 0x03345c00 0x00000040
+D RKNN: [17:05:59.601] 34  exNorm   layernorm.weight                        FLOAT     (1,2048,1,1)   | 0x00000000 0x00002000 0x00002000
+D RKNN: [17:05:59.601] 34  exNorm   layernorm.bias                          FLOAT     (1,2048,1,1)   | 0x00002000 0x00004000 0x00002000
+D RKNN: [17:05:59.601] 35  Reshape  /gru/Transpose_output_0-rs_i1           INT64     (3)            | 0x03345980 0x033459c0 0x00000040
+D RKNN: [17:05:59.601] 36  GRU      onnx::GRU_581                           FLOAT     (2,384,2048)   | 0x00010c80 0x03010c80 0x03000000
+D RKNN: [17:05:59.601] 36  GRU      onnx::GRU_582                           FLOAT     (2,384,128)    | 0x03010c80 0x03310c80 0x00300000
+D RKNN: [17:05:59.601] 36  GRU      onnx::GRU_580                           FLOAT     (2,768)        | 0x00004c80 0x00010c80 0x0000c000
+D RKNN: [17:05:59.601] 36  GRU      empty_placeholder_0                     FLOAT     (1)            | 0x03345e40 0x03345e80 0x00000040
+D RKNN: [17:05:59.601] 36  GRU      /gru/Expand_output_0                    FLOAT     (2,1,128)      | 0x03325280 0x03327280 0x00002000
+D RKNN: [17:05:59.601] 37  Reshape  /gru/Transpose_2_output_0_rs_i1         INT64     (4)            | 0x03345c00 0x03345c40 0x00000040
+D RKNN: [17:05:59.601] 38  Conv     /Clip_output_0                          INT8      (1100,100,1,1) | 0x03327280 0x033453c0 0x0001e140
+D RKNN: [17:05:59.601] 38  Conv     /Clip_output_0_bias_0                   INT32     (1100)         | 0x03346280 0x03348500 0x00002280
+D RKNN: [17:05:59.601] 39  Reshape  /Gather_output_0-rs_i1                  INT64     (4)            | 0x033459c0 0x03345a00 0x00000040
+D RKNN: [17:05:59.601] 42  Conv     /ReduceSum_2conv_i1                     INT8      (1,256,1,1)    | 0x03345a00 0x03345b00 0x00000100
+D RKNN: [17:05:59.601] 42  Conv     /ReduceSum_2conv_i1_bias_0              INT32     (1)            | 0x03348500 0x03348540 0x00000040
+D RKNN: [17:05:59.601] 48  Conv     /ReduceSum_1_2conv_i1                   INT8      (1,11,1,1)     | 0x03345b00 0x03345b40 0x00000040
+D RKNN: [17:05:59.601] 48  Conv     /ReduceSum_1_2conv_i1_bias_0            INT32     (1)            | 0x03348540*0x03348580 0x00000040
+D RKNN: [17:05:59.601] 50  ConvRelu onnx::MatMul_588                        INT8      (128,256,1,1)  | 0x0331b480 0x03323480 0x00008000
+D RKNN: [17:05:59.601] 50  ConvRelu fc_h.0.bias                             INT32     (128)          | 0x00004680 0x00004a80 0x00000400
+D RKNN: [17:05:59.601] 51  Conv     onnx::MatMul_589                        INT8      (60,128,1,1)   | 0x03323480 0x03325280 0x00001e00
+D RKNN: [17:05:59.601] 51  Conv     fc_h.3.bias                             INT32     (60)           | 0x00004a80 0x00004c80 0x00000200
+D RKNN: [17:05:59.601] 52  ConvRelu onnx::MatMul_586                        INT8      (128,256,1,1)  | 0x03310c80 0x03318c80 0x00008000
+D RKNN: [17:05:59.601] 52  ConvRelu fc_w.0.bias                             INT32     (128)          | 0x00004000 0x00004400 0x00000400
+I rknn building done.
+I Target is None, use simulator!
+I GraphPreparing :   0%|                                                     | 0/62 [00:00<?, ?it/s]I GraphPreparing : 100%|██████████████████████████████████████████| 62/62 [00:00<00:00, 8384.55it/s]
+I SessionPreparing :   0%|                                                   | 0/62 [00:00<?, ?it/s]I SessionPreparing : 100%|████████████████████████████████████████| 62/62 [00:00<00:00, 1911.81it/s]
+D RKNN: [17:05:59.601] 53  Conv     onnx::MatMul_587                        INT8      (80,128,1,1)   | 0x03318c80 0x0331b480 0x00002800
+D RKNN: [17:05:59.601] 53  Conv     fc_w.3.bias                             INT32     (80)           | 0x00004400 0x00004680 0x00000280
+D RKNN: [17:05:59.601] 55  Reshape  y_logits-rs_i1                          INT64     (3)            | 0x03345b80 0x03345bc0 0x00000040
+D RKNN: [17:05:59.601] 58  Reshape  x_logits-rs_i1                          INT64     (3)            | 0x03345b40 0x03345b80 0x00000040
+D RKNN: [17:05:59.601] ------------------------------------------------------------------------------+---------------------------------
+D RKNN: [17:05:59.601] ----------------------------------------
+D RKNN: [17:05:59.601] Total Internal Memory Size: 10000KB
+D RKNN: [17:05:59.601] Total Weight Memory Size: 52513.4KB
+D RKNN: [17:05:59.601] ----------------------------------------
+D RKNN: [17:05:59.609] <<<<<<<< end: rknn::RKNNMemStatisticsPass

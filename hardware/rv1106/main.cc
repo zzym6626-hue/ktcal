@@ -7,14 +7,16 @@
 #include <stdexcept>
 
 int main(int argc, char** argv) {
-  if (argc != 5) {
-    std::cerr << "usage: ktcal_rv1106 MATCHER.bin STNET.rknn frames-f32-chw.bin INPUT_DIVISOR\n";
+  if (argc != 5 && argc != 6) {
+    std::cerr << "usage: ktcal_rv1106 MATCHER.bin STNET.rknn frames-f32-chw.bin INPUT_DIVISOR [CONFIDENCE_THRESHOLD]\n";
     return 2;
   }
   try {
     const float divisor = std::stof(argv[4]);
     ktcal::RknnBackend backend(argv[2], divisor); // outlives Tracker / async task
-    ktcal::Tracker tracker(ktcal::Matcher(ktcal::load_matcher_weights(argv[1])));
+    const float confidence_threshold = argc == 6 ? std::stof(argv[5]) : 0.5f;
+    ktcal::Tracker tracker(ktcal::Matcher(ktcal::load_matcher_weights(argv[1])),
+                           confidence_threshold);
     std::ifstream frames(argv[3], std::ios::binary);
     if (!frames) throw std::runtime_error("cannot open frame input");
     ktcal::Frame frame{};

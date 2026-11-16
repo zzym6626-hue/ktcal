@@ -1,0 +1,110 @@
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████████| 2/2 [00:00<00:00, 15563.28it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 180400.17it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 88208.29it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 73262.95it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 66470.74it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/2 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 2/2 [00:00<00:00, 7660.83it/s]
+I Quantizating :   0%|                                                        | 0/2 [00:00<?, ?it/s]I Quantizating : 100%|████████████████████████████████████████████████| 2/2 [00:00<00:00, 16.98it/s]I Quantizating : 100%|████████████████████████████████████████████████| 2/2 [00:00<00:00, 16.95it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████████| 2/2 [00:00<00:00, 20971.52it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 202427.80it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 89354.58it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 73687.70it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 66777.65it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/3 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 3/3 [00:00<00:00, 8873.70it/s]
+I Quantizating :   0%|                                                        | 0/3 [00:00<?, ?it/s]I Quantizating :  33%|████████████████                                | 1/3 [00:00<00:00,  4.39it/s]I Quantizating : 100%|████████████████████████████████████████████████| 3/3 [00:00<00:00, 11.07it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████████| 2/2 [00:00<00:00, 16844.59it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 248036.90it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|██████████████████████████████████████████| 100/100 [00:00<00:00, 110843.13it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 89852.27it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 79830.68it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/2 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 2/2 [00:00<00:00, 7639.90it/s]
+I Quantizating :   0%|                                                        | 0/2 [00:00<?, ?it/s]I Quantizating : 100%|████████████████████████████████████████████████| 2/2 [00:00<00:00, 21.57it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████████| 2/2 [00:00<00:00, 20262.34it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 204800.00it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 91022.22it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 74751.45it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 67792.21it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/3 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 3/3 [00:00<00:00, 8911.41it/s]
+I Quantizating :   0%|                                                        | 0/3 [00:00<?, ?it/s]I Quantizating : 100%|████████████████████████████████████████████████| 3/3 [00:00<00:00, 33.92it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|███████████████████████████████████████████████████| 2/2 [00:00<00:00, 9108.15it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 265294.37it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|██████████████████████████████████████████| 100/100 [00:00<00:00, 115641.14it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 92507.81it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 82032.15it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/2 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 2/2 [00:00<00:00, 7717.21it/s]
+I Quantizating :   0%|                                                        | 0/2 [00:00<?, ?it/s]I Quantizating : 100%|████████████████████████████████████████████████| 2/2 [00:00<00:00, 39.12it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I rknn-toolkit2 version: 2.3.2
+I Loading :   0%|                                                             | 0/2 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████████| 2/2 [00:00<00:00, 17476.27it/s]
+[1;33mW[0m [1;33mload_onnx: The config.mean_values is None, zeros will be set for input 0![0m
+[1;33mW[0m [1;33mload_onnx: The config.std_values is None, ones will be set for input 0![0m
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0: 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 264624.86it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|██████████████████████████████████████████| 100/100 [00:00<00:00, 113851.90it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 91618.70it/s]I OpFusing 2 : 100%|███████████████████████████████████████████| 100/100 [00:00<00:00, 81411.18it/s]
+
+
+I GraphPreparing :   0%|                                                      | 0/2 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 2/2 [00:00<00:00, 7688.92it/s]
+I Quantizating :   0%|                                                        | 0/2 [00:00<?, ?it/s]I Quantizating : 100%|████████████████████████████████████████████████| 2/2 [00:00<00:00, 47.14it/s]
+[1;33mW[0m [1;33mbuild: The default input dtype of 'features' is changed from 'float32' to 'int8' in rknn model for performance!
+                       Please take care of this change when deploy rknn model with Runtime API![0m
+[1;33mW[0m [1;33mbuild: The default output dtype of 'out_features' is changed from 'float32' to 'int8' in rknn model for performance!
+                      Please take care of this change when deploy rknn model with Runtime API![0m
+I rknn building ...
+I rknn building done.
+I Target is None, use simulator!
+I GraphPreparing :   0%|                                                      | 0/4 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 4/4 [00:00<00:00, 8464.79it/s]
+I SessionPreparing :   0%|                                                    | 0/4 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 4/4 [00:00<00:00, 3739.07it/s]
+I GraphPreparing :   0%|                                                      | 0/5 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 5/5 [00:00<00:00, 7407.81it/s]
+I SessionPreparing :   0%|                                                    | 0/5 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 5/5 [00:00<00:00, 3106.89it/s]
+I GraphPreparing :   0%|                                                      | 0/4 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 4/4 [00:00<00:00, 6505.32it/s]
+I SessionPreparing :   0%|                                                    | 0/4 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 4/4 [00:00<00:00, 2853.27it/s]
+I GraphPreparing :   0%|                                                      | 0/5 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 5/5 [00:00<00:00, 7557.30it/s]
+I SessionPreparing :   0%|                                                    | 0/5 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 5/5 [00:00<00:00, 3260.50it/s]
+I GraphPreparing :   0%|                                                      | 0/4 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 4/4 [00:00<00:00, 6921.29it/s]
+I SessionPreparing :   0%|                                                    | 0/4 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 4/4 [00:00<00:00, 2077.16it/s]
+I GraphPreparing :   0%|                                                      | 0/4 [00:00<?, ?it/s]I GraphPreparing : 100%|████████████████████████████████████████████| 4/4 [00:00<00:00, 7727.87it/s]
+I SessionPreparing :   0%|                                                    | 0/4 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████████| 4/4 [00:00<00:00, 3361.49it/s]{"record": 0, "seconds": 9.342974059283733, "stats": {"tier1": 35, "tier2": 2, "tier3": 63, "medium_refinements": 0, "medium_rollbacks": 2, "fusion_calls": 0, "small_fusion_calls": 0, "stnet_requests": 65, "border_peaks": 14, "replay_and_cpp_ms": 131.996, "low_global_invariant": true, "all_raw_views_equal": true}}
+{"schema": 1, "completed": true, "complete": false, "records": 1, "checkpoint_sha256": "594497e981f43b3113f14f2b928dd97e3d1ce73ec603b19e4e2982e8725a18e0", "matcher_sha256": "a118055c2a5b64a33db0ff1155722a970655a696c7bfa2ee273c2313a91df77f", "h5_sha256": "04ab5b392e250b79426bd6fc93b0f4464f000ed8ab38ac925ef8e500affffb7e", "calibration_sha256": "9108f7f716b06a51e19f0f53a6bddca8b095da323203a8fcc1c9f3f175458c2d", "export_sha256": "6fb572ef57f022504b8de659c4181d54471abe73942bb3813b49f91d0a01c1b5", "metrics": {"stnet": {"frames": 100, "mean_error_px": 1.1361710576330764, "p3": 0.95, "p5": 1.0, "p10": 1.0}, "ktcal": {"frames": 100, "mean_error_px": 1.1570401765216338, "p3": 0.96, "p5": 1.0, "p10": 1.0}}, "tracker_stats": {"tier1": 35, "tier2": 2, "tier3": 63, "medium_refinements": 0, "medium_rollbacks": 2, "fusion_calls": 0, "small_fusion_calls": 0, "stnet_requests": 65, "border_peaks": 14}, "low_global_invariant_all_records": true, "raw_transforms_byte_equal_all_records": true, "simulator_calls": [1000, 1000, 1000, 1000, 1000, 1000], "shapes_seen": [[[1, 32, 60, 80]], [[1, 32, 20, 26]], [[1, 64, 20, 26]], [[1, 64, 6, 8]], [[1, 128, 6, 8]], [[1, 128, 6, 8]]], "simulation_only": true, "board_verified": false, "cpu_tail": "ORT floating full100 pool/LayerNorm/BiGRU/attention/FC", "cpu_tail_calls": 10, "cpu_tail_max_abs_error_vs_torch": 0.0001678466796875, "host_wall_seconds_per_record": [9.342974059283733], "timing_scope": "six SDK simulator graphs plus ORT tail/reference/Python/replay/IO, no warmup, not NPU latency", "csv_sha256": "7cbe456edd7a10cea09ef57927a10aecc6bd4670a0d4a540398fed6e0836ae78"}
+

@@ -1,0 +1,7 @@
+{
+  "onnx_sha256": "1ad114a5c011a85580b7551bdf3ec8ca37c563a43d0a58edd4f80428b8a23ee3",
+  "rknn_sha256": "b206addcaff30febf9b7259c8e9fdfd04943a1e87ed3ac8b0082722713244806",
+  "calibration_sha256": "98db66037e91023d379bdec2ee6d2bf75bb27d3e4c1f8b19e0daa5c22913c8e0",
+  "simulation_only": true,
+  "board_verified": false
+}
